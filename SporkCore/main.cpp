@@ -17,7 +17,7 @@ int main()
 	{
 		//std::cout << window.getHeight() << " " << window.getWidth() << std::endl;
 		window.clear();
-#if 0
+#if 1
 		glBegin(GL_QUADS);
 		glVertex2f(-0.5f, -0.5f);
 		glVertex2f(-0.5f, 0.5f);
