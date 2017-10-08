@@ -2,11 +2,6 @@
 
 namespace spork {
 	namespace graphics {
-
-		bool Window::m_Keys[MAX_KEYS];
-		bool Window::m_MouseButtons[MAX_BUTTONS];
-		double Window::mx;
-		double Window::my;
 		
 		void windowResize(GLFWwindow *window, int width, int height);
 		
@@ -27,12 +22,12 @@ namespace spork {
 				m_MouseButtons[i] = false;
 			}
 		}
-
+		//Windows destructor
 		Window::~Window()
 		{
 			glfwTerminate();
 		}
-
+		//Initialise GLFW, GLEW and the GLFW Window
 		bool Window::init()
 		{
 			if (!glfwInit())
@@ -40,7 +35,7 @@ namespace spork {
 				std::cout << "Error! Could not initialize GLFW!" << std::endl;
 				return false;
 			}
-
+			//Create glfw Window
 			m_Window = glfwCreateWindow(m_Width, m_Height, m_Title, NULL, NULL);
 			if (!m_Window)
 			{
@@ -48,10 +43,15 @@ namespace spork {
 				std::cout << "Failed to create GLFW Window!" << std::endl;
 				return false;
 			}
+			//Make the current window the context
 			glfwMakeContextCurrent(m_Window);
+			//Set User pointer to current window so it can be accessed
 			glfwSetWindowUserPointer(m_Window, this);
+			//Callback functions
 			glfwSetWindowSizeCallback(m_Window, windowResize);
 			glfwSetKeyCallback(m_Window, key_callback);
+			glfwSetMouseButtonCallback(m_Window, mouse_button_callback);
+			glfwSetCursorPosCallback(m_Window, cursor_position_callback);
 
 			if (glewInit() != GLEW_OK)
 			{
@@ -68,12 +68,28 @@ namespace spork {
 			return glfwWindowShouldClose(m_Window) == 1;
 		}
 
-		bool Window::isKeyPressed(unsigned int keycode)
+		bool Window::isKeyPressed(unsigned int keycode) const
 		{
+			//TODO: Log this
 			if (keycode >= MAX_KEYS)
 				return false;
 			return m_Keys[keycode];
 		}
+
+		bool Window::isMouseButtonPressed(unsigned int button) const
+		{
+			//TODO: Log this
+			if (button >= MAX_BUTTONS)
+				return false;
+			return m_MouseButtons[button];
+		}
+
+		void Window::getMousePosition(double& x, double& y) const
+		{
+			x = mx;
+			y = my;
+		}
+
 		void Window::clear() const
 		{
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -90,13 +106,26 @@ namespace spork {
 		{
 			glViewport(0, 0, width, height);
 		}
-		//glfw input
+		//glfw key input
 		void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
 		{
 			Window* win = (Window*) glfwGetWindowUserPointer(window);
-			
 			win->m_Keys[key] = action != GLFW_RELEASE;
 		}
+		//glfw mouse input
+		void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
+		{
+			Window* win = (Window*)glfwGetWindowUserPointer(window);
+			win->m_MouseButtons[button] = action != GLFW_RELEASE;
+		}
+		//glfw mouse position 
+		void cursor_position_callback(GLFWwindow* window, double xpos, double ypos)
+		{
+			Window* win = (Window*)glfwGetWindowUserPointer(window);
+			win->mx = xpos;
+			win->my = ypos;
+		}
+
 
 	} //gaphics end
 } // spork eng
