@@ -7,6 +7,8 @@ namespace spork { namespace maths {
 	{
 		x = 0.0f;
 		y = 0.0f;
+		z = 0.0f;
+		w = 0.0f;
 	}
 
 	vec4::vec4(const float& x, const float &y, const float & z, const float & w)
@@ -109,7 +111,7 @@ namespace spork { namespace maths {
 
 	std::ostream& operator<<(std::ostream& stream, const vec4& vec)
 	{
-		stream << "vec4: (" << vec.x << "," << vec.y << "," << vec.z << "," << vec.w << ")";
+		//stream << "vec4: (" << vec.x << "," << vec.y << "," << vec.z << "," << vec.w << ")";
 		return stream;
 	}
 	

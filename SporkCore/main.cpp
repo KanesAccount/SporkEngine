@@ -1,11 +1,20 @@
 #include "src/graphics/window.h"
 #include "src/maths/maths.h"
+#include "src/utils/fileutil.h"
+
 
 int main()
 {
 	using namespace spork;
 	using namespace graphics;
 	using namespace maths;
+
+	/* file read test
+	std::string file = read_file("main.cpp");
+	std::cout << file << std::endl;
+	std::cin.get();
+	return 0;
+	*/
 
 	Window window("SporkEngine", 800, 600);
 	glClearColor(0.2f, 0.3f, 0.8f, 1.0f);
@@ -17,12 +26,19 @@ int main()
 
 	mat4 pos = mat4::translation(vec3(2.0f, 3.0f, 4.0f));
 	pos * mat4::identity();
+
+	pos.elements[12] = 2.0f;
+
+	vec4 column = pos.columns[3];
+
+	std::cout << &pos.elements[12] << std::endl;
+	std::cout << &column.x << std::endl;
+
 	while (!window.closed())
 	{
-		//std::cout << window.getHeight() << " " << window.getWidth() << std::endl;
 		window.clear();
 
-		std::cout << c << std::endl;
+		//std::cout << c << std::endl;
 
 		double x, y;
 		window.getMousePosition(x, y);
