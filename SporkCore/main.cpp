@@ -17,6 +17,11 @@ int main()
 	{
 		//std::cout << window.getHeight() << " " << window.getWidth() << std::endl;
 		window.clear();
+
+		if (window.isKeyPressed(GLFW_KEY_A)) {
+			std::cout << "a" << std::endl;
+		}
+
 #if 1
 		glBegin(GL_QUADS);
 		glVertex2f(-0.5f, -0.5f);
