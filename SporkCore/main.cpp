@@ -1,7 +1,7 @@
 #include "src/graphics/window.h"
 #include "src/maths/maths.h"
 #include "src/utils/fileutil.h"
-
+#include "src/graphics//shader.h"
 
 int main()
 {
@@ -9,31 +9,36 @@ int main()
 	using namespace graphics;
 	using namespace maths;
 
-	/* file read test
-	std::string file = read_file("main.cpp");
-	std::cout << file << std::endl;
-	std::cin.get();
-	return 0;
-	*/
-
 	Window window("SporkEngine", 800, 600);
-	glClearColor(0.2f, 0.3f, 0.8f, 1.0f);
+	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
-	vec4 a(0.2f, 0.1f, 0.8, 1.0f);
-	vec4 b(0.1f, 0.1f, 0.4f, 1.0f);
+	GLfloat verticies[] =
+	{
+		4, 3, 0,
+		12,3, 0,
+		4, 6, 0,
+		4, 6, 0,
+		12,6, 0,
+		12, 3, 0
+	};
 
-	vec4 c = a - b;
+	GLuint vbo;
+	glGenBuffers(1, &vbo);
+	glBindBuffer(GL_ARRAY_BUFFER, vbo);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(verticies), verticies, GL_STATIC_DRAW);
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
+	glEnableVertexAttribArray(0);
 
-	mat4 pos = mat4::translation(vec3(2.0f, 3.0f, 4.0f));
-	pos * mat4::identity();
+	mat4 ortho = mat4::orthographic(0.0f, 16.0f, 0.0f, 9.0f, -1.0f, 1.0f);
+	
+	Shader shader("src/shaders/basic.vert", "src/shaders/basic.frag");
+	shader.enable();
 
-	pos.elements[12] = 2.0f;
-
-	vec4 column = pos.columns[3];
-
-	std::cout << &pos.elements[12] << std::endl;
-	std::cout << &column.x << std::endl;
-
+	shader.setUniformMat4("pr_matrix", ortho);	//set view perspective
+	//shader.setUniformMat4("ml_matrix", mat4::rotation(45.0f, vec3(0, 0, 1)));
+	shader.setUniform2f("light_pos", vec2(8.0f, 4.5f));	//set light position
+	shader.setUniform4f("colour", vec4(0.2f, 0.2f, 0.0, 1.0f)); //set rec colour
+	
 	while (!window.closed())
 	{
 		window.clear();
@@ -44,15 +49,7 @@ int main()
 		window.getMousePosition(x, y);
 		//std::cout << x << "," << y << std::endl;
 
-#if 1
-		glBegin(GL_QUADS);
-		glVertex2f(-0.5f, -0.5f);
-		glVertex2f(-0.5f, 0.5f);
-		glVertex2f( 0.5f, 0.5f);
-		glVertex2f( 0.5f, -0.5f);
-		glEnd();
-#endif
-		glDrawArrays(GL_ARRAY_BUFFER, 0, 0);
+		glDrawArrays(GL_TRIANGLES, 0, 6);
 		window.update();
 	}
 
