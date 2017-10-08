@@ -10,15 +10,13 @@ int main()
 	Window window("SporkEngine", 800, 600);
 	glClearColor(0.2f, 0.3f, 0.8f, 1.0f);
 
-	GLuint vao;
-	glGenVertexArrays(1, &vao);
-	glBindVertexArray(vao);
-
 	vec4 a(0.2f, 0.1f, 0.8, 1.0f);
 	vec4 b(0.1f, 0.1f, 0.4f, 1.0f);
 
 	vec4 c = a - b;
 
+	mat4 pos = mat4::translation(vec3(2.0f, 3.0f, 4.0f));
+	pos * mat4::identity();
 	while (!window.closed())
 	{
 		//std::cout << window.getHeight() << " " << window.getWidth() << std::endl;
