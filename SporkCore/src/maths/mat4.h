@@ -4,12 +4,11 @@
 #include <math.h>
 #include "maths.h"
 
-namespace spork { namespace graphics {
+namespace spork { namespace maths {
 	
-	using namespace maths;
-
 	struct mat4
 	{
+	public:
 		union {
 			float elements[4 * 4];
 			vec4 columns[4];

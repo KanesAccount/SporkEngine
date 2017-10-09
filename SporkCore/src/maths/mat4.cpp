@@ -1,6 +1,6 @@
 #include "mat4.h"
 
-namespace spork { namespace graphics {
+namespace spork { namespace maths {
 	//mat4 constructor
 	mat4::mat4()
 	{
