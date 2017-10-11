@@ -3,7 +3,7 @@
 namespace spork {
 	namespace graphics {
 
-		indexBuffer::indexBuffer(GLushort* data, GLsizei count)
+		indexBuffer::indexBuffer(GLuint* data, GLsizei count)
 			: m_Count(count)
 		{
 			glGenBuffers(1, &m_BufferID);

@@ -1,7 +1,6 @@
 #include "window.h"
 
-namespace spork {
-	namespace graphics {
+namespace spork { namespace graphics {
 		
 		void windowResize(GLFWwindow *window, int width, int height);
 		
@@ -129,7 +128,4 @@ namespace spork {
 			win->mx = xpos;
 			win->my = ypos;
 		}
-
-
-	} //gaphics end
-} // spork eng
+}	} 

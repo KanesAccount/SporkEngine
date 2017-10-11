@@ -10,7 +10,7 @@ namespace spork { namespace graphics {
 			GLuint m_BufferID;
 			GLuint m_Count;
 		public:
-			indexBuffer(GLushort* data, GLsizei count);
+			indexBuffer(GLuint* data, GLsizei count);
 
 			void bind() const;
 			void unbind() const;
