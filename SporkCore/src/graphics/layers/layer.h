@@ -14,7 +14,7 @@ namespace spork { namespace graphics {
 		maths::mat4 m_ProjectionMatrix;
 
 	protected:
-		Layer(Renderer2D* renderer, Shader* shader, mat4 projectionMatrix);
+		Layer(Renderer2D* renderer, Shader* shader, maths::mat4 projectionMatrix);
 	public:
 		virtual ~Layer();
 		virtual void add(Renderable2D* renderable);

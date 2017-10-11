@@ -13,6 +13,8 @@
 #include "src/graphics/renderers/simple2Drenderer.h"
 #include "src/graphics/renderers/batchRenderer2D.h"
 
+#include "src/graphics/layers/tileLayer.h"
+
 #include "src/graphics/sprite.h"
 
 #include <time.h>
@@ -23,17 +25,40 @@ int main()
 	using namespace graphics;
 	using namespace maths;
 
-	Window window("SporkEngine", 960, 540);
+	Window window("SporkEngine", 2200, 1800);
 
 	mat4 ortho = mat4::orthographic(0.0f, 16.0f, 0.0f, 9.0f, -1.0f, 1.0f);
 	
-	Shader shader("src/shaders/basic.vert", "src/shaders/basic.frag");
+	Shader* s = new Shader("src/shaders/basic.vert", "src/shaders/basic.frag");
+	Shader* s2 = new Shader("src/shaders/basic.vert", "src/shaders/basic.frag");
+	Shader& shader = *s;
+	Shader& shader2 = *s2;
 	shader.enable();
-	shader.setUniformMat4("pr_matrix", ortho);
+	shader2.enable();
+	shader.setUniform2f("light_pos", vec2(4.0f, 1.5f));
+	shader2.setUniform2f("light_pos", vec2(4.0f, 1.5f));
+
+	TileLayer layer(&shader);
+	TileLayer layer2(&shader2);
+	int spriteNum = 0;
+	for (float y = 0; y < 9.0f; y += 0.05)
+	{
+		for (float x = 0; x < 16.0f; x += 0.05)
+		{
+			layer.add(new Sprite(x, y, 0.04f, 0.04f, maths::vec4(rand() % 1000 / 1000.0f, 0, 1, 1)));
+			spriteNum++;
+		}
+	}
+
+	layer2.add(new Sprite(-2, -2, 4, 4, vec4(1, 2, 3, 1)));
+	
+	srand(time(NULL));
+
+	/*
 
 	std::vector<Renderable2D*> sprites;
 
-	srand(time(NULL));
+	shader.setUniformMat4("pr_matrix", ortho);
 
 	for (float y = 0; y < 9.0f; y += 0.05)
 	{
@@ -50,6 +75,7 @@ int main()
 	BatchRenderer2D renderer;
 	shader.setUniform2f("light_pos", vec2(4.0f, 1.5f));
 	shader.setUniform4f("colour", vec4(0.2f, 0.3f, 0.8f, 1.0f));
+	*/
 
 	Timer time;
 	float timer = 0;
@@ -68,14 +94,22 @@ int main()
 		renderer.end();
 		renderer.flush();
 		*/
+		//
 
+		shader.enable();
+		shader.setUniform2f("light_pos", vec2((float)(x * 16.0f / 2200.0f), (float)(9.0f - y * 9.0f / 1800.0f)));
+		shader2.enable();
+		shader2.setUniform2f("light_pos", vec2(-8.0f, -3));
 
+		layer.render();
+		layer2.render();
 		window.update();
 		frames++;
 		if (time.elapsed() - timer > 1.0f)
 		{
 			timer += 1.0f;
 			printf("%d fps\n", frames);
+			std::cout << "Number of Sprites: " << spriteNum << std::endl;
 			frames = 0;
 		}
 	}

@@ -1,6 +1,4 @@
 #include "shader.h"
-#include <vector>
-#include <iostream>
 
 namespace spork { namespace graphics {
 	
@@ -39,7 +37,7 @@ namespace spork { namespace graphics {
 			glGetShaderiv(vertex, GL_INFO_LOG_LENGTH, &length);
 			std::vector<char> error(length);
 			glGetShaderInfoLog(vertex, length, &length, &error[0]);
-			std::cout << "Failed to compile vert shader!" << &error[0] << std::endl;
+			std::cout << "Failed to compile vert shader" << &error[0] << std::endl;
 			glDeleteShader(vertex);
 			return 0;
 		}
@@ -54,7 +52,7 @@ namespace spork { namespace graphics {
 			glGetShaderiv(fragment, GL_INFO_LOG_LENGTH, &length);
 			std::vector<char> error(length);
 			glGetShaderInfoLog(fragment, length, &length, &error[0]);
-			std::cout << "Failed to compile frag shader!" << &error[0] << std::endl;
+			std::cout << "Failed to compile frag shader" << &error[0] << std::endl;
 			glDeleteShader(fragment);
 			return 0;
 		}
