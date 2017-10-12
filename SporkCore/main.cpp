@@ -1,34 +1,20 @@
-#include "src/graphics/window.h"
-#include "src/graphics//shader.h"
-
-#include "src/maths/maths.h"
-#include "src/utils/fileutil.h"
-#include "src/utils/timer.h"
-
-#include "src/graphics/buffers/buffer.h"
-#include "src/graphics/buffers/indexBuffer.h"
-#include "src/graphics/buffers/vertexArray.h"
-
-#include "src/graphics/renderers/renderer2D.h"
-#include "src/graphics/renderers/simple2Drenderer.h"
-#include "src/graphics/renderers/batchRenderer2D.h"
-
-#include "src/graphics/layers/tileLayer.h"
-
-#include "src/graphics/sprite.h"
-
+#include "src/sporkCoreHeaders.h"
 #include <time.h>
+
+#define TEST_50K 0
+
+#define WIDTH 720
+#define HEIGHT 1400
 
 int main()
 {
 	using namespace spork;
 	using namespace graphics;
 	using namespace maths;
+	using namespace gameobject;
+	using namespace component;
 
-	float screenWidth = 540.0f;
-	float screenHeight = 960.0f;
-
-	Window window("SporkEngine", screenHeight, screenWidth);
+	Window window("SporkEngine", HEIGHT, WIDTH);
 
 	mat4 ortho = mat4::orthographic(0.0f, 16.0f, 0.0f, 9.0f, -1.0f, 1.0f);
 	
@@ -41,6 +27,7 @@ int main()
 	shader.setUniform2f("light_pos", vec2(4.0f, 1.5f));
 	shader2.setUniform2f("light_pos", vec2(4.0f, 1.5f));
 
+#if TEST_50K 
 	TileLayer layer(&shader);
 	for (float y = -9.0f; y < 9.0f; y += 0.1)
 	{
@@ -49,11 +36,28 @@ int main()
 			layer.add(new Sprite(x, y, 0.09f, 0.09f, maths::vec4(rand() % 1000 / 1000.0f, 0, 1, 1)));
 		}
 	}
+#else
+	TileLayer layer(&shader);
+	for (float y = -9.0f; y < 9.0f; y += 1)
+	{
+		for (float x = -16.0f; x < 16.0f; x += 1)
+		{
+			layer.add(new Sprite(x, y, 0.9f, 0.9f, vec4(rand() % 1000 / 1000.0f, 0, 1, 1)));
+		}
+	}
+#endif
+
+	Sprite* spr = new Sprite(0, 0, 4, 4, vec4(1, 0, 1, 1));
+	SpriteComponent testSprite(spr);
+	/*
+	GameObject* m_Go = testSprite->GetComponent();
+	m_Go->AddComponent(
+		testSprite);
+	*/
+	
 
 	TileLayer layer2(&shader2);
-	layer2.add(new Sprite(-2, -2, 4, 4, vec4(1, 2, 3, 1)));
-	
-	srand(time(NULL));
+	//layer2.add(m_Go);
 
 	/*
 
@@ -78,6 +82,7 @@ int main()
 	shader.setUniform4f("colour", vec4(0.2f, 0.3f, 0.8f, 1.0f));
 	*/
 
+	srand(time(NULL));
 	Timer time;
 	float timer = 0;
 	unsigned int frames = 0;
@@ -89,7 +94,7 @@ int main()
 		window.getMousePosition(x, y);
 
 		shader.enable();
-		shader.setUniform2f("light_pos", vec2((float)(x * 32.0f / screenHeight - 16.0f), (float)(9.0f - y * 18.0f / screenWidth)));
+		shader.setUniform2f("light_pos", vec2((float)(x * 32.0f / HEIGHT - 16.0f), (float)(9.0f - y * 18.0f / WIDTH)));
 		shader2.enable();
 		shader2.setUniform2f("light_pos", vec2(0, 0));
 
@@ -98,6 +103,7 @@ int main()
 		window.update();
 		frames++;
 
+		//std::cout << testSprite.GetName() << std::endl;
 		if (time.elapsed() - timer > 1.0f)
 		{
 			timer += 1.0f;

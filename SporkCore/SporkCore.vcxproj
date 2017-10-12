@@ -83,7 +83,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;DEBUG_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>UninitializedLocalUsageCheck</BasicRuntimeChecks>
     </ClCompile>
     <Link>
@@ -132,6 +132,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\gameObjects\component.cpp" />
+    <ClCompile Include="src\gameObjects\gameObject.cpp" />
+    <ClCompile Include="src\gameObjects\spriteComponent.cpp" />
+    <ClCompile Include="src\gameObjects\transformComponent.cpp" />
     <ClCompile Include="src\graphics\buffers\buffer.cpp" />
     <ClCompile Include="src\graphics\buffers\indexBuffer.cpp" />
     <ClCompile Include="src\graphics\buffers\vertexArray.cpp" />
@@ -149,6 +153,15 @@
     <ClCompile Include="src\maths\vec4.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\game objects\components\components.h" />
+    <ClInclude Include="src\game objects\components\spriteComponent.h" />
+    <ClInclude Include="src\game objects\component.h" />
+    <ClInclude Include="src\game objects\gameObject.h" />
+    <ClInclude Include="src\gameObjects\component.h" />
+    <ClInclude Include="src\gameObjects\components.h" />
+    <ClInclude Include="src\gameObjects\gameObject.h" />
+    <ClInclude Include="src\gameObjects\spriteComponent.h" />
+    <ClInclude Include="src\gameObjects\transformComponent.h" />
     <ClInclude Include="src\graphics\buffers\buffer.h" />
     <ClInclude Include="src\graphics\buffers\indexBuffer.h" />
     <ClInclude Include="src\graphics\buffers\vertexArray.h" />
@@ -168,6 +181,10 @@
     <ClInclude Include="src\maths\vec2.h" />
     <ClInclude Include="src\maths\vec3.h" />
     <ClInclude Include="src\maths\vec4.h" />
+    <ClInclude Include="src\sporkCoreHeaders.h" />
+    <ClInclude Include="src\spork\defines.h" />
+    <ClInclude Include="src\spork\spork.h" />
+    <ClInclude Include="src\spork\types.h" />
     <ClInclude Include="src\utils\fileutil.h" />
     <ClInclude Include="src\utils\timer.h" />
   </ItemGroup>

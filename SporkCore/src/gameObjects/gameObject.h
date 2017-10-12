@@ -1,25 +1,20 @@
 #pragma once
-#include <vector>
-#include <memory>
-#include <unordered_map>
+#include "components.h"
 #include "component.h"
-#include "../graphics/sprite.h"
+#include "../spork/spork.h"
 
 namespace spork { namespace gameobject {
 	
 	class GameObject 
 	{
-		typedef std::shared_ptr<GameObject> Pointer;
-		typedef std::weak_ptr<GameObject> WeakPointer;
-
 	protected:
-		std::unordered_map<componenet::ComponentName*, componenet::Component> m_Compenents;
+		std::unordered_map<component::ComponentName*, component::Component*> m_Compenents;
 	public:
-		GameObject() {};
+		GameObject();
 		~GameObject() {};
 		GameObject(graphics::Sprite* sprite, const maths::mat4& transform = maths::mat4::identity());
 
-		void AddComponent(componenet::Component* componenet);
+		void AddComponent(component::Component* componenet);
 
 		template <typename T>
 		const T* GetComponent() const
@@ -37,8 +32,8 @@ namespace spork { namespace gameobject {
 		template <typename T>
 		const T* GetComponentInternal() const
 		{
-			component::ComponentName* type = T::GetStaticType();
-			auto it = m_Components.find(type);
+			component::ComponentName* name = T::GetStaticName();
+			auto it = m_Components.find(name);
 			if (it == m_Components.end())
 				return nullptr;
 			return (T*)it->second;
