@@ -42,18 +42,13 @@ int main()
 	{
 		for (float x = -16.0f; x < 16.0f; x += 1)
 		{
-			layer.add(new Sprite(x, y, 0.9f, 0.9f, vec4(rand() % 1000 / 1000.0f, 0, 1, 1)));
+			layer.add(new Sprite(x, y, 0.9f, 0.9f, vec4(rand() % 1000 / 1000.0f, rand() % 1000 / 1000.0f, rand() % 1000 / 1000.0f, 1)));
 		}
 	}
 #endif
 
 	Sprite* spr = new Sprite(0, 0, 4, 4, vec4(1, 0, 1, 1));
 	SpriteComponent testSprite(spr);
-	/*
-	GameObject* m_Go = testSprite->GetComponent();
-	m_Go->AddComponent(
-		testSprite);
-	*/
 	
 
 	TileLayer layer2(&shader2);
@@ -103,10 +98,12 @@ int main()
 		window.update();
 		frames++;
 
+		ComponentName* spriteName = testSprite.GetName();
 		//std::cout << testSprite.GetName() << std::endl;
 		if (time.elapsed() - timer > 1.0f)
 		{
 			timer += 1.0f;
+			std::cout << spriteName->name << std::endl;
 			printf("%d fps\n", frames);
 			frames = 0;
 		}

@@ -12,10 +12,10 @@ namespace spork { namespace gameobject { namespace component {
 
 		static ComponentName* StaticGetName()
 		{
-			ComponentName name({ "Sprite" });
+			static ComponentName name({ "Sprite" });
 			return &name;
 		};
 	public:
-		virtual ComponentName* GetName() const { return StaticGetName(); }
+		inline virtual ComponentName* GetName() const { return StaticGetName(); }
 	};
 } } }
