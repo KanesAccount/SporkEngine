@@ -1,6 +1,5 @@
 #pragma once
 #include "../renderers/renderable2D.h"
-#include "../renderers/renderer2D.h"
 
 namespace spork { namespace graphics {
 
@@ -12,6 +11,6 @@ namespace spork { namespace graphics {
 	public:
 		LayerContainer(const mat4& transform);
 		void add(Renderable2D* renderable);
-		void submit(Renderer2D* renderer) const;
+		void submit(Renderer2D* renderer) const override;
 	};
 } }

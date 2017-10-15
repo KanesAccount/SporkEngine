@@ -49,7 +49,8 @@ int main()
 
 	Sprite* spr = new Sprite(0, 0, 4, 4, vec4(1, 0, 1, 1));
 	SpriteComponent testSprite(spr);
-	
+
+	ComponentName* spriteName = testSprite.GetName();
 
 	TileLayer layer2(&shader2);
 	//layer2.add(m_Go);
@@ -98,7 +99,6 @@ int main()
 		window.update();
 		frames++;
 
-		ComponentName* spriteName = testSprite.GetName();
 		//std::cout << testSprite.GetName() << std::endl;
 		if (time.elapsed() - timer > 1.0f)
 		{

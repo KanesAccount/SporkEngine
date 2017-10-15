@@ -1,5 +1,4 @@
 #pragma once
-
 #include "../renderers/renderable2D.h"
 #include "../renderers/renderer2D.h"
 
@@ -20,5 +19,4 @@ namespace spork { namespace graphics {
 		virtual void add(Renderable2D* renderable);
 		virtual void render();
 	};
-
 } }

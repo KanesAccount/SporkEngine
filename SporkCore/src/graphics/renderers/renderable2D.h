@@ -4,6 +4,7 @@
 #include "../buffers/indexBuffer.h"
 #include "../buffers/vertexArray.h"
 #include "../shader.h"
+//#include "../renderers/renderer2D.h"
 
 namespace spork { namespace graphics {
 
@@ -26,6 +27,11 @@ namespace spork { namespace graphics {
 
 		virtual ~Renderable2D()
 		{}
+
+//		virtual void submit(Renderer2D* renderer) const
+		//{
+			//renderer->submit(this);		
+		//}
 
 		inline const maths::vec3& getPosition() const { return m_Position; }
 		inline const maths::vec2& getSize() const { return m_Size; }
