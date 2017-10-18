@@ -11,5 +11,4 @@ namespace spork { namespace graphics {
 	{ 
 		m_Texture = texture;
 	}
-
 } }

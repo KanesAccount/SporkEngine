@@ -7,6 +7,7 @@
 
 #define WIDTH 720
 #define HEIGHT 1400
+#define FREETYPE_PROPERTIES 0
 
 int main() 
 {
@@ -53,10 +54,8 @@ int main()
 	SpriteComponent testSprite(spr);
 	ComponentName* spriteName = testSprite.GetName();
 	
-
-
 	//std::shared_ptr<Texture> t = std::shared_ptr<Texture>(new t("test.png"));
-
+	//new Sprite(x, y, 0.9f, 0.9f, maths::vec4(rand() % 1000 / 1000.0f, rand() % 1000 / 1000.0f, rand() % 1000 / 1000.0f, 1))
 	Texture* textures[] =
 	{
 		new Texture("test.png"),
@@ -69,7 +68,7 @@ int main()
 		for (float x = -16.0f; x < 16.0f; x += 1)
 		{
 			if (rand() % 4 == 0)
-				layer.add(new Sprite(x, y, 0.9f, 0.9f, maths::vec4(rand() % 1000 / 1000.0f, 0, 1, 1)));
+				layer.add(spr);
 			else
 				layer.add(new Sprite(x, y, 0.9f, 0.9f, textures[rand() % 3]));
 		}
