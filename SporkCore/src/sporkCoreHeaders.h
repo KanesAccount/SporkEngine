@@ -24,3 +24,4 @@
 #include "gameObjects/component.h"
 #include "gameObjects/components.h"
 
+#include "graphics/texture.h"

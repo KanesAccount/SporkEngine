@@ -1,6 +1,8 @@
 #include "src/sporkCoreHeaders.h"
 #include <time.h>
 
+#include <FreeImage.h>
+
 #define TEST_50K 0
 
 #define WIDTH 720
@@ -53,30 +55,11 @@ int main()
 	ComponentName* spriteName = testSprite.GetName();
 
 	TileLayer layer2(&shader2);
-	//layer2.add(m_Go);
+	layer2.add(spr);
 
-	/*
+	glActiveTexture(GL_TEXTURE0);
+	Texture texture("test.png");
 
-	std::vector<Renderable2D*> sprites;
-
-	shader.setUniformMat4("pr_matrix", ortho);
-
-	for (float y = 0; y < 9.0f; y += 0.05)
-	{
-		for (float x = 0; x < 16.0f; x += 0.05)
-		{
-			sprites.push_back(new
-				Sprite
-				(x, y, 0.04f, 0.04f, maths::vec4(rand() % 1000 / 1000.0f, 0, 1, 1)));
-		}
-	}
-
-	Sprite sprite(5, 5, 4, 4, maths::vec4(1, 0, 1, 1));
-	Sprite sprite2(7, 1, 2, 3, maths::vec4(0.2f, 0, 1, 1));
-	BatchRenderer2D renderer;
-	shader.setUniform2f("light_pos", vec2(4.0f, 1.5f));
-	shader.setUniform4f("colour", vec4(0.2f, 0.3f, 0.8f, 1.0f));
-	*/
 
 	srand(time(NULL));
 	Timer time;
@@ -112,3 +95,4 @@ int main()
 	
 	return 0;
 }
+

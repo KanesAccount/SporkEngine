@@ -7,7 +7,6 @@
 
 namespace spork { namespace graphics {
 	using namespace maths;
-
 	//class Renderable2D;
 
 	class Renderer2D
