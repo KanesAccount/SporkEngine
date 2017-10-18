@@ -8,7 +8,7 @@
 #define WIDTH 720
 #define HEIGHT 1400
 
-int main()
+int main() 
 {
 	using namespace spork;
 	using namespace graphics;
@@ -21,14 +21,14 @@ int main()
 	mat4 ortho = mat4::orthographic(0.0f, 16.0f, 0.0f, 9.0f, -1.0f, 1.0f);
 	
 	Shader* s = new Shader("src/shaders/basic.vert", "src/shaders/basic.frag");
-	Shader* s2 = new Shader("src/shaders/basic.vert", "src/shaders/basic.frag");
+	//Shader* s2 = new Shader("src/shaders/basic.vert", "src/shaders/basic.frag");
 	Shader& shader = *s;
-	Shader& shader2 = *s2;
+	//Shader& shader2 = *s2;
 	shader.enable();
-	shader2.enable();
+	//shader2.enable();
 	shader.setUniform2f("light_pos", vec2(4.0f, 1.5f));
-	shader2.setUniform2f("light_pos", vec2(4.0f, 1.5f));
-
+	//shader2.setUniform2f("light_pos", vec2(4.0f, 1.5f));
+	
 #if TEST_50K 
 	TileLayer layer(&shader);
 	for (float y = -9.0f; y < 9.0f; y += 0.1)
@@ -51,15 +51,39 @@ int main()
 
 	Sprite* spr = new Sprite(0, 0, 4, 4, vec4(1, 0, 1, 1));
 	SpriteComponent testSprite(spr);
-
 	ComponentName* spriteName = testSprite.GetName();
+	
 
-	TileLayer layer2(&shader2);
-	layer2.add(spr);
 
-	glActiveTexture(GL_TEXTURE0);
-	Texture texture("test.png");
+	//std::shared_ptr<Texture> t = std::shared_ptr<Texture>(new t("test.png"));
 
+	Texture* textures[] =
+	{
+		new Texture("test.png"),
+		new Texture("test1.png"),
+		new Texture("test2.png")
+	};
+
+	for (float y = -9.0f; y < 9.0f; y += 1)
+	{
+		for (float x = -16.0f; x < 16.0f; x += 1)
+		{
+			if (rand() % 4 == 0)
+				layer.add(new Sprite(x, y, 0.9f, 0.9f, maths::vec4(rand() % 1000 / 1000.0f, 0, 1, 1)));
+			else
+				layer.add(new Sprite(x, y, 0.9f, 0.9f, textures[rand() % 3]));
+		}
+	}
+
+	GLint texIDs[] =
+	{
+		0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+	};
+
+	//shader action for tex
+	shader.enable();
+	shader.setUniform1iv("textures", texIDs, 10);
+	shader.setUniformMat4("pr_matrix", maths::mat4::orthographic(-16.0f, 16.0f, -9.0f, 9.0f, -1.0f, 1.0f));
 
 	srand(time(NULL));
 	Timer time;
@@ -72,13 +96,13 @@ int main()
 		double x, y;
 		window.getMousePosition(x, y);
 
-		shader.enable();
 		shader.setUniform2f("light_pos", vec2((float)(x * 32.0f / HEIGHT - 16.0f), (float)(9.0f - y * 18.0f / WIDTH)));
-		shader2.enable();
-		shader2.setUniform2f("light_pos", vec2(0, 0));
+		//shader2.enable();
+		//shader2.setUniform2f("light_pos", vec2(0, 0));
 
 		layer.render();
-		layer2.render();
+		//layer2.render();
+
 		window.update();
 		frames++;
 
@@ -92,6 +116,8 @@ int main()
 		}
 	}
 
+	for (int i = 0; i < 3; i++)
+		delete textures[i];
 	
 	return 0;
 }

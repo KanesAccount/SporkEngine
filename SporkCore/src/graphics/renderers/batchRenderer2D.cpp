@@ -24,10 +24,12 @@ namespace spork { namespace graphics {
 
 		glEnableVertexAttribArray(SHADER_VERTEX_INDEX);
 		glEnableVertexAttribArray(SHADER_UV_INDEX);
+		glEnableVertexAttribArray(SHADER_TEXID_INDEX);
 		glEnableVertexAttribArray(SHADER_COLOR_INDEX);
 
 		glVertexAttribPointer(SHADER_VERTEX_INDEX, 3, GL_FLOAT, GL_FALSE, RENDERER_VERTEX_SIZE, (const GLvoid*)0);
 		glVertexAttribPointer(SHADER_UV_INDEX, 2, GL_FLOAT, GL_FALSE, RENDERER_VERTEX_SIZE, (const GLvoid*)(offsetof(VertexData, VertexData::uv)));
+		glVertexAttribPointer(SHADER_TEXID_INDEX, 1, GL_FLOAT, GL_FALSE, RENDERER_VERTEX_SIZE, (const GLvoid*)(offsetof(VertexData, VertexData::texID)));
 		glVertexAttribPointer(SHADER_COLOR_INDEX, 4, GL_UNSIGNED_BYTE, GL_TRUE, RENDERER_VERTEX_SIZE, (const GLvoid*)(offsetof(VertexData, VertexData::color)));
 
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
@@ -65,32 +67,69 @@ namespace spork { namespace graphics {
 		const maths::vec2& size = renderable->getSize();
 		const maths::vec4& color = renderable->getColor();
 		const std::vector<maths::vec2>& uv = renderable->getUV();
-		
-		int r = color.x * 255.0f;
-		int g = color.y * 255.0f;
-		int b = color.z * 255.0f;
-		int a = color.w * 255.0f;
+		const GLuint texID = renderable->getTexID();
 
-		unsigned int c = a << 24 | b << 16 | g << 8 | r;
+		unsigned int c = 0;
+
+		float sampleTex = 0.0f;
+		if (texID > 0)				//If texture isnt mapped add it to texture vector
+		{ 
+			bool exists = false;
+
+			for (int i = 0; i < m_TexVec.size(); i++)
+			{
+				if (m_TexVec[i] == texID)
+				{
+					sampleTex = (float)(i + 1);
+					exists = true;
+					break;
+				}
+			}
+			if (!exists)
+			{
+				if (m_TexVec.size() >= 32)		
+				{
+					end();
+					flush();
+					begin();
+				}
+				m_TexVec.push_back(texID);
+				sampleTex = (float)(m_TexVec.size());
+			}
+
+		}
+		else
+		{
+			int r = color.x * 255.0f;
+			int g = color.y * 255.0f;
+			int b = color.z * 255.0f;
+			int a = color.w * 255.0f;
+
+			unsigned int c = a << 24 | b << 16 | g << 8 | r;
+		}
 
  		m_Buffer->vertex = m_TransformationStack.back() * (position);
-		m_Buffer->color = c;
 		m_Buffer->uv = uv[0];
+		m_Buffer->texID = sampleTex;
+		m_Buffer->color = c;
 		m_Buffer++;
 
 		m_Buffer->vertex = m_TransformationStack.back() * (maths::vec3(position.x, position.y + size.y, position.z));
-		m_Buffer->color = c;
 		m_Buffer->uv = uv[1];
+		m_Buffer->texID = sampleTex;
+		m_Buffer->color = c;
 		m_Buffer++;
 
 		m_Buffer->vertex = m_TransformationStack.back() * (maths::vec3(position.x + size.x, position.y + size.y, position.z));
-		m_Buffer->color = c;
 		m_Buffer->uv = uv[2];
+		m_Buffer->texID = sampleTex;
+		m_Buffer->color = c;
 		m_Buffer++;
 
 		m_Buffer->vertex = m_TransformationStack.back() * (maths::vec3(position.x + size.x, position.y, position.z));
-		m_Buffer->color = c;
 		m_Buffer->uv = uv[3];
+		m_Buffer->texID = sampleTex;
+		m_Buffer->color = c;
 		m_Buffer++;
 
 		m_IndexCount += 6;
@@ -104,6 +143,12 @@ namespace spork { namespace graphics {
 
 	void BatchRenderer2D::flush()
 	{
+		for (int i = 0; i < m_TexVec.size(); i++)
+		{
+			glActiveTexture(GL_TEXTURE0 + i);
+			glBindTexture(GL_TEXTURE_2D, m_TexVec[i]);
+		}
+
 		glBindVertexArray(m_VAO);
 		m_IBO->bind();
 

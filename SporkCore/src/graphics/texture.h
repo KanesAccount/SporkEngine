@@ -18,6 +18,7 @@ namespace spork { namespace graphics {
 		void bind() const;
 		void unbind() const;
 
+		inline unsigned int getID() const { return m_TexID; }
 		inline unsigned int getWidth() const { return m_Width; }
 		inline unsigned int getHeight() const { return m_Height; }
 	private:
