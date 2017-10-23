@@ -1,8 +1,10 @@
 #pragma once
 
 #include <cstddef>
-#include "renderer2d.h"
+#include "renderer2D.h"
+#include "renderable2D.h"
 #include "../buffers/indexBuffer.h"
+#include "../../ext/freetype-gl/freetype-gl.h"
 
 namespace spork { namespace graphics {
 

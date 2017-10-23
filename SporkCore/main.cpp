@@ -1,6 +1,5 @@
 #include "src/sporkCoreHeaders.h"
 #include <time.h>
-
 #include <FreeImage.h>
 
 #define TEST_50K 0
@@ -16,6 +15,7 @@ int main()
 	using namespace maths;
 	using namespace gameobject;
 	using namespace component;
+	using namespace freetype;
 
 	Window window("SporkEngine", HEIGHT, WIDTH);
 
@@ -51,8 +51,12 @@ int main()
 #endif
 
 	Sprite* spr = new Sprite(0, 0, 4, 4, vec4(1, 0, 1, 1));
-	SpriteComponent testSprite(spr);
-	ComponentName* spriteName = testSprite.GetName();
+//	SpriteComponent* testSprite(spr);
+	//ComponentName* spriteName = testSprite.GetName();
+
+	//go.AddComponent(component::SpriteComponent(*spr));
+	//GameObject m_GO = (new GameObject(spr));
+//	layer.add(m_GO);
 	
 	//std::shared_ptr<Texture> t = std::shared_ptr<Texture>(new t("test.png"));
 	//new Sprite(x, y, 0.9f, 0.9f, maths::vec4(rand() % 1000 / 1000.0f, rand() % 1000 / 1000.0f, rand() % 1000 / 1000.0f, 1))
@@ -89,6 +93,10 @@ int main()
 	float timer = 0;
 	unsigned int frames = 0;
 
+	//fontData myFont;
+	//myFont.init("arial.ttf", 16);	//Build the font
+	//printText(myFont, 320, 200, "Active FreeType Text - %7.2f");
+
 	while (!window.closed())
 	{
 		window.clear();
@@ -109,7 +117,7 @@ int main()
 		if (time.elapsed() - timer > 1.0f)
 		{
 			timer += 1.0f;
-			std::cout << spriteName->name << std::endl;
+			//std::cout << go.GetComponent(SpriteComponent::GetName()) << std::endl;
 			printf("%d fps\n", frames);
 			frames = 0;
 		}
@@ -118,6 +126,8 @@ int main()
 	for (int i = 0; i < 3; i++)
 		delete textures[i];
 	
+	//myFont.tidy();
+
 	return 0;
 }
 

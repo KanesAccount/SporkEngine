@@ -18,18 +18,18 @@ namespace spork { namespace maths {
 		mat4(float diagonal);
 
 		static mat4 identity();
-
+		//Mattrix multiplication
 		mat4& multiply(const mat4& other);
-		friend mat4 operator*(mat4 left, mat4& right);
+		friend mat4 operator*(mat4 left, const mat4& right);
 		mat4& operator*=(const mat4& other);
 
 		//Vec3 multiplication
 		vec3 multiply(const vec3& other) const;
-		friend vec3 operator*(const mat4 left, const vec3& right);
+		friend vec3 operator*(const mat4& left, const vec3& right);
 
 		//Vec4 multiplication
 		vec4 multiply(const vec4& other) const;
-		friend vec4 operator*(const mat4 left, const vec4& right);
+		friend vec4 operator*(const mat4& left, const vec4& right);
 
 		//projection mats
 		static mat4 orthographic(float left, float right, float bottom, float top, float near, float far);

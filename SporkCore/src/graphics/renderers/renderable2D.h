@@ -4,8 +4,8 @@
 #include "../buffers/indexBuffer.h"
 #include "../buffers/vertexArray.h"
 #include "../shader.h"
-//#include "../renderers/renderer2D.h"
 #include "../texture.h"
+#include "renderer2D.h"
 
 namespace spork { namespace graphics {
 
@@ -37,10 +37,10 @@ namespace spork { namespace graphics {
 		virtual ~Renderable2D()
 		{}
 
-//		virtual void submit(Renderer2D* renderer) const
-		//{
-			//renderer->submit(this);		
-		//}
+		virtual void submit(Renderer2D* renderer) const
+		{
+			renderer->submit(this);
+		}
 
 		void initUVs()
 		{
@@ -54,6 +54,6 @@ namespace spork { namespace graphics {
 		inline const maths::vec2& getSize() const { return m_Size; }
 		inline const maths::vec4& getColor() const { return m_Color; }
 		inline const std::vector<maths::vec2>& getUV() const { return m_UV; }
-		inline const GLuint getTexID() const { return m_Texture == nullptr ? 0 : m_Texture->getID(); }
+		inline const GLuint getTexID() const { return m_Texture ? m_Texture->getID() : 0; }	  //if texture isn't 0 return the texture, otherwise return 0
 	};
 } }

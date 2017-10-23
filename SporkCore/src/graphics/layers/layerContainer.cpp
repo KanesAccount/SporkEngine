@@ -8,13 +8,13 @@ namespace spork { namespace graphics {
 	}
 
 	//add a renderable to the transformation mat
-	LayerContainer::add(Renderable2D* renderable)
+	void LayerContainer::add(Renderable2D* renderable)
 	{
 		m_Renderables.push_back(renderable);
 	}
 
 	//submit all renderables in container to renderer
-	LayerContainer::submit(Renderer2D* renderer) const
+	void LayerContainer::submit(Renderer2D* renderer) const
 	{
 		renderer->push(m_TransformationMatrix);
 
@@ -23,5 +23,4 @@ namespace spork { namespace graphics {
 
 		renderer->pop();
 	}
-
 } }

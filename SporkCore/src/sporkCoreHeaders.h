@@ -5,6 +5,7 @@
 #include "maths/maths.h"
 #include "utils/fileutil.h"
 #include "utils/timer.h"
+#include "utils/fontManager.h"
 
 #include "graphics/buffers/buffer.h"
 #include "graphics/buffers/indexBuffer.h"
@@ -25,3 +26,4 @@
 #include "gameObjects/components.h"
 
 #include "graphics/texture.h"
+

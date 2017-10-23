@@ -69,7 +69,7 @@ namespace spork { namespace maths {
 	}
 
 	//mat4 & vec3 multiplication overload
-	vec3 operator*(const mat4 left, const vec3& right)
+	vec3 operator*(const mat4& left, const vec3& right)
 	{
 		return left.multiply(right);
 	}
@@ -86,7 +86,7 @@ namespace spork { namespace maths {
 	}
 
 	//mat4 & vec4 multiplication overload
-	vec4 operator*(const mat4 left, const vec4& right) 
+	vec4 operator*(const mat4& left, const vec4& right) 
 	{
 		return left.multiply(right);
 	}
