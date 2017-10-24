@@ -1,4 +1,4 @@
-#pragma once
+/*#pragma once
 #pragma warning(disable: 4786)
 //Freetype Headers
 #include "../../ext/freetype/include/ft2build.h"
@@ -31,4 +31,4 @@ namespace spork { namespace freetype {
 
 	void printText(const fontData &ftFont, float x, float y, const char *fmt);
 
-} }
+} }*/

@@ -86,7 +86,8 @@
 #include "infcodes.h"
 #include "infutil.h"
 #undef  NO_INFLATE_MASK
-/*
+
+  /* infutil.c must be included before infcodes.c */
 #include "zutil.c"
 #include "inftrees.c"
 #include "infutil.c"
@@ -94,7 +95,7 @@
 #include "infblock.c"
 #include "inflate.c"
 #include "adler32.c"
-*/
+
 #if defined( _MSC_VER )
 #pragma warning( pop )
 #endif

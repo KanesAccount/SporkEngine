@@ -29,12 +29,16 @@ namespace spork { namespace graphics {
 		VertexData* m_Buffer;
 
 		std::vector<GLuint> m_TexVec;
+		ftgl::texture_atlas_t* m_Atlas;
+		ftgl::texture_font_t* m_Font;
+
 	public:
 		BatchRenderer2D();
 		~BatchRenderer2D();
 
 		void begin();
 		void submit(const Renderable2D* renderable) override;
+		void drawText(const std::string& text, const maths::vec3 pos, const maths::vec4& col) override;
 		void end();
 		void flush() override;
 	private:

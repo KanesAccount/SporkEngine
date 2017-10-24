@@ -44,6 +44,7 @@
 #include FT_MODULE_H
 #include "basepic.h"
 
+
   /*************************************************************************/
   /*                                                                       */
   /* The macro FT_COMPONENT is used in trace mode.  It is an implicit      */
@@ -52,6 +53,7 @@
   /*                                                                       */
 #undef  FT_COMPONENT
 #define FT_COMPONENT  trace_init
+
 
 #ifndef FT_CONFIG_OPTION_PIC
 
@@ -191,7 +193,7 @@
 
 
   /* documentation is in ftmodapi.h */
-  
+
   FT_EXPORT_DEF( void )
   FT_Add_Default_Modules( FT_Library  library )
   {
@@ -223,13 +225,15 @@
     }
   }
 
+
   /* documentation is in freetype.h */
-  FT_Bool     no_long_family_names = FALSE;
+
   FT_EXPORT_DEF( FT_Error )
   FT_Init_FreeType( FT_Library  *alibrary )
   {
     FT_Error   error;
     FT_Memory  memory;
+
 
     /* check of `alibrary' delayed to `FT_New_Library' */
 
@@ -252,10 +256,6 @@
     else
       FT_Add_Default_Modules( *alibrary );
 
-	FT_Property_Set(alibrary, "pcf",
-		"no-long-family-names",
-		&no_long_family_names);
-
     return error;
   }
 
@@ -266,6 +266,7 @@
   FT_Done_FreeType( FT_Library  library )
   {
     FT_Memory  memory;
+
 
     if ( !library )
       return FT_THROW( Invalid_Library_Handle );

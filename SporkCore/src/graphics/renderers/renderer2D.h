@@ -36,9 +36,10 @@ namespace spork { namespace graphics {
 			//TODO: add log for missing pop
 			m_TransformationBack = &m_TransformationStack.back();
 		}
-		virtual void begin() {};
+		virtual void begin() {}
 		virtual void submit(const Renderable2D* renderable) = 0;
-		virtual void end() {};
+		virtual void drawText(const std::string& text, const maths::vec3 pos, const maths::vec4& col) {}
+		virtual void end() {}
 		virtual void flush() = 0;
 	};
 

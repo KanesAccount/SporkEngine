@@ -19,7 +19,7 @@
 #define FT_MAKE_OPTION_SINGLE_OBJECT
 
 #include <ft2build.h>
-/*
+
 #include "cffpic.c"
 #include "cffdrivr.c"
 #include "cffparse.c"
@@ -37,5 +37,5 @@
 #include "cf2intrp.c"
 #include "cf2read.c"
 #include "cf2stack.c"
-*/
+
 /* END */

@@ -18,6 +18,8 @@
 
 #include "graphics/layers/layer.h"
 #include "graphics/layers/tileLayer.h"
+#include "graphics/layers/layerContainer.h"
+#include "graphics/textContainer.h"
 
 #include "graphics/sprite.h"
 

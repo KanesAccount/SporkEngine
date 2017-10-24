@@ -19,7 +19,6 @@
 #define FT_MAKE_OPTION_SINGLE_OBJECT
 
 #include <ft2build.h>
-/*
 #include "t1parse.c"
 #include "t1load.c"
 #include "t1objs.c"
@@ -29,6 +28,6 @@
 #ifndef T1_CONFIG_OPTION_NO_AFM
 #include "t1afm.c"
 #endif
-*/
+
 
 /* END */

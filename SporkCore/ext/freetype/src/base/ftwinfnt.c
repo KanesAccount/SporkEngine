@@ -2,7 +2,7 @@
 /*                                                                         */
 /*  ftwinfnt.c                                                             */
 /*                                                                         */
-/*    FreeType API for accessing Windows FNT specific info (body).         */
+/*    FreeType API for accessing  (body).         */
 /*                                                                         */
 /*  Copyright 2003, 2004, 2014 by                                          */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */

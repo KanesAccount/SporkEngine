@@ -365,7 +365,7 @@
    *
    */
 #define FT_TYPE1_TABLES_H  <t1tables.h>
-#define FT_PCF_DRIVER_H  <freetype/ftpcfdrv.h>
+
 
   /*************************************************************************
    *

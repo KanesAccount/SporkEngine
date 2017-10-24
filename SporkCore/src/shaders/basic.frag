@@ -22,7 +22,9 @@ void main()
 	if (fs_in.texID > 0.0)
 	{
 		int texID = int(fs_in.texID - 0.5);		//rounding error prevention
-		texColor = texture(textures[texID], fs_in.uv);
+		texColor = fs_in.color * texture(textures[texID], fs_in.uv);
 	}
 	color = texColor * intensity;
+	//color = texColor;
+
 }

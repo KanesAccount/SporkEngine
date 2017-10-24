@@ -29,9 +29,8 @@ THE SOFTWARE.
 
 
 #include <ft2build.h>
-/*
 #include "pcfutil.c"
 #include "pcfread.c"
-#include "pcfdrivr.c"*/
+#include "pcfdrivr.c"
 
 /* END */

@@ -19,7 +19,6 @@
 #define FT_MAKE_OPTION_SINGLE_OBJECT
 
 #include <ft2build.h>
-/*
 #include "psobjs.c"
 #include "psauxmod.c"
 #include "t1decode.c"
@@ -30,6 +29,6 @@
 #endif
 
 #include "psconv.c"
-*/
+
 
 /* END */

@@ -27,7 +27,7 @@
 #include FT_TRUETYPE_TAGS_H
 #include FT_SERVICE_POSTSCRIPT_CMAPS_H
 #include FT_SFNT_NAMES_H
-//#include FT_GZIP_H
+#include FT_GZIP_H
 #include "sferrors.h"
 
 #ifdef TT_CONFIG_OPTION_BDF
@@ -657,8 +657,8 @@
       else
       {
 #ifdef FT_CONFIG_OPTION_USE_ZLIB
-		  /*
-        /* Uncompress with zlib. 
+
+        /* Uncompress with zlib. */
         FT_ULong  output_len = table->OrigLength;
 
 
@@ -672,7 +672,7 @@
           error = FT_THROW( Invalid_Table );
           goto Exit;
         }
-		*/
+
 #else /* !FT_CONFIG_OPTION_USE_ZLIB */
 
         error = FT_THROW( Unimplemented_Feature );

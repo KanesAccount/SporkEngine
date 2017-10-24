@@ -18,7 +18,7 @@
 #define FT_MAKE_OPTION_SINGLE_OBJECT
 
 #include <ft2build.h>
-/*
+
 #include "gxvfeat.c"
 #include "gxvcommn.c"
 #include "gxvbsln.c"
@@ -41,6 +41,6 @@
 #include "gxvprop.c"
 #include "gxvlcar.c"
 #include "gxvmod.c"
-*/
+
 
 /* END */

@@ -15,7 +15,6 @@ int main()
 	using namespace maths;
 	using namespace gameobject;
 	using namespace component;
-	using namespace freetype;
 
 	Window window("SporkEngine", HEIGHT, WIDTH);
 
@@ -88,14 +87,17 @@ int main()
 	shader.setUniform1iv("textures", texIDs, 10);
 	shader.setUniformMat4("pr_matrix", maths::mat4::orthographic(-16.0f, 16.0f, -9.0f, 9.0f, -1.0f, 1.0f));
 
+	LayerContainer* l = new LayerContainer(mat4::translate(vec3(-16.0f, 8.0f, 0.0f)));
+	TextContainer* fps = new TextContainer("", 0.4f, 0.4f, vec4(0.3f, 0.3f, 0.3f, 0.9f));
+	l->add(new Sprite(0, 0, 5, 1.5f, vec4(0.3f, 0.3f, 0.3f, 0.9f)));
+	l->add(fps);
+
+	layer.add(l);
+
 	srand(time(NULL));
 	Timer time;
 	float timer = 0;
 	unsigned int frames = 0;
-
-	//fontData myFont;
-	//myFont.init("arial.ttf", 16);	//Build the font
-	//printText(myFont, 320, 200, "Active FreeType Text - %7.2f");
 
 	while (!window.closed())
 	{
@@ -107,17 +109,16 @@ int main()
 		//shader2.enable();
 		//shader2.setUniform2f("light_pos", vec2(0, 0));
 
-		layer.render();
 		//layer2.render();
 
+		layer.render();
 		window.update();
 		frames++;
-
-		//std::cout << testSprite.GetName() << std::endl;
 		if (time.elapsed() - timer > 1.0f)
 		{
 			timer += 1.0f;
 			//std::cout << go.GetComponent(SpriteComponent::GetName()) << std::endl;
+			fps->text = std::to_string(frames) + "fps";
 			printf("%d fps\n", frames);
 			frames = 0;
 		}
@@ -126,8 +127,6 @@ int main()
 	for (int i = 0; i < 3; i++)
 		delete textures[i];
 	
-	//myFont.tidy();
-
 	return 0;
 }
 

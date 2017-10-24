@@ -15,7 +15,7 @@
 /*                                                                         */
 /***************************************************************************/
 
-/*
+
 #define FT_MAKE_OPTION_SINGLE_OBJECT
 #include <ft2build.h>
 #include "afpic.c"
@@ -42,5 +42,5 @@
 #ifdef AF_CONFIG_OPTION_USE_WARPER
 #include "afwarp.c"
 #endif
-*/
+
 /* END */

@@ -1,4 +1,4 @@
-#include "fontManager.h"
+/*#include "fontManager.h"
 
 namespace spork { namespace freetype {
 
@@ -157,13 +157,13 @@ namespace spork { namespace freetype {
 			}
 		}
 
-		/*if (startLine)
+		if (startLine)
 		{
 			std::string line;
 			for (const char* n = startLine; n < c; n++)
 				line.append(1, *n);
 			lines.push_back(line);
-		}*/
+		}
 
 		//OpenGL func calls 
 		glPushAttrib(GL_LIST_BIT | GL_CURRENT_BIT | GL_ENABLE_BIT | GL_TRANSFORM_BIT);
@@ -192,4 +192,4 @@ namespace spork { namespace freetype {
 		glPopAttrib(); 
 	};
 
-} }
+} }*/

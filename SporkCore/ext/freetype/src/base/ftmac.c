@@ -64,13 +64,16 @@
       available.
   */
 
-/*
+
 #include <ft2build.h>
 #include FT_FREETYPE_H
 #include FT_TRUETYPE_TAGS_H
 #include FT_INTERNAL_STREAM_H
 #include "ftbase.h"
-                 
+
+  /* This is for Mac OS X.  Without redefinition, OS_INLINE */
+  /* expands to `static inline' which doesn't survive the   */
+  /* -ansi compilation flag of GCC.                         */
 #if !HAVE_ANSI_OS_INLINE
 #undef  OS_INLINE
 #define OS_INLINE  static __inline__
@@ -79,7 +82,7 @@
   /* `configure' checks the availability of `ResourceIndex' strictly */
   /* and sets HAVE_TYPE_RESOURCE_INDEX 1 or 0 always.  If it is      */
   /* not set (e.g., a build without `configure'), the availability   */
-  /* is guessed from the SDK version.                                
+  /* is guessed from the SDK version.                                */
 #ifndef HAVE_TYPE_RESOURCE_INDEX
 #if !defined( MAC_OS_X_VERSION_10_5 ) || \
     ( MAC_OS_X_VERSION_MAX_ALLOWED < MAC_OS_X_VERSION_10_5 )
@@ -87,36 +90,37 @@
 #else
 #define HAVE_TYPE_RESOURCE_INDEX 1
 #endif
-#endif /* !HAVE_TYPE_RESOURCE_INDEX 
+#endif /* !HAVE_TYPE_RESOURCE_INDEX */
 
 #if ( HAVE_TYPE_RESOURCE_INDEX == 0 )
   typedef short  ResourceIndex;
 #endif
 
-//#include <CoreServices/CoreServices.h>
-//#include <ApplicationServices/ApplicationServices.h>
-//#include <sys/syslimits.h> /* PATH_MAX */
+#include <CoreServices/CoreServices.h>
+#include <ApplicationServices/ApplicationServices.h>
+#include <sys/syslimits.h> /* PATH_MAX */
 
-  /* Don't want warnings about our own use of deprecated functions. 
+  /* Don't want warnings about our own use of deprecated functions. */
 #define FT_DEPRECATED_ATTRIBUTE
 
 #include FT_MAC_H
 
-#ifndef kATSOptionFlagsUnRestrictedScope /* since Mac OS X 10.1 
+#ifndef kATSOptionFlagsUnRestrictedScope /* since Mac OS X 10.1 */
 #define kATSOptionFlagsUnRestrictedScope kATSOptionFlagsDefault
 #endif
 
 
   /* Set PREFER_LWFN to 1 if LWFN (Type 1) is preferred over
      TrueType in case *both* are available (this is not common,
-     but it *is* possible). 
+     but it *is* possible). */
 #ifndef PREFER_LWFN
 #define PREFER_LWFN  1
 #endif
 
 
 #ifdef FT_MACINTOSH
-#
+
+  /* This function is deprecated because FSSpec is deprecated in Mac OS X  */
   FT_EXPORT_DEF( FT_Error )
   FT_GetFile_From_Mac_Name( const char*  fontName,
                             FSSpec*      pathSpec,
@@ -134,7 +138,7 @@
   /* The FSSpec type has been discouraged for a long time,     */
   /* unfortunately an FSRef replacement API for                */
   /* ATSFontGetFileSpecification() is only available in        */
-  /* Mac OS X 10.5 and later.                                  
+  /* Mac OS X 10.5 and later.                                  */
   static OSStatus
   FT_ATSFontGetFileReference( ATSFontRef  ats_font_id,
                               FSRef*      ats_font_ref )
@@ -147,13 +151,13 @@
     err = ATSFontGetFileReference( ats_font_id, ats_font_ref );
 
     return err;
-#elif __LP64__ /* No 64bit Carbon API on legacy platforms 
+#elif __LP64__ /* No 64bit Carbon API on legacy platforms */
     FT_UNUSED( ats_font_id );
     FT_UNUSED( ats_font_ref );
 
 
     return fnfErr;
-#else /* 32bit Carbon API on legacy platforms 
+#else /* 32bit Carbon API on legacy platforms */
     OSStatus  err;
     FSSpec    spec;
 
@@ -190,8 +194,8 @@
     if ( noErr != FT_ATSFontGetFileReference( ats_font_id, ats_font_ref ) )
       return FT_THROW( Unknown_File_Format );
 
-    /* face_index calculation by searching preceding fontIDs 
-    /* with same FSRef                                       
+    /* face_index calculation by searching preceding fontIDs */
+    /* with same FSRef                                       */
     {
       ATSFontRef  id2 = ats_font_id - 1;
       FSRef       ref2;
@@ -237,7 +241,7 @@
   }
 
 
-  /* This function is deprecated because FSSpec is deprecated in Mac OS X  
+  /* This function is deprecated because FSSpec is deprecated in Mac OS X  */
   FT_EXPORT_DEF( FT_Error )
   FT_GetFile_From_Mac_ATS_Name( const char*  fontName,
                                 FSSpec*      pathSpec,
@@ -282,12 +286,12 @@
     if ( noErr != FSPathMakeRef( pathname, &ref, FALSE ) )
       return FT_THROW( Cannot_Open_Resource );
 
-    /* at present, no support for dfont format 
+    /* at present, no support for dfont format */
     err = FSOpenResourceFile( &ref, 0, NULL, fsRdPerm, res );
     if ( noErr == err )
       return err;
 
-    /* fallback to original resource-fork font 
+    /* fallback to original resource-fork font */
     *res = FSOpenResFile( &ref, fsRdPerm );
     err  = ResError();
 
@@ -295,7 +299,7 @@
   }
 
 
-  /* Return the file type for given pathname 
+  /* Return the file type for given pathname */
   static OSType
   get_file_type_from_path( const UInt8*  pathname )
   {
@@ -314,6 +318,8 @@
   }
 
 
+  /* Given a PostScript font name, create the Macintosh LWFN file name. */
+  static void
   create_lwfn_name( char*   ps_name,
                     Str255  lwfn_file_name )
   {
@@ -346,6 +352,8 @@
   static short
   count_faces_sfnt( char*  fond_data )
   {
+    /* The count is 1 greater than the value in the FOND.  */
+    /* Isn't that cute? :-)                                */
 
     return EndianS16_BtoN( *( (short*)( fond_data +
                                         sizeof ( FamRec ) ) ) ) + 1;
@@ -377,6 +385,8 @@
      resource, and answer the name of a possible LWFN Type 1 file.
 
      Thanks to Paul Miller (paulm@profoundeffects.com) for the fix
+     to load a face OTHER than the first one in the FOND!
+  */
 
 
   static void
@@ -399,14 +409,17 @@
     assoc      = (AsscEntry*)( fond_data + sizeof ( FamRec ) + 2 );
     base_assoc = assoc;
 
+    /* the maximum faces in a FOND is 48, size of StyleTable.indexes[] */
     if ( 47 < face_index )
       return;
 
+    /* Let's do a little range checking before we get too excited here */
     if ( face_index < count_faces_sfnt( fond_data ) )
     {
-      assoc += face_index;        /* add on the face_index! 
+      assoc += face_index;        /* add on the face_index! */
 
       /* if the face at this index is not scalable,
+         fall back to the first one (old behavior) */
       if ( EndianS16_BtoN( assoc->fontSize ) == 0 )
       {
         *have_sfnt = 1;
@@ -495,6 +508,8 @@
     size_t  dirname_len;
 
 
+    /* Pathname for FSRef can be in various formats: HFS, HFS+, and POSIX. */
+    /* We should not extract parent directory by string manipulation.      */
 
     if ( noErr != FSPathMakeRef( path_fond, &ref, FALSE ) )
       return FT_THROW( Invalid_Argument );
@@ -508,6 +523,8 @@
 
     if ( ft_strlen( (char *)path_lwfn ) + 1 + base_lwfn[0] > path_size )
       return FT_THROW( Invalid_Argument );
+
+    /* now we have absolute dirname in path_lwfn */
     ft_strcat( (char *)path_lwfn, "/" );
     dirname_len = ft_strlen( (char *)path_lwfn );
     ft_strcat( (char *)path_lwfn, (char *)base_lwfn + 1 );
@@ -561,6 +578,7 @@
      return a PFB buffer.  This is somewhat convoluted because the FT2
      PFB parser wants the ASCII header as one chunk, and the LWFN
      chunks are often not organized that way, so we glue chunks
+     of the same type together. */
   static FT_Error
   read_lwfn( FT_Memory      memory,
              ResFileRefNum  res,
@@ -578,6 +596,9 @@
 
 
     UseResFile( res );
+
+    /* First pass: load all POST resources, and determine the size of */
+    /* the output buffer.                                             */
     res_id    = 501;
     last_code = -1;
 
@@ -585,22 +606,22 @@
     {
       post_data = Get1Resource( TTAG_POST, res_id++ );
       if ( post_data == NULL )
-        break;  /* we are done 
+        break;  /* we are done */
 
       code = (*post_data)[0];
 
       if ( code != last_code )
       {
         if ( code == 5 )
-          total_size += 2; /* just the end code 
+          total_size += 2; /* just the end code */
         else
-          total_size += 6; /* code + 4 bytes chunk length 
+          total_size += 6; /* code + 4 bytes chunk length */
       }
 
       total_size += GetHandleSize( post_data ) - 2;
       last_code = code;
 
-      /* detect integer overflows 
+      /* detect integer overflows */
       if ( total_size < old_total_size )
       {
         error = FT_THROW( Array_Too_Large );
@@ -613,8 +634,8 @@
     if ( FT_ALLOC( buffer, (FT_Long)total_size ) )
       goto Error;
 
-    /* Second pass: append all POST data to the buffer, add PFB fields. 
-    /* Glue all consecutive chunks of the same type together.           
+    /* Second pass: append all POST data to the buffer, add PFB fields. */
+    /* Glue all consecutive chunks of the same type together.           */
     p              = buffer;
     res_id         = 501;
     last_code      = -1;
@@ -624,7 +645,7 @@
     {
       post_data = Get1Resource( TTAG_POST, res_id++ );
       if ( post_data == NULL )
-        break;  /* we are done 
+        break;  /* we are done */
 
       post_size = (FT_ULong)GetHandleSize( post_data ) - 2;
       code = (*post_data)[0];
@@ -633,7 +654,7 @@
       {
         if ( last_code != -1 )
         {
-          /* we are done adding a chunk, fill in the size field 
+          /* we are done adding a chunk, fill in the size field */
           if ( size_p != NULL )
           {
             *size_p++ = (FT_Byte)(   pfb_chunk_size         & 0xFF );
@@ -646,16 +667,16 @@
 
         *p++ = 0x80;
         if ( code == 5 )
-          *p++ = 0x03;  /* the end 
+          *p++ = 0x03;  /* the end */
         else if ( code == 2 )
-          *p++ = 0x02;  /* binary segment 
+          *p++ = 0x02;  /* binary segment */
         else
-          *p++ = 0x01;  /* ASCII segment 
+          *p++ = 0x01;  /* ASCII segment */
 
         if ( code != 5 )
         {
-          size_p = p;   /* save for later 
-          p += 4;       /* make space for size field 
+          size_p = p;   /* save for later */
+          p += 4;       /* make space for size field */
         }
       }
 
@@ -674,7 +695,7 @@
   }
 
 
-  /* Create a new FT_Face from a file path to an LWFN file. 
+  /* Create a new FT_Face from a file path to an LWFN file. */
   static FT_Error
   FT_New_Face_From_LWFN( FT_Library    library,
                          const UInt8*  pathname,
@@ -693,7 +714,7 @@
     pfb_data = NULL;
     pfb_size = 0;
     error = read_lwfn( library->memory, res, &pfb_data, &pfb_size );
-    CloseResFile( res ); /* PFB is already loaded, useless anymore 
+    CloseResFile( res ); /* PFB is already loaded, useless anymore */
     if ( error )
       return error;
 
@@ -706,7 +727,7 @@
   }
 
 
-  /* Create a new FT_Face from an SFNT resource, specified by res ID. 
+  /* Create a new FT_Face from an SFNT resource, specified by res ID. */
   static FT_Error
   FT_New_Face_From_SFNT( FT_Library  library,
                          ResID       sfnt_id,
@@ -773,7 +794,7 @@
   }
 
 
-  /* Create a new FT_Face from a file path to a suitcase file. 
+  /* Create a new FT_Face from a file path to a suitcase file. */
   static FT_Error
   FT_New_Face_From_Suitcase( FT_Library    library,
                              const UInt8*  pathname,
@@ -821,7 +842,7 @@
 
 
   /* documentation is in ftmac.h */
-#ifdef GIVEAFK 1
+
   FT_EXPORT_DEF( FT_Error )
   FT_New_Face_From_FOND( FT_Library  library,
                          Handle      fond,

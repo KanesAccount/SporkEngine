@@ -21,7 +21,6 @@
 
 
 #include <ft2build.h>
-#define PCF_CONFIG_OPTION_LONG_FAMILY_NAMES 
 
 
 FT_BEGIN_HEADER
