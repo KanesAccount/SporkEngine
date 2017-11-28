@@ -4,7 +4,6 @@
 #include "renderer2D.h"
 #include "renderable2D.h"
 #include "../buffers/indexBuffer.h"
-#include "../../ext/freetype-gl/freetype-gl.h"
 
 namespace spork { namespace graphics {
 
@@ -29,8 +28,8 @@ namespace spork { namespace graphics {
 		VertexData* m_Buffer;
 
 		std::vector<GLuint> m_TexVec;
-		ftgl::texture_atlas_t* m_Atlas;
-		ftgl::texture_font_t* m_Font;
+		//ftgl::texture_atlas_t* m_Atlas;
+		//ftgl::texture_font_t* m_Font;
 
 	public:
 		BatchRenderer2D();
@@ -38,7 +37,7 @@ namespace spork { namespace graphics {
 
 		void begin();
 		void submit(const Renderable2D* renderable) override;
-		void drawText(const std::string& text, const maths::vec3 pos, const maths::vec4& col) override;
+		//void drawText(const std::string& text, const maths::vec3 pos, const maths::vec4& col) override;
 		void end();
 		void flush() override;
 	private:

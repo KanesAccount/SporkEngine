@@ -11,7 +11,7 @@ namespace spork { namespace gameobject { namespace component {
 
 		static ComponentName* StaticGetName()
 		{
-			ComponentName name({ "Transform" });
+			static ComponentName name({ "Transform" });
 			return &name;
 		};
 	public:

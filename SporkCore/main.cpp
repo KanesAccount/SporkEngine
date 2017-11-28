@@ -1,6 +1,6 @@
-#include "src/sporkCoreHeaders.h"
 #include <time.h>
 #include <FreeImage.h>
+#include "src/sporkCoreHeaders.h"
 
 #define TEST_50K 0
 
@@ -91,16 +91,19 @@ int main()
 	TextContainer* fps = new TextContainer("", 0.4f, 0.4f, vec4(0.3f, 0.3f, 0.3f, 0.9f));
 	l->add(new Sprite(0, 0, 5, 1.5f, vec4(0.3f, 0.3f, 0.3f, 0.9f)));
 	l->add(fps);
-
 	layer.add(l);
+
+	maths::vec3 cameraPos = maths::vec3(0.0f, 0.0f, 3.0f);
 
 	srand(time(NULL));
 	Timer time;
 	float timer = 0;
 	unsigned int frames = 0;
 
+	Time deltaTime;
 	while (!window.closed())
 	{
+		deltaTime.update();
 		window.clear();
 		double x, y;
 		window.getMousePosition(x, y);
@@ -130,3 +133,8 @@ int main()
 	return 0;
 }
 
+void processInput(GLFWwindow *window)
+{
+    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+        glfwSetWindowShouldClose(window, true);
+}

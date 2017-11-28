@@ -5,6 +5,7 @@
 #include "maths/maths.h"
 #include "utils/fileutil.h"
 #include "utils/timer.h"
+#include "utils/time.h"
 #include "utils/fontManager.h"
 
 #include "graphics/buffers/buffer.h"

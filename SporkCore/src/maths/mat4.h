@@ -23,6 +23,9 @@ namespace spork { namespace maths {
 		friend mat4 operator*(mat4 left, const mat4& right);
 		mat4& operator*=(const mat4& other);
 
+		//Matrix inversion
+		mat4& invert();
+
 		//Vec3 multiplication
 		vec3 multiply(const vec3& other) const;
 		friend vec3 operator*(const mat4& left, const vec3& right);

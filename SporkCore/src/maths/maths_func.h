@@ -10,4 +10,13 @@ namespace spork { namespace maths {
 		return degrees * (M_PI / 180.0f);
 	}
 
+	inline float sqrt(float value)
+	{
+		return ::sqrt(value);
+	}
+
+	inline float rsqrt(float value)
+	{
+		return 1.0f / ::sqrt(value);
+	}
 } }
