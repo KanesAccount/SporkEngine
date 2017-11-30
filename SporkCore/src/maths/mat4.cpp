@@ -304,4 +304,26 @@ namespace spork { namespace maths {
 		return result;
 	}
 
+	mat4 mat4::lookAt(const vec3& cam, const vec3& obj, const vec3& up)
+	{
+		mat4 result = identity();
+		vec3 f = (obj - cam).normalize();
+		vec3 s = f.cross(up.normalize());
+		vec3 u = s.cross(f);
+
+		result.elements[0 + 0 * 4] = s.x;
+		result.elements[0 + 1 * 4] = s.y;
+		result.elements[0 + 2 * 4] = s.z;
+
+		result.elements[1 + 0 * 4] = u.x;
+		result.elements[1 + 1 * 4] = u.y;
+		result.elements[1 + 2 * 4] = u.z;
+
+		result.elements[2 + 0 * 4] = -f.x;
+		result.elements[2 + 1 * 4] = -f.y;
+		result.elements[2 + 2 * 4] = -f.z;
+
+		return result * translate(vec3(-cam.x, -cam.y, -cam.z));
+
+	}
 } }

@@ -41,7 +41,8 @@ namespace spork { namespace maths {
 		static mat4 translate(const vec3& translate);
 		static mat4 rotation(float angle, const vec3& axis);
 		static mat4 scale(const vec3& scale);
-
+		//View helper
+		static mat4 lookAt(const vec3& cam, const vec3& obj, const vec3& up);
 	};	
 
 }	}

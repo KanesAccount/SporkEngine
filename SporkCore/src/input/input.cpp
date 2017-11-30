@@ -1,10 +1,10 @@
 #include "input.h"
-/*
-namespace spork { namespace graphics {
-		//Static var declarations
-		std::vector <int> Input::keys;
-		std::vector <int> Input::downKeys;
-		std::vector <int> Input::upKeys;
+
+namespace spork { namespace app {
+
+		Input::Input()
+		{
+		}
 
 		// Search all currently pressed keys for keyCode
 		bool Input::getKey(int keycode)
@@ -36,6 +36,42 @@ namespace spork { namespace graphics {
 			}
 			return false;
 		}
-	}
-}
-*/
+
+		// Update keeps track of keys pressed and released for each frame
+		void Input::update()
+		{
+			upKeys.clear();
+
+			for (int i = 0; i < NUM_KEYS; i++)
+			{
+				if (!getKey(i))	
+				{
+					if (std::find(currentKeys.begin(), currentKeys.end(), i) != currentKeys.end())
+						upKeys.push_back(i);
+				}
+			}
+
+			downKeys.clear();
+
+			for (int i = 0; i < NUM_KEYS; i++)
+			{
+				if (getKey(i))
+				{
+					if (std::find(currentKeys.begin(), currentKeys.end(), i) != currentKeys.end())
+						continue;
+					else
+						downKeys.push_back(i);
+				}
+			}
+
+			currentKeys.clear();
+
+			for (int i = 0; i < NUM_KEYS; i++)
+			{
+				if (getKey(i))
+					currentKeys.push_back(i);
+			}
+		}
+} }
+
+

@@ -23,7 +23,7 @@ namespace spork { namespace graphics {
 	private:
 		GLuint m_VAO;
 		GLuint m_VBO;
-		indexBuffer* m_IBO;
+		IndexBuffer* m_IBO;
 		GLsizei m_IndexCount;
 		VertexData* m_Buffer;
 

@@ -2,20 +2,22 @@
 
 namespace spork { namespace graphics {
 
-	vertexArray::vertexArray()
+	VertexArray::VertexArray()
 	{
 		glGenVertexArrays(1, &m_ArrayID);
 	}
 
-	vertexArray::~vertexArray()
+	VertexArray::~VertexArray()
 	{
 		for (int i = 0; i < m_Buffers.size(); i++)
 		{
 			delete m_Buffers[i];
 		}
+
+		glDeleteVertexArrays(1, &m_ArrayID);
 	}
 
-	void vertexArray::addBuffer(Buffer* buffer, GLuint index)
+	void VertexArray::addBuffer(Buffer* buffer, GLuint index)
 	{
 		bind();
 		buffer->bind();
@@ -27,14 +29,14 @@ namespace spork { namespace graphics {
 		unbind();
 	}
 
-	void vertexArray::bind() const
+	void VertexArray::bind() const
 	{
 		glBindVertexArray(m_ArrayID);
 	}
 
-	void vertexArray::unbind() const
+	void VertexArray::unbind() const
 	{
 		glBindVertexArray(0);
 	}
 
-}	}
+} }

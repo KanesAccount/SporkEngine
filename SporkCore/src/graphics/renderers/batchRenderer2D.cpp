@@ -50,7 +50,7 @@ namespace spork { namespace graphics {
 			offset += 4;
 		}
 
-		m_IBO = new indexBuffer(indices, RENDERER_INDICES_SIZE);
+		m_IBO = new IndexBuffer(indices, RENDERER_INDICES_SIZE);
 
 		glBindVertexArray(0);
 

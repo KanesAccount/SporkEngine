@@ -15,7 +15,7 @@ namespace spork { namespace graphics {
 		delete m_Shader;
 		delete m_Renderer;
 
-		for (int i = 0; i < m_Renderables.size(); i++)
+		for (uint i = 0; i < m_Renderables.size(); i++)
 			delete m_Renderables[i];
 	}
 

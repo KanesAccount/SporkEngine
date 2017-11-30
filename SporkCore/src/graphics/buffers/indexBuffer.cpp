@@ -1,27 +1,40 @@
 #include "indexBuffer.h"
 
-namespace spork {
-	namespace graphics {
+namespace spork { namespace graphics {
 
-		indexBuffer::indexBuffer(GLuint* data, GLsizei count)
-			: m_Count(count)
+		IndexBuffer::IndexBuffer()
 		{
 			glGenBuffers(1, &m_BufferID);
-			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_BufferID);
-			glBufferData(GL_ELEMENT_ARRAY_BUFFER, count * sizeof(GLushort), data, GL_STATIC_DRAW);
-			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 		}
 
-		void indexBuffer::bind() const
+		IndexBuffer::IndexBuffer(GLuint* data, GLsizei amount)
+			: m_Amount(amount)
+		{
+			glGenBuffers(1, &m_BufferID);
+			load(data, amount);
+		}
+
+		IndexBuffer::~IndexBuffer()
+		{
+			glDeleteBuffers(1, &m_BufferID);
+		}
+
+		void IndexBuffer::load(GLuint * data, GLsizei amount)
+		{
+			m_Amount = amount;
+
+			bind();
+			glBufferData(GL_ELEMENT_ARRAY_BUFFER, amount * sizeof(GLuint), data, GL_STATIC_DRAW);
+			unbind();
+		}
+
+		void IndexBuffer::bind() const
 		{
 			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_BufferID);
 		}
 
-		void indexBuffer::unbind() const
+		void IndexBuffer::unbind() const
 		{
 			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 		}
-
-
-	}
-}
+} }

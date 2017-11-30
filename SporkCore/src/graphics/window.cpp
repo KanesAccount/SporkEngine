@@ -9,6 +9,7 @@ namespace spork { namespace graphics {
 			m_Title = title;
 			m_Width = width;
 			m_Height = height;
+
 			if (!init())
 				glfwTerminate();
 
@@ -24,6 +25,7 @@ namespace spork { namespace graphics {
 		//Windows destructor
 		Window::~Window()
 		{
+			glfwDestroyWindow(m_Window);
 			glfwTerminate();
 		}
 		//Initialise GLFW, GLEW and the GLFW Window
@@ -35,7 +37,13 @@ namespace spork { namespace graphics {
 				return false;
 			}
 			//Create glfw Window
-			m_Window = glfwCreateWindow(m_Width, m_Height, m_Title, NULL, NULL);
+			if (FULLSCREEN_MODE) {
+				setFullscreenResolution();
+				m_Window = glfwCreateWindow(m_Width, m_Height, m_Title, glfwGetPrimaryMonitor(), NULL);
+			}
+			else {
+				m_Window = glfwCreateWindow(m_Width, m_Height, m_Title, NULL, NULL);
+			}
 			if (!m_Window)
 			{
 				glfwTerminate();
@@ -51,6 +59,7 @@ namespace spork { namespace graphics {
 			glfwSetKeyCallback(m_Window, key_callback);
 			glfwSetMouseButtonCallback(m_Window, mouse_button_callback);
 			glfwSetCursorPosCallback(m_Window, cursor_position_callback);
+			glfwSetScrollCallback(m_Window, scroll_callback);
 
 			if (glewInit() != GLEW_OK)
 			{
@@ -58,11 +67,31 @@ namespace spork { namespace graphics {
 				return false;
 			}
 
-			glEnable(GL_BLEND);
-			glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+			// Setup the mouse settings
+			if (!MOUSE_VISIBLE)
+				glCall(glfwSetInputMode(m_Window, GLFW_CURSOR, GLFW_CURSOR_DISABLED));
+
+			// Check to see if v-sync was enabled and act accordingly
+			if (V_SYNC) {
+				glfwSwapInterval(1);
+			}
+			else {
+				glfwSwapInterval(0);
+			}
+
+
+			glCall(glEnable(GL_BLEND));
+			glCall(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA));
 			
 			std::cout << "OpenGL: " << glGetString(GL_VERSION) << std::endl;
 			return true;
+		}
+
+		// Sets the Window's Size to the Primary Monitor's Resolution
+		void Window::setFullscreenResolution() {
+			const GLFWvidmode *mode = glfwGetVideoMode(glfwGetPrimaryMonitor());
+			m_Width = mode->width;
+			m_Height = mode->height;
 		}
 
 		bool Window::closed() const
@@ -86,15 +115,9 @@ namespace spork { namespace graphics {
 			return m_MouseButtons[button];
 		}
 
-		void Window::getMousePosition(double& x, double& y) const
-		{
-			x = mx;
-			y = my;
-		}
-
 		void Window::clear() const
 		{
-			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+			glCall(glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT));
 		}
 
 		void Window::update() 
@@ -110,12 +133,12 @@ namespace spork { namespace graphics {
 
 		void windowResize(GLFWwindow *window, int width, int height)
 		{
-			glViewport(0, 0, width, height);
+			glCall(glViewport(0, 0, width, height));
 		}
 		//glfw key input
 		void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
 		{
-			Window* win = (Window*) glfwGetWindowUserPointer(window);
+			Window* win = (Window*)glfwGetWindowUserPointer(window);
 			win->m_Keys[key] = action != GLFW_RELEASE;
 		}
 		//glfw mouse input
@@ -130,5 +153,11 @@ namespace spork { namespace graphics {
 			Window* win = (Window*)glfwGetWindowUserPointer(window);
 			win->mx = xpos;
 			win->my = ypos;
+		}
+		//Mouse scroll callback
+		static void scroll_callback(GLFWwindow* window, double xoffset, double yoffset) {
+			Window* win = (Window*)glfwGetWindowUserPointer(window);
+			win->scrollX = xoffset;
+			win->scrollY = yoffset;
 		}
 }	} 

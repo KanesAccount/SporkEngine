@@ -1,23 +1,23 @@
 #pragma once
-/*
-#include <string>
-#include <vector>
-namespace spork { namespace graphics {
-		class Window;
+#include "../spork/spork.h"
+#define NUM_KEYS 256
+
+namespace spork { namespace app {
+		//class Window;
 		
 		class Input {
-			friend class spork::graphics::Window;
-
+			//friend class graphics::Window;
 		public:
-			static bool getKey(int keyCode);
-			static bool getKeyDown(int keyCode);
-			static bool getKeyUp(int keyCode);
+			Input();
+			bool getKey(int keyCode);
+			bool getKeyDown(int keyCode);
+			bool getKeyUp(int keyCode);
+			void update();
 		private:
-			static std::vector <int> keys;
-			static std::vector <int> upKeys;
-			static std::vector <int> downKeys;
-		};
+			std::vector<int> keys;
+			std::vector<int> upKeys;
+			std::vector<int> downKeys;
 
-	}
-}
-*/
+			std::vector<int> currentKeys;
+		};
+} }

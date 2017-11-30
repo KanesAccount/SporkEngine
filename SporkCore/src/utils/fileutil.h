@@ -1,13 +1,13 @@
 #pragma once
-#include <string>
-#include <fstream>
+#include "../spork/spork.h"
+#include "myString.h"
 
 namespace spork {
 
 	class FileUtil
 	{
 	public:
-		static std::string read_file(const char* filepath)
+		static String read_file(const char* filepath)
 		{
 			FILE* file = fopen(filepath, "rt");
 			fseek(file, 0, SEEK_END);
@@ -18,7 +18,7 @@ namespace spork {
 			fread(data, 1, length, file);	//assign file contents to data
 			fclose(file);	//close file
 
-			std::string result(data);
+			String result(data);
 			delete[] data;
 			return result;
 		}

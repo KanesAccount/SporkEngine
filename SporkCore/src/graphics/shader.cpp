@@ -25,7 +25,6 @@ namespace spork { namespace graphics {
 		const char* vertSource = vertSourceString.c_str();
 		const char* fragSource = fragSourceString.c_str();
 
-
 		glShaderSource(vertex, 1, &vertSource, NULL);
 		glCompileShader(vertex);
 		

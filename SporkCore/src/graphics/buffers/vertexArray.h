@@ -6,18 +6,18 @@
 
 namespace spork { namespace graphics {
 
-	class vertexArray
+	class VertexArray
 	{
 	private:
 		GLuint m_ArrayID;
 		std::vector<Buffer*> m_Buffers;
 	public:
-		vertexArray();
-		~vertexArray();
+		VertexArray();
+		~VertexArray();
 
 		void addBuffer(Buffer* buffer, GLuint index);
 		void bind() const;
 		void unbind() const;
 	};
 
-}	}
+} }

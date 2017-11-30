@@ -1,16 +1,10 @@
-#pragma once
-//#include "camera.h"
+#ifndef FPSCAMERA_H
+#define FPSCAMERA_H
+//#pragma once
 #include <GL/glew.h>
 #include "../../maths/maths.h"
 #include "../../maths/maths_func.h"
 #include "../../utils/time.h"
-
-//Default cam vals
-#define YAW -90.0f
-#define PITCH 0.0f
-#define SPEED  40.0f
-#define SENSITIVITY 0.10f
-#define FOV 80.0f
 
 namespace spork { namespace graphics {
 
@@ -24,23 +18,30 @@ namespace spork { namespace graphics {
 		DOWN
 	};
 
+	//Default camera values
+	const float YAW = -90.0f;
+	const float PITCH = 0.0f;
+	const float SPEED = 40.0f;
+	const float SENSITIVITY = 0.1f;
+	const float ZOOM = 45.0f;
+
 	class FPScamera
 	{
-	private:
+	public:
 		float m_MouseSensitivity;
 		float m_CamSpeed;
-		float m_SprintSpeed;
 		float m_Pitch, m_Yaw;
-		float m_FOV;
+		float m_Zoom;
 		//bool m_MouseClicked;
+	
 		maths::vec3 m_Pos, m_Front, m_Right, m_Up, m_WorldUp;
-		
-	public:
-		FPScamera(maths::vec3 pos, maths::vec3 up, GLfloat yaw, GLfloat pitch);
+
+		FPScamera(maths::vec3 pos, maths::vec3 up, float yaw, float pitch);
 
 		// Focus() override;
 		//void Update() override;
-		void processMouseMove(GLfloat xOffset, GLfloat yOffset);
+		void processKeyboard(camMovement direction, GLfloat deltaTime);
+		void processMouseMove(float xOffset, float yOffset, bool holdPitch = true);
 		void processMouseScroll(float yOffset);
 		
 		//Getters
@@ -48,9 +49,12 @@ namespace spork { namespace graphics {
 		inline float getPitch() const { return m_Pitch; }
 		inline float getMovementSpeed() const { return m_CamSpeed; }
 		inline float getMouseSensitivity() const { return m_MouseSensitivity; }
-		inline float getFOV() const { return m_FOV; }
+		inline float getFOV() const { return m_Zoom; }
 		inline const maths::vec3& getFront() const { return m_Front; }
 		inline const maths::vec3& getPosition() const { return m_Pos; }
+
+		maths::mat4 getViewMat();
+
 		void updateVecs();
 		//priv:
 		//maths::Quaternion getOrientation() const;
@@ -59,3 +63,4 @@ namespace spork { namespace graphics {
 		//maths::vec3 FPScamera::GetRightDir(const maths::Quaternion& orientation) const;	
 	};
 } }
+#endif
