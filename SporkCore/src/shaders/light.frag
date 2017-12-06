@@ -21,7 +21,7 @@ void main()
 	float lightPow = 50.0f;	//Set to 50.0f default
 
 	//Material properties
-	vec3 matDiffuseCol = texture( myTexSampler, UV ).rgb;
+	vec3 matDiffuseCol = texture(myTexSampler, UV).rgb;
 	vec3 matAmbientCol = vec3(0.1,0.1,0.1) * matDiffuseCol;	//Set ambient to small val 0.1,0.1,0.1
 	vec3 matSpecularCol = vec3(0.3,0.3,0.3);
 
@@ -55,10 +55,10 @@ void main()
 	
 	//FragColor.xyz = n;
 
-	FragColor = vec4(matAmbientCol + matDiffuseCol * lightCol * lightPow * cosTheta / (distance*distance) + matSpecularCol * lightCol * lightPow * pow(cosAlpha,5) / (distance*distance), 1);	
+	//FragColor = vec4(matAmbientCol + matDiffuseCol * lightCol * lightPow * cosTheta / (distance*distance) + matSpecularCol * lightCol * lightPow * pow(cosAlpha,5) / (distance*distance), 1);	
 	
-	//FragColor =
-		//matAmbientCol +
-		//matDiffuseCol * lightCol * lightPow * cosTheta / (distance*distance) + 
-		//matSpecularCol * lightCol * lightPow * pow(cosAlpha,5) / (distance*distance);	
+	FragColor = vec4(
+		matAmbientCol +
+		matDiffuseCol * lightCol * lightPow * cosTheta / (distance*distance) + 
+		matSpecularCol * lightCol * lightPow * pow(cosAlpha,5) / (distance*distance), 1);	
 }

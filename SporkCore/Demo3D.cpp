@@ -2,7 +2,7 @@
 
 namespace spork {
 	Demo3D::Demo3D(app::Controls* controller, graphics::Window* window)
-		: m_Controller(controller), m_Window(window), m_ModelShader("src/shaders/light.vert", "src/shaders/light.frag")/*, m_SkyboxShader("src/shaders/skybox.frag", "src/sybox.vert")*/, hooman("src/res/models/tests/Human_body_with_net.obj", false), nano("src/res/models/crysis/nanosuit.obj"), TextManager("src/res/Holstein.DDS"), m_TextShader("src/shaders/textShader.vert", "src/shaders/textShader.frag")
+		: m_Controller(controller), m_Window(window), m_ModelShader("src/shaders/light.vert", "src/shaders/light.frag")/*, m_SkyboxShader("src/shaders/skybox.frag", "src/sybox.vert")*/, nano("src/res/models/crysis/nanosuit.obj"), TextManager("src/res/Holstein.DDS"), m_TextShader("src/shaders/textShader.vert", "src/shaders/textShader.frag")
 	{
 		//m_Renderer = new graphics::Renderer3D(camera);
 		init();
@@ -46,7 +46,34 @@ namespace spork {
 
 	void Demo3D::onUpdate(float deltaTime)
 	{
+		////Update view matrices dependant on input
+		//using namespace maths;
+		//m_Controller->computeMatricesFromInputs(m_Window, m_Window->getWidth() / 2, m_Window->getHeight() / 2);
+		//mat4 projMat = m_Controller->getProjMat();
+		//mat4 viewMat = m_Controller->getViewMat();
+		//mat4 modMat = mat4::identity();
+		//modMat = mat4::translate(vec3(0.0f, -2.75f, 0.0f));
+		//modMat = mat4::scale(vec3(0.2f, 0.2f, 0.2f));
+		//mat4 MVP = projMat * viewMat * modMat;
 
+		//m_ModelShader.setUniformMat4("MVP", MVP);
+		//m_ModelShader.setUniformMat4("M", modMat);
+		//m_ModelShader.setUniformMat4("V", viewMat);
+
+		//vec3 lightPos = vec3(4.0f, 4.0f, 4.0f);
+
+		////GLuint lightID = glGetUniformLocation(m_ModelShader.m_ShaderID, "lightPos_WorldSpace");
+		////glUniform3f(lightID, vec3(lightPos.x, lightPos.y, lightPos.z));
+		//m_ModelShader.setUniform3f("lightPos_WorldSpace", vec3(lightPos.x, lightPos.y, lightPos.z));
+
+	}
+
+	void Demo3D::onRender()
+	{
+		//Shaders
+		//Models
+		//glCall(glPolygonMode(GL_FRONT_AND_BACK, GL_LINE));		//WIREFRAME MODE
+		//Update view matrices dependant on input
 		using namespace maths;
 		m_Controller->computeMatricesFromInputs(m_Window, m_Window->getWidth() / 2, m_Window->getHeight() / 2);
 		mat4 projMat = m_Controller->getProjMat();
@@ -61,18 +88,14 @@ namespace spork {
 		m_ModelShader.setUniformMat4("V", viewMat);
 
 		vec3 lightPos = vec3(4.0f, 4.0f, 4.0f);
+
+		//GLuint lightID = glGetUniformLocation(m_ModelShader.m_ShaderID, "lightPos_WorldSpace");
+		//glUniform3f(lightID, vec3(lightPos.x, lightPos.y, lightPos.z));
+		m_ModelShader.enable();
 		m_ModelShader.setUniform3f("lightPos_WorldSpace", vec3(lightPos.x, lightPos.y, lightPos.z));
 
-	}
-
-	void Demo3D::onRender()
-	{
-		//Shaders
-		//Models
-		//glCall(glPolygonMode(GL_FRONT_AND_BACK, GL_LINE));		//WIREFRAME MODE
-		
 		nano.draw(m_ModelShader);
-		hooman.draw(m_ModelShader);
+		
 		//m_ModelShader.disable();
 		//for (uint i = 0; i < m_Models.size(); i++)
 		//{

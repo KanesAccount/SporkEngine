@@ -28,7 +28,7 @@ void main()
 	eyeDir_CamSpace = vec3(0,0,0) - vertPos_CamSpace;
 
 	//Vector from evrt pos to light in camera space, M is ommited as it is set to identity
-	vec3 lightPos_CamSpace = ( V * vec4(lightPos_WorldSpace,1)).xyz;
+	vec3 lightPos_CamSpace = ( V * vec4(lightPos_WorldSpace, 1)).xyz;
 	lightDir_CamSpace = lightPos_CamSpace + eyeDir_CamSpace;
 
 	//Vert noraml in camera space

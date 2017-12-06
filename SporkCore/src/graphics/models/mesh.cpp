@@ -84,7 +84,7 @@ namespace spork { namespace graphics {
 
 			//Set sampler to correct texture unit
 			//glCall((glGetUniformLocation(shader.m_ShaderID, (name + number).c_str()), i));
-			glGetUniformLocation(shader.m_ShaderID, "myTexSampler");
+			glCall(glGetUniformLocation(shader.m_ShaderID, "myTexSampler"));
 
 			//shader.setFloat(("material." + name + number).c_str(), i);
 			//Bind the tex

@@ -30,7 +30,6 @@ namespace spork {
 		//graphics::Shader m_Shader;
 
 		graphics::Model nano;
-		graphics::Model hooman;
 
 		graphics::TextContainer TextManager;
 

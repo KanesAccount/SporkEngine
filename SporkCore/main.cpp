@@ -28,12 +28,7 @@ int main()
 	//glfwSetScrollCallback(window.getWindow(), scroll_callback);
 
 	Demo3D demo(&controller, &window);
-	
-	//glEnable(GL_DEPTH_TEST);	//Enable depth test
-	//glEnable(GL_CULL_FACE);		//Cull triangles /with /normals oppo to cam
-	//glDepthFunc(GL_LESS);		//Accept fragment if its //closer to cam then previous frag
 
-	
 #if TEST_50K 
 	TileLayer layer(&shader);
 	for (float y = -9.0f; y < 9.0f; y += 0.1)

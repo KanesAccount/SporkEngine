@@ -103,7 +103,7 @@ namespace spork { namespace graphics {
 
 	void Shader::setUniform3f(const GLchar* name, const maths::vec3& vector)
 	{
-		glUniform3f(getUniformLoc(name), vector.x, vector.y, vector.z);
+		glCall(glUniform3f(getUniformLoc(name), vector.x, vector.y, vector.z));
 
 	}
 

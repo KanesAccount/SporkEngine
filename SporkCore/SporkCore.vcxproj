@@ -243,6 +243,8 @@
     <None Include="src\shaders\basic.vert" />
     <None Include="src\shaders\lamp.frag" />
     <None Include="src\shaders\lamp.vert" />
+    <None Include="src\shaders\light.frag" />
+    <None Include="src\shaders\light.vert" />
     <None Include="src\shaders\lrn.frag" />
     <None Include="src\shaders\lrn.vert" />
     <None Include="src\shaders\model.frag" />
