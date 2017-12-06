@@ -2,6 +2,7 @@
 #include <string>
 #include <GL/glew.h>
 #include "../utils/imageLoader.h"
+#include "../utils/log.h"
 
 namespace spork { namespace graphics {
 
@@ -18,7 +19,7 @@ namespace spork { namespace graphics {
 		void bind() const;
 		void unbind() const;
 
-		inline unsigned int getID() const { return m_TexID; }
+		inline GLuint getID() const { return m_TexID; }
 		inline unsigned int getWidth() const { return m_Width; }
 		inline unsigned int getHeight() const { return m_Height; }
 	private:

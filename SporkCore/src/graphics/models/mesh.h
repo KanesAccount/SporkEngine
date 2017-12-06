@@ -29,6 +29,7 @@ namespace spork { namespace graphics {
 		uint VAO, VBO, EBO;
 	public:
 		Mesh(std::vector<Vertex> vertices, std::vector<uint> indice, std::vector<Tex> textures);
+		~Mesh();
 		void draw(Shader shader);
 
 		std::vector<Vertex> vertices;

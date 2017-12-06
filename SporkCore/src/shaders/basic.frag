@@ -26,5 +26,4 @@ void main()
 	}
 	color = texColor * intensity;
 	//color = texColor;
-
 }

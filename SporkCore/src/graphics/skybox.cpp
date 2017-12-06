@@ -2,70 +2,87 @@
 
 namespace spork { namespace graphics {
 	
-	Skybox::Skybox(const std::vector<const char*>& filepath, FPScamera* camera, Window* window)
-		: m_SkyboxShader("src/shaders/skybox.vert", "src/shaders/sksybox.frag"), m_Camera(camera), m_Window(window)
+	Skybox::Skybox(std::vector<const char*>& filepath, app::Controls* controller, Window* window)
+		: m_SkyboxShader("src/shaders/skybox.vert", "src/shaders/skybox.frag"), m_Controller(controller), m_Window(window)
 	{
 		m_SkyboxCubemap = utils::LoadUtils::loadCubemap(filepath);
 
-		GLfloat skyboxVerts[]
-		{
-			// Front
-			-1.0, -1.0,  1.0,
-			1.0, -1.0,  1.0,
-			1.0,  1.0,  1.0,
-			-1.0,  1.0,  1.0,
-			// Back
-			-1.0, -1.0, -1.0,
-			1.0, -1.0, -1.0,
-			1.0,  1.0, -1.0,
-			-1.0,  1.0, -1.0,
-		};
+		float skyboxVerts[] = {
+			// positions          
+			-1.0f,  1.0f, -1.0f,
+			-1.0f, -1.0f, -1.0f,
+			1.0f, -1.0f, -1.0f,
+			1.0f, -1.0f, -1.0f,
+			1.0f,  1.0f, -1.0f,
+			-1.0f,  1.0f, -1.0f,
 
-		GLuint skyboxIndices[] = {
-			// front
-			2, 1, 0,
-			0, 3, 2,
-			// top
-			6, 5, 1,
-			1, 2, 6,
-			// back
-			5, 6, 7,
-			7, 4, 5,
-			// bottom
-			3, 0, 4,
-			4, 7, 3,
-			// left
-			1, 5, 4,
-			4, 0, 1,
-			// right
-			6, 2, 3,
-			3, 7, 6,
-		};
+			-1.0f, -1.0f,  1.0f,
+			-1.0f, -1.0f, -1.0f,
+			-1.0f,  1.0f, -1.0f,
+			-1.0f,  1.0f, -1.0f,
+			-1.0f,  1.0f,  1.0f,
+			-1.0f, -1.0f,  1.0f,
 
-		m_SkyboxVBO.load(skyboxVerts, 8 * 3, 3);
-		m_SkyboxIBO.load(skyboxIndices, 36);
+			1.0f, -1.0f, -1.0f,
+			1.0f, -1.0f,  1.0f,
+			1.0f,  1.0f,  1.0f,
+			1.0f,  1.0f,  1.0f,
+			1.0f,  1.0f, -1.0f,
+			1.0f, -1.0f, -1.0f,
+
+			-1.0f, -1.0f,  1.0f,
+			-1.0f,  1.0f,  1.0f,
+			1.0f,  1.0f,  1.0f,
+			1.0f,  1.0f,  1.0f,
+			1.0f, -1.0f,  1.0f,
+			-1.0f, -1.0f,  1.0f,
+
+			-1.0f,  1.0f, -1.0f,
+			1.0f,  1.0f, -1.0f,
+			1.0f,  1.0f,  1.0f,
+			1.0f,  1.0f,  1.0f,
+			-1.0f,  1.0f,  1.0f,
+			-1.0f,  1.0f, -1.0f,
+
+			-1.0f, -1.0f, -1.0f,
+			-1.0f, -1.0f,  1.0f,
+			1.0f, -1.0f, -1.0f,
+			1.0f, -1.0f, -1.0f,
+			-1.0f, -1.0f,  1.0f,
+			1.0f, -1.0f,  1.0f
+		};
+		
+		m_SkyboxVBO.load(skyboxVerts, sizeof(skyboxVerts), 108);
 		m_SkyboxVAO.addBuffer(&m_SkyboxVBO, 0);
 	}
 
 	void Skybox::draw()
 	{
-		m_SkyboxShader.enable();
+		//m_SkyboxShader.enable();
 		//Send textures to shader
-		glActiveTexture(GL_TEXTURE0);
-		m_SkyboxShader.setUniform1f("skyboxCubemap", 0);
-		glBindTexture(GL_TEXTURE_CUBE_MAP, m_SkyboxCubemap);
-
-		m_SkyboxShader.setUniformMat4("view", m_Camera->getViewMat());
-		m_SkyboxShader.setUniformMat4("projection", mat4::perspective(toRadians(m_Camera->getFOV()), (float)m_Window->getWidth() / (float)m_Window->getHeight(), 0.f, 1000.0f));
-
+		//glActiveTexture(GL_TEXTURE0);
+		//m_SkyboxShader.setUniform1i("skyboxCubemap", 0);
+		//glBindTexture(GL_TEXTURE_CUBE_MAP, m_SkyboxCubemap);
+	
 		//Vert shader changes depth to 1.0 & default depth buffer val is 1.0 
-		//so to draw the skybox need a call to the gldepth func
 		glDepthFunc(GL_LEQUAL);
+		m_SkyboxShader.enable();
+		//Set mats
+		m_SkyboxShader.setUniformMat4("view", m_Controller->getViewMat());
+		m_SkyboxShader.setUniformMat4("projection", mat4::perspective(toRadians(m_Controller->getFOV()), (float)m_Window->getWidth() / (float)m_Window->getHeight(), 0.f, 100.0f));
+
+		//Bind buffer objs
 		m_SkyboxVAO.bind();
 		m_SkyboxIBO.bind();
+
+		//Send textures to shader
+		glActiveTexture(GL_TEXTURE0);
+		m_SkyboxShader.setUniform1i("skyboxCubemap", 0);
+		glBindTexture(GL_TEXTURE_CUBE_MAP, m_SkyboxCubemap);
+
 		glDrawElements(GL_TRIANGLES, m_SkyboxIBO.getCount(), GL_UNSIGNED_INT, 0);
-		m_SkyboxIBO.unbind();
 		m_SkyboxVAO.unbind();
+		m_SkyboxIBO.unbind();
 		glDepthFunc(GL_LESS);
 
 		m_SkyboxShader.disable();

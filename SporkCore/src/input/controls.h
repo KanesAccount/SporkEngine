@@ -15,6 +15,8 @@ namespace spork { namespace app {
 		void computeMatricesFromInputs(graphics::Window* window, double halfWidth, double halfHeight);
 		inline maths::mat4 getViewMat() { return m_ViewMat; }
 		inline maths::mat4 getProjMat() { return m_ProjMat; }
+		inline float getFOV() { return m_FOV; }
+
 	private:
 		maths::mat4 m_ViewMat;
 		maths::mat4 m_ProjMat;
@@ -24,6 +26,7 @@ namespace spork { namespace app {
 		float m_FOV;
 		float m_Speed;
 		float m_MouseSpeed;
+		float m_SprintSpeed;
 	};
 } }
 #endif

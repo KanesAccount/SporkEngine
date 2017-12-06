@@ -4,7 +4,7 @@
 #include "mesh.h"
 #include "../shader.h"
 #include "../../utils/log.h"
-
+#include "../../utils/loadUtils.h"
 #include <assimp/Importer.hpp>
 #include <assimp/scene.h>
 #include <assimp/postprocess.h>
@@ -21,14 +21,13 @@ namespace spork { namespace graphics {
 		bool gammaCorrection;
 	public:
 		Model(const String& path, bool gamma = false);
-
+		utils::LoadUtils loader;
 		void draw(Shader shader);
 	private:
 		void loadModel(const String& path);
 		void processNode(aiNode* node, const aiScene* scene);
 		Mesh processMesh(aiMesh* mesh, const aiScene* scene);
-
-		uint loadTexFromFile(const char* path, const String& dir, bool gamma);
+	public:
 		std::vector<Tex>loadMaterialTextures(aiMaterial *mat, aiTextureType type, String typeName);
 	};
 } }

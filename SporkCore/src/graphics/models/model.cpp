@@ -73,18 +73,25 @@ namespace spork { namespace graphics {
 			}
 			else
 				vert.uv = vec2(0.0f, 0.0f);
+
 			//Tangent
-			tempVec.x = mesh->mTangents[i].x;
-			tempVec.y = mesh->mTangents[i].y;
-			tempVec.z = mesh->mTangents[i].z;
-			vert.tangent = tempVec;
+			if (mesh->mTangents)
+			{
+				tempVec.x = mesh->mTangents[i].x;
+				tempVec.y = mesh->mTangents[i].y;
+				tempVec.z = mesh->mTangents[i].z;
+				vert.tangent = tempVec;
+			}
 
 			//Bitangent
-			tempVec.x = mesh->mBitangents[i].x;
-			tempVec.y = mesh->mBitangents[i].y;
-			tempVec.z = mesh->mBitangents[i].z;
-			vert.bitangent = tempVec;
-			vertices.push_back(vert);
+			if (mesh->mBitangents)
+			{
+				tempVec.x = mesh->mBitangents[i].x;
+				tempVec.y = mesh->mBitangents[i].y;
+				tempVec.z = mesh->mBitangents[i].z;
+				vert.bitangent = tempVec;
+				vertices.push_back(vert);
+			}
 		}
 
 		//Process indices
@@ -99,7 +106,7 @@ namespace spork { namespace graphics {
 		}
 
 		//Process materials
-	
+		
 		aiMaterial* material = scene->mMaterials[mesh->mMaterialIndex];
 			
 		//Diffuse maps
@@ -146,7 +153,7 @@ namespace spork { namespace graphics {
 			{
 				//Texture hasnt been loaded
 				Tex texture;
-				texture.id = loadTexFromFile(str.C_Str(), dir, false);
+				texture.id = loader.loadTexFromFile(str.C_Str(), dir, false);
 				texture.type = typeName;
 				texture.path = str.C_Str();
 				textures.push_back(texture);
@@ -154,49 +161,6 @@ namespace spork { namespace graphics {
 			}
 		}
 		return textures;
-	}
-
-	uint Model::loadTexFromFile(const char* path, const String& dir, bool gamma)
-	{
-		String filename = String(path);
-		filename = dir + '/' + filename;
-		std::cout<< filename << "\n";
-		uint textureID;
-		glGenTextures(1, &textureID);	//Create the texture
-
-		int width, height, nrComponents;
-		unsigned char *data = stbi_load(filename.c_str(), &width, &height, &nrComponents, 0);
-		if (data)
-		{
-			GLenum format;
-			//Check number of components and set colour format accordingly
-			if (nrComponents == 1)
-				format = GL_RED;
-			else if (nrComponents == 3)
-				format = GL_RGB;
-			else if (nrComponents == 4)
-				format = GL_RGBA;
-
-			//Bind the texture & generate mipmaps 
-			glBindTexture(GL_TEXTURE_2D, textureID);
-			glTexImage2D(GL_TEXTURE_2D, 0, format, width, height, 0, format, GL_UNSIGNED_BYTE, data);
-			glGenerateMipmap(GL_TEXTURE_2D);
-
-			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
-			stbi_image_free(data);	//Cleanup
-		}
-		else
-		{
-			//DEBUG_LOG_ERROR("Texture failed to load at path: ", path);
-			std::cout<< "Texture failed to load at path: " << path <<"\n";
-			stbi_image_free(data);	//Cleanup
-		}
-
-		return textureID;
 	}
 
 	void Model::draw(Shader shader)

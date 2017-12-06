@@ -2,9 +2,9 @@
 #include "buffers/vertexArray.h"
 #include "buffers/indexBuffer.h"
 #include "buffers/Buffer.h"
-#include "camera/FPScamera.h"
 #include "shader.h"
 #include "window.h"
+#include "../input/controls.h"
 #include "../utils/loadUtils.h"
 
 namespace spork { namespace graphics {
@@ -12,13 +12,13 @@ namespace spork { namespace graphics {
 	class Skybox 
 	{
 	public:
-		Skybox(const std::vector<const char*>& filepath, FPScamera* camera, Window* window);
+		Skybox(std::vector<const char*>& filepath, app::Controls* controller, Window* window);
 
 		void draw();
 
 		inline uint getSkyboxCubemap() { return m_SkyboxCubemap; }
 	private:
-		FPScamera* m_Camera;
+		app::Controls* m_Controller;
 		Window* m_Window;
 		Shader m_SkyboxShader;
 

@@ -7,6 +7,8 @@
 #include "src/graphics/models/meshGenerator.h"
 #include "src/graphics/models/model.h"
 #include "src/input/input.h"
+#include "src/graphics/textContainer.h"
+#include "src/graphics/texture.h"
 
 namespace spork {
 
@@ -14,19 +16,26 @@ namespace spork {
 	{
 	private:
 		graphics::Window* m_Window;
-		graphics::FPScamera* m_Camera;
+		app::Controls* m_Controller;
 		graphics::Renderer3D* m_Renderer;
 		//graphics::MeshGenerator m_MeshGen;
-		//graphics::Skybox *m_Skybox;
+		graphics::Skybox *m_Skybox;
 
 		//std::vector<Renderable3D*> m_Renderables;
 		std::vector<graphics::Model> m_Models;
 		app::Input inputManager;
 		graphics::Shader m_ModelShader;
+		graphics::Shader m_TextShader;
 		//graphics::Shader m_SkyboxShader;
 		//graphics::Shader m_Shader;
+
+		graphics::Model nano;
+		graphics::Model hooman;
+
+		graphics::TextContainer TextManager;
+
 	public:
-		Demo3D(graphics::FPScamera* cam, graphics::Window* window);
+		Demo3D(app::Controls* controller, graphics::Window* window);
 		~Demo3D();
 
 		void input();
@@ -36,8 +45,7 @@ namespace spork {
 		void onUpdate(float deltaTime);
 		void onRender();
 
-		inline graphics::Renderer3D* getRenderer() const { return m_Renderer; }
-		inline graphics::FPScamera* getCamera() const { return m_Camera; }
+		inline app::Controls* getController() const { return m_Controller; }
 	private:
 		void init();
 	};

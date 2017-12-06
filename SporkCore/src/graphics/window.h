@@ -32,7 +32,7 @@ namespace spork { namespace graphics {
 
 		inline int getWidth() const { return m_Width; }
 		inline int getHeight() const { return m_Height; }
-
+		inline const Window* getPointer() const { return this; }
 
 		inline double getMouseX() const { return mx; }
 		inline double getMouseY() const { return my; }

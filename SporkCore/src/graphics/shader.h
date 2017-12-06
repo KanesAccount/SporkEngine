@@ -3,6 +3,7 @@
 #include <GL/glew.h>
 #include <vector>
 #include <iostream>
+#include "../utils/log.h"
 #include "../utils/fileutil.h"
 #include "../maths/maths.h"		
 
@@ -18,7 +19,6 @@ namespace spork { namespace graphics {
 		GLuint m_ShaderID;
 		Shader(const char* vertPath, const char* fragPath);
 		~Shader();
-
 		void setUniform1f(const GLchar* name, float value);
 		void setUniform1i(const GLchar* name, int value);
 		void setUniform1iv(const GLchar* name, int* value, int count);
@@ -31,17 +31,17 @@ namespace spork { namespace graphics {
 		// uniform utility functions
 		void setBool(const std::string &name, bool value) const
 		{
-			glUniform1i(glGetUniformLocation(m_ShaderID, name.c_str()), (int)value);
+			glCall(glUniform1i(glGetUniformLocation(m_ShaderID, name.c_str()), (int)value));
 		}
 		
 		void setInt(const std::string &name, int value) const
 		{
-			glUniform1i(glGetUniformLocation(m_ShaderID, name.c_str()), value);
+			glCall(glUniform1i(glGetUniformLocation(m_ShaderID, name.c_str()), value));
 		}
 		
 		void setFloat(const std::string &name, float value) const
 		{
-			glUniform1f(glGetUniformLocation(m_ShaderID, name.c_str()), value);
+			glCall(glUniform1f(glGetUniformLocation(m_ShaderID, name.c_str()), value));
 		}
 		void enable() const;
 		void disable() const;

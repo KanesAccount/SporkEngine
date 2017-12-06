@@ -25,26 +25,28 @@ namespace spork { namespace graphics {
 		const char* vertSource = vertSourceString.c_str();
 		const char* fragSource = fragSourceString.c_str();
 
-		glShaderSource(vertex, 1, &vertSource, NULL);
-		glCompileShader(vertex);
+		glCall(glShaderSource(vertex, 1, &vertSource, NULL));
+		glCall(glCompileShader(vertex));
 		
 		GLint result;
-		glGetShaderiv(vertex, GL_COMPILE_STATUS, &result);
+		glCall(glGetShaderiv(vertex, GL_COMPILE_STATUS, &result));
+
 		if (result == GL_FALSE)
 		{
 			GLint length;
 			glGetShaderiv(vertex, GL_INFO_LOG_LENGTH, &length);
 			std::vector<char> error(length);
 			glGetShaderInfoLog(vertex, length, &length, &error[0]);
-			std::cout << "Failed to compile vert shader" << &error[0] << std::endl;
-			glDeleteShader(vertex);
+			std::cout << "Failed to compile vert shader: " << &error[0] << std::endl;
+			glCall(glDeleteShader(vertex));
 			return 0;
 		}
 
-		glShaderSource(fragment, 1, &fragSource, NULL);
-		glCompileShader(fragment);
+		glCall(glShaderSource(fragment, 1, &fragSource, NULL));
+		glCall(glCompileShader(fragment));
 
 		glGetShaderiv(fragment, GL_COMPILE_STATUS, &result);
+		
 		if (result == GL_FALSE)
 		{
 			GLint length;
@@ -56,14 +58,14 @@ namespace spork { namespace graphics {
 			return 0;
 		}
 
-		glAttachShader(program, vertex);
-		glAttachShader(program, fragment);
+		glCall(glAttachShader(program, vertex));
+		glCall(glAttachShader(program, fragment));
 
-		glLinkProgram(program);
-		glValidateProgram(program);
+		glCall(glLinkProgram(program));
+		glCall(glValidateProgram(program));
 
-		glDeleteShader(vertex);
-		glDeleteShader(fragment);
+		glCall(glDeleteShader(vertex));
+		glCall(glDeleteShader(fragment));
 
 		return program;
 	}
@@ -75,27 +77,27 @@ namespace spork { namespace graphics {
 
 	void Shader::setUniform1f(const GLchar* name, float value)
 	{
-		glUniform1f(getUniformLoc(name), value);
+		glCall(glUniform1f(getUniformLoc(name), value));
 	}
 
 	void Shader::setUniform1fv(const GLchar* name, float* value, int count)
 	{
-		glUniform1fv(getUniformLoc(name), count, value);
+		glCall(glUniform1fv(getUniformLoc(name), count, value));
 	}
 
 	void Shader::setUniform1i(const GLchar* name, int value)
 	{
-		glUniform1i(getUniformLoc(name), value);
+		glCall(glUniform1i(getUniformLoc(name), value));
 	}
 
 	void Shader::setUniform1iv(const GLchar* name, int* value, int count)
 	{
-		glUniform1iv(getUniformLoc(name), count, value);
+		glCall(glUniform1iv(getUniformLoc(name), count, value));
 	}
 
 	void Shader::setUniform2f(const GLchar* name, const maths::vec2& vector)
 	{
-		glUniform2f(getUniformLoc(name), vector.x, vector.y);
+		glCall(glUniform2f(getUniformLoc(name), vector.x, vector.y));
 
 	}
 
@@ -107,24 +109,23 @@ namespace spork { namespace graphics {
 
 	void Shader::setUniform4f(const GLchar* name, const maths::vec4& vector)
 	{
-		glUniform4f(getUniformLoc(name), vector.x, vector.y, vector.z, vector.w);
+		glCall(glUniform4f(getUniformLoc(name), vector.x, vector.y, vector.z, vector.w));
 
 	}
 
 	void Shader::setUniformMat4(const GLchar* name, const mat4& matrix)
 	{
-		glUniformMatrix4fv(getUniformLoc(name), 1, GL_FALSE, matrix.elements);	
+		glUniformMatrix4fv(getUniformLoc(name), 1, GL_FALSE, matrix.elements);
 
 	}
 
 	void Shader::enable() const
 	{
-		glUseProgram(m_ShaderID);
+		glCall(glUseProgram(m_ShaderID));
 	}
 
 	void Shader::disable() const
 	{
-		glUseProgram(0);
+		glCall(glUseProgram(0));
 	}
-
-}	}
+} }

@@ -1,16 +1,25 @@
 #pragma once
-#include "renderers/renderable2D.h"
+#include "../utils/loadUtils.h"
+#include "../utils/log.h"
+#include "../graphics/shader.h"
+#include "../graphics/texture.h"
 
 namespace spork { namespace graphics {
 	
-	class TextContainer : public Renderable2D
+	class TextContainer 
 	{
+		const char* m_Path;
 	public:
-		std::string text;
-		maths::vec3& pos;
-		float x, y;
+		utils::LoadUtils loader;
+		Shader m_TextShader;
+		GLuint m_Text2DTexID;
+		uint m_Text2DVertexBufferID;
+		uint m_Text2DUVBufferID;
+		uint m_Text2DShaderID;
+		uint m_Text2DUniformID;
 	public:
-		TextContainer(std::string text, float x, float y, maths::vec4 col);
-		void submit(Renderer2D* renderer) const override;
+		TextContainer(const char* path);
+		~TextContainer();
+		void printText(const char* text, int x, int y, int size);
 	};
 } }

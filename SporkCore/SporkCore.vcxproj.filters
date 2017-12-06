@@ -333,6 +333,10 @@
     <None Include="src\shaders\lamp.vert" />
     <None Include="src\shaders\model.vert" />
     <None Include="src\shaders\model.frag" />
+    <None Include="src\shaders\skybox.frag" />
+    <None Include="src\shaders\skybox.vert" />
+    <None Include="src\shaders\textShader.vert" />
+    <None Include="src\shaders\textShader.frag" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="src\res\test.png">

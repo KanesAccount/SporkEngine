@@ -1,8 +1,8 @@
 #include "Demo3D.h"
 
 namespace spork {
-	Demo3D::Demo3D(graphics::FPScamera* cam, graphics::Window* window)
-		: m_Camera(cam), m_Window(window), m_ModelShader("src/shaders/model.frag", "src/shaders/model.vert")/*, m_SkyboxShader("src/shaders/skybox.frag", "src/sybox.vert")*/
+	Demo3D::Demo3D(app::Controls* controller, graphics::Window* window)
+		: m_Controller(controller), m_Window(window), m_ModelShader("src/shaders/light.vert", "src/shaders/light.frag")/*, m_SkyboxShader("src/shaders/skybox.frag", "src/sybox.vert")*/, hooman("src/res/models/tests/Human_body_with_net.obj", false), nano("src/res/models/crysis/nanosuit.obj"), TextManager("src/res/Holstein.DDS"), m_TextShader("src/shaders/textShader.vert", "src/shaders/textShader.frag")
 	{
 		//m_Renderer = new graphics::Renderer3D(camera);
 		init();
@@ -22,10 +22,10 @@ namespace spork {
 		//Load models
 		//std::vector<graphics::Mesh> m_Meshes;
 		//std::vector<graphics::Model> m_Models;
-		graphics::Model nano("src/res/models/bosses/lich/lich_king.obj", false);
-		m_Models.push_back(nano);
-		
-		//// Skybox
+		//m_ModelShader.enable();
+		//m_Models.push_back(nano);
+
+		// Skybox
 		//std::vector<const char*> skyboxFilePaths;
 		//skyboxFilePaths.push_back("src/res/skybox/right.png");
 		//skyboxFilePaths.push_back("src/res/skybox/left.png");
@@ -33,27 +33,8 @@ namespace spork {
 		//skyboxFilePaths.push_back("src/res/skybox/bottom.png");
 		//skyboxFilePaths.push_back("src/res/skybox/back.png");
 		//skyboxFilePaths.push_back("src/res/skybox/front.png");
-		//m_Skybox = new graphics::Skybox(skyboxFilePaths, m_Camera, m_Window);
+		//m_Skybox = new graphics::Skybox(skyboxFilePaths, m_Controller, m_Window);
 	}
-
-	//void Demo3D::input()
-	//{
-	//	if (Input.getKeyDown(glfwGetKey(window, GLFW_KEY_ESCAPE))
-	//		glfwSetWindowShouldClose(window, true);
-
-	//	if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
-	//		camera.processKeyboard(spork::graphics::FORWARDS, deltaT);
-	//	if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
-	//		camera.processKeyboard(spork::graphics::BACKWARDS, deltaT);
-	//	if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
-	//		camera.processKeyboard(spork::graphics::LEFT, deltaT);
-	//	if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
-	//		camera.processKeyboard(spork::graphics::RIGHT, deltaT);
-	//	if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS)
-	//		camera.processKeyboard(spork::graphics::UP, deltaT);
-	//	if (glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) == GLFW_PRESS)
-	//		camera.processKeyboard(spork::graphics::DOWN, deltaT);
-	//}
 
 	void Demo3D::input()
 	{
@@ -65,31 +46,45 @@ namespace spork {
 
 	void Demo3D::onUpdate(float deltaTime)
 	{
-		inputManager.update();
+
+		using namespace maths;
+		m_Controller->computeMatricesFromInputs(m_Window, m_Window->getWidth() / 2, m_Window->getHeight() / 2);
+		mat4 projMat = m_Controller->getProjMat();
+		mat4 viewMat = m_Controller->getViewMat();
+		mat4 modMat = mat4::identity();
+		modMat = mat4::translate(vec3(0.0f, -2.75f, 0.0f));
+		modMat = mat4::scale(vec3(0.2f, 0.2f, 0.2f));
+		mat4 MVP = projMat * viewMat * modMat;
+
+		m_ModelShader.setUniformMat4("MVP", MVP);
+		m_ModelShader.setUniformMat4("M", modMat);
+		m_ModelShader.setUniformMat4("V", viewMat);
+
+		vec3 lightPos = vec3(4.0f, 4.0f, 4.0f);
+		m_ModelShader.setUniform3f("lightPos_WorldSpace", vec3(lightPos.x, lightPos.y, lightPos.z));
+
 	}
 
 	void Demo3D::onRender()
 	{
-		//Setup
-
 		//Shaders
 		//Models
-		m_ModelShader.enable();
-		//m_ModelShader.setUniform3f("viewPos", m_Camera->getPosition());
-		m_ModelShader.setUniformMat4("view", m_Camera->getViewMat());
-		m_ModelShader.setUniformMat4("projection", maths::mat4::perspective(maths::toRadians(m_Camera->m_Zoom), (float)m_Window->getWidth() / (float)m_Window->getHeight(), 0.1f, 1000.0f));
+		//glCall(glPolygonMode(GL_FRONT_AND_BACK, GL_LINE));		//WIREFRAME MODE
+		
+		nano.draw(m_ModelShader);
+		hooman.draw(m_ModelShader);
+		//m_ModelShader.disable();
+		//for (uint i = 0; i < m_Models.size(); i++)
+		//{
+		//	m_Models[i].draw(m_ModelShader);
+		//}
 
-		maths::mat4 mod;
-		mod = maths::mat4::translate(maths::vec3(-5.0f, -1.75f, 0.0f));
-		mod = maths::mat4::scale(maths::vec3(0.02f, 0.02f, 0.02f));
-		m_ModelShader.setUniformMat4("model", mod);
-
-		for (uint i = 0; i < m_Models.size(); i++)
-		{
-			m_Models[i].draw(m_ModelShader);
-		}
 		//Skybox
 		//m_Skybox->draw();
+		//m_TextShader.enable();
+		char text[256];
+		sprintf(text, "%.2f sec", glfwGetTime());
+		//TextManager.printText(text, 10, 500, 60);	
 	}
 
 	void Demo3D::add(graphics::Renderable3D* renderable)

@@ -1,11 +1,14 @@
 #version 330 core
+//Output data
 out vec4 FragColor;
 
-in vec2 TexCoords;
+// Interpolated values from vert shader
+in vec2 UV;
 
-uniform sampler2D texture_diffuse1;
+// Constant values for mesh
+uniform sampler2D myTexSampler;
 
 void main()
 {    
-    FragColor = texture(texture_diffuse1, TexCoords);
+    FragColor = texture(myTexSampler, UV);
 }

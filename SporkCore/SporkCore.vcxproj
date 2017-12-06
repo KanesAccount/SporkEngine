@@ -247,6 +247,10 @@
     <None Include="src\shaders\lrn.vert" />
     <None Include="src\shaders\model.frag" />
     <None Include="src\shaders\model.vert" />
+    <None Include="src\shaders\skybox.frag" />
+    <None Include="src\shaders\skybox.vert" />
+    <None Include="src\shaders\textShader.frag" />
+    <None Include="src\shaders\textShader.vert" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="src\res\test.png" />
