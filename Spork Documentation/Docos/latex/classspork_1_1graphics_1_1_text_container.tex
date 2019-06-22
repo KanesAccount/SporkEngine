@@ -1,0 +1,204 @@
+\hypertarget{classspork_1_1graphics_1_1_text_container}{}\section{spork\+:\+:graphics\+:\+:Text\+Container Class Reference}
+\label{classspork_1_1graphics_1_1_text_container}\index{spork\+::graphics\+::\+Text\+Container@{spork\+::graphics\+::\+Text\+Container}}
+
+
+Text Container Class.  
+
+
+
+
+{\ttfamily \#include $<$text\+Container.\+h$>$}
+
+
+
+Collaboration diagram for spork\+:\+:graphics\+:\+:Text\+Container\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classspork_1_1graphics_1_1_text_container_a71bb507bf5c76486928a2db2e00575e9}{Text\+Container} ()
+\item 
+\hyperlink{classspork_1_1graphics_1_1_text_container_a8a34a5a346d747e56cf4d41c98ed9d23}{Text\+Container} (const char $\ast$path)
+\item 
+\hyperlink{classspork_1_1graphics_1_1_text_container_ab22ce89b3d81e0e59a68648fdb2c8468}{$\sim$\+Text\+Container} ()
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_text_container_a189aaec032d32035071532f3628203ba}{print\+Text} (const char $\ast$text, int x, int y, int size)
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_text_container_a05f5fa9194b9ca558e33320e19fcfdbe}{cleanup\+Text} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classspork_1_1utils_1_1_load_utils}{utils\+::\+Load\+Utils} \hyperlink{classspork_1_1graphics_1_1_text_container_a32e7f7af04cf6aab22a462a0a1763111}{loader}
+\item 
+\hyperlink{classspork_1_1graphics_1_1_shader}{Shader} \hyperlink{classspork_1_1graphics_1_1_text_container_a3a89e588d01b57aefc4cfdc37d2ee7e6}{m\+\_\+\+Text\+Shader}
+\item 
+G\+Luint \hyperlink{classspork_1_1graphics_1_1_text_container_abf191e64b578694758840b9b08f35f4f}{m\+\_\+\+Text2\+D\+Tex\+ID}
+\item 
+\hyperlink{defines_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} \hyperlink{classspork_1_1graphics_1_1_text_container_ae59c249f016c85e86bff6c1be939f872}{m\+\_\+\+Text2\+D\+Vertex\+Buffer\+ID}
+\item 
+\hyperlink{defines_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} \hyperlink{classspork_1_1graphics_1_1_text_container_a18c0b39008e60b277f3baf5bb81bf632}{m\+\_\+\+Text2\+D\+U\+V\+Buffer\+ID}
+\item 
+\hyperlink{defines_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} \hyperlink{classspork_1_1graphics_1_1_text_container_a0374741cdbab8c64bdf490665204cbfd}{m\+\_\+\+Text2\+D\+Shader\+ID}
+\item 
+\hyperlink{defines_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} \hyperlink{classspork_1_1graphics_1_1_text_container_a1872c800795971390a9f0fa0334e8a92}{m\+\_\+\+Text2\+D\+Uniform\+ID}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{classspork_1_1graphics_1_1_text_container_a4b36fa27b2b511ac8444e00c5474b38b}{m\+\_\+\+Path}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Text Container Class. 
+
+Handles Printing of 2D Text to the screen. 
+
+Definition at line 10 of file text\+Container.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_text_container_a71bb507bf5c76486928a2db2e00575e9}\label{classspork_1_1graphics_1_1_text_container_a71bb507bf5c76486928a2db2e00575e9}} 
+\index{spork\+::graphics\+::\+Text\+Container@{spork\+::graphics\+::\+Text\+Container}!Text\+Container@{Text\+Container}}
+\index{Text\+Container@{Text\+Container}!spork\+::graphics\+::\+Text\+Container@{spork\+::graphics\+::\+Text\+Container}}
+\subsubsection{\texorpdfstring{Text\+Container()}{TextContainer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily spork\+::graphics\+::\+Text\+Container\+::\+Text\+Container (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 5 of file text\+Container.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_text_container_a8a34a5a346d747e56cf4d41c98ed9d23}\label{classspork_1_1graphics_1_1_text_container_a8a34a5a346d747e56cf4d41c98ed9d23}} 
+\index{spork\+::graphics\+::\+Text\+Container@{spork\+::graphics\+::\+Text\+Container}!Text\+Container@{Text\+Container}}
+\index{Text\+Container@{Text\+Container}!spork\+::graphics\+::\+Text\+Container@{spork\+::graphics\+::\+Text\+Container}}
+\subsubsection{\texorpdfstring{Text\+Container()}{TextContainer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily spork\+::graphics\+::\+Text\+Container\+::\+Text\+Container (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+Definition at line 9 of file text\+Container.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_text_container_ab22ce89b3d81e0e59a68648fdb2c8468}\label{classspork_1_1graphics_1_1_text_container_ab22ce89b3d81e0e59a68648fdb2c8468}} 
+\index{spork\+::graphics\+::\+Text\+Container@{spork\+::graphics\+::\+Text\+Container}!````~Text\+Container@{$\sim$\+Text\+Container}}
+\index{````~Text\+Container@{$\sim$\+Text\+Container}!spork\+::graphics\+::\+Text\+Container@{spork\+::graphics\+::\+Text\+Container}}
+\subsubsection{\texorpdfstring{$\sim$\+Text\+Container()}{~TextContainer()}}
+{\footnotesize\ttfamily spork\+::graphics\+::\+Text\+Container\+::$\sim$\+Text\+Container (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 21 of file text\+Container.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_text_container_a05f5fa9194b9ca558e33320e19fcfdbe}\label{classspork_1_1graphics_1_1_text_container_a05f5fa9194b9ca558e33320e19fcfdbe}} 
+\index{spork\+::graphics\+::\+Text\+Container@{spork\+::graphics\+::\+Text\+Container}!cleanup\+Text@{cleanup\+Text}}
+\index{cleanup\+Text@{cleanup\+Text}!spork\+::graphics\+::\+Text\+Container@{spork\+::graphics\+::\+Text\+Container}}
+\subsubsection{\texorpdfstring{cleanup\+Text()}{cleanupText()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Text\+Container\+::cleanup\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 103 of file text\+Container.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_text_container_a189aaec032d32035071532f3628203ba}\label{classspork_1_1graphics_1_1_text_container_a189aaec032d32035071532f3628203ba}} 
+\index{spork\+::graphics\+::\+Text\+Container@{spork\+::graphics\+::\+Text\+Container}!print\+Text@{print\+Text}}
+\index{print\+Text@{print\+Text}!spork\+::graphics\+::\+Text\+Container@{spork\+::graphics\+::\+Text\+Container}}
+\subsubsection{\texorpdfstring{print\+Text()}{printText()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Text\+Container\+::print\+Text (\begin{DoxyParamCaption}\item[{const char $\ast$}]{text,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 25 of file text\+Container.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_text_container_a32e7f7af04cf6aab22a462a0a1763111}\label{classspork_1_1graphics_1_1_text_container_a32e7f7af04cf6aab22a462a0a1763111}} 
+\index{spork\+::graphics\+::\+Text\+Container@{spork\+::graphics\+::\+Text\+Container}!loader@{loader}}
+\index{loader@{loader}!spork\+::graphics\+::\+Text\+Container@{spork\+::graphics\+::\+Text\+Container}}
+\subsubsection{\texorpdfstring{loader}{loader}}
+{\footnotesize\ttfamily \hyperlink{classspork_1_1utils_1_1_load_utils}{utils\+::\+Load\+Utils} spork\+::graphics\+::\+Text\+Container\+::loader}
+
+
+
+Definition at line 14 of file text\+Container.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_text_container_a4b36fa27b2b511ac8444e00c5474b38b}\label{classspork_1_1graphics_1_1_text_container_a4b36fa27b2b511ac8444e00c5474b38b}} 
+\index{spork\+::graphics\+::\+Text\+Container@{spork\+::graphics\+::\+Text\+Container}!m\+\_\+\+Path@{m\+\_\+\+Path}}
+\index{m\+\_\+\+Path@{m\+\_\+\+Path}!spork\+::graphics\+::\+Text\+Container@{spork\+::graphics\+::\+Text\+Container}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Path}{m\_Path}}
+{\footnotesize\ttfamily const char$\ast$ spork\+::graphics\+::\+Text\+Container\+::m\+\_\+\+Path\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 12 of file text\+Container.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_text_container_a0374741cdbab8c64bdf490665204cbfd}\label{classspork_1_1graphics_1_1_text_container_a0374741cdbab8c64bdf490665204cbfd}} 
+\index{spork\+::graphics\+::\+Text\+Container@{spork\+::graphics\+::\+Text\+Container}!m\+\_\+\+Text2\+D\+Shader\+ID@{m\+\_\+\+Text2\+D\+Shader\+ID}}
+\index{m\+\_\+\+Text2\+D\+Shader\+ID@{m\+\_\+\+Text2\+D\+Shader\+ID}!spork\+::graphics\+::\+Text\+Container@{spork\+::graphics\+::\+Text\+Container}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Text2\+D\+Shader\+ID}{m\_Text2DShaderID}}
+{\footnotesize\ttfamily \hyperlink{defines_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} spork\+::graphics\+::\+Text\+Container\+::m\+\_\+\+Text2\+D\+Shader\+ID}
+
+
+
+Definition at line 19 of file text\+Container.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_text_container_abf191e64b578694758840b9b08f35f4f}\label{classspork_1_1graphics_1_1_text_container_abf191e64b578694758840b9b08f35f4f}} 
+\index{spork\+::graphics\+::\+Text\+Container@{spork\+::graphics\+::\+Text\+Container}!m\+\_\+\+Text2\+D\+Tex\+ID@{m\+\_\+\+Text2\+D\+Tex\+ID}}
+\index{m\+\_\+\+Text2\+D\+Tex\+ID@{m\+\_\+\+Text2\+D\+Tex\+ID}!spork\+::graphics\+::\+Text\+Container@{spork\+::graphics\+::\+Text\+Container}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Text2\+D\+Tex\+ID}{m\_Text2DTexID}}
+{\footnotesize\ttfamily G\+Luint spork\+::graphics\+::\+Text\+Container\+::m\+\_\+\+Text2\+D\+Tex\+ID}
+
+
+
+Definition at line 16 of file text\+Container.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_text_container_a1872c800795971390a9f0fa0334e8a92}\label{classspork_1_1graphics_1_1_text_container_a1872c800795971390a9f0fa0334e8a92}} 
+\index{spork\+::graphics\+::\+Text\+Container@{spork\+::graphics\+::\+Text\+Container}!m\+\_\+\+Text2\+D\+Uniform\+ID@{m\+\_\+\+Text2\+D\+Uniform\+ID}}
+\index{m\+\_\+\+Text2\+D\+Uniform\+ID@{m\+\_\+\+Text2\+D\+Uniform\+ID}!spork\+::graphics\+::\+Text\+Container@{spork\+::graphics\+::\+Text\+Container}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Text2\+D\+Uniform\+ID}{m\_Text2DUniformID}}
+{\footnotesize\ttfamily \hyperlink{defines_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} spork\+::graphics\+::\+Text\+Container\+::m\+\_\+\+Text2\+D\+Uniform\+ID}
+
+
+
+Definition at line 20 of file text\+Container.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_text_container_a18c0b39008e60b277f3baf5bb81bf632}\label{classspork_1_1graphics_1_1_text_container_a18c0b39008e60b277f3baf5bb81bf632}} 
+\index{spork\+::graphics\+::\+Text\+Container@{spork\+::graphics\+::\+Text\+Container}!m\+\_\+\+Text2\+D\+U\+V\+Buffer\+ID@{m\+\_\+\+Text2\+D\+U\+V\+Buffer\+ID}}
+\index{m\+\_\+\+Text2\+D\+U\+V\+Buffer\+ID@{m\+\_\+\+Text2\+D\+U\+V\+Buffer\+ID}!spork\+::graphics\+::\+Text\+Container@{spork\+::graphics\+::\+Text\+Container}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Text2\+D\+U\+V\+Buffer\+ID}{m\_Text2DUVBufferID}}
+{\footnotesize\ttfamily \hyperlink{defines_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} spork\+::graphics\+::\+Text\+Container\+::m\+\_\+\+Text2\+D\+U\+V\+Buffer\+ID}
+
+
+
+Definition at line 18 of file text\+Container.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_text_container_ae59c249f016c85e86bff6c1be939f872}\label{classspork_1_1graphics_1_1_text_container_ae59c249f016c85e86bff6c1be939f872}} 
+\index{spork\+::graphics\+::\+Text\+Container@{spork\+::graphics\+::\+Text\+Container}!m\+\_\+\+Text2\+D\+Vertex\+Buffer\+ID@{m\+\_\+\+Text2\+D\+Vertex\+Buffer\+ID}}
+\index{m\+\_\+\+Text2\+D\+Vertex\+Buffer\+ID@{m\+\_\+\+Text2\+D\+Vertex\+Buffer\+ID}!spork\+::graphics\+::\+Text\+Container@{spork\+::graphics\+::\+Text\+Container}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Text2\+D\+Vertex\+Buffer\+ID}{m\_Text2DVertexBufferID}}
+{\footnotesize\ttfamily \hyperlink{defines_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} spork\+::graphics\+::\+Text\+Container\+::m\+\_\+\+Text2\+D\+Vertex\+Buffer\+ID}
+
+
+
+Definition at line 17 of file text\+Container.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_text_container_a3a89e588d01b57aefc4cfdc37d2ee7e6}\label{classspork_1_1graphics_1_1_text_container_a3a89e588d01b57aefc4cfdc37d2ee7e6}} 
+\index{spork\+::graphics\+::\+Text\+Container@{spork\+::graphics\+::\+Text\+Container}!m\+\_\+\+Text\+Shader@{m\+\_\+\+Text\+Shader}}
+\index{m\+\_\+\+Text\+Shader@{m\+\_\+\+Text\+Shader}!spork\+::graphics\+::\+Text\+Container@{spork\+::graphics\+::\+Text\+Container}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Text\+Shader}{m\_TextShader}}
+{\footnotesize\ttfamily \hyperlink{classspork_1_1graphics_1_1_shader}{Shader} spork\+::graphics\+::\+Text\+Container\+::m\+\_\+\+Text\+Shader}
+
+
+
+Definition at line 15 of file text\+Container.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+N\+G S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/graphics/\hyperlink{text_container_8h}{text\+Container.\+h}\item 
+W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+N\+G S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/graphics/\hyperlink{text_container_8cpp}{text\+Container.\+cpp}\end{DoxyCompactItemize}

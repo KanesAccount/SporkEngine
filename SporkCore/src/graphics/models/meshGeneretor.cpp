@@ -1,16 +1,30 @@
 #include "meshGenerator.h"
-#include "../shader.h"
-#include "../renderers/renderer2D.h"
-#include "../renderers/renderable2D.h"
 #include <GL/glew.h>
 
 namespace spork { namespace graphics {
-	//TODO: implement mesh support
-	/*Mesh* MeshGen::createQuad(const char* path, bool hasSpec)
+
+	MeshGen::MeshGen()
 	{
-		std::vector<Vertex> vertices;
-		std::vector<uint> indices;
-		std::vector<Texture> textures;
-		
-	}*/
+		m_QuadVAO = 0;
+		m_QuadVBO = 0;
+	}
+
+	void MeshGen::createBufferQuad(Shader* fbShader)
+	{
+		glCall(glGenVertexArrays(1, &m_QuadVAO));
+		glCall(glBindVertexArray(m_QuadVAO));
+
+		static const GLfloat bufferVertData[]
+		{
+			-1.0f, -1.0f, 0.0f,
+			1.0f, -1.0f, 0.0f,
+			-1.0f, 1.0f, 0.0f,
+			-1.0f, 1.0f, 0.0f,
+			1.0f, -1.0f, 0.0f,
+			1.0f, 1.0f, 0.0f
+		};
+		glCall(glGenBuffers(1, &m_QuadVBO));
+		glCall(glBindBuffer(GL_ARRAY_BUFFER, m_QuadVBO));
+		glCall(glBufferData(GL_ARRAY_BUFFER, sizeof(bufferVertData), bufferVertData, GL_STATIC_DRAW));
+	}
 } } 

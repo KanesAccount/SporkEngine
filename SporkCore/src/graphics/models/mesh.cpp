@@ -1,6 +1,5 @@
 #include "meshGenerator.h"
 #include "mesh.h"
-#include "../renderers/renderer3D.h"
 #include <GL/glew.h>
 
 namespace spork { namespace graphics {
@@ -61,7 +60,7 @@ namespace spork { namespace graphics {
 		glCall(glDisableVertexAttribArray(4));
 	}
 
-	void Mesh::draw(Shader shader)
+	void Mesh::draw(Shader* shader)
 	{
 		uint diffuseNr = 1;
 		uint specularNr = 1;
@@ -71,22 +70,21 @@ namespace spork { namespace graphics {
 		{
 			glCall(glActiveTexture(GL_TEXTURE0 + i)); // activate proper texture unit before binding
 												// retrieve texture number (the N in diffuse_textureN)
-			//String number;
-			//String name = textures[i].type;
-			//if (name == "texture_diffuse")
-			//	number = std::to_string(diffuseNr++);
-			//else if (name == "texture_specular")
-			//	number = std::to_string(specularNr++);
-			//else if (name == "texture_normal")
-			//	number = std::to_string(normalNr++);
-			//else if (name == "texture_height")
-			//	number = std::to_string(heightNr++);
+			String number;
+			String name = textures[i].type;
+			if (name == "diffuse")
+				number = std::to_string(diffuseNr++);
+			else if (name == "specular")
+				number = std::to_string(specularNr++);
+			else if (name == "normal")
+				number = std::to_string(normalNr++);
+			else if (name == "height")
+				number = std::to_string(heightNr++);
 
 			//Set sampler to correct texture unit
-			//glCall((glGetUniformLocation(shader.m_ShaderID, (name + number).c_str()), i));
-			glCall(glGetUniformLocation(shader.m_ShaderID, "myTexSampler"));
+			glCall((glGetUniformLocation(shader->m_ShaderID, (name + number).c_str()), i));
 
-			//shader.setFloat(("material." + name + number).c_str(), i);
+			shader->setFloat(("material." + name + number).c_str(), i);
 			//Bind the tex
 			glCall(glBindTexture(GL_TEXTURE_2D, textures[i].id));
 		}

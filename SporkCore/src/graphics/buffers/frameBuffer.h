@@ -1,27 +1,30 @@
 #pragma once
+#include "../../spork/spork.h"
+#include "../window.h"
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
-#include "../../utils/log.h"
-#include "../../spork/defines.h"
-#include "../../utils/log.h"
 
 namespace spork { namespace graphics { 
-	
+	/**
+	*  Framebuffer Class. Handles framebuffer creation, initialisation deletion & binding.
+	*/
 	class FrameBuffer
 	{
+	private:
+		Window* m_Window;
+		GLuint m_Fbo;
+		GLuint m_Dbo;
+		GLuint m_RenderedTexture;
 	public:
-		FrameBuffer(int width, int height, bool multiSampleFrameBuffer = true);
+		FrameBuffer();
+		FrameBuffer(Window* window);
 		~FrameBuffer();
-
+		inline GLuint getID() { return m_Fbo; }
+		inline GLuint getTex() { return m_RenderedTexture; }
+		void init();
+	private:
 		void bind();
 		void unbind();
-
-		inline GLuint getFrameBuffer() { return m_FBO; }
-		inline GLuint getColourBufferTex() { return m_ColourTex; }
-		inline GLuint getDepthStencilBufferTex() { return m_DepthStencilBO; }
-
-		private:
-			GLuint m_FBO, m_DepthStencilBO, m_ColourTex;
-			uint m_Width, m_Height;
+		void draw();
 	};
 } }

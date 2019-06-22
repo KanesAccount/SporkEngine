@@ -2,67 +2,60 @@
 
 namespace spork { namespace graphics { 
 	
-	FrameBuffer::FrameBuffer(int width, int height, bool multiSampleBuffers)
-		: m_Width(width), m_Height(height)
+	FrameBuffer::FrameBuffer()
 	{
-		glGenFramebuffers(1, &m_FBO);
-		bind();
+	}
 
-		//Depth & Stencil buffer
-		glGenRenderbuffers(1, &m_DepthStencilBO);	//Generate the Depth & Stencil Render buffer object
-
-		if (multiSampleBuffers)
-		{
-			glRenderbufferStorageMultisample(GL_RENDERBUFFER, 4, GL_DEPTH24_STENCIL8, width, height);
-		}
-		else
-			glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8, width, height);
-
-		//Colour buffers
-		if (multiSampleBuffers)
-		{
-			glBindTexture(GL_TEXTURE_2D_MULTISAMPLE, m_ColourTex);
-			glTexImage2DMultisample(GL_TEXTURE_2D_MULTISAMPLE, 4, GL_RGB, width, height, GL_TRUE);
-			glBindTexture(GL_TEXTURE_2D_MULTISAMPLE, 0);
-		}
-		else {
-			glBindTexture(GL_TEXTURE_2D, m_ColourTex);
-			glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, nullptr);
-			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE); // Both need to clamp to edge or strange colours appear around the border due to interpolation and how it works with GL_REPEAT
-			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-			glBindTexture(GL_TEXTURE_2D, 0);
-		}
-
-		// Add colour, depth, and stencil buffer to the framebuffer
-		if (multiSampleBuffers) {
-			glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D_MULTISAMPLE, m_ColourTex, 0);
-		}
-		else {
-			glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, m_ColourTex, 0);
-		}
-		glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_RENDERBUFFER, m_DepthStencilBO);
-
-		glBindRenderbuffer(GL_RENDERBUFFER, 0);
-
-		// Check if the creation failed
-		if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE) {
-			//DEBUG_LOG_ERROR("Could not initialize the framebuffer");
-			return;
-		}
-
-		unbind();
+	FrameBuffer::FrameBuffer(Window* window)
+		: m_Window(window)
+	{
 	}
 
 	FrameBuffer::~FrameBuffer()
-	{}
-
-	void FrameBuffer::bind() {
-		glBindFramebuffer(GL_FRAMEBUFFER, m_FBO);
+	{
+		glDeleteFramebuffers(1, &m_Fbo);
+		glDeleteTextures(1, &m_RenderedTexture);
 	}
 
-	void FrameBuffer::unbind() {
-		glBindFramebuffer(GL_FRAMEBUFFER, 0); 
+	void FrameBuffer::init()
+	{
+		m_Fbo = 0;
+		glGenFramebuffers(1, &m_Fbo);
+		bind();
+		glGenTextures(1, &m_RenderedTexture);
+		glBindTexture(GL_TEXTURE_2D, m_RenderedTexture);
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, m_Window->getWidth(), m_Window->getHeight(), 0, GL_RGB, GL_UNSIGNED_BYTE, 0);
+		glGenRenderbuffers(1, &m_Dbo);
+		glBindRenderbuffer(GL_RENDERBUFFER, m_Dbo);
+		glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT, m_Window->getWidth(), m_Window->getHeight());
+		//Filtering
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+
+		glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, m_Dbo);
+
+		glFramebufferTexture(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, m_RenderedTexture, 0);
+		GLenum DrawBuffers[1] = { GL_COLOR_ATTACHMENT0 };
+		glDrawBuffers(1, DrawBuffers);
+
+		if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
+			std::cout << "ERROR! Could not complete framebuffer draw call!\n";
+		unbind();
+	}
+
+	void FrameBuffer::bind()
+	{
+		glBindFramebuffer(GL_FRAMEBUFFER, m_Fbo);
+	}
+
+	void FrameBuffer::unbind()
+	{
+		glBindFramebuffer(GL_FRAMEBUFFER, 0);
+	}
+
+	void FrameBuffer::draw()
+	{
 	}
 } }

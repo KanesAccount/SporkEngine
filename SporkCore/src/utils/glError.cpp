@@ -5,7 +5,9 @@ void checkError()
 {
 	glGetError();
 }
-
+/**
+*  OpenGL Error Parsing Function. Defines the error type based on GL Value given.
+*/
 bool logGLcall(const char* function, const char* file, int line)
 {
 	GLenum err = glGetError();

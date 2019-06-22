@@ -3,6 +3,9 @@
 #include <chrono>
 
 namespace spork {
+	/** \file timer.h
+	*  Time keeping class. Calculates elapsed time in seconds and millseconds.
+	*/
 	class Timer
 	{
 	private:

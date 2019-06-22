@@ -1,5 +1,7 @@
 #pragma once
-//Spork Ext Headers Container
+/**
+*  External Headers Container. 
+*/
 #include <string>
 #include <algorithm>
 #include <iostream>

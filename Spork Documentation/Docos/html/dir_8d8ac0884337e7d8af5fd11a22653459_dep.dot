@@ -1,0 +1,21 @@
+digraph "W:/Uni/SPORK/WORKING SPORK/Assignment/Spork Engine Submission/SporkEngine/SporkCore/src/graphics/models" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_970aca47ba06d285cc7c331eb503c699 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="graphics" fontname="Helvetica", fontsize="10", URL="dir_970aca47ba06d285cc7c331eb503c699.html"]
+  dir_8d8ac0884337e7d8af5fd11a22653459 [shape=box, label="models", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_8d8ac0884337e7d8af5fd11a22653459.html"];
+  }
+  dir_e27a936568ff70964ab342b03051fecf [shape=box label="spork" URL="dir_e27a936568ff70964ab342b03051fecf.html"];
+  dir_6d3a224d7d1fd814891968da47835acf [shape=box label="maths" URL="dir_6d3a224d7d1fd814891968da47835acf.html"];
+  dir_d535da5847048e1b8c70554b0c09b5be [shape=box label="buffers" URL="dir_d535da5847048e1b8c70554b0c09b5be.html"];
+  dir_b23c82020b9dd33f9b5c31aac9998b97 [shape=box label="utils" URL="dir_b23c82020b9dd33f9b5c31aac9998b97.html"];
+  dir_6d3a224d7d1fd814891968da47835acf->dir_b23c82020b9dd33f9b5c31aac9998b97 [headlabel="2", labeldistance=1.5 headhref="dir_000011_000013.html"];
+  dir_8d8ac0884337e7d8af5fd11a22653459->dir_e27a936568ff70964ab342b03051fecf [headlabel="3", labeldistance=1.5 headhref="dir_000008_000012.html"];
+  dir_8d8ac0884337e7d8af5fd11a22653459->dir_6d3a224d7d1fd814891968da47835acf [headlabel="1", labeldistance=1.5 headhref="dir_000008_000011.html"];
+  dir_8d8ac0884337e7d8af5fd11a22653459->dir_d535da5847048e1b8c70554b0c09b5be [headlabel="2", labeldistance=1.5 headhref="dir_000008_000006.html"];
+  dir_8d8ac0884337e7d8af5fd11a22653459->dir_b23c82020b9dd33f9b5c31aac9998b97 [headlabel="3", labeldistance=1.5 headhref="dir_000008_000013.html"];
+  dir_d535da5847048e1b8c70554b0c09b5be->dir_e27a936568ff70964ab342b03051fecf [headlabel="1", labeldistance=1.5 headhref="dir_000006_000012.html"];
+  dir_b23c82020b9dd33f9b5c31aac9998b97->dir_e27a936568ff70964ab342b03051fecf [headlabel="5", labeldistance=1.5 headhref="dir_000013_000012.html"];
+  dir_b23c82020b9dd33f9b5c31aac9998b97->dir_6d3a224d7d1fd814891968da47835acf [headlabel="1", labeldistance=1.5 headhref="dir_000013_000011.html"];
+}

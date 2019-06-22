@@ -1,13 +1,19 @@
 #pragma once
 #include "../../spork/spork.h"
-#include "../../maths/maths.h"
-#include "mesh.h"
+#include "../shader.h"
 
 namespace spork { namespace graphics { 
-		
+	/**
+	*  Mesh Generation Class. Creates a quad for use in the framebuffer class.
+	*/
 	class MeshGen
 	{
-		Mesh* createQuad(const char* path, bool hasSpec = false);
-		Mesh* createBufferQuad(int colourBufferID);
+	private:
+		GLuint m_QuadVAO;
+		GLuint m_QuadVBO;
+	public:
+		MeshGen();
+		void createBufferQuad(Shader* fbShader);
+		inline GLuint getVBO() { return m_QuadVBO; }
 	};
 } } 

@@ -2,8 +2,12 @@
 
 namespace spork { namespace graphics {
 	
-	Shader::Shader(const char* vertPath, const char* fragPath)
-		: m_VertPath(vertPath), m_FragPath(fragPath)
+	Shader::Shader()
+	{
+	}
+
+	Shader::Shader(const char* vertPath, const char* fragPath, const char* geometryPath)
+		: m_VertPath(vertPath), m_FragPath(fragPath), m_GeometryPath(geometryPath)
 	{
 		m_ShaderID = load();
 	}
@@ -19,15 +23,16 @@ namespace spork { namespace graphics {
 		GLuint vertex = glCreateShader(GL_VERTEX_SHADER);
 		GLuint fragment = glCreateShader(GL_FRAGMENT_SHADER);
 
-		std::string vertSourceString = FileUtil::read_file(m_VertPath);
-		std::string fragSourceString = FileUtil::read_file(m_FragPath);
-
+		String vertSourceString = FileUtil::readFile(m_VertPath);
+		String fragSourceString = FileUtil::readFile(m_FragPath);
+		
 		const char* vertSource = vertSourceString.c_str();
 		const char* fragSource = fragSourceString.c_str();
 
+		//Compile vertex shader
 		glCall(glShaderSource(vertex, 1, &vertSource, NULL));
 		glCall(glCompileShader(vertex));
-		
+		//Check for succesful compilation
 		GLint result;
 		glCall(glGetShaderiv(vertex, GL_COMPILE_STATUS, &result));
 
@@ -41,10 +46,11 @@ namespace spork { namespace graphics {
 			glCall(glDeleteShader(vertex));
 			return 0;
 		}
-
+		//Compile fragment shader
 		glCall(glShaderSource(fragment, 1, &fragSource, NULL));
 		glCall(glCompileShader(fragment));
-
+		
+		//Check for succesful compilation
 		glGetShaderiv(fragment, GL_COMPILE_STATUS, &result);
 		
 		if (result == GL_FALSE)
@@ -58,14 +64,41 @@ namespace spork { namespace graphics {
 			return 0;
 		}
 
+		//If geometry shaader is present compile & check for succesful compilation
+		GLuint geometry;
+		if (m_GeometryPath != nullptr)
+		{
+			String geomShaderString = FileUtil::readFile(m_GeometryPath);
+			geometry = glCreateShader(GL_GEOMETRY_SHADER);
+			const char* geomSource = geomShaderString.c_str();
+			glShaderSource(geometry, 1, &geomSource, NULL);
+			glCompileShader(geometry);
+
+			glGetShaderiv(fragment, GL_COMPILE_STATUS, &result);
+			if(result == GL_FALSE)
+			{
+				GLint length;
+				glGetShaderiv(geometry, GL_INFO_LOG_LENGTH, &length);
+				std::vector<char> error(length);
+				glGetShaderInfoLog(geometry, length, &length, &error[0]);
+				std::cout << "Failed to compile geom shader" << &error[0] << std::endl;
+				glDeleteShader(geometry);
+				return 0;
+			}
+		}
+		//Attach and link all shaders
 		glCall(glAttachShader(program, vertex));
 		glCall(glAttachShader(program, fragment));
-
+		if (m_GeometryPath != nullptr)
+			glAttachShader(program, geometry);
 		glCall(glLinkProgram(program));
 		glCall(glValidateProgram(program));
 
+		//Cleanup
 		glCall(glDeleteShader(vertex));
 		glCall(glDeleteShader(fragment));
+		if (m_GeometryPath != nullptr)
+			glDeleteShader(geometry);
 
 		return program;
 	}
@@ -77,7 +110,7 @@ namespace spork { namespace graphics {
 
 	void Shader::setUniform1f(const GLchar* name, float value)
 	{
-		glCall(glUniform1f(getUniformLoc(name), value));
+ 		glCall(glUniform1f(getUniformLoc(name), value));
 	}
 
 	void Shader::setUniform1fv(const GLchar* name, float* value, int count)

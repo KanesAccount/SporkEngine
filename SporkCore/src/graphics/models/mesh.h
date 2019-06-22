@@ -2,7 +2,6 @@
 #include "../../spork/spork.h"
 #include "../buffers/vertexArray.h"
 #include "../buffers/indexBuffer.h"
-#include "../renderers/renderable3D.h"
 #include "../shader.h"
 
 namespace spork { namespace graphics { 
@@ -22,7 +21,9 @@ namespace spork { namespace graphics {
 		String type;
 		String path;
 	};
-
+	/**
+	*  Mesh Class. Handles mesh creation and drawing.
+	*/
 	class Mesh
 	{
 	private:
@@ -30,7 +31,7 @@ namespace spork { namespace graphics {
 	public:
 		Mesh(std::vector<Vertex> vertices, std::vector<uint> indice, std::vector<Tex> textures);
 		~Mesh();
-		void draw(Shader shader);
+		void draw(Shader* shader);
 
 		std::vector<Vertex> vertices;
 		std::vector<uint> indices;

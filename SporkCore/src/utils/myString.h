@@ -5,7 +5,9 @@ typedef std::string String;
 namespace spork {
 
 #define STR_BUFFER_SIZE 10 * 1024
-
+	/**
+	*  Custom String class. Replaces std::string.
+	*/
 	class StringFormat
 	{
 	private:

@@ -1,42 +1,43 @@
 #pragma once
-#include "components.h"
-#include "component.h"
 #include "../spork/spork.h"
+#include "components.h"
 
 namespace spork { namespace gameobject {
-	
-	class GameObject 
+	/**
+	*  Game Object Class. Handles adding of components using templates.
+	*/
+	class GameObject
 	{
 	protected:
-		std::unordered_map<component::ComponentName*, component::Component*> m_Compenents;
+		std::vector<component::Component*> m_Components;
 	public:
-		GameObject() {};
-		GameObject(graphics::Sprite* sprite, const maths::mat4& transform = maths::mat4::identity());
+		GameObject();
 
-		void AddComponent(component::Component* componenet);
+		void addComponent(component::Component* componenet);
 
 		template <class T>
-		const T* GetComponent() const
+		const T* getComponent() const
 		{
-			return GetComponentInternal<T>();
+			return getComponentInternal<T>();
 		}
 
 		template <class T>
-		T* GetComponent()
+		T* getComponent()
 		{
-			return (T*)GetComponentInternal<T>();
+			return (T*)getComponentInternal<T>();
 		}
 
 	private:
 		template <class T>
-		const T* GetComponentInternal() const
+		const T* getComponentInternal() const
 		{
-			component::ComponentName* name = T::GetStaticName();
-			auto it = m_Components.find(name);
-			if (it == m_Components.end())
-				return nullptr;
-			return (T*)it->second;
+			component::ComponentName* name = T::staticGetName();
+			for (auto x : m_Components)
+			{
+				if (x->getName() == name)
+					return (const T*)x;
+			}
+			return nullptr;
 		}
-
 	};
 } }

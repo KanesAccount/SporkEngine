@@ -1,0 +1,312 @@
+\hypertarget{structspork_1_1maths_1_1mat4}{}\section{spork\+:\+:maths\+:\+:mat4 Struct Reference}
+\label{structspork_1_1maths_1_1mat4}\index{spork\+::maths\+::mat4@{spork\+::maths\+::mat4}}
+
+
+4x4 Matrix Class.  
+
+
+
+
+{\ttfamily \#include $<$mat4.\+h$>$}
+
+
+
+Collaboration diagram for spork\+:\+:maths\+:\+:mat4\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structspork_1_1maths_1_1mat4_a819bc1d0966136278f3e6f56d4946095}{mat4} ()
+\item 
+\hyperlink{structspork_1_1maths_1_1mat4_a2e37be82e75a8986e43c63d0b3a2be46}{mat4} (float diagonal)
+\item 
+\hyperlink{structspork_1_1maths_1_1mat4}{mat4} \& \hyperlink{structspork_1_1maths_1_1mat4_a68bddd1d0d1f9a512138161230d53d48}{multiply} (const \hyperlink{structspork_1_1maths_1_1mat4}{mat4} \&other)
+\item 
+\hyperlink{structspork_1_1maths_1_1mat4}{mat4} \& \hyperlink{structspork_1_1maths_1_1mat4_a706a4d4c7946d3470af94b2466be3b6e}{operator$\ast$=} (const \hyperlink{structspork_1_1maths_1_1mat4}{mat4} \&other)
+\item 
+\hyperlink{structspork_1_1maths_1_1mat4}{mat4} \& \hyperlink{structspork_1_1maths_1_1mat4_a6b3f2da18fbf011ad5856ff83278ebe5}{invert} ()
+\item 
+\hyperlink{structspork_1_1maths_1_1vec3}{vec3} \hyperlink{structspork_1_1maths_1_1mat4_aca8372b7cd3bbffd3fdabde5bc4c8cde}{multiply} (const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&other) const
+\item 
+\hyperlink{structspork_1_1maths_1_1vec4}{vec4} \hyperlink{structspork_1_1maths_1_1mat4_ab57d988ef0f1b080045b936668875dd6}{multiply} (const \hyperlink{structspork_1_1maths_1_1vec4}{vec4} \&other) const
+\item 
+\hyperlink{my_string_8h_afbeda3fd1bdc8c37d01bdf9f5c8274ff}{String} \hyperlink{structspork_1_1maths_1_1mat4_a051931c026a2c6efe06d1884c477bbbc}{to\+String} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{structspork_1_1maths_1_1mat4}{mat4} \hyperlink{structspork_1_1maths_1_1mat4_a845d42d6162116afe3bd2397523c2f15}{identity} ()
+\item 
+static \hyperlink{structspork_1_1maths_1_1mat4}{mat4} \hyperlink{structspork_1_1maths_1_1mat4_a689cf66fadd19f1be45c3096a09044fc}{orthographic} (float left, float right, float bottom, float top, float near, float far)
+\item 
+static \hyperlink{structspork_1_1maths_1_1mat4}{mat4} \hyperlink{structspork_1_1maths_1_1mat4_afbbc5c7795b2a312c9aef93120695a6f}{perspective} (float fov, float aspect\+Ratio, float near, float far)
+\item 
+static \hyperlink{structspork_1_1maths_1_1mat4}{mat4} \hyperlink{structspork_1_1maths_1_1mat4_a7a212d97ca3807e61d6a0aa7df904b35}{translate} (const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&translate)
+\item 
+static \hyperlink{structspork_1_1maths_1_1mat4}{mat4} \hyperlink{structspork_1_1maths_1_1mat4_ab47cf3486703b158744c77b8273bcb5b}{rotate} (float angle, const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&axis)
+\item 
+static \hyperlink{structspork_1_1maths_1_1mat4}{mat4} \hyperlink{structspork_1_1maths_1_1mat4_ae8eab0264126ec8bcee502727f705b2a}{rotate} (const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \&quat)
+\item 
+static \hyperlink{structspork_1_1maths_1_1mat4}{mat4} \hyperlink{structspork_1_1maths_1_1mat4_a6d42d521e673886f906c6bef2600a5b6}{scale} (const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&scale)
+\item 
+static \hyperlink{structspork_1_1maths_1_1mat4}{mat4} \hyperlink{structspork_1_1maths_1_1mat4_ab9fb102f6e628b289edfe09e4b9ffe04}{look\+At} (const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&cam, const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&obj, const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&up)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>float \hyperlink{structspork_1_1maths_1_1mat4_a0a8a151f19ba28db2930db1931d304ae}{elements} \mbox{[}4 $\ast$4\mbox{]}\\
+\>\hyperlink{structspork_1_1maths_1_1vec4}{vec4} \hyperlink{structspork_1_1maths_1_1mat4_abf628a07e5dbd841155b941a1c157acf}{columns} \mbox{[}3\mbox{]}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structspork_1_1maths_1_1mat4}{mat4} \hyperlink{structspork_1_1maths_1_1mat4_aec96623f8535f2451a1cfef2b9f56e29}{operator$\ast$} (\hyperlink{structspork_1_1maths_1_1mat4}{mat4} left, const \hyperlink{structspork_1_1maths_1_1mat4}{mat4} \&right)
+\item 
+\hyperlink{structspork_1_1maths_1_1vec3}{vec3} \hyperlink{structspork_1_1maths_1_1mat4_a4d8d620a16d3104dc5c96435d0d12530}{operator$\ast$} (const \hyperlink{structspork_1_1maths_1_1mat4}{mat4} \&left, const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&right)
+\item 
+\hyperlink{structspork_1_1maths_1_1vec4}{vec4} \hyperlink{structspork_1_1maths_1_1mat4_aa9a6ff23e02db1be9e45e89037029a1b}{operator$\ast$} (const \hyperlink{structspork_1_1maths_1_1mat4}{mat4} \&left, const \hyperlink{structspork_1_1maths_1_1vec4}{vec4} \&right)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+4x4 Matrix Class. 
+
+Definition at line 13 of file mat4.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structspork_1_1maths_1_1mat4_a819bc1d0966136278f3e6f56d4946095}\label{structspork_1_1maths_1_1mat4_a819bc1d0966136278f3e6f56d4946095}} 
+\index{spork\+::maths\+::mat4@{spork\+::maths\+::mat4}!mat4@{mat4}}
+\index{mat4@{mat4}!spork\+::maths\+::mat4@{spork\+::maths\+::mat4}}
+\subsubsection{\texorpdfstring{mat4()}{mat4()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily spork\+::maths\+::mat4\+::mat4 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file mat4.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1mat4_a2e37be82e75a8986e43c63d0b3a2be46}\label{structspork_1_1maths_1_1mat4_a2e37be82e75a8986e43c63d0b3a2be46}} 
+\index{spork\+::maths\+::mat4@{spork\+::maths\+::mat4}!mat4@{mat4}}
+\index{mat4@{mat4}!spork\+::maths\+::mat4@{spork\+::maths\+::mat4}}
+\subsubsection{\texorpdfstring{mat4()}{mat4()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily spork\+::maths\+::mat4\+::mat4 (\begin{DoxyParamCaption}\item[{float}]{diagonal }\end{DoxyParamCaption})}
+
+
+
+Definition at line 13 of file mat4.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structspork_1_1maths_1_1mat4_a845d42d6162116afe3bd2397523c2f15}\label{structspork_1_1maths_1_1mat4_a845d42d6162116afe3bd2397523c2f15}} 
+\index{spork\+::maths\+::mat4@{spork\+::maths\+::mat4}!identity@{identity}}
+\index{identity@{identity}!spork\+::maths\+::mat4@{spork\+::maths\+::mat4}}
+\subsubsection{\texorpdfstring{identity()}{identity()}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1mat4}{mat4} spork\+::maths\+::mat4\+::identity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 25 of file mat4.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1mat4_a6b3f2da18fbf011ad5856ff83278ebe5}\label{structspork_1_1maths_1_1mat4_a6b3f2da18fbf011ad5856ff83278ebe5}} 
+\index{spork\+::maths\+::mat4@{spork\+::maths\+::mat4}!invert@{invert}}
+\index{invert@{invert}!spork\+::maths\+::mat4@{spork\+::maths\+::mat4}}
+\subsubsection{\texorpdfstring{invert()}{invert()}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1mat4}{mat4} \& spork\+::maths\+::mat4\+::invert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 63 of file mat4.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1mat4_ab9fb102f6e628b289edfe09e4b9ffe04}\label{structspork_1_1maths_1_1mat4_ab9fb102f6e628b289edfe09e4b9ffe04}} 
+\index{spork\+::maths\+::mat4@{spork\+::maths\+::mat4}!look\+At@{look\+At}}
+\index{look\+At@{look\+At}!spork\+::maths\+::mat4@{spork\+::maths\+::mat4}}
+\subsubsection{\texorpdfstring{look\+At()}{lookAt()}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1mat4}{mat4} spork\+::maths\+::mat4\+::look\+At (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&}]{cam,  }\item[{const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&}]{obj,  }\item[{const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&}]{up }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 340 of file mat4.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1mat4_a68bddd1d0d1f9a512138161230d53d48}\label{structspork_1_1maths_1_1mat4_a68bddd1d0d1f9a512138161230d53d48}} 
+\index{spork\+::maths\+::mat4@{spork\+::maths\+::mat4}!multiply@{multiply}}
+\index{multiply@{multiply}!spork\+::maths\+::mat4@{spork\+::maths\+::mat4}}
+\subsubsection{\texorpdfstring{multiply()}{multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1mat4}{mat4} \& spork\+::maths\+::mat4\+::multiply (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1mat4}{mat4} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Definition at line 31 of file mat4.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1mat4_aca8372b7cd3bbffd3fdabde5bc4c8cde}\label{structspork_1_1maths_1_1mat4_aca8372b7cd3bbffd3fdabde5bc4c8cde}} 
+\index{spork\+::maths\+::mat4@{spork\+::maths\+::mat4}!multiply@{multiply}}
+\index{multiply@{multiply}!spork\+::maths\+::mat4@{spork\+::maths\+::mat4}}
+\subsubsection{\texorpdfstring{multiply()}{multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec3}{vec3} spork\+::maths\+::mat4\+::multiply (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 189 of file mat4.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1mat4_ab57d988ef0f1b080045b936668875dd6}\label{structspork_1_1maths_1_1mat4_ab57d988ef0f1b080045b936668875dd6}} 
+\index{spork\+::maths\+::mat4@{spork\+::maths\+::mat4}!multiply@{multiply}}
+\index{multiply@{multiply}!spork\+::maths\+::mat4@{spork\+::maths\+::mat4}}
+\subsubsection{\texorpdfstring{multiply()}{multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec4}{vec4} spork\+::maths\+::mat4\+::multiply (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1vec4}{vec4} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 205 of file mat4.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1mat4_a706a4d4c7946d3470af94b2466be3b6e}\label{structspork_1_1maths_1_1mat4_a706a4d4c7946d3470af94b2466be3b6e}} 
+\index{spork\+::maths\+::mat4@{spork\+::maths\+::mat4}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!spork\+::maths\+::mat4@{spork\+::maths\+::mat4}}
+\subsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1mat4}{mat4} \& spork\+::maths\+::mat4\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1mat4}{mat4} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Definition at line 57 of file mat4.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1mat4_a689cf66fadd19f1be45c3096a09044fc}\label{structspork_1_1maths_1_1mat4_a689cf66fadd19f1be45c3096a09044fc}} 
+\index{spork\+::maths\+::mat4@{spork\+::maths\+::mat4}!orthographic@{orthographic}}
+\index{orthographic@{orthographic}!spork\+::maths\+::mat4@{spork\+::maths\+::mat4}}
+\subsubsection{\texorpdfstring{orthographic()}{orthographic()}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1mat4}{mat4} spork\+::maths\+::mat4\+::orthographic (\begin{DoxyParamCaption}\item[{float}]{left,  }\item[{float}]{right,  }\item[{float}]{bottom,  }\item[{float}]{top,  }\item[{float}]{near,  }\item[{float}]{far }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 222 of file mat4.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1mat4_afbbc5c7795b2a312c9aef93120695a6f}\label{structspork_1_1maths_1_1mat4_afbbc5c7795b2a312c9aef93120695a6f}} 
+\index{spork\+::maths\+::mat4@{spork\+::maths\+::mat4}!perspective@{perspective}}
+\index{perspective@{perspective}!spork\+::maths\+::mat4@{spork\+::maths\+::mat4}}
+\subsubsection{\texorpdfstring{perspective()}{perspective()}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1mat4}{mat4} spork\+::maths\+::mat4\+::perspective (\begin{DoxyParamCaption}\item[{float}]{fov,  }\item[{float}]{aspect\+Ratio,  }\item[{float}]{near,  }\item[{float}]{far }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 239 of file mat4.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1mat4_ab47cf3486703b158744c77b8273bcb5b}\label{structspork_1_1maths_1_1mat4_ab47cf3486703b158744c77b8273bcb5b}} 
+\index{spork\+::maths\+::mat4@{spork\+::maths\+::mat4}!rotate@{rotate}}
+\index{rotate@{rotate}!spork\+::maths\+::mat4@{spork\+::maths\+::mat4}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1mat4}{mat4} spork\+::maths\+::mat4\+::rotate (\begin{DoxyParamCaption}\item[{float}]{angle,  }\item[{const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&}]{axis }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 269 of file mat4.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1mat4_ae8eab0264126ec8bcee502727f705b2a}\label{structspork_1_1maths_1_1mat4_ae8eab0264126ec8bcee502727f705b2a}} 
+\index{spork\+::maths\+::mat4@{spork\+::maths\+::mat4}!rotate@{rotate}}
+\index{rotate@{rotate}!spork\+::maths\+::mat4@{spork\+::maths\+::mat4}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1mat4}{mat4} spork\+::maths\+::mat4\+::rotate (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \&}]{quat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 297 of file mat4.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1mat4_a6d42d521e673886f906c6bef2600a5b6}\label{structspork_1_1maths_1_1mat4_a6d42d521e673886f906c6bef2600a5b6}} 
+\index{spork\+::maths\+::mat4@{spork\+::maths\+::mat4}!scale@{scale}}
+\index{scale@{scale}!spork\+::maths\+::mat4@{spork\+::maths\+::mat4}}
+\subsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1mat4}{mat4} spork\+::maths\+::mat4\+::scale (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&}]{scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 329 of file mat4.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1mat4_a051931c026a2c6efe06d1884c477bbbc}\label{structspork_1_1maths_1_1mat4_a051931c026a2c6efe06d1884c477bbbc}} 
+\index{spork\+::maths\+::mat4@{spork\+::maths\+::mat4}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!spork\+::maths\+::mat4@{spork\+::maths\+::mat4}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}}
+{\footnotesize\ttfamily \hyperlink{my_string_8h_afbeda3fd1bdc8c37d01bdf9f5c8274ff}{String} spork\+::maths\+::mat4\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 364 of file mat4.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1mat4_a7a212d97ca3807e61d6a0aa7df904b35}\label{structspork_1_1maths_1_1mat4_a7a212d97ca3807e61d6a0aa7df904b35}} 
+\index{spork\+::maths\+::mat4@{spork\+::maths\+::mat4}!translate@{translate}}
+\index{translate@{translate}!spork\+::maths\+::mat4@{spork\+::maths\+::mat4}}
+\subsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1mat4}{mat4} spork\+::maths\+::mat4\+::translate (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&}]{translate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 258 of file mat4.\+cpp.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{structspork_1_1maths_1_1mat4_aec96623f8535f2451a1cfef2b9f56e29}\label{structspork_1_1maths_1_1mat4_aec96623f8535f2451a1cfef2b9f56e29}} 
+\index{spork\+::maths\+::mat4@{spork\+::maths\+::mat4}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!spork\+::maths\+::mat4@{spork\+::maths\+::mat4}}
+\subsubsection{\texorpdfstring{operator$\ast$}{operator*}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1mat4}{mat4} operator$\ast$ (\begin{DoxyParamCaption}\item[{\hyperlink{structspork_1_1maths_1_1mat4}{mat4}}]{left,  }\item[{const \hyperlink{structspork_1_1maths_1_1mat4}{mat4} \&}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 51 of file mat4.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1mat4_a4d8d620a16d3104dc5c96435d0d12530}\label{structspork_1_1maths_1_1mat4_a4d8d620a16d3104dc5c96435d0d12530}} 
+\index{spork\+::maths\+::mat4@{spork\+::maths\+::mat4}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!spork\+::maths\+::mat4@{spork\+::maths\+::mat4}}
+\subsubsection{\texorpdfstring{operator$\ast$}{operator*}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec3}{vec3} operator$\ast$ (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1mat4}{mat4} \&}]{left,  }\item[{const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 199 of file mat4.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1mat4_aa9a6ff23e02db1be9e45e89037029a1b}\label{structspork_1_1maths_1_1mat4_aa9a6ff23e02db1be9e45e89037029a1b}} 
+\index{spork\+::maths\+::mat4@{spork\+::maths\+::mat4}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!spork\+::maths\+::mat4@{spork\+::maths\+::mat4}}
+\subsubsection{\texorpdfstring{operator$\ast$}{operator*}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec4}{vec4} operator$\ast$ (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1mat4}{mat4} \&}]{left,  }\item[{const \hyperlink{structspork_1_1maths_1_1vec4}{vec4} \&}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 216 of file mat4.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structspork_1_1maths_1_1mat4_aeeec09efc7af1895ba8833e179c15e53}\label{structspork_1_1maths_1_1mat4_aeeec09efc7af1895ba8833e179c15e53}} 
+\subsubsection{\texorpdfstring{"@1}{@1}}
+{\footnotesize\ttfamily union \{ ... \} }
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1mat4_abf628a07e5dbd841155b941a1c157acf}\label{structspork_1_1maths_1_1mat4_abf628a07e5dbd841155b941a1c157acf}} 
+\index{spork\+::maths\+::mat4@{spork\+::maths\+::mat4}!columns@{columns}}
+\index{columns@{columns}!spork\+::maths\+::mat4@{spork\+::maths\+::mat4}}
+\subsubsection{\texorpdfstring{columns}{columns}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec4}{vec4} spork\+::maths\+::mat4\+::columns\mbox{[}3\mbox{]}}
+
+
+
+Definition at line 19 of file mat4.\+h.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1mat4_a0a8a151f19ba28db2930db1931d304ae}\label{structspork_1_1maths_1_1mat4_a0a8a151f19ba28db2930db1931d304ae}} 
+\index{spork\+::maths\+::mat4@{spork\+::maths\+::mat4}!elements@{elements}}
+\index{elements@{elements}!spork\+::maths\+::mat4@{spork\+::maths\+::mat4}}
+\subsubsection{\texorpdfstring{elements}{elements}}
+{\footnotesize\ttfamily float spork\+::maths\+::mat4\+::elements\mbox{[}4 $\ast$4\mbox{]}}
+
+
+
+Definition at line 18 of file mat4.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+N\+G S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/maths/\hyperlink{mat4_8h}{mat4.\+h}\item 
+W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+N\+G S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/maths/\hyperlink{mat4_8cpp}{mat4.\+cpp}\end{DoxyCompactItemize}

@@ -69,14 +69,18 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(SolutionDir)Dependencies\Assimp\include;$(ProjectDir)ext\freetype\include;$(SolutionDir)Dependencies\FreeImage\include;$(SolutionDir)Dependencies\GLEW\include;$(SolutionDir)Dependencies\GLFW\include;$(WindowsSDK_IncludePath);$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)Dependencies\FreeImage\lib;$(SolutionDir)Dependencies\GLEW\lib;$(SolutionDir)Dependencies\GLFW\lib-vc2015;$(SolutionDir)Dependencies\Assimp\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)ext\AntTweakBar\include;$(ProjectDir)ext\Assimp\include;$(ProjectDir)ext\FreeImage\include;$(ProjectDir)ext\GLEW\include;$(ProjectDir)ext\GLFW\include;$(WindowsSDK_IncludePath);$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)ext\AntTweakBar\lib;$(ProjectDir)ext\FreeImage\lib;$(ProjectDir)ext\GLEW\lib;$(ProjectDir)ext\GLFW\lib-vc2015;$(ProjectDir)ext\Assimp\lib;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)bin\$(Configuration)\Intermediates\</IntDir>
+    <TargetName>SporkEngine</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>$(SolutionDir)Dependencies\Assimp\include;$(ProjectDir)ext\freetype\include;$(SolutionDir)Dependencies\FreeImage\include;$(SolutionDir)Dependencies\GLEW\include;$(SolutionDir)Dependencies\GLFW\include;$(WindowsSDK_IncludePath);$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)Dependencies\FreeImage\lib;$(SolutionDir)Dependencies\GLEW\lib;$(SolutionDir)Dependencies\GLFW\lib-vc2015;$(SolutionDir)Dependencies\Assimp\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)ext\AntTweakBar\include;$(ProjectDir)ext\Assimp\include;$(ProjectDir)ext\GLEW\include;$(ProjectDir)ext\GLFW\include;$(WindowsSDK_IncludePath);$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)ext\AntTweakBar\lib;$(ProjectDir)ext\GLEW\lib;$(ProjectDir)ext\GLFW\lib-vc2015;$(ProjectDir)ext\Assimp\lib;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)bin\$(Configuration)\Intermediates\</IntDir>
+    <TargetName>SporkEngine</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -90,7 +94,7 @@
       <PreprocessToFile>false</PreprocessToFile>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>glfw3.lib;opengl32.lib;glew32s.lib;FreeImage.lib;assimp-vc140-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>AntTweakBar.lib;glfw3.lib;opengl32.lib;glew32s.lib;assimp-vc140-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>
       </AdditionalOptions>
     </Link>
@@ -111,7 +115,7 @@
       <SDLCheck>true</SDLCheck>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
-      <PreprocessorDefinitions>GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;FT2_BUILD_LIBRARY;_LIB;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECIATE;FT2_BUILD_LIBRARY;_LIB;WIN32;DEBUG_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
       <FloatingPointModel>Fast</FloatingPointModel>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
@@ -121,7 +125,7 @@
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>glfw3.lib;opengl32.lib;glew32s.lib;FreeImage.lib;assimp-vc140-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>AntTweakBar.lib;glfw3.lib;opengl32.lib;glew32s.lib;assimp-vc140-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>
       </AdditionalOptions>
     </Link>
@@ -144,40 +148,35 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="src\gameObjects\component.cpp" />
     <ClCompile Include="src\gameObjects\gameObject.cpp" />
+    <ClCompile Include="src\gameObjects\meshComponent.cpp" />
     <ClCompile Include="src\gameObjects\spriteComponent.cpp" />
     <ClCompile Include="src\gameObjects\transformComponent.cpp" />
     <ClCompile Include="src\graphics\buffers\buffer.cpp" />
-    <ClCompile Include="src\graphics\buffers\frameBuffer.cpp" />
     <ClCompile Include="src\graphics\buffers\indexBuffer.cpp" />
     <ClCompile Include="src\graphics\buffers\vertexArray.cpp" />
+    <ClCompile Include="src\graphics\camera\baseCamera.cpp" />
     <ClCompile Include="src\graphics\camera\FPScamera.cpp" />
-    <ClCompile Include="src\graphics\layers\layer.cpp" />
-    <ClCompile Include="src\graphics\layers\layerContainer.cpp" />
-    <ClCompile Include="src\graphics\layers\tileLayer.cpp" />
+    <ClCompile Include="src\graphics\camera\modelCam.cpp" />
+    <ClCompile Include="src\graphics\buffers\frameBuffer.cpp" />
     <ClCompile Include="src\graphics\models\mesh.cpp" />
     <ClCompile Include="src\graphics\models\meshGeneretor.cpp" />
     <ClCompile Include="src\graphics\models\model.cpp" />
-    <ClCompile Include="src\graphics\renderers\batchRenderer2D.cpp" />
-    <ClCompile Include="src\graphics\renderers\simple2Drenderer.cpp" />
     <ClCompile Include="src\graphics\shader.cpp" />
     <ClCompile Include="src\graphics\skybox.cpp" />
     <ClCompile Include="src\graphics\sprite.cpp" />
     <ClCompile Include="src\graphics\textContainer.cpp" />
-    <ClCompile Include="src\graphics\texture.cpp" />
     <ClCompile Include="src\graphics\window.cpp" />
-    <ClCompile Include="src\input\controls.cpp" />
+    <ClCompile Include="src\gui\gui.cpp" />
     <ClCompile Include="src\input\input.cpp" />
     <ClCompile Include="src\maths\mat4.cpp" />
     <ClCompile Include="src\maths\quaternion.cpp" />
     <ClCompile Include="src\maths\vec2.cpp" />
     <ClCompile Include="src\maths\vec3.cpp" />
     <ClCompile Include="src\maths\vec4.cpp" />
-    <ClCompile Include="src\utils\fontManager.cpp" />
     <ClCompile Include="src\utils\glError.cpp" />
     <ClCompile Include="src\utils\loadUtils.cpp" />
     <ClCompile Include="src\utils\myString.cpp" />
     <ClCompile Include="src\utils\stbImage.cpp" />
-    <ClCompile Include="src\utils\time.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Demo3D.h" />
@@ -188,33 +187,25 @@
     <ClInclude Include="src\gameObjects\component.h" />
     <ClInclude Include="src\gameObjects\components.h" />
     <ClInclude Include="src\gameObjects\gameObject.h" />
+    <ClInclude Include="src\gameObjects\meshComponent.h" />
     <ClInclude Include="src\gameObjects\spriteComponent.h" />
     <ClInclude Include="src\gameObjects\transformComponent.h" />
     <ClInclude Include="src\graphics\buffers\buffer.h" />
-    <ClInclude Include="src\graphics\buffers\frameBuffer.h" />
     <ClInclude Include="src\graphics\buffers\indexBuffer.h" />
     <ClInclude Include="src\graphics\buffers\vertexArray.h" />
+    <ClInclude Include="src\graphics\camera\baseCamera.h" />
     <ClInclude Include="src\graphics\camera\FPScamera.h" />
-    <ClInclude Include="src\graphics\layers\layer.h" />
-    <ClInclude Include="src\graphics\layers\layerContainer.h" />
-    <ClInclude Include="src\graphics\layers\tileLayer.h" />
+    <ClInclude Include="src\graphics\camera\modelCam.h" />
+    <ClInclude Include="src\graphics\buffers\frameBuffer.h" />
     <ClInclude Include="src\graphics\models\mesh.h" />
     <ClInclude Include="src\graphics\models\meshGenerator.h" />
     <ClInclude Include="src\graphics\models\model.h" />
-    <ClInclude Include="src\graphics\renderers\batchRenderer2D.h" />
-    <ClInclude Include="src\graphics\renderers\renderable2D.h" />
-    <ClInclude Include="src\graphics\renderers\renderable3D.h" />
-    <ClInclude Include="src\graphics\renderers\renderer2D.h" />
-    <ClInclude Include="src\graphics\renderers\renderer3D.h" />
-    <ClInclude Include="src\graphics\renderers\renderInstruction.h" />
-    <ClInclude Include="src\graphics\renderers\simple2Drenderer.h" />
     <ClInclude Include="src\graphics\shader.h" />
     <ClInclude Include="src\graphics\skybox.h" />
     <ClInclude Include="src\graphics\sprite.h" />
     <ClInclude Include="src\graphics\textContainer.h" />
-    <ClInclude Include="src\graphics\texture.h" />
     <ClInclude Include="src\graphics\window.h" />
-    <ClInclude Include="src\input\controls.h" />
+    <ClInclude Include="src\gui\gui.h" />
     <ClInclude Include="src\input\input.h" />
     <ClInclude Include="src\maths\mat4.h" />
     <ClInclude Include="src\maths\maths.h" />
@@ -227,40 +218,23 @@
     <ClInclude Include="src\spork\defines.h" />
     <ClInclude Include="src\spork\spork.h" />
     <ClInclude Include="src\utils\fileutil.h" />
-    <ClInclude Include="src\utils\fontManager.h" />
-    <ClInclude Include="src\utils\glError.h" />
-    <ClInclude Include="src\utils\imageLoader.h" />
     <ClInclude Include="src\utils\loadUtils.h" />
     <ClInclude Include="src\utils\log.h" />
     <ClInclude Include="src\utils\myString.h" />
     <ClInclude Include="src\utils\stb_image.h" />
     <ClInclude Include="src\utils\stringUtil.h" />
-    <ClInclude Include="src\utils\time.h" />
     <ClInclude Include="src\utils\timer.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\shaders\basic.frag" />
-    <None Include="src\shaders\basic.vert" />
-    <None Include="src\shaders\lamp.frag" />
-    <None Include="src\shaders\lamp.vert" />
+    <None Include="src\shaders\explode.geom" />
+    <None Include="src\shaders\frameBufferShader.frag" />
+    <None Include="src\shaders\frameBufferShader.vert" />
     <None Include="src\shaders\light.frag" />
     <None Include="src\shaders\light.vert" />
-    <None Include="src\shaders\lrn.frag" />
-    <None Include="src\shaders\lrn.vert" />
-    <None Include="src\shaders\model.frag" />
-    <None Include="src\shaders\model.vert" />
     <None Include="src\shaders\skybox.frag" />
     <None Include="src\shaders\skybox.vert" />
     <None Include="src\shaders\textShader.frag" />
     <None Include="src\shaders\textShader.vert" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="src\res\test.png" />
-    <Image Include="src\res\test1.png" />
-    <Image Include="src\res\test2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Font Include="arial.ttf" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

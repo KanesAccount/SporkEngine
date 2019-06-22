@@ -1,0 +1,272 @@
+\hypertarget{namespacespork_1_1debug}{}\section{spork\+:\+:debug Namespace Reference}
+\label{namespacespork_1_1debug}\index{spork\+::debug@{spork\+::debug}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structspork_1_1debug_1_1has__iter}{has\+\_\+iter}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespacespork_1_1debug_ad263309a1fad3a21dcf0c66d025a3d91}{plat\+Log\+Msg} (\hyperlink{defines_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} err\+Lvl, const char $\ast$msg)
+\item 
+{\footnotesize template$<$typename T $>$ }\\static const char $\ast$ \hyperlink{namespacespork_1_1debug_afc2bf363eb52ab11d27418006ad8e210}{to\+\_\+string} (const T \&t)
+\item 
+{\footnotesize template$<$$>$ }\\static const char $\ast$ \hyperlink{namespacespork_1_1debug_aa66a308ebd1125248b867ab43722de8f}{to\+\_\+string$<$ char $>$} (char const \&t)
+\item 
+{\footnotesize template$<$$>$ }\\static const char $\ast$ \hyperlink{namespacespork_1_1debug_aaa53753be4d2d27251764c381778aa38}{to\+\_\+string$<$ char $\ast$ $>$} (char $\ast$const \&t)
+\item 
+{\footnotesize template$<$$>$ }\\static const char $\ast$ \hyperlink{namespacespork_1_1debug_a2a5fd3461b42e65daf2b614c769bf849}{to\+\_\+string$<$ unsigned char const $\ast$ $>$} (unsigned char const $\ast$const \&t)
+\item 
+{\footnotesize template$<$$>$ }\\static const char $\ast$ \hyperlink{namespacespork_1_1debug_a4b09591a3c5a6760a63bd6cf39b48f99}{to\+\_\+string$<$ char const $\ast$ $>$} (char const $\ast$const \&t)
+\item 
+{\footnotesize template$<$$>$ }\\static const char $\ast$ \hyperlink{namespacespork_1_1debug_ae2c63495057b0491e5de0fc0f7f0922e}{to\+\_\+string$<$ String $>$} (const \hyperlink{my_string_8h_afbeda3fd1bdc8c37d01bdf9f5c8274ff}{String} \&t)
+\item 
+{\footnotesize template$<$$>$ }\\static const char $\ast$ \hyperlink{namespacespork_1_1debug_a34c91e829f04513719a850e5806a506e}{to\+\_\+string$<$ bool $>$} (const bool \&t)
+\item 
+{\footnotesize template$<$$>$ }\\static const char $\ast$ \hyperlink{namespacespork_1_1debug_a0080d57663b5fdb7cd10a606a2bf719b}{to\+\_\+string$<$ maths\+::vec2 $>$} (const \hyperlink{structspork_1_1maths_1_1vec2}{maths\+::vec2} \&t)
+\item 
+{\footnotesize template$<$$>$ }\\static const char $\ast$ \hyperlink{namespacespork_1_1debug_ad9f34051f44d14eb4d3a792ed84c36c8}{to\+\_\+string$<$ maths\+::vec3 $>$} (const \hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} \&t)
+\item 
+{\footnotesize template$<$typename T $>$ }\\static \hyperlink{my_string_8h_afbeda3fd1bdc8c37d01bdf9f5c8274ff}{String} \hyperlink{namespacespork_1_1debug_adb4d1a890888f2ed6eb0e85d4cea5c49}{format\+\_\+iterators} (T \&begin, T \&end)
+\item 
+{\footnotesize template$<$typename T $>$ }\\static const char $\ast$ \hyperlink{namespacespork_1_1debug_a8fd0aebbc584e9053a2e81ad7f207c14}{to\+\_\+string\+\_\+internal} (const T \&v, const std\+::true\+\_\+type \&ignored)
+\item 
+{\footnotesize template$<$typename T $>$ }\\static const char $\ast$ \hyperlink{namespacespork_1_1debug_a2d49d37a5a0aa7df3d3b18376406be42}{to\+\_\+string\+\_\+internal} (const T \&t, const std\+::false\+\_\+type \&ignored)
+\item 
+{\footnotesize template$<$typename X , typename Y $>$ }\\static const char $\ast$ \hyperlink{namespacespork_1_1debug_a1365e215370f4a9ace42b9421077caf0}{to\+\_\+string} (const std\+::pair$<$ typename X, typename Y $>$ \&v)
+\item 
+{\footnotesize template$<$$>$ }\\static const char $\ast$ \hyperlink{namespacespork_1_1debug_a32859632cb378334e7808f5daf380ed8}{to\+\_\+string\+\_\+internal$<$ const char $\ast$ $>$} (const char $\ast$const \&v, const std\+::false\+\_\+type \&ignored)
+\item 
+{\footnotesize template$<$typename First $>$ }\\static void \hyperlink{namespacespork_1_1debug_ac9c88ed5e936f4ebbe5c09cbdc3d3c9f}{print\+\_\+log\+\_\+internal} (char $\ast$buffer, int \&position, First \&\&first)
+\item 
+{\footnotesize template$<$typename First , typename... Args$>$ }\\static void \hyperlink{namespacespork_1_1debug_abed0fd88d4a8b8ee6c705d43908d5fb5}{print\+\_\+log\+\_\+internal} (char $\ast$buffer, int \&position, First \&\&first, Args \&\&... args)
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\static void \hyperlink{namespacespork_1_1debug_ae5b65f263f4686cf365b19f468fc1e53}{log\+Msg} (int level, bool newline, Args... args)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static char \hyperlink{namespacespork_1_1debug_aa1305eea424e282f851d800b690e1682}{to\+\_\+string\+\_\+buffer} \mbox{[}1024 $\ast$10\mbox{]}
+\item 
+static char \hyperlink{namespacespork_1_1debug_ad495c6327f1d571e7db4d5698410ca7d}{sprintf\+\_\+buffer} \mbox{[}1024 $\ast$10\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacespork_1_1debug_adb4d1a890888f2ed6eb0e85d4cea5c49}\label{namespacespork_1_1debug_adb4d1a890888f2ed6eb0e85d4cea5c49}} 
+\index{spork\+::debug@{spork\+::debug}!format\+\_\+iterators@{format\+\_\+iterators}}
+\index{format\+\_\+iterators@{format\+\_\+iterators}!spork\+::debug@{spork\+::debug}}
+\subsubsection{\texorpdfstring{format\+\_\+iterators()}{format\_iterators()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static \hyperlink{my_string_8h_afbeda3fd1bdc8c37d01bdf9f5c8274ff}{String} spork\+::debug\+::format\+\_\+iterators (\begin{DoxyParamCaption}\item[{T \&}]{begin,  }\item[{T \&}]{end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 100 of file log.\+h.
+
+\mbox{\Hypertarget{namespacespork_1_1debug_ae5b65f263f4686cf365b19f468fc1e53}\label{namespacespork_1_1debug_ae5b65f263f4686cf365b19f468fc1e53}} 
+\index{spork\+::debug@{spork\+::debug}!log\+Msg@{log\+Msg}}
+\index{log\+Msg@{log\+Msg}!spork\+::debug@{spork\+::debug}}
+\subsubsection{\texorpdfstring{log\+Msg()}{logMsg()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+static void spork\+::debug\+::log\+Msg (\begin{DoxyParamCaption}\item[{int}]{level,  }\item[{bool}]{newline,  }\item[{Args...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 163 of file log.\+h.
+
+\mbox{\Hypertarget{namespacespork_1_1debug_ad263309a1fad3a21dcf0c66d025a3d91}\label{namespacespork_1_1debug_ad263309a1fad3a21dcf0c66d025a3d91}} 
+\index{spork\+::debug@{spork\+::debug}!plat\+Log\+Msg@{plat\+Log\+Msg}}
+\index{plat\+Log\+Msg@{plat\+Log\+Msg}!spork\+::debug@{spork\+::debug}}
+\subsubsection{\texorpdfstring{plat\+Log\+Msg()}{platLogMsg()}}
+{\footnotesize\ttfamily void spork\+::debug\+::plat\+Log\+Msg (\begin{DoxyParamCaption}\item[{\hyperlink{defines_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}}]{err\+Lvl,  }\item[{const char $\ast$}]{msg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacespork_1_1debug_ac9c88ed5e936f4ebbe5c09cbdc3d3c9f}\label{namespacespork_1_1debug_ac9c88ed5e936f4ebbe5c09cbdc3d3c9f}} 
+\index{spork\+::debug@{spork\+::debug}!print\+\_\+log\+\_\+internal@{print\+\_\+log\+\_\+internal}}
+\index{print\+\_\+log\+\_\+internal@{print\+\_\+log\+\_\+internal}!spork\+::debug@{spork\+::debug}}
+\subsubsection{\texorpdfstring{print\+\_\+log\+\_\+internal()}{print\_log\_internal()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename First $>$ \\
+static void spork\+::debug\+::print\+\_\+log\+\_\+internal (\begin{DoxyParamCaption}\item[{char $\ast$}]{buffer,  }\item[{int \&}]{position,  }\item[{First \&\&}]{first }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 143 of file log.\+h.
+
+\mbox{\Hypertarget{namespacespork_1_1debug_abed0fd88d4a8b8ee6c705d43908d5fb5}\label{namespacespork_1_1debug_abed0fd88d4a8b8ee6c705d43908d5fb5}} 
+\index{spork\+::debug@{spork\+::debug}!print\+\_\+log\+\_\+internal@{print\+\_\+log\+\_\+internal}}
+\index{print\+\_\+log\+\_\+internal@{print\+\_\+log\+\_\+internal}!spork\+::debug@{spork\+::debug}}
+\subsubsection{\texorpdfstring{print\+\_\+log\+\_\+internal()}{print\_log\_internal()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename First , typename... Args$>$ \\
+static void spork\+::debug\+::print\+\_\+log\+\_\+internal (\begin{DoxyParamCaption}\item[{char $\ast$}]{buffer,  }\item[{int \&}]{position,  }\item[{First \&\&}]{first,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 152 of file log.\+h.
+
+\mbox{\Hypertarget{namespacespork_1_1debug_afc2bf363eb52ab11d27418006ad8e210}\label{namespacespork_1_1debug_afc2bf363eb52ab11d27418006ad8e210}} 
+\index{spork\+::debug@{spork\+::debug}!to\+\_\+string@{to\+\_\+string}}
+\index{to\+\_\+string@{to\+\_\+string}!spork\+::debug@{spork\+::debug}}
+\subsubsection{\texorpdfstring{to\+\_\+string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static const char$\ast$ spork\+::debug\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{const T \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 36 of file log.\+h.
+
+\mbox{\Hypertarget{namespacespork_1_1debug_a1365e215370f4a9ace42b9421077caf0}\label{namespacespork_1_1debug_a1365e215370f4a9ace42b9421077caf0}} 
+\index{spork\+::debug@{spork\+::debug}!to\+\_\+string@{to\+\_\+string}}
+\index{to\+\_\+string@{to\+\_\+string}!spork\+::debug@{spork\+::debug}}
+\subsubsection{\texorpdfstring{to\+\_\+string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename X , typename Y $>$ \\
+static const char$\ast$ spork\+::debug\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{const std\+::pair$<$ typename X, typename Y $>$ \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 130 of file log.\+h.
+
+\mbox{\Hypertarget{namespacespork_1_1debug_a34c91e829f04513719a850e5806a506e}\label{namespacespork_1_1debug_a34c91e829f04513719a850e5806a506e}} 
+\index{spork\+::debug@{spork\+::debug}!to\+\_\+string$<$ bool $>$@{to\+\_\+string$<$ bool $>$}}
+\index{to\+\_\+string$<$ bool $>$@{to\+\_\+string$<$ bool $>$}!spork\+::debug@{spork\+::debug}}
+\subsubsection{\texorpdfstring{to\+\_\+string$<$ bool $>$()}{to\_string< bool >()}}
+{\footnotesize\ttfamily template$<$$>$ \\
+static const char$\ast$ \hyperlink{namespacespork_1_1debug_afc2bf363eb52ab11d27418006ad8e210}{spork\+::debug\+::to\+\_\+string}$<$ bool $>$ (\begin{DoxyParamCaption}\item[{const bool \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 74 of file log.\+h.
+
+\mbox{\Hypertarget{namespacespork_1_1debug_aaa53753be4d2d27251764c381778aa38}\label{namespacespork_1_1debug_aaa53753be4d2d27251764c381778aa38}} 
+\index{spork\+::debug@{spork\+::debug}!to\+\_\+string$<$ char $\ast$ $>$@{to\+\_\+string$<$ char $\ast$ $>$}}
+\index{to\+\_\+string$<$ char $\ast$ $>$@{to\+\_\+string$<$ char $\ast$ $>$}!spork\+::debug@{spork\+::debug}}
+\subsubsection{\texorpdfstring{to\+\_\+string$<$ char $\ast$ $>$()}{to\_string< char * >()}}
+{\footnotesize\ttfamily template$<$$>$ \\
+static const char$\ast$ \hyperlink{namespacespork_1_1debug_afc2bf363eb52ab11d27418006ad8e210}{spork\+::debug\+::to\+\_\+string}$<$ char $\ast$$>$ (\begin{DoxyParamCaption}\item[{char $\ast$const \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 49 of file log.\+h.
+
+\mbox{\Hypertarget{namespacespork_1_1debug_aa66a308ebd1125248b867ab43722de8f}\label{namespacespork_1_1debug_aa66a308ebd1125248b867ab43722de8f}} 
+\index{spork\+::debug@{spork\+::debug}!to\+\_\+string$<$ char $>$@{to\+\_\+string$<$ char $>$}}
+\index{to\+\_\+string$<$ char $>$@{to\+\_\+string$<$ char $>$}!spork\+::debug@{spork\+::debug}}
+\subsubsection{\texorpdfstring{to\+\_\+string$<$ char $>$()}{to\_string< char >()}}
+{\footnotesize\ttfamily template$<$$>$ \\
+static const char$\ast$ \hyperlink{namespacespork_1_1debug_afc2bf363eb52ab11d27418006ad8e210}{spork\+::debug\+::to\+\_\+string}$<$ char $>$ (\begin{DoxyParamCaption}\item[{char const \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 43 of file log.\+h.
+
+\mbox{\Hypertarget{namespacespork_1_1debug_a4b09591a3c5a6760a63bd6cf39b48f99}\label{namespacespork_1_1debug_a4b09591a3c5a6760a63bd6cf39b48f99}} 
+\index{spork\+::debug@{spork\+::debug}!to\+\_\+string$<$ char const $\ast$ $>$@{to\+\_\+string$<$ char const $\ast$ $>$}}
+\index{to\+\_\+string$<$ char const $\ast$ $>$@{to\+\_\+string$<$ char const $\ast$ $>$}!spork\+::debug@{spork\+::debug}}
+\subsubsection{\texorpdfstring{to\+\_\+string$<$ char const $\ast$ $>$()}{to\_string< char const * >()}}
+{\footnotesize\ttfamily template$<$$>$ \\
+static const char$\ast$ \hyperlink{namespacespork_1_1debug_afc2bf363eb52ab11d27418006ad8e210}{spork\+::debug\+::to\+\_\+string}$<$ char const $\ast$$>$ (\begin{DoxyParamCaption}\item[{char const $\ast$const \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 62 of file log.\+h.
+
+\mbox{\Hypertarget{namespacespork_1_1debug_a0080d57663b5fdb7cd10a606a2bf719b}\label{namespacespork_1_1debug_a0080d57663b5fdb7cd10a606a2bf719b}} 
+\index{spork\+::debug@{spork\+::debug}!to\+\_\+string$<$ maths\+::vec2 $>$@{to\+\_\+string$<$ maths\+::vec2 $>$}}
+\index{to\+\_\+string$<$ maths\+::vec2 $>$@{to\+\_\+string$<$ maths\+::vec2 $>$}!spork\+::debug@{spork\+::debug}}
+\subsubsection{\texorpdfstring{to\+\_\+string$<$ maths\+::vec2 $>$()}{to\_string< maths::vec2 >()}}
+{\footnotesize\ttfamily template$<$$>$ \\
+static const char$\ast$ \hyperlink{namespacespork_1_1debug_afc2bf363eb52ab11d27418006ad8e210}{spork\+::debug\+::to\+\_\+string}$<$ \hyperlink{structspork_1_1maths_1_1vec2}{maths\+::vec2} $>$ (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1vec2}{maths\+::vec2} \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 80 of file log.\+h.
+
+\mbox{\Hypertarget{namespacespork_1_1debug_ad9f34051f44d14eb4d3a792ed84c36c8}\label{namespacespork_1_1debug_ad9f34051f44d14eb4d3a792ed84c36c8}} 
+\index{spork\+::debug@{spork\+::debug}!to\+\_\+string$<$ maths\+::vec3 $>$@{to\+\_\+string$<$ maths\+::vec3 $>$}}
+\index{to\+\_\+string$<$ maths\+::vec3 $>$@{to\+\_\+string$<$ maths\+::vec3 $>$}!spork\+::debug@{spork\+::debug}}
+\subsubsection{\texorpdfstring{to\+\_\+string$<$ maths\+::vec3 $>$()}{to\_string< maths::vec3 >()}}
+{\footnotesize\ttfamily template$<$$>$ \\
+static const char$\ast$ \hyperlink{namespacespork_1_1debug_afc2bf363eb52ab11d27418006ad8e210}{spork\+::debug\+::to\+\_\+string}$<$ \hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} $>$ (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 90 of file log.\+h.
+
+\mbox{\Hypertarget{namespacespork_1_1debug_ae2c63495057b0491e5de0fc0f7f0922e}\label{namespacespork_1_1debug_ae2c63495057b0491e5de0fc0f7f0922e}} 
+\index{spork\+::debug@{spork\+::debug}!to\+\_\+string$<$ String $>$@{to\+\_\+string$<$ String $>$}}
+\index{to\+\_\+string$<$ String $>$@{to\+\_\+string$<$ String $>$}!spork\+::debug@{spork\+::debug}}
+\subsubsection{\texorpdfstring{to\+\_\+string$<$ String $>$()}{to\_string< String >()}}
+{\footnotesize\ttfamily template$<$$>$ \\
+static const char$\ast$ \hyperlink{namespacespork_1_1debug_afc2bf363eb52ab11d27418006ad8e210}{spork\+::debug\+::to\+\_\+string}$<$ \hyperlink{my_string_8h_afbeda3fd1bdc8c37d01bdf9f5c8274ff}{String} $>$ (\begin{DoxyParamCaption}\item[{const \hyperlink{my_string_8h_afbeda3fd1bdc8c37d01bdf9f5c8274ff}{String} \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 68 of file log.\+h.
+
+\mbox{\Hypertarget{namespacespork_1_1debug_a2a5fd3461b42e65daf2b614c769bf849}\label{namespacespork_1_1debug_a2a5fd3461b42e65daf2b614c769bf849}} 
+\index{spork\+::debug@{spork\+::debug}!to\+\_\+string$<$ unsigned char const $\ast$ $>$@{to\+\_\+string$<$ unsigned char const $\ast$ $>$}}
+\index{to\+\_\+string$<$ unsigned char const $\ast$ $>$@{to\+\_\+string$<$ unsigned char const $\ast$ $>$}!spork\+::debug@{spork\+::debug}}
+\subsubsection{\texorpdfstring{to\+\_\+string$<$ unsigned char const $\ast$ $>$()}{to\_string< unsigned char const * >()}}
+{\footnotesize\ttfamily template$<$$>$ \\
+static const char$\ast$ \hyperlink{namespacespork_1_1debug_afc2bf363eb52ab11d27418006ad8e210}{spork\+::debug\+::to\+\_\+string}$<$ unsigned char const $\ast$$>$ (\begin{DoxyParamCaption}\item[{unsigned char const $\ast$const \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 55 of file log.\+h.
+
+\mbox{\Hypertarget{namespacespork_1_1debug_a8fd0aebbc584e9053a2e81ad7f207c14}\label{namespacespork_1_1debug_a8fd0aebbc584e9053a2e81ad7f207c14}} 
+\index{spork\+::debug@{spork\+::debug}!to\+\_\+string\+\_\+internal@{to\+\_\+string\+\_\+internal}}
+\index{to\+\_\+string\+\_\+internal@{to\+\_\+string\+\_\+internal}!spork\+::debug@{spork\+::debug}}
+\subsubsection{\texorpdfstring{to\+\_\+string\+\_\+internal()}{to\_string\_internal()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static const char$\ast$ spork\+::debug\+::to\+\_\+string\+\_\+internal (\begin{DoxyParamCaption}\item[{const T \&}]{v,  }\item[{const std\+::true\+\_\+type \&}]{ignored }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 116 of file log.\+h.
+
+\mbox{\Hypertarget{namespacespork_1_1debug_a2d49d37a5a0aa7df3d3b18376406be42}\label{namespacespork_1_1debug_a2d49d37a5a0aa7df3d3b18376406be42}} 
+\index{spork\+::debug@{spork\+::debug}!to\+\_\+string\+\_\+internal@{to\+\_\+string\+\_\+internal}}
+\index{to\+\_\+string\+\_\+internal@{to\+\_\+string\+\_\+internal}!spork\+::debug@{spork\+::debug}}
+\subsubsection{\texorpdfstring{to\+\_\+string\+\_\+internal()}{to\_string\_internal()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static const char$\ast$ spork\+::debug\+::to\+\_\+string\+\_\+internal (\begin{DoxyParamCaption}\item[{const T \&}]{t,  }\item[{const std\+::false\+\_\+type \&}]{ignored }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 123 of file log.\+h.
+
+\mbox{\Hypertarget{namespacespork_1_1debug_a32859632cb378334e7808f5daf380ed8}\label{namespacespork_1_1debug_a32859632cb378334e7808f5daf380ed8}} 
+\index{spork\+::debug@{spork\+::debug}!to\+\_\+string\+\_\+internal$<$ const char $\ast$ $>$@{to\+\_\+string\+\_\+internal$<$ const char $\ast$ $>$}}
+\index{to\+\_\+string\+\_\+internal$<$ const char $\ast$ $>$@{to\+\_\+string\+\_\+internal$<$ const char $\ast$ $>$}!spork\+::debug@{spork\+::debug}}
+\subsubsection{\texorpdfstring{to\+\_\+string\+\_\+internal$<$ const char $\ast$ $>$()}{to\_string\_internal< const char * >()}}
+{\footnotesize\ttfamily template$<$$>$ \\
+static const char$\ast$ \hyperlink{namespacespork_1_1debug_a8fd0aebbc584e9053a2e81ad7f207c14}{spork\+::debug\+::to\+\_\+string\+\_\+internal}$<$ const char $\ast$$>$ (\begin{DoxyParamCaption}\item[{const char $\ast$const \&}]{v,  }\item[{const std\+::false\+\_\+type \&}]{ignored }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 137 of file log.\+h.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacespork_1_1debug_ad495c6327f1d571e7db4d5698410ca7d}\label{namespacespork_1_1debug_ad495c6327f1d571e7db4d5698410ca7d}} 
+\index{spork\+::debug@{spork\+::debug}!sprintf\+\_\+buffer@{sprintf\+\_\+buffer}}
+\index{sprintf\+\_\+buffer@{sprintf\+\_\+buffer}!spork\+::debug@{spork\+::debug}}
+\subsubsection{\texorpdfstring{sprintf\+\_\+buffer}{sprintf\_buffer}}
+{\footnotesize\ttfamily char spork\+::debug\+::sprintf\+\_\+buffer\mbox{[}1024 $\ast$10\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 23 of file log.\+h.
+
+\mbox{\Hypertarget{namespacespork_1_1debug_aa1305eea424e282f851d800b690e1682}\label{namespacespork_1_1debug_aa1305eea424e282f851d800b690e1682}} 
+\index{spork\+::debug@{spork\+::debug}!to\+\_\+string\+\_\+buffer@{to\+\_\+string\+\_\+buffer}}
+\index{to\+\_\+string\+\_\+buffer@{to\+\_\+string\+\_\+buffer}!spork\+::debug@{spork\+::debug}}
+\subsubsection{\texorpdfstring{to\+\_\+string\+\_\+buffer}{to\_string\_buffer}}
+{\footnotesize\ttfamily char spork\+::debug\+::to\+\_\+string\+\_\+buffer\mbox{[}1024 $\ast$10\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 22 of file log.\+h.
+

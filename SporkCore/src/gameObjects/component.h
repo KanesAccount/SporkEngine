@@ -10,15 +10,17 @@ namespace spork { namespace gameobject { namespace component {
 
 	struct ComponentName 
 	{
-		std::string name;
+		String name;
 	};
-
-	class Component 
+	/**
+	*  Component Base Class. Contains virtual functions used by components.
+	*/
+	class Component
 	{
 	protected:
 		GameObject* m_GameObject;
 	public:
-		virtual GameObject* GetComponent() { return m_GameObject; }
-		virtual ComponentName* GetName() const { return nullptr; }
+		virtual GameObject* getComponent() { return m_GameObject; }
+		virtual ComponentName* getName() const { return nullptr; }
 	};
 } } }

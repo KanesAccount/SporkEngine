@@ -1,0 +1,17 @@
+digraph "W:/Uni/SPORK/WORKING SPORK/Assignment/Spork Engine Submission/SporkEngine/SporkCore/src/gameObjects" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_f24a18f2d481361064cf425afe0b6224 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="src" fontname="Helvetica", fontsize="10", URL="dir_f24a18f2d481361064cf425afe0b6224.html"]
+  dir_9aa12cc50a2066395e7990c089d9aba3 [shape=box, label="gameObjects", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_9aa12cc50a2066395e7990c089d9aba3.html"];
+  }
+  dir_e27a936568ff70964ab342b03051fecf [shape=box label="spork" URL="dir_e27a936568ff70964ab342b03051fecf.html"];
+  dir_6d3a224d7d1fd814891968da47835acf [shape=box label="maths" URL="dir_6d3a224d7d1fd814891968da47835acf.html"];
+  dir_970aca47ba06d285cc7c331eb503c699 [shape=box label="graphics" fillcolor="white" style="filled" color="red" URL="dir_970aca47ba06d285cc7c331eb503c699.html"];
+  dir_970aca47ba06d285cc7c331eb503c699->dir_e27a936568ff70964ab342b03051fecf [headlabel="6", labeldistance=1.5 headhref="dir_000005_000012.html"];
+  dir_970aca47ba06d285cc7c331eb503c699->dir_6d3a224d7d1fd814891968da47835acf [headlabel="4", labeldistance=1.5 headhref="dir_000005_000011.html"];
+  dir_9aa12cc50a2066395e7990c089d9aba3->dir_e27a936568ff70964ab342b03051fecf [headlabel="1", labeldistance=1.5 headhref="dir_000004_000012.html"];
+  dir_9aa12cc50a2066395e7990c089d9aba3->dir_6d3a224d7d1fd814891968da47835acf [headlabel="1", labeldistance=1.5 headhref="dir_000004_000011.html"];
+  dir_9aa12cc50a2066395e7990c089d9aba3->dir_970aca47ba06d285cc7c331eb503c699 [headlabel="2", labeldistance=1.5 headhref="dir_000004_000005.html"];
+}

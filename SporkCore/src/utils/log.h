@@ -1,7 +1,6 @@
 #pragma once
 #include "../spork/spork.h"
 #include "../maths/vec2.h"
-//#include <engine/events/events.h>
 
 //Logger defines
 #define LOG_WARNING 0
@@ -96,91 +95,6 @@ namespace spork { namespace debug {
 			strcpy(result, &string[0]);
 			return result;
 		}
-
-
-		//template <>
-		//static const char* to_string<maths::Rectangle>(const maths::Rectangle& r)
-		//{
-		//	sprintf(sprintf_buffer, "Rectangle: (%f, %f, %f, %f)", r.x, r.y, r.width, r.height);
-		//	char* result = new char[strlen(sprintf_buffer)];
-		//	strcpy(result, &sprintf_buffer[0]);
-		//	return result;
-		//}
-
-		//template <>
-		//static const char* to_string<event::KeyPress>(const event::KeyPress& e)
-		//{
-		//	sprintf(sprintf_buffer, "KeyPressedEvent: (%d, %d)", e.getKey(), e.getHold());
-		//	char* result = new char[strlen(sprintf_buffer)];
-		//	strcpy(result, &sprintf_buffer[0]);
-		//	return result;
-		//}
-
-		//template <>
-		//static const char* to_string<event::KeyRelease>(const event::KeyRelease& e)
-		//{
-		//	sprintf(sprintf_buffer, "KeyReleasedEvent: (%d)", e.getKey());
-		//	char* result = new char[strlen(sprintf_buffer)];
-		//	strcpy(result, &sprintf_buffer[0]);
-		//	return result;
-		//}
-
-		//template <>
-		//static const char* to_string<event::MouseClickEvent>(const event::MouseClickEvent& e)
-		//{
-		//	sprintf(sprintf_buffer, "MousePressedEvent: (%d, %f, %f)", e.getButton(), e.getX(), e.getY());
-		//	char* result = new char[strlen(sprintf_buffer)];
-		//	strcpy(result, &sprintf_buffer[0]);
-		//	return result;
-		//}
-
-		//template <>
-		//static const char* to_string<event::MouseReleaseEvent>(const event::MouseReleaseEvent& e)
-		//{
-		//	sprintf(sprintf_buffer, "MouseReleasedEvent: (%d, %f, %f)", e.getButton(), e.getX(), e.getY());
-		//	char* result = new char[strlen(sprintf_buffer)];
-		//	strcpy(result, &sprintf_buffer[0]);
-		//	return result;
-		//}
-
-		//template <>
-		//static const char* to_string<event::MouseMoveEvent>(const event::MouseMoveEvent& e)
-		//{
-		//	sprintf(sprintf_buffer, "MouseMovedEvent: (%f, %f, %s)", e.getX(), e.getY(), e.isDrag() ? "true" : "false");
-		//	char* result = new char[strlen(sprintf_buffer)];
-		//	strcpy(result, &sprintf_buffer[0]);
-		//	return result;
-		//}
-
-		//template <>
-		//static const char* to_string<event::Event>(const event::Event& e)
-		//{
-		//	sprintf(sprintf_buffer, "Event: %s (%d)", event::Event::eventToString(e.getType()).c_str(), e.getType());
-		//	char* result = new char[strlen(sprintf_buffer)];
-		//	strcpy(result, &sprintf_buffer[0]);
-		//	return result;
-		//}
-
-		//template <>
-		//static const char* to_string<event::Event*>(event::Event* const& e)
-		//{
-		//	using namespace event;
-
-		//	switch (e->getType())
-		//	{
-		//	case Event::Type::KEY_PRESS:
-		//		return to_string(*(KeyPress*)e);
-		//	case Event::Type::KEY_RELEASE:
-		//		return to_string(*(KeyRelease*)e);
-		//	case Event::Type::MOUSE_CLICK:
-		//		return to_string(*(MouseClickEvent*)e);
-		//	case Event::Type::MOUSE_RELEASE:
-		//		return to_string(*(MouseReleaseEvent*)e);
-		//	case Event::Type::MOUSE_MOVE:
-		//		return to_string(*(MouseMoveEvent*)e);
-		//	}
-		//	return "Unkown Event!";
-		//}
 
 		template <typename T>
 		static String format_iterators(T& begin, T& end)

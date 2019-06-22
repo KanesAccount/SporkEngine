@@ -1,0 +1,144 @@
+\hypertarget{classspork_1_1gui_1_1_g_u_i}{}\section{spork\+:\+:gui\+:\+:G\+UI Class Reference}
+\label{classspork_1_1gui_1_1_g_u_i}\index{spork\+::gui\+::\+G\+UI@{spork\+::gui\+::\+G\+UI}}
+
+
+\hyperlink{classspork_1_1gui_1_1_g_u_i}{G\+UI} Class.  
+
+
+
+
+{\ttfamily \#include $<$gui.\+h$>$}
+
+
+
+Collaboration diagram for spork\+:\+:gui\+:\+:G\+UI\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classspork_1_1gui_1_1_g_u_i_a28fe6b112dddc8530e2b3df51d3b55b4}{G\+UI} (\hyperlink{classspork_1_1graphics_1_1_window}{graphics\+::\+Window} $\ast$window)
+\item 
+\hyperlink{classspork_1_1gui_1_1_g_u_i_ab72190104e3a7209b0b59114a0fef862}{$\sim$\+G\+UI} ()
+\item 
+void \hyperlink{classspork_1_1gui_1_1_g_u_i_a81feb6b378f67372bb0d888a3e8a9a0c}{load\+G\+UI} ()
+\item 
+void \hyperlink{classspork_1_1gui_1_1_g_u_i_ad931ff397620434803152efafb65f199}{add\+Bar} (Tw\+Bar $\ast$bar\+Name, const char $\ast$bar\+Handle)
+\item 
+void \hyperlink{classspork_1_1gui_1_1_g_u_i_add55001e7b4f540f80ed915d3588f20f}{add\+G\+U\+Ielement} (Tw\+Bar $\ast$bar, const char $\ast$element\+Name, Tw\+Type type, void $\ast$var, const char $\ast$def=nullptr, bool read\+Only=false, \hyperlink{my_string_8h_afbeda3fd1bdc8c37d01bdf9f5c8274ff}{String} label=nullptr)
+\item 
+void \hyperlink{classspork_1_1gui_1_1_g_u_i_a2e6dcd5011c7bbe5607c2ec126e5f080}{add\+G\+U\+Ibutton} (Tw\+Bar $\ast$bar, const char $\ast$name, Tw\+Button\+Callback callback, void $\ast$client\+Data, const char $\ast$def)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Tw\+Bar $\ast$ \hyperlink{classspork_1_1gui_1_1_g_u_i_a3eb1c6aa668d31183967e050bc7bafd0}{my\+Bar}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classspork_1_1graphics_1_1_window}{graphics\+::\+Window} $\ast$ \hyperlink{classspork_1_1gui_1_1_g_u_i_ac865a577121a3a5ca2319ef638484956}{m\+\_\+\+Window}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classspork_1_1gui_1_1_g_u_i}{G\+UI} Class. 
+
+Handles construction of the \hyperlink{classspork_1_1gui_1_1_g_u_i}{G\+UI}. 
+
+Definition at line 11 of file gui.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classspork_1_1gui_1_1_g_u_i_a28fe6b112dddc8530e2b3df51d3b55b4}\label{classspork_1_1gui_1_1_g_u_i_a28fe6b112dddc8530e2b3df51d3b55b4}} 
+\index{spork\+::gui\+::\+G\+UI@{spork\+::gui\+::\+G\+UI}!G\+UI@{G\+UI}}
+\index{G\+UI@{G\+UI}!spork\+::gui\+::\+G\+UI@{spork\+::gui\+::\+G\+UI}}
+\subsubsection{\texorpdfstring{G\+U\+I()}{GUI()}}
+{\footnotesize\ttfamily spork\+::gui\+::\+G\+U\+I\+::\+G\+UI (\begin{DoxyParamCaption}\item[{\hyperlink{classspork_1_1graphics_1_1_window}{graphics\+::\+Window} $\ast$}]{window }\end{DoxyParamCaption})}
+
+
+
+Definition at line 5 of file gui.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1gui_1_1_g_u_i_ab72190104e3a7209b0b59114a0fef862}\label{classspork_1_1gui_1_1_g_u_i_ab72190104e3a7209b0b59114a0fef862}} 
+\index{spork\+::gui\+::\+G\+UI@{spork\+::gui\+::\+G\+UI}!````~G\+UI@{$\sim$\+G\+UI}}
+\index{````~G\+UI@{$\sim$\+G\+UI}!spork\+::gui\+::\+G\+UI@{spork\+::gui\+::\+G\+UI}}
+\subsubsection{\texorpdfstring{$\sim$\+G\+U\+I()}{~GUI()}}
+{\footnotesize\ttfamily spork\+::gui\+::\+G\+U\+I\+::$\sim$\+G\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 11 of file gui.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classspork_1_1gui_1_1_g_u_i_ad931ff397620434803152efafb65f199}\label{classspork_1_1gui_1_1_g_u_i_ad931ff397620434803152efafb65f199}} 
+\index{spork\+::gui\+::\+G\+UI@{spork\+::gui\+::\+G\+UI}!add\+Bar@{add\+Bar}}
+\index{add\+Bar@{add\+Bar}!spork\+::gui\+::\+G\+UI@{spork\+::gui\+::\+G\+UI}}
+\subsubsection{\texorpdfstring{add\+Bar()}{addBar()}}
+{\footnotesize\ttfamily void spork\+::gui\+::\+G\+U\+I\+::add\+Bar (\begin{DoxyParamCaption}\item[{Tw\+Bar $\ast$}]{bar\+Name,  }\item[{const char $\ast$}]{bar\+Handle }\end{DoxyParamCaption})}
+
+
+
+Definition at line 27 of file gui.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1gui_1_1_g_u_i_a2e6dcd5011c7bbe5607c2ec126e5f080}\label{classspork_1_1gui_1_1_g_u_i_a2e6dcd5011c7bbe5607c2ec126e5f080}} 
+\index{spork\+::gui\+::\+G\+UI@{spork\+::gui\+::\+G\+UI}!add\+G\+U\+Ibutton@{add\+G\+U\+Ibutton}}
+\index{add\+G\+U\+Ibutton@{add\+G\+U\+Ibutton}!spork\+::gui\+::\+G\+UI@{spork\+::gui\+::\+G\+UI}}
+\subsubsection{\texorpdfstring{add\+G\+U\+Ibutton()}{addGUIbutton()}}
+{\footnotesize\ttfamily void spork\+::gui\+::\+G\+U\+I\+::add\+G\+U\+Ibutton (\begin{DoxyParamCaption}\item[{Tw\+Bar $\ast$}]{bar,  }\item[{const char $\ast$}]{name,  }\item[{Tw\+Button\+Callback}]{callback,  }\item[{void $\ast$}]{client\+Data,  }\item[{const char $\ast$}]{def }\end{DoxyParamCaption})}
+
+
+
+Definition at line 45 of file gui.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1gui_1_1_g_u_i_add55001e7b4f540f80ed915d3588f20f}\label{classspork_1_1gui_1_1_g_u_i_add55001e7b4f540f80ed915d3588f20f}} 
+\index{spork\+::gui\+::\+G\+UI@{spork\+::gui\+::\+G\+UI}!add\+G\+U\+Ielement@{add\+G\+U\+Ielement}}
+\index{add\+G\+U\+Ielement@{add\+G\+U\+Ielement}!spork\+::gui\+::\+G\+UI@{spork\+::gui\+::\+G\+UI}}
+\subsubsection{\texorpdfstring{add\+G\+U\+Ielement()}{addGUIelement()}}
+{\footnotesize\ttfamily void spork\+::gui\+::\+G\+U\+I\+::add\+G\+U\+Ielement (\begin{DoxyParamCaption}\item[{Tw\+Bar $\ast$}]{bar,  }\item[{const char $\ast$}]{element\+Name,  }\item[{Tw\+Type}]{type,  }\item[{void $\ast$}]{var,  }\item[{const char $\ast$}]{def = {\ttfamily nullptr},  }\item[{bool}]{read\+Only = {\ttfamily false},  }\item[{\hyperlink{my_string_8h_afbeda3fd1bdc8c37d01bdf9f5c8274ff}{String}}]{label = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 32 of file gui.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1gui_1_1_g_u_i_a81feb6b378f67372bb0d888a3e8a9a0c}\label{classspork_1_1gui_1_1_g_u_i_a81feb6b378f67372bb0d888a3e8a9a0c}} 
+\index{spork\+::gui\+::\+G\+UI@{spork\+::gui\+::\+G\+UI}!load\+G\+UI@{load\+G\+UI}}
+\index{load\+G\+UI@{load\+G\+UI}!spork\+::gui\+::\+G\+UI@{spork\+::gui\+::\+G\+UI}}
+\subsubsection{\texorpdfstring{load\+G\+U\+I()}{loadGUI()}}
+{\footnotesize\ttfamily void spork\+::gui\+::\+G\+U\+I\+::load\+G\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 16 of file gui.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classspork_1_1gui_1_1_g_u_i_ac865a577121a3a5ca2319ef638484956}\label{classspork_1_1gui_1_1_g_u_i_ac865a577121a3a5ca2319ef638484956}} 
+\index{spork\+::gui\+::\+G\+UI@{spork\+::gui\+::\+G\+UI}!m\+\_\+\+Window@{m\+\_\+\+Window}}
+\index{m\+\_\+\+Window@{m\+\_\+\+Window}!spork\+::gui\+::\+G\+UI@{spork\+::gui\+::\+G\+UI}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Window}{m\_Window}}
+{\footnotesize\ttfamily \hyperlink{classspork_1_1graphics_1_1_window}{graphics\+::\+Window}$\ast$ spork\+::gui\+::\+G\+U\+I\+::m\+\_\+\+Window\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 14 of file gui.\+h.
+
+\mbox{\Hypertarget{classspork_1_1gui_1_1_g_u_i_a3eb1c6aa668d31183967e050bc7bafd0}\label{classspork_1_1gui_1_1_g_u_i_a3eb1c6aa668d31183967e050bc7bafd0}} 
+\index{spork\+::gui\+::\+G\+UI@{spork\+::gui\+::\+G\+UI}!my\+Bar@{my\+Bar}}
+\index{my\+Bar@{my\+Bar}!spork\+::gui\+::\+G\+UI@{spork\+::gui\+::\+G\+UI}}
+\subsubsection{\texorpdfstring{my\+Bar}{myBar}}
+{\footnotesize\ttfamily Tw\+Bar$\ast$ spork\+::gui\+::\+G\+U\+I\+::my\+Bar}
+
+
+
+Definition at line 18 of file gui.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+N\+G S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/gui/\hyperlink{gui_8h}{gui.\+h}\item 
+W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+N\+G S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/gui/\hyperlink{gui_8cpp}{gui.\+cpp}\end{DoxyCompactItemize}

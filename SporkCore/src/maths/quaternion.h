@@ -3,7 +3,9 @@
 #include "mat4.h"
 
 namespace spork { namespace maths {
-
+	/**
+	*  Quaternion Class.
+	*/
 	struct Quaternion 
 	{
 		float x, y, z, w;
@@ -32,8 +34,8 @@ namespace spork { namespace maths {
 		const Quaternion operator-() const;
 
 		static vec3 rotate(const Quaternion &quat, const vec3& vec);
-		static const Quaternion rotation(const vec3& unitVec0, const vec3& unitVec1);
-		static const Quaternion rotation(float radians, const vec3& unitVec);
+		static const Quaternion rotate(const vec3& unitVec0, const vec3& unitVec1);
+		static const Quaternion rotate(float radians, const vec3& unitVec);
 
 		static const Quaternion rotationX(float radians)
 		{
@@ -57,5 +59,4 @@ namespace spork { namespace maths {
 		Quaternion conjugate() const;
 
 	};
-
 } }

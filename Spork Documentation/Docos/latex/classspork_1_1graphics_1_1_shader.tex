@@ -1,0 +1,311 @@
+\hypertarget{classspork_1_1graphics_1_1_shader}{}\section{spork\+:\+:graphics\+:\+:Shader Class Reference}
+\label{classspork_1_1graphics_1_1_shader}\index{spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}}
+
+
+\hyperlink{classspork_1_1graphics_1_1_shader}{Shader} Class.  
+
+
+
+
+{\ttfamily \#include $<$shader.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classspork_1_1graphics_1_1_shader_ad07f4c0a9721d13c9a3330ccc83f8405}{Shader} ()
+\item 
+\hyperlink{classspork_1_1graphics_1_1_shader_a14fbd32bddfed0666e957d6377a745a9}{Shader} (const char $\ast$vert\+Path, const char $\ast$frag\+Path, const char $\ast$geometry\+Path=nullptr)
+\item 
+\hyperlink{classspork_1_1graphics_1_1_shader_a5c999f2993935905b276cc90e1b83ca8}{$\sim$\+Shader} ()
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_shader_a486a5b4ebc281939211eaacb85a2fd93}{set\+Uniform1f} (const G\+Lchar $\ast$name, float value)
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_shader_a589ba3d50686c9ce540db9e974b5fc70}{set\+Uniform1i} (const G\+Lchar $\ast$name, int value)
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_shader_a843892caad17a39b03df675ae1fa268c}{set\+Uniform1iv} (const G\+Lchar $\ast$name, int $\ast$value, int count)
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_shader_aefb625d58b7cec854102f8a6c36fab90}{set\+Uniform2f} (const G\+Lchar $\ast$name, const \hyperlink{structspork_1_1maths_1_1vec2}{maths\+::vec2} \&vector)
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_shader_a3f8da01159682ede6b4ae15b02e0277f}{set\+Uniform1fv} (const G\+Lchar $\ast$name, float $\ast$value, int count)
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_shader_a70b750aa20eec302d038e7764d3702b4}{set\+Uniform3f} (const G\+Lchar $\ast$name, const \hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} \&vector)
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_shader_a77b6c8294c146830f14a045db79a45a3}{set\+Uniform4f} (const G\+Lchar $\ast$name, const \hyperlink{structspork_1_1maths_1_1vec4}{maths\+::vec4} \&vector)
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_shader_aad96559174940fa57823854c8fb37e7a}{set\+Uniform\+Mat4} (const G\+Lchar $\ast$name, const \hyperlink{structspork_1_1maths_1_1mat4}{mat4} \&matrix)
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_shader_ad6b8581afbd17fa147249f64a6e63277}{set\+Bool} (const std\+::string \&name, bool value) const
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_shader_ab45b2c3e18a9cd749415554c20798761}{set\+Int} (const std\+::string \&name, int value) const
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_shader_a237454c02782f6466cc82d5c1e245d01}{set\+Float} (const std\+::string \&name, float value) const
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_shader_a9f94f59d4beda122f51475dc7d7eda07}{enable} () const
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_shader_a0218ebe5d0c83780e3680432fe99fb5a}{disable} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+Luint \hyperlink{classspork_1_1graphics_1_1_shader_a408beae51c0bf176c8d598872e524a12}{m\+\_\+\+Shader\+ID}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+G\+Luint \hyperlink{classspork_1_1graphics_1_1_shader_a24f95d4765321c8244726bcbe47c2bc3}{load} ()
+\item 
+G\+Lint \hyperlink{classspork_1_1graphics_1_1_shader_a421e7428713f0d5e33f50ef0e9650185}{get\+Uniform\+Loc} (const G\+Lchar $\ast$name)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{classspork_1_1graphics_1_1_shader_a2d045628a84f775d6ca5843a72511351}{m\+\_\+\+Vert\+Path}
+\item 
+const char $\ast$ \hyperlink{classspork_1_1graphics_1_1_shader_a87cbddb4557834f2d21023d12f3a85e7}{m\+\_\+\+Frag\+Path}
+\item 
+const char $\ast$ \hyperlink{classspork_1_1graphics_1_1_shader_a2e931298118049cbcbc65a62eae2b0d8}{m\+\_\+\+Geometry\+Path}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classspork_1_1graphics_1_1_shader}{Shader} Class. 
+
+Handles loading of vertex, fragment and geometry shaders \& setting of uniform variables. 
+
+Definition at line 14 of file shader.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_shader_ad07f4c0a9721d13c9a3330ccc83f8405}\label{classspork_1_1graphics_1_1_shader_ad07f4c0a9721d13c9a3330ccc83f8405}} 
+\index{spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}!Shader@{Shader}}
+\index{Shader@{Shader}!spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{Shader()}{Shader()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily spork\+::graphics\+::\+Shader\+::\+Shader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 5 of file shader.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_shader_a14fbd32bddfed0666e957d6377a745a9}\label{classspork_1_1graphics_1_1_shader_a14fbd32bddfed0666e957d6377a745a9}} 
+\index{spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}!Shader@{Shader}}
+\index{Shader@{Shader}!spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{Shader()}{Shader()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily spork\+::graphics\+::\+Shader\+::\+Shader (\begin{DoxyParamCaption}\item[{const char $\ast$}]{vert\+Path,  }\item[{const char $\ast$}]{frag\+Path,  }\item[{const char $\ast$}]{geometry\+Path = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 9 of file shader.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_shader_a5c999f2993935905b276cc90e1b83ca8}\label{classspork_1_1graphics_1_1_shader_a5c999f2993935905b276cc90e1b83ca8}} 
+\index{spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}!````~Shader@{$\sim$\+Shader}}
+\index{````~Shader@{$\sim$\+Shader}!spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{$\sim$\+Shader()}{~Shader()}}
+{\footnotesize\ttfamily spork\+::graphics\+::\+Shader\+::$\sim$\+Shader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file shader.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_shader_a0218ebe5d0c83780e3680432fe99fb5a}\label{classspork_1_1graphics_1_1_shader_a0218ebe5d0c83780e3680432fe99fb5a}} 
+\index{spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}!disable@{disable}}
+\index{disable@{disable}!spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{disable()}{disable()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Shader\+::disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 160 of file shader.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_shader_a9f94f59d4beda122f51475dc7d7eda07}\label{classspork_1_1graphics_1_1_shader_a9f94f59d4beda122f51475dc7d7eda07}} 
+\index{spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}!enable@{enable}}
+\index{enable@{enable}!spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Shader\+::enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 155 of file shader.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_shader_a421e7428713f0d5e33f50ef0e9650185}\label{classspork_1_1graphics_1_1_shader_a421e7428713f0d5e33f50ef0e9650185}} 
+\index{spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}!get\+Uniform\+Loc@{get\+Uniform\+Loc}}
+\index{get\+Uniform\+Loc@{get\+Uniform\+Loc}!spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{get\+Uniform\+Loc()}{getUniformLoc()}}
+{\footnotesize\ttfamily G\+Lint spork\+::graphics\+::\+Shader\+::get\+Uniform\+Loc (\begin{DoxyParamCaption}\item[{const G\+Lchar $\ast$}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 106 of file shader.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_shader_a24f95d4765321c8244726bcbe47c2bc3}\label{classspork_1_1graphics_1_1_shader_a24f95d4765321c8244726bcbe47c2bc3}} 
+\index{spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}!load@{load}}
+\index{load@{load}!spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily G\+Luint spork\+::graphics\+::\+Shader\+::load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 20 of file shader.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_shader_ad6b8581afbd17fa147249f64a6e63277}\label{classspork_1_1graphics_1_1_shader_ad6b8581afbd17fa147249f64a6e63277}} 
+\index{spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}!set\+Bool@{set\+Bool}}
+\index{set\+Bool@{set\+Bool}!spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{set\+Bool()}{setBool()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Shader\+::set\+Bool (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{bool}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 35 of file shader.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_shader_a237454c02782f6466cc82d5c1e245d01}\label{classspork_1_1graphics_1_1_shader_a237454c02782f6466cc82d5c1e245d01}} 
+\index{spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}!set\+Float@{set\+Float}}
+\index{set\+Float@{set\+Float}!spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{set\+Float()}{setFloat()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Shader\+::set\+Float (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{float}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 45 of file shader.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_shader_ab45b2c3e18a9cd749415554c20798761}\label{classspork_1_1graphics_1_1_shader_ab45b2c3e18a9cd749415554c20798761}} 
+\index{spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}!set\+Int@{set\+Int}}
+\index{set\+Int@{set\+Int}!spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{set\+Int()}{setInt()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Shader\+::set\+Int (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{int}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 40 of file shader.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_shader_a486a5b4ebc281939211eaacb85a2fd93}\label{classspork_1_1graphics_1_1_shader_a486a5b4ebc281939211eaacb85a2fd93}} 
+\index{spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}!set\+Uniform1f@{set\+Uniform1f}}
+\index{set\+Uniform1f@{set\+Uniform1f}!spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{set\+Uniform1f()}{setUniform1f()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Shader\+::set\+Uniform1f (\begin{DoxyParamCaption}\item[{const G\+Lchar $\ast$}]{name,  }\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 111 of file shader.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_shader_a3f8da01159682ede6b4ae15b02e0277f}\label{classspork_1_1graphics_1_1_shader_a3f8da01159682ede6b4ae15b02e0277f}} 
+\index{spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}!set\+Uniform1fv@{set\+Uniform1fv}}
+\index{set\+Uniform1fv@{set\+Uniform1fv}!spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{set\+Uniform1fv()}{setUniform1fv()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Shader\+::set\+Uniform1fv (\begin{DoxyParamCaption}\item[{const G\+Lchar $\ast$}]{name,  }\item[{float $\ast$}]{value,  }\item[{int}]{count }\end{DoxyParamCaption})}
+
+
+
+Definition at line 116 of file shader.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_shader_a589ba3d50686c9ce540db9e974b5fc70}\label{classspork_1_1graphics_1_1_shader_a589ba3d50686c9ce540db9e974b5fc70}} 
+\index{spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}!set\+Uniform1i@{set\+Uniform1i}}
+\index{set\+Uniform1i@{set\+Uniform1i}!spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{set\+Uniform1i()}{setUniform1i()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Shader\+::set\+Uniform1i (\begin{DoxyParamCaption}\item[{const G\+Lchar $\ast$}]{name,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 121 of file shader.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_shader_a843892caad17a39b03df675ae1fa268c}\label{classspork_1_1graphics_1_1_shader_a843892caad17a39b03df675ae1fa268c}} 
+\index{spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}!set\+Uniform1iv@{set\+Uniform1iv}}
+\index{set\+Uniform1iv@{set\+Uniform1iv}!spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{set\+Uniform1iv()}{setUniform1iv()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Shader\+::set\+Uniform1iv (\begin{DoxyParamCaption}\item[{const G\+Lchar $\ast$}]{name,  }\item[{int $\ast$}]{value,  }\item[{int}]{count }\end{DoxyParamCaption})}
+
+
+
+Definition at line 126 of file shader.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_shader_aefb625d58b7cec854102f8a6c36fab90}\label{classspork_1_1graphics_1_1_shader_aefb625d58b7cec854102f8a6c36fab90}} 
+\index{spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}!set\+Uniform2f@{set\+Uniform2f}}
+\index{set\+Uniform2f@{set\+Uniform2f}!spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{set\+Uniform2f()}{setUniform2f()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Shader\+::set\+Uniform2f (\begin{DoxyParamCaption}\item[{const G\+Lchar $\ast$}]{name,  }\item[{const \hyperlink{structspork_1_1maths_1_1vec2}{maths\+::vec2} \&}]{vector }\end{DoxyParamCaption})}
+
+
+
+Definition at line 131 of file shader.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_shader_a70b750aa20eec302d038e7764d3702b4}\label{classspork_1_1graphics_1_1_shader_a70b750aa20eec302d038e7764d3702b4}} 
+\index{spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}!set\+Uniform3f@{set\+Uniform3f}}
+\index{set\+Uniform3f@{set\+Uniform3f}!spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{set\+Uniform3f()}{setUniform3f()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Shader\+::set\+Uniform3f (\begin{DoxyParamCaption}\item[{const G\+Lchar $\ast$}]{name,  }\item[{const \hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} \&}]{vector }\end{DoxyParamCaption})}
+
+
+
+Definition at line 137 of file shader.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_shader_a77b6c8294c146830f14a045db79a45a3}\label{classspork_1_1graphics_1_1_shader_a77b6c8294c146830f14a045db79a45a3}} 
+\index{spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}!set\+Uniform4f@{set\+Uniform4f}}
+\index{set\+Uniform4f@{set\+Uniform4f}!spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{set\+Uniform4f()}{setUniform4f()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Shader\+::set\+Uniform4f (\begin{DoxyParamCaption}\item[{const G\+Lchar $\ast$}]{name,  }\item[{const \hyperlink{structspork_1_1maths_1_1vec4}{maths\+::vec4} \&}]{vector }\end{DoxyParamCaption})}
+
+
+
+Definition at line 143 of file shader.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_shader_aad96559174940fa57823854c8fb37e7a}\label{classspork_1_1graphics_1_1_shader_aad96559174940fa57823854c8fb37e7a}} 
+\index{spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}!set\+Uniform\+Mat4@{set\+Uniform\+Mat4}}
+\index{set\+Uniform\+Mat4@{set\+Uniform\+Mat4}!spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{set\+Uniform\+Mat4()}{setUniformMat4()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Shader\+::set\+Uniform\+Mat4 (\begin{DoxyParamCaption}\item[{const G\+Lchar $\ast$}]{name,  }\item[{const \hyperlink{structspork_1_1maths_1_1mat4}{mat4} \&}]{matrix }\end{DoxyParamCaption})}
+
+
+
+Definition at line 149 of file shader.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_shader_a87cbddb4557834f2d21023d12f3a85e7}\label{classspork_1_1graphics_1_1_shader_a87cbddb4557834f2d21023d12f3a85e7}} 
+\index{spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}!m\+\_\+\+Frag\+Path@{m\+\_\+\+Frag\+Path}}
+\index{m\+\_\+\+Frag\+Path@{m\+\_\+\+Frag\+Path}!spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Frag\+Path}{m\_FragPath}}
+{\footnotesize\ttfamily const char$\ast$ spork\+::graphics\+::\+Shader\+::m\+\_\+\+Frag\+Path\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 18 of file shader.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_shader_a2e931298118049cbcbc65a62eae2b0d8}\label{classspork_1_1graphics_1_1_shader_a2e931298118049cbcbc65a62eae2b0d8}} 
+\index{spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}!m\+\_\+\+Geometry\+Path@{m\+\_\+\+Geometry\+Path}}
+\index{m\+\_\+\+Geometry\+Path@{m\+\_\+\+Geometry\+Path}!spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Geometry\+Path}{m\_GeometryPath}}
+{\footnotesize\ttfamily const char$\ast$ spork\+::graphics\+::\+Shader\+::m\+\_\+\+Geometry\+Path\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 19 of file shader.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_shader_a408beae51c0bf176c8d598872e524a12}\label{classspork_1_1graphics_1_1_shader_a408beae51c0bf176c8d598872e524a12}} 
+\index{spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}!m\+\_\+\+Shader\+ID@{m\+\_\+\+Shader\+ID}}
+\index{m\+\_\+\+Shader\+ID@{m\+\_\+\+Shader\+ID}!spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Shader\+ID}{m\_ShaderID}}
+{\footnotesize\ttfamily G\+Luint spork\+::graphics\+::\+Shader\+::m\+\_\+\+Shader\+ID}
+
+
+
+Definition at line 21 of file shader.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_shader_a2d045628a84f775d6ca5843a72511351}\label{classspork_1_1graphics_1_1_shader_a2d045628a84f775d6ca5843a72511351}} 
+\index{spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}!m\+\_\+\+Vert\+Path@{m\+\_\+\+Vert\+Path}}
+\index{m\+\_\+\+Vert\+Path@{m\+\_\+\+Vert\+Path}!spork\+::graphics\+::\+Shader@{spork\+::graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Vert\+Path}{m\_VertPath}}
+{\footnotesize\ttfamily const char$\ast$ spork\+::graphics\+::\+Shader\+::m\+\_\+\+Vert\+Path\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 17 of file shader.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+N\+G S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/graphics/\hyperlink{shader_8h}{shader.\+h}\item 
+W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+N\+G S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/graphics/\hyperlink{shader_8cpp}{shader.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,149 @@
+\hypertarget{classspork_1_1app_1_1_input}{}\section{spork\+:\+:app\+:\+:Input Class Reference}
+\label{classspork_1_1app_1_1_input}\index{spork\+::app\+::\+Input@{spork\+::app\+::\+Input}}
+
+
+\hyperlink{classspork_1_1app_1_1_input}{Input} Manager Class.  
+
+
+
+
+{\ttfamily \#include $<$input.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classspork_1_1app_1_1_input_ade1285875cb237a23704d76b69957989}{Input} ()
+\item 
+bool \hyperlink{classspork_1_1app_1_1_input_a49050175fcca31843c59cbdeb1cfbc88}{get\+Key} (int key\+Code)
+\item 
+bool \hyperlink{classspork_1_1app_1_1_input_a5204953f654ba10336f5ab9c61ca314c}{get\+Key\+Down} (int key\+Code)
+\item 
+bool \hyperlink{classspork_1_1app_1_1_input_a2454efa1c6f96d5dca7229889f58f2b4}{get\+Key\+Up} (int key\+Code)
+\item 
+void \hyperlink{classspork_1_1app_1_1_input_a11538adf219ba9bbe9b450efa166ab3b}{add\+Key} (int keycode)
+\item 
+void \hyperlink{classspork_1_1app_1_1_input_a422c08ccd18bb23ea7c075e4f79e2d80}{clear\+Keys} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ int $>$ \hyperlink{classspork_1_1app_1_1_input_ac72b6ae8e2a966c7c2acb94cfa2a99f4}{keys}
+\item 
+static std\+::vector$<$ int $>$ \hyperlink{classspork_1_1app_1_1_input_a7820f843c7008add303c10b3c8e28423}{up\+Keys}
+\item 
+static std\+::vector$<$ int $>$ \hyperlink{classspork_1_1app_1_1_input_aeddda0deeb063ab432c6be8addd2b268}{down\+Keys}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classspork_1_1app_1_1_input}{Input} Manager Class. 
+
+Handles keyboard input. (Currently unimplimented in release version due to input delay) 
+
+Definition at line 11 of file input.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classspork_1_1app_1_1_input_ade1285875cb237a23704d76b69957989}\label{classspork_1_1app_1_1_input_ade1285875cb237a23704d76b69957989}} 
+\index{spork\+::app\+::\+Input@{spork\+::app\+::\+Input}!Input@{Input}}
+\index{Input@{Input}!spork\+::app\+::\+Input@{spork\+::app\+::\+Input}}
+\subsubsection{\texorpdfstring{Input()}{Input()}}
+{\footnotesize\ttfamily spork\+::app\+::\+Input\+::\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 9 of file input.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classspork_1_1app_1_1_input_a11538adf219ba9bbe9b450efa166ab3b}\label{classspork_1_1app_1_1_input_a11538adf219ba9bbe9b450efa166ab3b}} 
+\index{spork\+::app\+::\+Input@{spork\+::app\+::\+Input}!add\+Key@{add\+Key}}
+\index{add\+Key@{add\+Key}!spork\+::app\+::\+Input@{spork\+::app\+::\+Input}}
+\subsubsection{\texorpdfstring{add\+Key()}{addKey()}}
+{\footnotesize\ttfamily void spork\+::app\+::\+Input\+::add\+Key (\begin{DoxyParamCaption}\item[{int}]{keycode }\end{DoxyParamCaption})}
+
+
+
+Definition at line 44 of file input.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1app_1_1_input_a422c08ccd18bb23ea7c075e4f79e2d80}\label{classspork_1_1app_1_1_input_a422c08ccd18bb23ea7c075e4f79e2d80}} 
+\index{spork\+::app\+::\+Input@{spork\+::app\+::\+Input}!clear\+Keys@{clear\+Keys}}
+\index{clear\+Keys@{clear\+Keys}!spork\+::app\+::\+Input@{spork\+::app\+::\+Input}}
+\subsubsection{\texorpdfstring{clear\+Keys()}{clearKeys()}}
+{\footnotesize\ttfamily void spork\+::app\+::\+Input\+::clear\+Keys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 56 of file input.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1app_1_1_input_a49050175fcca31843c59cbdeb1cfbc88}\label{classspork_1_1app_1_1_input_a49050175fcca31843c59cbdeb1cfbc88}} 
+\index{spork\+::app\+::\+Input@{spork\+::app\+::\+Input}!get\+Key@{get\+Key}}
+\index{get\+Key@{get\+Key}!spork\+::app\+::\+Input@{spork\+::app\+::\+Input}}
+\subsubsection{\texorpdfstring{get\+Key()}{getKey()}}
+{\footnotesize\ttfamily bool spork\+::app\+::\+Input\+::get\+Key (\begin{DoxyParamCaption}\item[{int}]{key\+Code }\end{DoxyParamCaption})}
+
+
+
+Definition at line 14 of file input.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1app_1_1_input_a5204953f654ba10336f5ab9c61ca314c}\label{classspork_1_1app_1_1_input_a5204953f654ba10336f5ab9c61ca314c}} 
+\index{spork\+::app\+::\+Input@{spork\+::app\+::\+Input}!get\+Key\+Down@{get\+Key\+Down}}
+\index{get\+Key\+Down@{get\+Key\+Down}!spork\+::app\+::\+Input@{spork\+::app\+::\+Input}}
+\subsubsection{\texorpdfstring{get\+Key\+Down()}{getKeyDown()}}
+{\footnotesize\ttfamily bool spork\+::app\+::\+Input\+::get\+Key\+Down (\begin{DoxyParamCaption}\item[{int}]{key\+Code }\end{DoxyParamCaption})}
+
+
+
+Definition at line 34 of file input.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1app_1_1_input_a2454efa1c6f96d5dca7229889f58f2b4}\label{classspork_1_1app_1_1_input_a2454efa1c6f96d5dca7229889f58f2b4}} 
+\index{spork\+::app\+::\+Input@{spork\+::app\+::\+Input}!get\+Key\+Up@{get\+Key\+Up}}
+\index{get\+Key\+Up@{get\+Key\+Up}!spork\+::app\+::\+Input@{spork\+::app\+::\+Input}}
+\subsubsection{\texorpdfstring{get\+Key\+Up()}{getKeyUp()}}
+{\footnotesize\ttfamily bool spork\+::app\+::\+Input\+::get\+Key\+Up (\begin{DoxyParamCaption}\item[{int}]{key\+Code }\end{DoxyParamCaption})}
+
+
+
+Definition at line 24 of file input.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classspork_1_1app_1_1_input_aeddda0deeb063ab432c6be8addd2b268}\label{classspork_1_1app_1_1_input_aeddda0deeb063ab432c6be8addd2b268}} 
+\index{spork\+::app\+::\+Input@{spork\+::app\+::\+Input}!down\+Keys@{down\+Keys}}
+\index{down\+Keys@{down\+Keys}!spork\+::app\+::\+Input@{spork\+::app\+::\+Input}}
+\subsubsection{\texorpdfstring{down\+Keys}{downKeys}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ spork\+::app\+::\+Input\+::down\+Keys\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 22 of file input.\+h.
+
+\mbox{\Hypertarget{classspork_1_1app_1_1_input_ac72b6ae8e2a966c7c2acb94cfa2a99f4}\label{classspork_1_1app_1_1_input_ac72b6ae8e2a966c7c2acb94cfa2a99f4}} 
+\index{spork\+::app\+::\+Input@{spork\+::app\+::\+Input}!keys@{keys}}
+\index{keys@{keys}!spork\+::app\+::\+Input@{spork\+::app\+::\+Input}}
+\subsubsection{\texorpdfstring{keys}{keys}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ spork\+::app\+::\+Input\+::keys\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 20 of file input.\+h.
+
+\mbox{\Hypertarget{classspork_1_1app_1_1_input_a7820f843c7008add303c10b3c8e28423}\label{classspork_1_1app_1_1_input_a7820f843c7008add303c10b3c8e28423}} 
+\index{spork\+::app\+::\+Input@{spork\+::app\+::\+Input}!up\+Keys@{up\+Keys}}
+\index{up\+Keys@{up\+Keys}!spork\+::app\+::\+Input@{spork\+::app\+::\+Input}}
+\subsubsection{\texorpdfstring{up\+Keys}{upKeys}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ spork\+::app\+::\+Input\+::up\+Keys\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 21 of file input.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+N\+G S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/input/\hyperlink{input_8h}{input.\+h}\item 
+W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+N\+G S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/input/\hyperlink{input_8cpp}{input.\+cpp}\end{DoxyCompactItemize}

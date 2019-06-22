@@ -1,0 +1,164 @@
+\hypertarget{classspork_1_1graphics_1_1_mesh}{}\section{spork\+:\+:graphics\+:\+:Mesh Class Reference}
+\label{classspork_1_1graphics_1_1_mesh}\index{spork\+::graphics\+::\+Mesh@{spork\+::graphics\+::\+Mesh}}
+
+
+\hyperlink{classspork_1_1graphics_1_1_mesh}{Mesh} Class.  
+
+
+
+
+{\ttfamily \#include $<$mesh.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classspork_1_1graphics_1_1_mesh_a72d87fa982dcad754e9993457a95724b}{Mesh} (std\+::vector$<$ \hyperlink{structspork_1_1graphics_1_1_vertex}{Vertex} $>$ \hyperlink{classspork_1_1graphics_1_1_mesh_ae2f135b00a81366187383271ebeb836e}{vertices}, std\+::vector$<$ \hyperlink{defines_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} $>$ indice, std\+::vector$<$ \hyperlink{structspork_1_1graphics_1_1_tex}{Tex} $>$ \hyperlink{classspork_1_1graphics_1_1_mesh_a2bfa767192b6622231e3aeeeea9ba119}{textures})
+\item 
+\hyperlink{classspork_1_1graphics_1_1_mesh_a995f42dd58db38b472170d8082dc538b}{$\sim$\+Mesh} ()
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_mesh_aa6cd194da090d5436f89524fc8332e46}{draw} (\hyperlink{classspork_1_1graphics_1_1_shader}{Shader} $\ast$shader)
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_mesh_af92ddf7ba47ffa22739ba031dc71ebfa}{setup\+Mesh} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \hyperlink{structspork_1_1graphics_1_1_vertex}{Vertex} $>$ \hyperlink{classspork_1_1graphics_1_1_mesh_ae2f135b00a81366187383271ebeb836e}{vertices}
+\item 
+std\+::vector$<$ \hyperlink{defines_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} $>$ \hyperlink{classspork_1_1graphics_1_1_mesh_aaf3d3748786e2faff3cee404497853ff}{indices}
+\item 
+std\+::vector$<$ \hyperlink{structspork_1_1graphics_1_1_tex}{Tex} $>$ \hyperlink{classspork_1_1graphics_1_1_mesh_a2bfa767192b6622231e3aeeeea9ba119}{textures}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{defines_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} \hyperlink{classspork_1_1graphics_1_1_mesh_a36ed157960b32e7b6a2dd1b42a3a4022}{V\+AO}
+\item 
+\hyperlink{defines_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} \hyperlink{classspork_1_1graphics_1_1_mesh_af042cedf11857eabbd50810967702b85}{V\+BO}
+\item 
+\hyperlink{defines_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} \hyperlink{classspork_1_1graphics_1_1_mesh_a96fbfb27eb4482b87b48e77567df41f7}{E\+BO}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classspork_1_1graphics_1_1_mesh}{Mesh} Class. 
+
+Handles mesh creation and drawing. 
+
+Definition at line 27 of file mesh.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_mesh_a72d87fa982dcad754e9993457a95724b}\label{classspork_1_1graphics_1_1_mesh_a72d87fa982dcad754e9993457a95724b}} 
+\index{spork\+::graphics\+::\+Mesh@{spork\+::graphics\+::\+Mesh}!Mesh@{Mesh}}
+\index{Mesh@{Mesh}!spork\+::graphics\+::\+Mesh@{spork\+::graphics\+::\+Mesh}}
+\subsubsection{\texorpdfstring{Mesh()}{Mesh()}}
+{\footnotesize\ttfamily spork\+::graphics\+::\+Mesh\+::\+Mesh (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{structspork_1_1graphics_1_1_vertex}{Vertex} $>$}]{vertices,  }\item[{std\+::vector$<$ \hyperlink{defines_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} $>$}]{indice,  }\item[{std\+::vector$<$ \hyperlink{structspork_1_1graphics_1_1_tex}{Tex} $>$}]{textures }\end{DoxyParamCaption})}
+
+
+
+Definition at line 7 of file mesh.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_mesh_a995f42dd58db38b472170d8082dc538b}\label{classspork_1_1graphics_1_1_mesh_a995f42dd58db38b472170d8082dc538b}} 
+\index{spork\+::graphics\+::\+Mesh@{spork\+::graphics\+::\+Mesh}!````~Mesh@{$\sim$\+Mesh}}
+\index{````~Mesh@{$\sim$\+Mesh}!spork\+::graphics\+::\+Mesh@{spork\+::graphics\+::\+Mesh}}
+\subsubsection{\texorpdfstring{$\sim$\+Mesh()}{~Mesh()}}
+{\footnotesize\ttfamily spork\+::graphics\+::\+Mesh\+::$\sim$\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 16 of file mesh.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_mesh_aa6cd194da090d5436f89524fc8332e46}\label{classspork_1_1graphics_1_1_mesh_aa6cd194da090d5436f89524fc8332e46}} 
+\index{spork\+::graphics\+::\+Mesh@{spork\+::graphics\+::\+Mesh}!draw@{draw}}
+\index{draw@{draw}!spork\+::graphics\+::\+Mesh@{spork\+::graphics\+::\+Mesh}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Mesh\+::draw (\begin{DoxyParamCaption}\item[{\hyperlink{classspork_1_1graphics_1_1_shader}{Shader} $\ast$}]{shader }\end{DoxyParamCaption})}
+
+
+
+Definition at line 63 of file mesh.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_mesh_af92ddf7ba47ffa22739ba031dc71ebfa}\label{classspork_1_1graphics_1_1_mesh_af92ddf7ba47ffa22739ba031dc71ebfa}} 
+\index{spork\+::graphics\+::\+Mesh@{spork\+::graphics\+::\+Mesh}!setup\+Mesh@{setup\+Mesh}}
+\index{setup\+Mesh@{setup\+Mesh}!spork\+::graphics\+::\+Mesh@{spork\+::graphics\+::\+Mesh}}
+\subsubsection{\texorpdfstring{setup\+Mesh()}{setupMesh()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Mesh\+::setup\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 23 of file mesh.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_mesh_a96fbfb27eb4482b87b48e77567df41f7}\label{classspork_1_1graphics_1_1_mesh_a96fbfb27eb4482b87b48e77567df41f7}} 
+\index{spork\+::graphics\+::\+Mesh@{spork\+::graphics\+::\+Mesh}!E\+BO@{E\+BO}}
+\index{E\+BO@{E\+BO}!spork\+::graphics\+::\+Mesh@{spork\+::graphics\+::\+Mesh}}
+\subsubsection{\texorpdfstring{E\+BO}{EBO}}
+{\footnotesize\ttfamily \hyperlink{defines_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} spork\+::graphics\+::\+Mesh\+::\+E\+BO\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 30 of file mesh.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_mesh_aaf3d3748786e2faff3cee404497853ff}\label{classspork_1_1graphics_1_1_mesh_aaf3d3748786e2faff3cee404497853ff}} 
+\index{spork\+::graphics\+::\+Mesh@{spork\+::graphics\+::\+Mesh}!indices@{indices}}
+\index{indices@{indices}!spork\+::graphics\+::\+Mesh@{spork\+::graphics\+::\+Mesh}}
+\subsubsection{\texorpdfstring{indices}{indices}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{defines_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}$>$ spork\+::graphics\+::\+Mesh\+::indices}
+
+
+
+Definition at line 37 of file mesh.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_mesh_a2bfa767192b6622231e3aeeeea9ba119}\label{classspork_1_1graphics_1_1_mesh_a2bfa767192b6622231e3aeeeea9ba119}} 
+\index{spork\+::graphics\+::\+Mesh@{spork\+::graphics\+::\+Mesh}!textures@{textures}}
+\index{textures@{textures}!spork\+::graphics\+::\+Mesh@{spork\+::graphics\+::\+Mesh}}
+\subsubsection{\texorpdfstring{textures}{textures}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{structspork_1_1graphics_1_1_tex}{Tex}$>$ spork\+::graphics\+::\+Mesh\+::textures}
+
+
+
+Definition at line 38 of file mesh.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_mesh_a36ed157960b32e7b6a2dd1b42a3a4022}\label{classspork_1_1graphics_1_1_mesh_a36ed157960b32e7b6a2dd1b42a3a4022}} 
+\index{spork\+::graphics\+::\+Mesh@{spork\+::graphics\+::\+Mesh}!V\+AO@{V\+AO}}
+\index{V\+AO@{V\+AO}!spork\+::graphics\+::\+Mesh@{spork\+::graphics\+::\+Mesh}}
+\subsubsection{\texorpdfstring{V\+AO}{VAO}}
+{\footnotesize\ttfamily \hyperlink{defines_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} spork\+::graphics\+::\+Mesh\+::\+V\+AO\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 30 of file mesh.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_mesh_af042cedf11857eabbd50810967702b85}\label{classspork_1_1graphics_1_1_mesh_af042cedf11857eabbd50810967702b85}} 
+\index{spork\+::graphics\+::\+Mesh@{spork\+::graphics\+::\+Mesh}!V\+BO@{V\+BO}}
+\index{V\+BO@{V\+BO}!spork\+::graphics\+::\+Mesh@{spork\+::graphics\+::\+Mesh}}
+\subsubsection{\texorpdfstring{V\+BO}{VBO}}
+{\footnotesize\ttfamily \hyperlink{defines_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} spork\+::graphics\+::\+Mesh\+::\+V\+BO\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 30 of file mesh.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_mesh_ae2f135b00a81366187383271ebeb836e}\label{classspork_1_1graphics_1_1_mesh_ae2f135b00a81366187383271ebeb836e}} 
+\index{spork\+::graphics\+::\+Mesh@{spork\+::graphics\+::\+Mesh}!vertices@{vertices}}
+\index{vertices@{vertices}!spork\+::graphics\+::\+Mesh@{spork\+::graphics\+::\+Mesh}}
+\subsubsection{\texorpdfstring{vertices}{vertices}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{structspork_1_1graphics_1_1_vertex}{Vertex}$>$ spork\+::graphics\+::\+Mesh\+::vertices}
+
+
+
+Definition at line 36 of file mesh.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+N\+G S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/graphics/models/\hyperlink{mesh_8h}{mesh.\+h}\item 
+W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+N\+G S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/graphics/models/\hyperlink{mesh_8cpp}{mesh.\+cpp}\end{DoxyCompactItemize}

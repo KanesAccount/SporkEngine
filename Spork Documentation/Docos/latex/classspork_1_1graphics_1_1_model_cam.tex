@@ -1,0 +1,333 @@
+\hypertarget{classspork_1_1graphics_1_1_model_cam}{}\section{spork\+:\+:graphics\+:\+:Model\+Cam Class Reference}
+\label{classspork_1_1graphics_1_1_model_cam}\index{spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}}
+
+
+\hyperlink{classspork_1_1graphics_1_1_model}{Model} \hyperlink{classspork_1_1graphics_1_1_camera}{Camera} Class.  
+
+
+
+
+{\ttfamily \#include $<$model\+Cam.\+h$>$}
+
+
+
+Inheritance diagram for spork\+:\+:graphics\+:\+:Model\+Cam\+:
+% FIG 0
+
+
+Collaboration diagram for spork\+:\+:graphics\+:\+:Model\+Cam\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classspork_1_1graphics_1_1_model_cam_a54380c21aa0b4b738cfa1d00e37ae477}{Model\+Cam} (\hyperlink{classspork_1_1graphics_1_1_window}{Window} $\ast$window)
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_model_cam_a3cf2a36ae3ad1b81dce99ee063a460be}{update} ()
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_model_cam_ade4df0e81cc325af221081634384783d}{add\+To\+G\+UI} (Tw\+Bar $\ast$bar, const char $\ast$cam\+Name) override
+\item 
+\hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} \hyperlink{classspork_1_1graphics_1_1_model_cam_ab5384be317526c2839bc736f6c779bd0}{get\+Up\+Dir} ()
+\item 
+\hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} \hyperlink{classspork_1_1graphics_1_1_model_cam_ad9b3a5d537feca1d93b6583a2f894c67}{get\+Right\+Dir} ()
+\item 
+\hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} \hyperlink{classspork_1_1graphics_1_1_model_cam_a93058ea250c97b9bcc03b5d3e7f7c127}{get\+Fwd\+Dir} ()
+\item 
+\hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} \hyperlink{classspork_1_1graphics_1_1_model_cam_a75760cf6f052df0409086db00d710dc7}{calc\+Pos} ()
+\item 
+\hyperlink{structspork_1_1maths_1_1_quaternion}{maths\+::\+Quaternion} \hyperlink{classspork_1_1graphics_1_1_model_cam_ab852f0da194a83225084c2a7318034fb}{get\+Orientation} ()
+\item 
+float \hyperlink{classspork_1_1graphics_1_1_model_cam_aea5b9f2322a418e278ba0f730793eb6f}{get\+Distance} () const
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_model_cam_ae08f0327166753ed9c19f319fd2131f5}{set\+Distance} (float distance)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_model_cam_a65f1646db38f6b616c34ddcb9d83b83b}{pan} (const \hyperlink{structspork_1_1maths_1_1vec2}{maths\+::vec2} \&delta)
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_model_cam_a5d8bb1b2b47c2dff072b1033ab282d3e}{rotate} (const \hyperlink{structspork_1_1maths_1_1vec2}{maths\+::vec2} \&delta)
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_model_cam_a8d02d2f6a9f92bce945f9ce0a0f75a02}{zoom} (float delta)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classspork_1_1graphics_1_1_window}{Window} $\ast$ \hyperlink{classspork_1_1graphics_1_1_model_cam_ae087fc0f2f0cf19009ee2cbbb87137ac}{m\+\_\+\+Window}
+\item 
+bool \hyperlink{classspork_1_1graphics_1_1_model_cam_a9a2893538207b486954d7e6efc6f3b81}{m\+\_\+\+Panning}
+\item 
+bool \hyperlink{classspork_1_1graphics_1_1_model_cam_a161388ef4b069c8f27f920577122f069}{m\+\_\+\+Rotating}
+\item 
+\hyperlink{structspork_1_1maths_1_1vec2}{maths\+::vec2} \hyperlink{classspork_1_1graphics_1_1_model_cam_a99b8dc6717b01a77acc6309fffecab13}{m\+\_\+\+Mouse\+Start\+Pos}
+\item 
+float \hyperlink{classspork_1_1graphics_1_1_model_cam_a67ee403829d2456f05d871ddd4c2a38c}{m\+\_\+\+Distance}
+\item 
+float \hyperlink{classspork_1_1graphics_1_1_model_cam_aace836b7d40f91d5aa0b914c3297f748}{m\+\_\+\+Pan\+Speed}
+\item 
+float \hyperlink{classspork_1_1graphics_1_1_model_cam_a44635899e72f7450f03bb2c34ff96a09}{m\+\_\+\+Rot\+Speed}
+\item 
+float \hyperlink{classspork_1_1graphics_1_1_model_cam_ae8efa38634c73e83df6469c3707206ab}{m\+\_\+\+Zoom\+Speed}
+\item 
+float \hyperlink{classspork_1_1graphics_1_1_model_cam_aedfb55bbce1cb27ea7115a1a7adc3a89}{m\+\_\+\+Pitch}
+\item 
+float \hyperlink{classspork_1_1graphics_1_1_model_cam_a1c36375d7cce22f4d47666d70b23545d}{m\+\_\+\+Yaw}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classspork_1_1graphics_1_1_model}{Model} \hyperlink{classspork_1_1graphics_1_1_camera}{Camera} Class. 
+
+Handles camera creation, movement \& orientation in a maya-\/esque fashion. 
+
+Definition at line 9 of file model\+Cam.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_cam_a54380c21aa0b4b738cfa1d00e37ae477}\label{classspork_1_1graphics_1_1_model_cam_a54380c21aa0b4b738cfa1d00e37ae477}} 
+\index{spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}!Model\+Cam@{Model\+Cam}}
+\index{Model\+Cam@{Model\+Cam}!spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}}
+\subsubsection{\texorpdfstring{Model\+Cam()}{ModelCam()}}
+{\footnotesize\ttfamily spork\+::graphics\+::\+Model\+Cam\+::\+Model\+Cam (\begin{DoxyParamCaption}\item[{\hyperlink{classspork_1_1graphics_1_1_window}{Window} $\ast$}]{window }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file model\+Cam.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_cam_ade4df0e81cc325af221081634384783d}\label{classspork_1_1graphics_1_1_model_cam_ade4df0e81cc325af221081634384783d}} 
+\index{spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}!add\+To\+G\+UI@{add\+To\+G\+UI}}
+\index{add\+To\+G\+UI@{add\+To\+G\+UI}!spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}}
+\subsubsection{\texorpdfstring{add\+To\+G\+U\+I()}{addToGUI()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Model\+Cam\+::add\+To\+G\+UI (\begin{DoxyParamCaption}\item[{Tw\+Bar $\ast$}]{bar,  }\item[{const char $\ast$}]{cam\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \hyperlink{classspork_1_1graphics_1_1_camera_a5ec54ffdedf82db7e3790566bd1e3522}{spork\+::graphics\+::\+Camera}.
+
+
+
+Definition at line 79 of file model\+Cam.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_cam_a75760cf6f052df0409086db00d710dc7}\label{classspork_1_1graphics_1_1_model_cam_a75760cf6f052df0409086db00d710dc7}} 
+\index{spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}!calc\+Pos@{calc\+Pos}}
+\index{calc\+Pos@{calc\+Pos}!spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}}
+\subsubsection{\texorpdfstring{calc\+Pos()}{calcPos()}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec3}{vec3} spork\+::graphics\+::\+Model\+Cam\+::calc\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 105 of file model\+Cam.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_cam_aea5b9f2322a418e278ba0f730793eb6f}\label{classspork_1_1graphics_1_1_model_cam_aea5b9f2322a418e278ba0f730793eb6f}} 
+\index{spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}!get\+Distance@{get\+Distance}}
+\index{get\+Distance@{get\+Distance}!spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}}
+\subsubsection{\texorpdfstring{get\+Distance()}{getDistance()}}
+{\footnotesize\ttfamily float spork\+::graphics\+::\+Model\+Cam\+::get\+Distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 33 of file model\+Cam.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_cam_a93058ea250c97b9bcc03b5d3e7f7c127}\label{classspork_1_1graphics_1_1_model_cam_a93058ea250c97b9bcc03b5d3e7f7c127}} 
+\index{spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}!get\+Fwd\+Dir@{get\+Fwd\+Dir}}
+\index{get\+Fwd\+Dir@{get\+Fwd\+Dir}!spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}}
+\subsubsection{\texorpdfstring{get\+Fwd\+Dir()}{getFwdDir()}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec3}{vec3} spork\+::graphics\+::\+Model\+Cam\+::get\+Fwd\+Dir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 100 of file model\+Cam.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_cam_ab852f0da194a83225084c2a7318034fb}\label{classspork_1_1graphics_1_1_model_cam_ab852f0da194a83225084c2a7318034fb}} 
+\index{spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}!get\+Orientation@{get\+Orientation}}
+\index{get\+Orientation@{get\+Orientation}!spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}}
+\subsubsection{\texorpdfstring{get\+Orientation()}{getOrientation()}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} spork\+::graphics\+::\+Model\+Cam\+::get\+Orientation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 110 of file model\+Cam.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_cam_ad9b3a5d537feca1d93b6583a2f894c67}\label{classspork_1_1graphics_1_1_model_cam_ad9b3a5d537feca1d93b6583a2f894c67}} 
+\index{spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}!get\+Right\+Dir@{get\+Right\+Dir}}
+\index{get\+Right\+Dir@{get\+Right\+Dir}!spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}}
+\subsubsection{\texorpdfstring{get\+Right\+Dir()}{getRightDir()}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec3}{vec3} spork\+::graphics\+::\+Model\+Cam\+::get\+Right\+Dir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 95 of file model\+Cam.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_cam_ab5384be317526c2839bc736f6c779bd0}\label{classspork_1_1graphics_1_1_model_cam_ab5384be317526c2839bc736f6c779bd0}} 
+\index{spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}!get\+Up\+Dir@{get\+Up\+Dir}}
+\index{get\+Up\+Dir@{get\+Up\+Dir}!spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}}
+\subsubsection{\texorpdfstring{get\+Up\+Dir()}{getUpDir()}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec3}{vec3} spork\+::graphics\+::\+Model\+Cam\+::get\+Up\+Dir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 90 of file model\+Cam.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_cam_a65f1646db38f6b616c34ddcb9d83b83b}\label{classspork_1_1graphics_1_1_model_cam_a65f1646db38f6b616c34ddcb9d83b83b}} 
+\index{spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}!pan@{pan}}
+\index{pan@{pan}!spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}}
+\subsubsection{\texorpdfstring{pan()}{pan()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Model\+Cam\+::pan (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1vec2}{maths\+::vec2} \&}]{delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 56 of file model\+Cam.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_cam_a5d8bb1b2b47c2dff072b1033ab282d3e}\label{classspork_1_1graphics_1_1_model_cam_a5d8bb1b2b47c2dff072b1033ab282d3e}} 
+\index{spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}!rotate@{rotate}}
+\index{rotate@{rotate}!spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Model\+Cam\+::rotate (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1vec2}{maths\+::vec2} \&}]{delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 62 of file model\+Cam.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_cam_ae08f0327166753ed9c19f319fd2131f5}\label{classspork_1_1graphics_1_1_model_cam_ae08f0327166753ed9c19f319fd2131f5}} 
+\index{spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}!set\+Distance@{set\+Distance}}
+\index{set\+Distance@{set\+Distance}!spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}}
+\subsubsection{\texorpdfstring{set\+Distance()}{setDistance()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Model\+Cam\+::set\+Distance (\begin{DoxyParamCaption}\item[{float}]{distance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 34 of file model\+Cam.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_cam_a3cf2a36ae3ad1b81dce99ee063a460be}\label{classspork_1_1graphics_1_1_model_cam_a3cf2a36ae3ad1b81dce99ee063a460be}} 
+\index{spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}!update@{update}}
+\index{update@{update}!spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Model\+Cam\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 21 of file model\+Cam.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_cam_a8d02d2f6a9f92bce945f9ce0a0f75a02}\label{classspork_1_1graphics_1_1_model_cam_a8d02d2f6a9f92bce945f9ce0a0f75a02}} 
+\index{spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}!zoom@{zoom}}
+\index{zoom@{zoom}!spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}}
+\subsubsection{\texorpdfstring{zoom()}{zoom()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Model\+Cam\+::zoom (\begin{DoxyParamCaption}\item[{float}]{delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 69 of file model\+Cam.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_cam_a67ee403829d2456f05d871ddd4c2a38c}\label{classspork_1_1graphics_1_1_model_cam_a67ee403829d2456f05d871ddd4c2a38c}} 
+\index{spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}!m\+\_\+\+Distance@{m\+\_\+\+Distance}}
+\index{m\+\_\+\+Distance@{m\+\_\+\+Distance}!spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Distance}{m\_Distance}}
+{\footnotesize\ttfamily float spork\+::graphics\+::\+Model\+Cam\+::m\+\_\+\+Distance\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 14 of file model\+Cam.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_cam_a99b8dc6717b01a77acc6309fffecab13}\label{classspork_1_1graphics_1_1_model_cam_a99b8dc6717b01a77acc6309fffecab13}} 
+\index{spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}!m\+\_\+\+Mouse\+Start\+Pos@{m\+\_\+\+Mouse\+Start\+Pos}}
+\index{m\+\_\+\+Mouse\+Start\+Pos@{m\+\_\+\+Mouse\+Start\+Pos}!spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Mouse\+Start\+Pos}{m\_MouseStartPos}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec2}{maths\+::vec2} spork\+::graphics\+::\+Model\+Cam\+::m\+\_\+\+Mouse\+Start\+Pos\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 13 of file model\+Cam.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_cam_a9a2893538207b486954d7e6efc6f3b81}\label{classspork_1_1graphics_1_1_model_cam_a9a2893538207b486954d7e6efc6f3b81}} 
+\index{spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}!m\+\_\+\+Panning@{m\+\_\+\+Panning}}
+\index{m\+\_\+\+Panning@{m\+\_\+\+Panning}!spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Panning}{m\_Panning}}
+{\footnotesize\ttfamily bool spork\+::graphics\+::\+Model\+Cam\+::m\+\_\+\+Panning\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 12 of file model\+Cam.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_cam_aace836b7d40f91d5aa0b914c3297f748}\label{classspork_1_1graphics_1_1_model_cam_aace836b7d40f91d5aa0b914c3297f748}} 
+\index{spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}!m\+\_\+\+Pan\+Speed@{m\+\_\+\+Pan\+Speed}}
+\index{m\+\_\+\+Pan\+Speed@{m\+\_\+\+Pan\+Speed}!spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Pan\+Speed}{m\_PanSpeed}}
+{\footnotesize\ttfamily float spork\+::graphics\+::\+Model\+Cam\+::m\+\_\+\+Pan\+Speed\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 15 of file model\+Cam.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_cam_aedfb55bbce1cb27ea7115a1a7adc3a89}\label{classspork_1_1graphics_1_1_model_cam_aedfb55bbce1cb27ea7115a1a7adc3a89}} 
+\index{spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}!m\+\_\+\+Pitch@{m\+\_\+\+Pitch}}
+\index{m\+\_\+\+Pitch@{m\+\_\+\+Pitch}!spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Pitch}{m\_Pitch}}
+{\footnotesize\ttfamily float spork\+::graphics\+::\+Model\+Cam\+::m\+\_\+\+Pitch\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 16 of file model\+Cam.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_cam_a161388ef4b069c8f27f920577122f069}\label{classspork_1_1graphics_1_1_model_cam_a161388ef4b069c8f27f920577122f069}} 
+\index{spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}!m\+\_\+\+Rotating@{m\+\_\+\+Rotating}}
+\index{m\+\_\+\+Rotating@{m\+\_\+\+Rotating}!spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Rotating}{m\_Rotating}}
+{\footnotesize\ttfamily bool spork\+::graphics\+::\+Model\+Cam\+::m\+\_\+\+Rotating\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 12 of file model\+Cam.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_cam_a44635899e72f7450f03bb2c34ff96a09}\label{classspork_1_1graphics_1_1_model_cam_a44635899e72f7450f03bb2c34ff96a09}} 
+\index{spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}!m\+\_\+\+Rot\+Speed@{m\+\_\+\+Rot\+Speed}}
+\index{m\+\_\+\+Rot\+Speed@{m\+\_\+\+Rot\+Speed}!spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Rot\+Speed}{m\_RotSpeed}}
+{\footnotesize\ttfamily float spork\+::graphics\+::\+Model\+Cam\+::m\+\_\+\+Rot\+Speed\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 15 of file model\+Cam.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_cam_ae087fc0f2f0cf19009ee2cbbb87137ac}\label{classspork_1_1graphics_1_1_model_cam_ae087fc0f2f0cf19009ee2cbbb87137ac}} 
+\index{spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}!m\+\_\+\+Window@{m\+\_\+\+Window}}
+\index{m\+\_\+\+Window@{m\+\_\+\+Window}!spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Window}{m\_Window}}
+{\footnotesize\ttfamily \hyperlink{classspork_1_1graphics_1_1_window}{Window}$\ast$ spork\+::graphics\+::\+Model\+Cam\+::m\+\_\+\+Window\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 11 of file model\+Cam.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_cam_a1c36375d7cce22f4d47666d70b23545d}\label{classspork_1_1graphics_1_1_model_cam_a1c36375d7cce22f4d47666d70b23545d}} 
+\index{spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}!m\+\_\+\+Yaw@{m\+\_\+\+Yaw}}
+\index{m\+\_\+\+Yaw@{m\+\_\+\+Yaw}!spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Yaw}{m\_Yaw}}
+{\footnotesize\ttfamily float spork\+::graphics\+::\+Model\+Cam\+::m\+\_\+\+Yaw\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 16 of file model\+Cam.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_cam_ae8efa38634c73e83df6469c3707206ab}\label{classspork_1_1graphics_1_1_model_cam_ae8efa38634c73e83df6469c3707206ab}} 
+\index{spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}!m\+\_\+\+Zoom\+Speed@{m\+\_\+\+Zoom\+Speed}}
+\index{m\+\_\+\+Zoom\+Speed@{m\+\_\+\+Zoom\+Speed}!spork\+::graphics\+::\+Model\+Cam@{spork\+::graphics\+::\+Model\+Cam}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Zoom\+Speed}{m\_ZoomSpeed}}
+{\footnotesize\ttfamily float spork\+::graphics\+::\+Model\+Cam\+::m\+\_\+\+Zoom\+Speed\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 15 of file model\+Cam.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+N\+G S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/graphics/camera/\hyperlink{model_cam_8h}{model\+Cam.\+h}\item 
+W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+N\+G S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/graphics/camera/\hyperlink{model_cam_8cpp}{model\+Cam.\+cpp}\end{DoxyCompactItemize}

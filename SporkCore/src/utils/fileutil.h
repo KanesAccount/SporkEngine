@@ -1,13 +1,16 @@
+
 #pragma once
 #include "../spork/spork.h"
 #include "myString.h"
 
 namespace spork {
-
+	/**
+	*  File loading Class. Returns loaded file as a String.
+	*/
 	class FileUtil
 	{
 	public:
-		static String read_file(const char* filepath)
+		static String readFile(const char* filepath)
 		{
 			FILE* file = fopen(filepath, "rt");
 			fseek(file, 0, SEEK_END);

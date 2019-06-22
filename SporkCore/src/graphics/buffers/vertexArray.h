@@ -1,11 +1,12 @@
 #pragma once
-
 #include <GL/glew.h>
 #include "buffer.h"
 #include <vector>
 
 namespace spork { namespace graphics {
-
+	/**
+	*  Vertex Array Class. Handles vertex array creation, deletion & binding.
+	*/
 	class VertexArray
 	{
 	private:
@@ -19,5 +20,4 @@ namespace spork { namespace graphics {
 		void bind() const;
 		void unbind() const;
 	};
-
 } }

@@ -168,7 +168,7 @@ namespace spork { namespace maths {
 		);
 	}
 
-	const Quaternion Quaternion::rotation(const vec3& unitVec0, const vec3& unitVec1)
+	const Quaternion Quaternion::rotate(const vec3& unitVec0, const vec3& unitVec1)
 	{
 		float cosHalfAngleX2, recipCosHalfAngleX2;
 		cosHalfAngleX2 = sqrt((2.0f * (1.0f + unitVec0.dot(unitVec1))));
@@ -176,7 +176,7 @@ namespace spork { namespace maths {
 		return Quaternion((unitVec0.cross(unitVec1) * recipCosHalfAngleX2), (cosHalfAngleX2 * 0.5f));
 	}
 
-	const Quaternion Quaternion::rotation(float radians, const vec3 & unitVec)
+	const Quaternion Quaternion::rotate(float radians, const vec3 & unitVec)
 	{
 		float angle = radians * 0.5f;
 		return Quaternion((unitVec * sin(angle)), cos(angle));

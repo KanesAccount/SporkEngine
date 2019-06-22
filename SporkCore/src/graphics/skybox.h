@@ -4,21 +4,23 @@
 #include "buffers/Buffer.h"
 #include "shader.h"
 #include "window.h"
-#include "../input/controls.h"
+#include "../graphics/camera/baseCamera.h"
 #include "../utils/loadUtils.h"
 
 namespace spork { namespace graphics {
-
+	/**
+	*  Skybox Class. Creates a skybox. (Currently unimplemented).
+	*/
 	class Skybox 
 	{
 	public:
-		Skybox(std::vector<const char*>& filepath, app::Controls* controller, Window* window);
+		Skybox(std::vector<const char*>& filepath, Camera* camera, Window* window);
 
 		void draw();
 
 		inline uint getSkyboxCubemap() { return m_SkyboxCubemap; }
 	private:
-		app::Controls* m_Controller;
+		Camera* m_Camera;
 		Window* m_Window;
 		Shader m_SkyboxShader;
 

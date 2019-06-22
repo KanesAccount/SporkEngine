@@ -1,0 +1,501 @@
+\hypertarget{namespacespork_1_1maths}{}\section{spork\+:\+:maths Namespace Reference}
+\label{namespacespork_1_1maths}\index{spork\+::maths@{spork\+::maths}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structspork_1_1maths_1_1mat4}{mat4}
+\begin{DoxyCompactList}\small\item\em 4x4 Matrix Class. \end{DoxyCompactList}\item 
+struct \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion}
+\begin{DoxyCompactList}\small\item\em \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} Class. \end{DoxyCompactList}\item 
+struct \hyperlink{structspork_1_1maths_1_1vec2}{vec2}
+\begin{DoxyCompactList}\small\item\em 2 Component Vector Class. \end{DoxyCompactList}\item 
+struct \hyperlink{structspork_1_1maths_1_1vec3}{vec3}
+\begin{DoxyCompactList}\small\item\em 3 Component Vector Class. \end{DoxyCompactList}\item 
+struct \hyperlink{structspork_1_1maths_1_1vec4}{vec4}
+\begin{DoxyCompactList}\small\item\em 4 Component Vector Class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structspork_1_1maths_1_1mat4}{mat4} \hyperlink{namespacespork_1_1maths_a88480b4756d668f2679cdb861e20225c}{operator$\ast$} (\hyperlink{structspork_1_1maths_1_1mat4}{mat4} left, const \hyperlink{structspork_1_1maths_1_1mat4}{mat4} \&right)
+\item 
+\hyperlink{structspork_1_1maths_1_1vec3}{vec3} \hyperlink{namespacespork_1_1maths_a69a3ee5d330b2639f489a97456b3d8a9}{operator$\ast$} (const \hyperlink{structspork_1_1maths_1_1mat4}{mat4} \&left, const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&right)
+\item 
+\hyperlink{structspork_1_1maths_1_1vec4}{vec4} \hyperlink{namespacespork_1_1maths_ad74bbcba8e01344bc4d987b7ea41b001}{operator$\ast$} (const \hyperlink{structspork_1_1maths_1_1mat4}{mat4} \&left, const \hyperlink{structspork_1_1maths_1_1vec4}{vec4} \&right)
+\item 
+float \hyperlink{namespacespork_1_1maths_a6a8870835949f3c092e2c89a662789a6}{to\+Radians} (float degrees)
+\item 
+float \hyperlink{namespacespork_1_1maths_a83529daea8730dd1694895c2e1f6049a}{to\+Degrees} (float radians)
+\item 
+float \hyperlink{namespacespork_1_1maths_a9b6e4ae0fa6afa5d30e3c077e5c2102f}{sqrt} (float value)
+\item 
+float \hyperlink{namespacespork_1_1maths_a45d065f3199c9ba816f80e2b79c3cc8d}{rsqrt} (float value)
+\item 
+float \hyperlink{namespacespork_1_1maths_a059ac1ec891e33b831ca67a6174c8ad8}{sin} (float angle)
+\item 
+float \hyperlink{namespacespork_1_1maths_a65b5ef1857a065cbab527d0fa4cd92df}{cos} (float angle)
+\item 
+float \hyperlink{namespacespork_1_1maths_a2e3fc6759119a0890eff6b58eed1ed2a}{tan} (float angle)
+\item 
+float \hyperlink{namespacespork_1_1maths_abe6dcee4251fcb68523b1dc1a7f2a0c1}{asin} (float angle)
+\item 
+float \hyperlink{namespacespork_1_1maths_a9a93c40ad65249b72433c0b2d3502f7d}{acos} (float angle)
+\item 
+float \hyperlink{namespacespork_1_1maths_aec35004bae3eb4a768cb4fa1a52ad4d1}{atan} (float angle)
+\item 
+float \hyperlink{namespacespork_1_1maths_a0e982679f0d9b9d9509069a195bb0763}{atan} (float y, float x)
+\item 
+float \hyperlink{namespacespork_1_1maths_afde139a899ca339b136632896e02c499}{atan2} (float y, float x)
+\item 
+float \hyperlink{namespacespork_1_1maths_a141bfeeb49979c58682a3088bfdbc329}{norm} (const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \&quaternion)
+\item 
+float \hyperlink{namespacespork_1_1maths_a7accffaa77c9ecaba22d3c5784fd550b}{Length} (const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \&quaternion)
+\item 
+const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \hyperlink{namespacespork_1_1maths_aa510abe7e7c68b015aa45c046395967a}{normalize} (const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \&quaternion)
+\item 
+\hyperlink{structspork_1_1maths_1_1vec2}{vec2} \hyperlink{namespacespork_1_1maths_aa0b8eecee8b72ea828601a9dc89fe6f7}{operator+} (\hyperlink{structspork_1_1maths_1_1vec2}{vec2} left, const \hyperlink{structspork_1_1maths_1_1vec2}{vec2} \&right)
+\item 
+\hyperlink{structspork_1_1maths_1_1vec2}{vec2} \hyperlink{namespacespork_1_1maths_a89ebc59051b819b77bdca5c54469a2b8}{operator-\/} (\hyperlink{structspork_1_1maths_1_1vec2}{vec2} left, const \hyperlink{structspork_1_1maths_1_1vec2}{vec2} \&right)
+\item 
+\hyperlink{structspork_1_1maths_1_1vec2}{vec2} \hyperlink{namespacespork_1_1maths_ab48c905dee8a5a3699d0ef88aec5163d}{operator$\ast$} (\hyperlink{structspork_1_1maths_1_1vec2}{vec2} left, const \hyperlink{structspork_1_1maths_1_1vec2}{vec2} \&right)
+\item 
+\hyperlink{structspork_1_1maths_1_1vec2}{vec2} \hyperlink{namespacespork_1_1maths_ae491f51c3cf643faf35f44368b88a385}{operator/} (\hyperlink{structspork_1_1maths_1_1vec2}{vec2} left, const \hyperlink{structspork_1_1maths_1_1vec2}{vec2} \&right)
+\item 
+\hyperlink{structspork_1_1maths_1_1vec2}{vec2} \hyperlink{namespacespork_1_1maths_abca6a1c7a99727069e27bfa8db3421f1}{operator+} (\hyperlink{structspork_1_1maths_1_1vec2}{vec2} left, float value)
+\item 
+\hyperlink{structspork_1_1maths_1_1vec2}{vec2} \hyperlink{namespacespork_1_1maths_ad486891132edddc4fc717eda8cb371b0}{operator$\ast$} (\hyperlink{structspork_1_1maths_1_1vec2}{vec2} left, float value)
+\item 
+std\+::ostream \& \hyperlink{namespacespork_1_1maths_ac11436d48bae0e63231b32507faa5985}{operator$<$$<$} (std\+::ostream \&stream, const \hyperlink{structspork_1_1maths_1_1vec2}{vec2} \&vec)
+\item 
+\hyperlink{structspork_1_1maths_1_1vec3}{vec3} \hyperlink{namespacespork_1_1maths_af21cd7b96da7a52260534225958cda3c}{operator+} (\hyperlink{structspork_1_1maths_1_1vec3}{vec3} left, const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&right)
+\item 
+\hyperlink{structspork_1_1maths_1_1vec3}{vec3} \hyperlink{namespacespork_1_1maths_ac0ee0df63a5845ab9b5e548234b34628}{operator-\/} (\hyperlink{structspork_1_1maths_1_1vec3}{vec3} left, const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&right)
+\item 
+\hyperlink{structspork_1_1maths_1_1vec3}{vec3} \hyperlink{namespacespork_1_1maths_ada6a3b00d259a40b306b3a42d2b592b1}{operator$\ast$} (\hyperlink{structspork_1_1maths_1_1vec3}{vec3} left, const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&right)
+\item 
+\hyperlink{structspork_1_1maths_1_1vec3}{vec3} \hyperlink{namespacespork_1_1maths_a85ae9110905b8f8a09c369de1837f234}{operator/} (\hyperlink{structspork_1_1maths_1_1vec3}{vec3} left, const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&right)
+\item 
+\hyperlink{structspork_1_1maths_1_1vec3}{vec3} \hyperlink{namespacespork_1_1maths_abac5b30d5be3e3251f9fc2c1c351ebb7}{operator+} (\hyperlink{structspork_1_1maths_1_1vec3}{vec3} left, float right)
+\item 
+\hyperlink{structspork_1_1maths_1_1vec3}{vec3} \hyperlink{namespacespork_1_1maths_abd740168ef44d890eb3795658292a623}{operator-\/} (\hyperlink{structspork_1_1maths_1_1vec3}{vec3} left, float right)
+\item 
+\hyperlink{structspork_1_1maths_1_1vec3}{vec3} \hyperlink{namespacespork_1_1maths_ac73b9375d78ee867fb4924d57771c6e1}{operator$\ast$} (\hyperlink{structspork_1_1maths_1_1vec3}{vec3} left, float right)
+\item 
+\hyperlink{structspork_1_1maths_1_1vec3}{vec3} \hyperlink{namespacespork_1_1maths_ac6eca6058f88e8b4f6c1a5567f109b2c}{operator/} (\hyperlink{structspork_1_1maths_1_1vec3}{vec3} left, float right)
+\item 
+\hyperlink{structspork_1_1maths_1_1vec3}{vec3} \hyperlink{namespacespork_1_1maths_a7be5d02ef2f6c8395af8a6ecb0aaa382}{operator-\/} (const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&vector)
+\item 
+std\+::ostream \& \hyperlink{namespacespork_1_1maths_a0f4b24ea725c7f2d1243b94c5a82cbf9}{operator$<$$<$} (std\+::ostream \&stream, const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&vec)
+\item 
+\hyperlink{structspork_1_1maths_1_1vec4}{vec4} \hyperlink{namespacespork_1_1maths_a7bfe9cc91f2ee3e20fe59c44cb8a7dce}{operator+} (\hyperlink{structspork_1_1maths_1_1vec4}{vec4} left, const \hyperlink{structspork_1_1maths_1_1vec4}{vec4} \&right)
+\item 
+\hyperlink{structspork_1_1maths_1_1vec4}{vec4} \hyperlink{namespacespork_1_1maths_a6bde3edda69efd684ea41488335b6e30}{operator-\/} (\hyperlink{structspork_1_1maths_1_1vec4}{vec4} left, const \hyperlink{structspork_1_1maths_1_1vec4}{vec4} \&right)
+\item 
+\hyperlink{structspork_1_1maths_1_1vec4}{vec4} \hyperlink{namespacespork_1_1maths_a3bdcb7f8ce863a83804ecd9e2061de0d}{operator$\ast$} (\hyperlink{structspork_1_1maths_1_1vec4}{vec4} left, const \hyperlink{structspork_1_1maths_1_1vec4}{vec4} \&right)
+\item 
+\hyperlink{structspork_1_1maths_1_1vec4}{vec4} \hyperlink{namespacespork_1_1maths_a803106d6ee7cd5fc7d8d3a2fb0bd423f}{operator/} (\hyperlink{structspork_1_1maths_1_1vec4}{vec4} left, const \hyperlink{structspork_1_1maths_1_1vec4}{vec4} \&right)
+\item 
+std\+::ostream \& \hyperlink{namespacespork_1_1maths_a8cf0d7b0a5f64f0f6319f0b922eda679}{operator$<$$<$} (std\+::ostream \&stream, const \hyperlink{structspork_1_1maths_1_1vec4}{vec4} \&vec)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacespork_1_1maths_a9a93c40ad65249b72433c0b2d3502f7d}\label{namespacespork_1_1maths_a9a93c40ad65249b72433c0b2d3502f7d}} 
+\index{spork\+::maths@{spork\+::maths}!acos@{acos}}
+\index{acos@{acos}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{acos()}{acos()}}
+{\footnotesize\ttfamily float spork\+::maths\+::acos (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 50 of file maths\+\_\+func.\+h.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_abe6dcee4251fcb68523b1dc1a7f2a0c1}\label{namespacespork_1_1maths_abe6dcee4251fcb68523b1dc1a7f2a0c1}} 
+\index{spork\+::maths@{spork\+::maths}!asin@{asin}}
+\index{asin@{asin}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{asin()}{asin()}}
+{\footnotesize\ttfamily float spork\+::maths\+::asin (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 45 of file maths\+\_\+func.\+h.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_aec35004bae3eb4a768cb4fa1a52ad4d1}\label{namespacespork_1_1maths_aec35004bae3eb4a768cb4fa1a52ad4d1}} 
+\index{spork\+::maths@{spork\+::maths}!atan@{atan}}
+\index{atan@{atan}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{atan()}{atan()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily float spork\+::maths\+::atan (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 55 of file maths\+\_\+func.\+h.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_a0e982679f0d9b9d9509069a195bb0763}\label{namespacespork_1_1maths_a0e982679f0d9b9d9509069a195bb0763}} 
+\index{spork\+::maths@{spork\+::maths}!atan@{atan}}
+\index{atan@{atan}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{atan()}{atan()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily float spork\+::maths\+::atan (\begin{DoxyParamCaption}\item[{float}]{y,  }\item[{float}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 60 of file maths\+\_\+func.\+h.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_afde139a899ca339b136632896e02c499}\label{namespacespork_1_1maths_afde139a899ca339b136632896e02c499}} 
+\index{spork\+::maths@{spork\+::maths}!atan2@{atan2}}
+\index{atan2@{atan2}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{atan2()}{atan2()}}
+{\footnotesize\ttfamily float spork\+::maths\+::atan2 (\begin{DoxyParamCaption}\item[{float}]{y,  }\item[{float}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 65 of file maths\+\_\+func.\+h.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_a65b5ef1857a065cbab527d0fa4cd92df}\label{namespacespork_1_1maths_a65b5ef1857a065cbab527d0fa4cd92df}} 
+\index{spork\+::maths@{spork\+::maths}!cos@{cos}}
+\index{cos@{cos}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{cos()}{cos()}}
+{\footnotesize\ttfamily float spork\+::maths\+::cos (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 35 of file maths\+\_\+func.\+h.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_a7accffaa77c9ecaba22d3c5784fd550b}\label{namespacespork_1_1maths_a7accffaa77c9ecaba22d3c5784fd550b}} 
+\index{spork\+::maths@{spork\+::maths}!Length@{Length}}
+\index{Length@{Length}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{Length()}{Length()}}
+{\footnotesize\ttfamily float spork\+::maths\+::\+Length (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \&}]{quaternion }\end{DoxyParamCaption})}
+
+
+
+Definition at line 134 of file quaternion.\+cpp.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_a141bfeeb49979c58682a3088bfdbc329}\label{namespacespork_1_1maths_a141bfeeb49979c58682a3088bfdbc329}} 
+\index{spork\+::maths@{spork\+::maths}!norm@{norm}}
+\index{norm@{norm}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{norm()}{norm()}}
+{\footnotesize\ttfamily float spork\+::maths\+::norm (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \&}]{quaternion }\end{DoxyParamCaption})}
+
+
+
+Definition at line 124 of file quaternion.\+cpp.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_aa510abe7e7c68b015aa45c046395967a}\label{namespacespork_1_1maths_aa510abe7e7c68b015aa45c046395967a}} 
+\index{spork\+::maths@{spork\+::maths}!normalize@{normalize}}
+\index{normalize@{normalize}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{normalize()}{normalize()}}
+{\footnotesize\ttfamily const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} spork\+::maths\+::normalize (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \&}]{quaternion }\end{DoxyParamCaption})}
+
+
+
+Definition at line 139 of file quaternion.\+cpp.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_a88480b4756d668f2679cdb861e20225c}\label{namespacespork_1_1maths_a88480b4756d668f2679cdb861e20225c}} 
+\index{spork\+::maths@{spork\+::maths}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1mat4}{mat4} spork\+::maths\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{\hyperlink{structspork_1_1maths_1_1mat4}{mat4}}]{left,  }\item[{const \hyperlink{structspork_1_1maths_1_1mat4}{mat4} \&}]{right }\end{DoxyParamCaption})}
+
+
+
+Definition at line 51 of file mat4.\+cpp.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_ab48c905dee8a5a3699d0ef88aec5163d}\label{namespacespork_1_1maths_ab48c905dee8a5a3699d0ef88aec5163d}} 
+\index{spork\+::maths@{spork\+::maths}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec2}{vec2} spork\+::maths\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{\hyperlink{structspork_1_1maths_1_1vec2}{vec2}}]{left,  }\item[{const \hyperlink{structspork_1_1maths_1_1vec2}{vec2} \&}]{right }\end{DoxyParamCaption})}
+
+
+
+Definition at line 63 of file vec2.\+cpp.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_a3bdcb7f8ce863a83804ecd9e2061de0d}\label{namespacespork_1_1maths_a3bdcb7f8ce863a83804ecd9e2061de0d}} 
+\index{spork\+::maths@{spork\+::maths}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec4}{vec4} spork\+::maths\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{\hyperlink{structspork_1_1maths_1_1vec4}{vec4}}]{left,  }\item[{const \hyperlink{structspork_1_1maths_1_1vec4}{vec4} \&}]{right }\end{DoxyParamCaption})}
+
+
+
+Definition at line 72 of file vec4.\+cpp.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_ad486891132edddc4fc717eda8cb371b0}\label{namespacespork_1_1maths_ad486891132edddc4fc717eda8cb371b0}} 
+\index{spork\+::maths@{spork\+::maths}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec2}{vec2} spork\+::maths\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{\hyperlink{structspork_1_1maths_1_1vec2}{vec2}}]{left,  }\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 115 of file vec2.\+cpp.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_ada6a3b00d259a40b306b3a42d2b592b1}\label{namespacespork_1_1maths_ada6a3b00d259a40b306b3a42d2b592b1}} 
+\index{spork\+::maths@{spork\+::maths}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec3}{vec3} spork\+::maths\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{\hyperlink{structspork_1_1maths_1_1vec3}{vec3}}]{left,  }\item[{const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&}]{right }\end{DoxyParamCaption})}
+
+
+
+Definition at line 150 of file vec3.\+cpp.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_a69a3ee5d330b2639f489a97456b3d8a9}\label{namespacespork_1_1maths_a69a3ee5d330b2639f489a97456b3d8a9}} 
+\index{spork\+::maths@{spork\+::maths}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec3}{vec3} spork\+::maths\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1mat4}{mat4} \&}]{left,  }\item[{const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&}]{right }\end{DoxyParamCaption})}
+
+
+
+Definition at line 199 of file mat4.\+cpp.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_ac73b9375d78ee867fb4924d57771c6e1}\label{namespacespork_1_1maths_ac73b9375d78ee867fb4924d57771c6e1}} 
+\index{spork\+::maths@{spork\+::maths}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec3}{vec3} spork\+::maths\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{\hyperlink{structspork_1_1maths_1_1vec3}{vec3}}]{left,  }\item[{float}]{right }\end{DoxyParamCaption})}
+
+
+
+Definition at line 200 of file vec3.\+cpp.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_ad74bbcba8e01344bc4d987b7ea41b001}\label{namespacespork_1_1maths_ad74bbcba8e01344bc4d987b7ea41b001}} 
+\index{spork\+::maths@{spork\+::maths}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec4}{vec4} spork\+::maths\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1mat4}{mat4} \&}]{left,  }\item[{const \hyperlink{structspork_1_1maths_1_1vec4}{vec4} \&}]{right }\end{DoxyParamCaption})}
+
+
+
+Definition at line 216 of file mat4.\+cpp.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_aa0b8eecee8b72ea828601a9dc89fe6f7}\label{namespacespork_1_1maths_aa0b8eecee8b72ea828601a9dc89fe6f7}} 
+\index{spork\+::maths@{spork\+::maths}!operator+@{operator+}}
+\index{operator+@{operator+}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec2}{vec2} spork\+::maths\+::operator+ (\begin{DoxyParamCaption}\item[{\hyperlink{structspork_1_1maths_1_1vec2}{vec2}}]{left,  }\item[{const \hyperlink{structspork_1_1maths_1_1vec2}{vec2} \&}]{right }\end{DoxyParamCaption})}
+
+
+
+Definition at line 55 of file vec2.\+cpp.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_a7bfe9cc91f2ee3e20fe59c44cb8a7dce}\label{namespacespork_1_1maths_a7bfe9cc91f2ee3e20fe59c44cb8a7dce}} 
+\index{spork\+::maths@{spork\+::maths}!operator+@{operator+}}
+\index{operator+@{operator+}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec4}{vec4} spork\+::maths\+::operator+ (\begin{DoxyParamCaption}\item[{\hyperlink{structspork_1_1maths_1_1vec4}{vec4}}]{left,  }\item[{const \hyperlink{structspork_1_1maths_1_1vec4}{vec4} \&}]{right }\end{DoxyParamCaption})}
+
+
+
+Definition at line 62 of file vec4.\+cpp.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_abca6a1c7a99727069e27bfa8db3421f1}\label{namespacespork_1_1maths_abca6a1c7a99727069e27bfa8db3421f1}} 
+\index{spork\+::maths@{spork\+::maths}!operator+@{operator+}}
+\index{operator+@{operator+}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec2}{vec2} spork\+::maths\+::operator+ (\begin{DoxyParamCaption}\item[{\hyperlink{structspork_1_1maths_1_1vec2}{vec2}}]{left,  }\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 110 of file vec2.\+cpp.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_af21cd7b96da7a52260534225958cda3c}\label{namespacespork_1_1maths_af21cd7b96da7a52260534225958cda3c}} 
+\index{spork\+::maths@{spork\+::maths}!operator+@{operator+}}
+\index{operator+@{operator+}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec3}{vec3} spork\+::maths\+::operator+ (\begin{DoxyParamCaption}\item[{\hyperlink{structspork_1_1maths_1_1vec3}{vec3}}]{left,  }\item[{const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&}]{right }\end{DoxyParamCaption})}
+
+
+
+Definition at line 140 of file vec3.\+cpp.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_abac5b30d5be3e3251f9fc2c1c351ebb7}\label{namespacespork_1_1maths_abac5b30d5be3e3251f9fc2c1c351ebb7}} 
+\index{spork\+::maths@{spork\+::maths}!operator+@{operator+}}
+\index{operator+@{operator+}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec3}{vec3} spork\+::maths\+::operator+ (\begin{DoxyParamCaption}\item[{\hyperlink{structspork_1_1maths_1_1vec3}{vec3}}]{left,  }\item[{float}]{right }\end{DoxyParamCaption})}
+
+
+
+Definition at line 190 of file vec3.\+cpp.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_a89ebc59051b819b77bdca5c54469a2b8}\label{namespacespork_1_1maths_a89ebc59051b819b77bdca5c54469a2b8}} 
+\index{spork\+::maths@{spork\+::maths}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec2}{vec2} spork\+::maths\+::operator-\/ (\begin{DoxyParamCaption}\item[{\hyperlink{structspork_1_1maths_1_1vec2}{vec2}}]{left,  }\item[{const \hyperlink{structspork_1_1maths_1_1vec2}{vec2} \&}]{right }\end{DoxyParamCaption})}
+
+
+
+Definition at line 59 of file vec2.\+cpp.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_a6bde3edda69efd684ea41488335b6e30}\label{namespacespork_1_1maths_a6bde3edda69efd684ea41488335b6e30}} 
+\index{spork\+::maths@{spork\+::maths}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec4}{vec4} spork\+::maths\+::operator-\/ (\begin{DoxyParamCaption}\item[{\hyperlink{structspork_1_1maths_1_1vec4}{vec4}}]{left,  }\item[{const \hyperlink{structspork_1_1maths_1_1vec4}{vec4} \&}]{right }\end{DoxyParamCaption})}
+
+
+
+Definition at line 67 of file vec4.\+cpp.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_ac0ee0df63a5845ab9b5e548234b34628}\label{namespacespork_1_1maths_ac0ee0df63a5845ab9b5e548234b34628}} 
+\index{spork\+::maths@{spork\+::maths}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec3}{vec3} spork\+::maths\+::operator-\/ (\begin{DoxyParamCaption}\item[{\hyperlink{structspork_1_1maths_1_1vec3}{vec3}}]{left,  }\item[{const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&}]{right }\end{DoxyParamCaption})}
+
+
+
+Definition at line 145 of file vec3.\+cpp.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_abd740168ef44d890eb3795658292a623}\label{namespacespork_1_1maths_abd740168ef44d890eb3795658292a623}} 
+\index{spork\+::maths@{spork\+::maths}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec3}{vec3} spork\+::maths\+::operator-\/ (\begin{DoxyParamCaption}\item[{\hyperlink{structspork_1_1maths_1_1vec3}{vec3}}]{left,  }\item[{float}]{right }\end{DoxyParamCaption})}
+
+
+
+Definition at line 195 of file vec3.\+cpp.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_a7be5d02ef2f6c8395af8a6ecb0aaa382}\label{namespacespork_1_1maths_a7be5d02ef2f6c8395af8a6ecb0aaa382}} 
+\index{spork\+::maths@{spork\+::maths}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec3}{vec3} spork\+::maths\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&}]{vector }\end{DoxyParamCaption})}
+
+
+
+Definition at line 240 of file vec3.\+cpp.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_ae491f51c3cf643faf35f44368b88a385}\label{namespacespork_1_1maths_ae491f51c3cf643faf35f44368b88a385}} 
+\index{spork\+::maths@{spork\+::maths}!operator/@{operator/}}
+\index{operator/@{operator/}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec2}{vec2} spork\+::maths\+::operator/ (\begin{DoxyParamCaption}\item[{\hyperlink{structspork_1_1maths_1_1vec2}{vec2}}]{left,  }\item[{const \hyperlink{structspork_1_1maths_1_1vec2}{vec2} \&}]{right }\end{DoxyParamCaption})}
+
+
+
+Definition at line 67 of file vec2.\+cpp.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_a803106d6ee7cd5fc7d8d3a2fb0bd423f}\label{namespacespork_1_1maths_a803106d6ee7cd5fc7d8d3a2fb0bd423f}} 
+\index{spork\+::maths@{spork\+::maths}!operator/@{operator/}}
+\index{operator/@{operator/}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec4}{vec4} spork\+::maths\+::operator/ (\begin{DoxyParamCaption}\item[{\hyperlink{structspork_1_1maths_1_1vec4}{vec4}}]{left,  }\item[{const \hyperlink{structspork_1_1maths_1_1vec4}{vec4} \&}]{right }\end{DoxyParamCaption})}
+
+
+
+Definition at line 77 of file vec4.\+cpp.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_a85ae9110905b8f8a09c369de1837f234}\label{namespacespork_1_1maths_a85ae9110905b8f8a09c369de1837f234}} 
+\index{spork\+::maths@{spork\+::maths}!operator/@{operator/}}
+\index{operator/@{operator/}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec3}{vec3} spork\+::maths\+::operator/ (\begin{DoxyParamCaption}\item[{\hyperlink{structspork_1_1maths_1_1vec3}{vec3}}]{left,  }\item[{const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&}]{right }\end{DoxyParamCaption})}
+
+
+
+Definition at line 155 of file vec3.\+cpp.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_ac6eca6058f88e8b4f6c1a5567f109b2c}\label{namespacespork_1_1maths_ac6eca6058f88e8b4f6c1a5567f109b2c}} 
+\index{spork\+::maths@{spork\+::maths}!operator/@{operator/}}
+\index{operator/@{operator/}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec3}{vec3} spork\+::maths\+::operator/ (\begin{DoxyParamCaption}\item[{\hyperlink{structspork_1_1maths_1_1vec3}{vec3}}]{left,  }\item[{float}]{right }\end{DoxyParamCaption})}
+
+
+
+Definition at line 205 of file vec3.\+cpp.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_a8cf0d7b0a5f64f0f6319f0b922eda679}\label{namespacespork_1_1maths_a8cf0d7b0a5f64f0f6319f0b922eda679}} 
+\index{spork\+::maths@{spork\+::maths}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily std\+::ostream\& spork\+::maths\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{stream,  }\item[{const \hyperlink{structspork_1_1maths_1_1vec4}{vec4} \&}]{vec }\end{DoxyParamCaption})}
+
+
+
+Definition at line 112 of file vec4.\+cpp.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_ac11436d48bae0e63231b32507faa5985}\label{namespacespork_1_1maths_ac11436d48bae0e63231b32507faa5985}} 
+\index{spork\+::maths@{spork\+::maths}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily std\+::ostream\& spork\+::maths\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{stream,  }\item[{const \hyperlink{structspork_1_1maths_1_1vec2}{vec2} \&}]{vec }\end{DoxyParamCaption})}
+
+
+
+Definition at line 143 of file vec2.\+cpp.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_a0f4b24ea725c7f2d1243b94c5a82cbf9}\label{namespacespork_1_1maths_a0f4b24ea725c7f2d1243b94c5a82cbf9}} 
+\index{spork\+::maths@{spork\+::maths}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily std\+::ostream\& spork\+::maths\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{stream,  }\item[{const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&}]{vec }\end{DoxyParamCaption})}
+
+
+
+Definition at line 245 of file vec3.\+cpp.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_a45d065f3199c9ba816f80e2b79c3cc8d}\label{namespacespork_1_1maths_a45d065f3199c9ba816f80e2b79c3cc8d}} 
+\index{spork\+::maths@{spork\+::maths}!rsqrt@{rsqrt}}
+\index{rsqrt@{rsqrt}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{rsqrt()}{rsqrt()}}
+{\footnotesize\ttfamily float spork\+::maths\+::rsqrt (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 25 of file maths\+\_\+func.\+h.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_a059ac1ec891e33b831ca67a6174c8ad8}\label{namespacespork_1_1maths_a059ac1ec891e33b831ca67a6174c8ad8}} 
+\index{spork\+::maths@{spork\+::maths}!sin@{sin}}
+\index{sin@{sin}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{sin()}{sin()}}
+{\footnotesize\ttfamily float spork\+::maths\+::sin (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 30 of file maths\+\_\+func.\+h.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_a9b6e4ae0fa6afa5d30e3c077e5c2102f}\label{namespacespork_1_1maths_a9b6e4ae0fa6afa5d30e3c077e5c2102f}} 
+\index{spork\+::maths@{spork\+::maths}!sqrt@{sqrt}}
+\index{sqrt@{sqrt}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{sqrt()}{sqrt()}}
+{\footnotesize\ttfamily float spork\+::maths\+::sqrt (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 20 of file maths\+\_\+func.\+h.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_a2e3fc6759119a0890eff6b58eed1ed2a}\label{namespacespork_1_1maths_a2e3fc6759119a0890eff6b58eed1ed2a}} 
+\index{spork\+::maths@{spork\+::maths}!tan@{tan}}
+\index{tan@{tan}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{tan()}{tan()}}
+{\footnotesize\ttfamily float spork\+::maths\+::tan (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 40 of file maths\+\_\+func.\+h.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_a83529daea8730dd1694895c2e1f6049a}\label{namespacespork_1_1maths_a83529daea8730dd1694895c2e1f6049a}} 
+\index{spork\+::maths@{spork\+::maths}!to\+Degrees@{to\+Degrees}}
+\index{to\+Degrees@{to\+Degrees}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{to\+Degrees()}{toDegrees()}}
+{\footnotesize\ttfamily float spork\+::maths\+::to\+Degrees (\begin{DoxyParamCaption}\item[{float}]{radians }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 15 of file maths\+\_\+func.\+h.
+
+\mbox{\Hypertarget{namespacespork_1_1maths_a6a8870835949f3c092e2c89a662789a6}\label{namespacespork_1_1maths_a6a8870835949f3c092e2c89a662789a6}} 
+\index{spork\+::maths@{spork\+::maths}!to\+Radians@{to\+Radians}}
+\index{to\+Radians@{to\+Radians}!spork\+::maths@{spork\+::maths}}
+\subsubsection{\texorpdfstring{to\+Radians()}{toRadians()}}
+{\footnotesize\ttfamily float spork\+::maths\+::to\+Radians (\begin{DoxyParamCaption}\item[{float}]{degrees }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 10 of file maths\+\_\+func.\+h.
+

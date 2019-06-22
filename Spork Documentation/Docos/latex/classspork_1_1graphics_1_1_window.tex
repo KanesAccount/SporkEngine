@@ -1,0 +1,558 @@
+\hypertarget{classspork_1_1graphics_1_1_window}{}\section{spork\+:\+:graphics\+:\+:Window Class Reference}
+\label{classspork_1_1graphics_1_1_window}\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+
+
+\hyperlink{classspork_1_1graphics_1_1_window}{Window} Class.  
+
+
+
+
+{\ttfamily \#include $<$window.\+h$>$}
+
+
+
+Collaboration diagram for spork\+:\+:graphics\+:\+:Window\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classspork_1_1graphics_1_1_window_a61957a15dbf07c17924f2da018ff478c}{Window} (const char $\ast$title, int width, int height)
+\item 
+\hyperlink{classspork_1_1graphics_1_1_window_af802335c30188ec6f226954200c45cde}{$\sim$\+Window} ()
+\item 
+bool \hyperlink{classspork_1_1graphics_1_1_window_a159afdd9ce89591b3dd14c05fede4047}{closed} () const
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_window_abee9fd2700c0cde67da0b928d02cc643}{update} ()
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_window_a5db0b0195bc1871329992ac07a3cfd60}{clear} () const
+\item 
+int \hyperlink{classspork_1_1graphics_1_1_window_ab2734b9f811991a869da7df83144cf9a}{get\+Width} () const
+\item 
+int \hyperlink{classspork_1_1graphics_1_1_window_a9b77b4c048725917e6bd2265bd279389}{get\+Height} () const
+\item 
+const \hyperlink{classspork_1_1graphics_1_1_window}{Window} $\ast$ \hyperlink{classspork_1_1graphics_1_1_window_aa457918a976128ac119987f662383cab}{get\+Pointer} () const
+\item 
+double \hyperlink{classspork_1_1graphics_1_1_window_a03843054a60415457614ff5a2db46265}{get\+MouseX} () const
+\item 
+double \hyperlink{classspork_1_1graphics_1_1_window_a5bedfe69db7ed097b8e854532667843d}{get\+MouseY} () const
+\item 
+bool \hyperlink{classspork_1_1graphics_1_1_window_a4c26d036a1f6f68cbac3eca853ae6fe1}{is\+Vis} () const
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_window_ac08ef4d4685604b45fe742eb41c89985}{set\+Vis} (bool visibility)
+\item 
+double \hyperlink{classspork_1_1graphics_1_1_window_a822f29839c96783eab0ee009bc618f6b}{get\+ScrollX} () const
+\item 
+double \hyperlink{classspork_1_1graphics_1_1_window_a4412cf93f306475fcb3a7549ee5f9811}{get\+ScrollY} () const
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_window_aab36e127aaad31798d7e4ed5112d42b1}{reset\+Scroll} ()
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_window_a73fd8ddc91d3dd1c2fe2b25ab44dc69b}{set\+F\+PS} (float fps)
+\item 
+float \hyperlink{classspork_1_1graphics_1_1_window_a3dd5bffe1be30fc323767a7c1bfae23e}{get\+F\+PS} ()
+\item 
+G\+L\+F\+Wwindow $\ast$ \hyperlink{classspork_1_1graphics_1_1_window_a56276c9d76c6e05876f427009a877228}{get\+Window} () const
+\item 
+\hyperlink{classspork_1_1app_1_1_input}{app\+::\+Input} \hyperlink{classspork_1_1graphics_1_1_window_a916d4311a1fa1f5350685ec8adf593d4}{get\+Input\+Manager} () const
+\item 
+bool \hyperlink{classspork_1_1graphics_1_1_window_af7af1e7167d29623fc59d50eae81f261}{is\+Key\+Pressed} (\hyperlink{defines_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} keycode) const
+\item 
+bool \hyperlink{classspork_1_1graphics_1_1_window_abe7de27c77151d5d03d07887bb2d6586}{is\+Key\+Released} (\hyperlink{defines_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} keycode) const
+\item 
+bool \hyperlink{classspork_1_1graphics_1_1_window_af7792201e6a0bfb8d14758b33f6468b7}{is\+Mouse\+Button\+Pressed} (\hyperlink{defines_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} button) const
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classspork_1_1graphics_1_1_window_a63b502f0b800a9e7822fae1d85e0c162}{init} ()
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_window_a14bd0e3d68dab8d84f0a116ab282a96d}{set\+Fullscreen\+Resolution} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{classspork_1_1graphics_1_1_window_a92e53320ace67c18ebeb2aeedaca642e}{m\+\_\+\+Title}
+\item 
+int \hyperlink{classspork_1_1graphics_1_1_window_aa9f8adb1d8e8663f8325ee940235b98e}{m\+\_\+\+Width}
+\item 
+int \hyperlink{classspork_1_1graphics_1_1_window_aab31788244145ca5bf23791c167c22e0}{m\+\_\+\+Height}
+\item 
+G\+L\+F\+Wwindow $\ast$ \hyperlink{classspork_1_1graphics_1_1_window_a63f713a27b94dfb0b2aec195de135917}{m\+\_\+\+Window}
+\item 
+bool \hyperlink{classspork_1_1graphics_1_1_window_aa639e1215ea2ee6304771668bf8b8645}{m\+\_\+\+Closed}
+\item 
+bool \hyperlink{classspork_1_1graphics_1_1_window_af46d08eafc336b3db36e27a2700e0086}{m\+\_\+\+Keys} \mbox{[}\hyperlink{input_8h_a3077ecca3770bdee50e6a17dfb55d002}{M\+A\+X\+\_\+\+K\+E\+YS}\mbox{]}
+\item 
+bool \hyperlink{classspork_1_1graphics_1_1_window_a764dc38ed3635c4f52c9f84398f7a4c4}{m\+\_\+\+Mouse\+Buttons} \mbox{[}\hyperlink{input_8h_a8bb0c7f312bb8665c3377a061dae552c}{M\+A\+X\+\_\+\+B\+U\+T\+T\+O\+NS}\mbox{]}
+\item 
+double \hyperlink{classspork_1_1graphics_1_1_window_a9e178f6a4378404048d26e4f560b76c8}{scrollX}
+\item 
+double \hyperlink{classspork_1_1graphics_1_1_window_a618aaab346cbb5e98f6a4b1f034ea56b}{scrollY}
+\item 
+double \hyperlink{classspork_1_1graphics_1_1_window_aebba1c26ee5c686524a1a0697ade5038}{mx}
+\item 
+double \hyperlink{classspork_1_1graphics_1_1_window_a5fea429ed7a514e1f1d7b51a5318e34d}{my}
+\item 
+bool \hyperlink{classspork_1_1graphics_1_1_window_abd1aee80a6fb58ccc507115dbdacbfd1}{mouse\+Visible} = true
+\item 
+float \hyperlink{classspork_1_1graphics_1_1_window_a801e3f961f859f6e9e9aa23487640c9e}{m\+\_\+\+F\+PS}
+\item 
+\hyperlink{classspork_1_1app_1_1_input}{app\+::\+Input} \hyperlink{classspork_1_1graphics_1_1_window_a3f2781c21d888ebf81828e66464378cb}{m\+\_\+\+Input\+Manager}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+static friend void \hyperlink{classspork_1_1graphics_1_1_window_a5d0f196b2f1443f793ef20de522995a3}{key\+\_\+callback} (G\+L\+F\+Wwindow $\ast$window, int key, int scancode, int action, int mods)
+\item 
+static friend void \hyperlink{classspork_1_1graphics_1_1_window_a934c179d0911e7f70088cebec526bfb6}{mouse\+\_\+button\+\_\+callback} (G\+L\+F\+Wwindow $\ast$window, int button, int action, int mods)
+\item 
+static friend void \hyperlink{classspork_1_1graphics_1_1_window_abd0dee5e80d63ce619c6681efb034852}{cursor\+\_\+position\+\_\+callback} (G\+L\+F\+Wwindow $\ast$window, double xpos, double ypos)
+\item 
+static friend void \hyperlink{classspork_1_1graphics_1_1_window_af7cf061faac82731cc1ac5dace7b42c1}{scroll\+\_\+callback} (G\+L\+F\+Wwindow $\ast$window, double xoffset, double yoffset)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classspork_1_1graphics_1_1_window}{Window} Class. 
+
+Handles construction of the window \& Mouse, Keyboard and Screen Resolution callbacks. 
+
+Definition at line 16 of file window.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_a61957a15dbf07c17924f2da018ff478c}\label{classspork_1_1graphics_1_1_window_a61957a15dbf07c17924f2da018ff478c}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!Window@{Window}}
+\index{Window@{Window}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{Window()}{Window()}}
+{\footnotesize\ttfamily spork\+::graphics\+::\+Window\+::\+Window (\begin{DoxyParamCaption}\item[{const char $\ast$}]{title,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+Definition at line 7 of file window.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_af802335c30188ec6f226954200c45cde}\label{classspork_1_1graphics_1_1_window_af802335c30188ec6f226954200c45cde}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!````~Window@{$\sim$\+Window}}
+\index{````~Window@{$\sim$\+Window}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{$\sim$\+Window()}{~Window()}}
+{\footnotesize\ttfamily spork\+::graphics\+::\+Window\+::$\sim$\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 26 of file window.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_a5db0b0195bc1871329992ac07a3cfd60}\label{classspork_1_1graphics_1_1_window_a5db0b0195bc1871329992ac07a3cfd60}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!clear@{clear}}
+\index{clear@{clear}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Window\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 124 of file window.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_a159afdd9ce89591b3dd14c05fede4047}\label{classspork_1_1graphics_1_1_window_a159afdd9ce89591b3dd14c05fede4047}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!closed@{closed}}
+\index{closed@{closed}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{closed()}{closed()}}
+{\footnotesize\ttfamily bool spork\+::graphics\+::\+Window\+::closed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 95 of file window.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_a3dd5bffe1be30fc323767a7c1bfae23e}\label{classspork_1_1graphics_1_1_window_a3dd5bffe1be30fc323767a7c1bfae23e}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!get\+F\+PS@{get\+F\+PS}}
+\index{get\+F\+PS@{get\+F\+PS}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{get\+F\+P\+S()}{getFPS()}}
+{\footnotesize\ttfamily float spork\+::graphics\+::\+Window\+::get\+F\+PS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 51 of file window.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_a9b77b4c048725917e6bd2265bd279389}\label{classspork_1_1graphics_1_1_window_a9b77b4c048725917e6bd2265bd279389}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!get\+Height@{get\+Height}}
+\index{get\+Height@{get\+Height}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{get\+Height()}{getHeight()}}
+{\footnotesize\ttfamily int spork\+::graphics\+::\+Window\+::get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 40 of file window.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_a916d4311a1fa1f5350685ec8adf593d4}\label{classspork_1_1graphics_1_1_window_a916d4311a1fa1f5350685ec8adf593d4}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!get\+Input\+Manager@{get\+Input\+Manager}}
+\index{get\+Input\+Manager@{get\+Input\+Manager}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{get\+Input\+Manager()}{getInputManager()}}
+{\footnotesize\ttfamily \hyperlink{classspork_1_1app_1_1_input}{app\+::\+Input} spork\+::graphics\+::\+Window\+::get\+Input\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 53 of file window.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_a03843054a60415457614ff5a2db46265}\label{classspork_1_1graphics_1_1_window_a03843054a60415457614ff5a2db46265}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!get\+MouseX@{get\+MouseX}}
+\index{get\+MouseX@{get\+MouseX}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{get\+Mouse\+X()}{getMouseX()}}
+{\footnotesize\ttfamily double spork\+::graphics\+::\+Window\+::get\+MouseX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 43 of file window.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_a5bedfe69db7ed097b8e854532667843d}\label{classspork_1_1graphics_1_1_window_a5bedfe69db7ed097b8e854532667843d}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!get\+MouseY@{get\+MouseY}}
+\index{get\+MouseY@{get\+MouseY}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{get\+Mouse\+Y()}{getMouseY()}}
+{\footnotesize\ttfamily double spork\+::graphics\+::\+Window\+::get\+MouseY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 44 of file window.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_aa457918a976128ac119987f662383cab}\label{classspork_1_1graphics_1_1_window_aa457918a976128ac119987f662383cab}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!get\+Pointer@{get\+Pointer}}
+\index{get\+Pointer@{get\+Pointer}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{get\+Pointer()}{getPointer()}}
+{\footnotesize\ttfamily const \hyperlink{classspork_1_1graphics_1_1_window}{Window}$\ast$ spork\+::graphics\+::\+Window\+::get\+Pointer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 41 of file window.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_a822f29839c96783eab0ee009bc618f6b}\label{classspork_1_1graphics_1_1_window_a822f29839c96783eab0ee009bc618f6b}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!get\+ScrollX@{get\+ScrollX}}
+\index{get\+ScrollX@{get\+ScrollX}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{get\+Scroll\+X()}{getScrollX()}}
+{\footnotesize\ttfamily double spork\+::graphics\+::\+Window\+::get\+ScrollX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 47 of file window.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_a4412cf93f306475fcb3a7549ee5f9811}\label{classspork_1_1graphics_1_1_window_a4412cf93f306475fcb3a7549ee5f9811}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!get\+ScrollY@{get\+ScrollY}}
+\index{get\+ScrollY@{get\+ScrollY}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{get\+Scroll\+Y()}{getScrollY()}}
+{\footnotesize\ttfamily double spork\+::graphics\+::\+Window\+::get\+ScrollY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 48 of file window.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_ab2734b9f811991a869da7df83144cf9a}\label{classspork_1_1graphics_1_1_window_ab2734b9f811991a869da7df83144cf9a}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!get\+Width@{get\+Width}}
+\index{get\+Width@{get\+Width}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{get\+Width()}{getWidth()}}
+{\footnotesize\ttfamily int spork\+::graphics\+::\+Window\+::get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 39 of file window.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_a56276c9d76c6e05876f427009a877228}\label{classspork_1_1graphics_1_1_window_a56276c9d76c6e05876f427009a877228}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!get\+Window@{get\+Window}}
+\index{get\+Window@{get\+Window}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{get\+Window()}{getWindow()}}
+{\footnotesize\ttfamily G\+L\+F\+Wwindow$\ast$ spork\+::graphics\+::\+Window\+::get\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 52 of file window.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_a63b502f0b800a9e7822fae1d85e0c162}\label{classspork_1_1graphics_1_1_window_a63b502f0b800a9e7822fae1d85e0c162}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!init@{init}}
+\index{init@{init}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool spork\+::graphics\+::\+Window\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 32 of file window.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_af7af1e7167d29623fc59d50eae81f261}\label{classspork_1_1graphics_1_1_window_af7af1e7167d29623fc59d50eae81f261}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!is\+Key\+Pressed@{is\+Key\+Pressed}}
+\index{is\+Key\+Pressed@{is\+Key\+Pressed}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{is\+Key\+Pressed()}{isKeyPressed()}}
+{\footnotesize\ttfamily bool spork\+::graphics\+::\+Window\+::is\+Key\+Pressed (\begin{DoxyParamCaption}\item[{\hyperlink{defines_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}}]{keycode }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 100 of file window.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_abe7de27c77151d5d03d07887bb2d6586}\label{classspork_1_1graphics_1_1_window_abe7de27c77151d5d03d07887bb2d6586}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!is\+Key\+Released@{is\+Key\+Released}}
+\index{is\+Key\+Released@{is\+Key\+Released}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{is\+Key\+Released()}{isKeyReleased()}}
+{\footnotesize\ttfamily bool spork\+::graphics\+::\+Window\+::is\+Key\+Released (\begin{DoxyParamCaption}\item[{\hyperlink{defines_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}}]{keycode }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 108 of file window.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_af7792201e6a0bfb8d14758b33f6468b7}\label{classspork_1_1graphics_1_1_window_af7792201e6a0bfb8d14758b33f6468b7}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!is\+Mouse\+Button\+Pressed@{is\+Mouse\+Button\+Pressed}}
+\index{is\+Mouse\+Button\+Pressed@{is\+Mouse\+Button\+Pressed}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{is\+Mouse\+Button\+Pressed()}{isMouseButtonPressed()}}
+{\footnotesize\ttfamily bool spork\+::graphics\+::\+Window\+::is\+Mouse\+Button\+Pressed (\begin{DoxyParamCaption}\item[{\hyperlink{defines_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}}]{button }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 116 of file window.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_a4c26d036a1f6f68cbac3eca853ae6fe1}\label{classspork_1_1graphics_1_1_window_a4c26d036a1f6f68cbac3eca853ae6fe1}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!is\+Vis@{is\+Vis}}
+\index{is\+Vis@{is\+Vis}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{is\+Vis()}{isVis()}}
+{\footnotesize\ttfamily bool spork\+::graphics\+::\+Window\+::is\+Vis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 45 of file window.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_aab36e127aaad31798d7e4ed5112d42b1}\label{classspork_1_1graphics_1_1_window_aab36e127aaad31798d7e4ed5112d42b1}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!reset\+Scroll@{reset\+Scroll}}
+\index{reset\+Scroll@{reset\+Scroll}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{reset\+Scroll()}{resetScroll()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Window\+::reset\+Scroll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 49 of file window.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_a73fd8ddc91d3dd1c2fe2b25ab44dc69b}\label{classspork_1_1graphics_1_1_window_a73fd8ddc91d3dd1c2fe2b25ab44dc69b}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!set\+F\+PS@{set\+F\+PS}}
+\index{set\+F\+PS@{set\+F\+PS}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{set\+F\+P\+S()}{setFPS()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Window\+::set\+F\+PS (\begin{DoxyParamCaption}\item[{float}]{fps }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 50 of file window.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_a14bd0e3d68dab8d84f0a116ab282a96d}\label{classspork_1_1graphics_1_1_window_a14bd0e3d68dab8d84f0a116ab282a96d}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!set\+Fullscreen\+Resolution@{set\+Fullscreen\+Resolution}}
+\index{set\+Fullscreen\+Resolution@{set\+Fullscreen\+Resolution}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{set\+Fullscreen\+Resolution()}{setFullscreenResolution()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Window\+::set\+Fullscreen\+Resolution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 88 of file window.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_ac08ef4d4685604b45fe742eb41c89985}\label{classspork_1_1graphics_1_1_window_ac08ef4d4685604b45fe742eb41c89985}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!set\+Vis@{set\+Vis}}
+\index{set\+Vis@{set\+Vis}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{set\+Vis()}{setVis()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Window\+::set\+Vis (\begin{DoxyParamCaption}\item[{bool}]{visibility }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 46 of file window.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_abee9fd2700c0cde67da0b928d02cc643}\label{classspork_1_1graphics_1_1_window_abee9fd2700c0cde67da0b928d02cc643}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!update@{update}}
+\index{update@{update}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Window\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 129 of file window.\+cpp.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_abd0dee5e80d63ce619c6681efb034852}\label{classspork_1_1graphics_1_1_window_abd0dee5e80d63ce619c6681efb034852}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!cursor\+\_\+position\+\_\+callback@{cursor\+\_\+position\+\_\+callback}}
+\index{cursor\+\_\+position\+\_\+callback@{cursor\+\_\+position\+\_\+callback}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{cursor\+\_\+position\+\_\+callback}{cursor\_position\_callback}}
+{\footnotesize\ttfamily static friend void cursor\+\_\+position\+\_\+callback (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{window,  }\item[{double}]{xpos,  }\item[{double}]{ypos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 180 of file window.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_a5d0f196b2f1443f793ef20de522995a3}\label{classspork_1_1graphics_1_1_window_a5d0f196b2f1443f793ef20de522995a3}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!key\+\_\+callback@{key\+\_\+callback}}
+\index{key\+\_\+callback@{key\+\_\+callback}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{key\+\_\+callback}{key\_callback}}
+{\footnotesize\ttfamily static friend void key\+\_\+callback (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{window,  }\item[{int}]{key,  }\item[{int}]{scancode,  }\item[{int}]{action,  }\item[{int}]{mods }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 155 of file window.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_a934c179d0911e7f70088cebec526bfb6}\label{classspork_1_1graphics_1_1_window_a934c179d0911e7f70088cebec526bfb6}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!mouse\+\_\+button\+\_\+callback@{mouse\+\_\+button\+\_\+callback}}
+\index{mouse\+\_\+button\+\_\+callback@{mouse\+\_\+button\+\_\+callback}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{mouse\+\_\+button\+\_\+callback}{mouse\_button\_callback}}
+{\footnotesize\ttfamily static friend void mouse\+\_\+button\+\_\+callback (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{window,  }\item[{int}]{button,  }\item[{int}]{action,  }\item[{int}]{mods }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 171 of file window.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_af7cf061faac82731cc1ac5dace7b42c1}\label{classspork_1_1graphics_1_1_window_af7cf061faac82731cc1ac5dace7b42c1}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!scroll\+\_\+callback@{scroll\+\_\+callback}}
+\index{scroll\+\_\+callback@{scroll\+\_\+callback}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{scroll\+\_\+callback}{scroll\_callback}}
+{\footnotesize\ttfamily static friend void scroll\+\_\+callback (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{window,  }\item[{double}]{xoffset,  }\item[{double}]{yoffset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 190 of file window.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_aa639e1215ea2ee6304771668bf8b8645}\label{classspork_1_1graphics_1_1_window_aa639e1215ea2ee6304771668bf8b8645}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!m\+\_\+\+Closed@{m\+\_\+\+Closed}}
+\index{m\+\_\+\+Closed@{m\+\_\+\+Closed}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Closed}{m\_Closed}}
+{\footnotesize\ttfamily bool spork\+::graphics\+::\+Window\+::m\+\_\+\+Closed\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 22 of file window.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_a801e3f961f859f6e9e9aa23487640c9e}\label{classspork_1_1graphics_1_1_window_a801e3f961f859f6e9e9aa23487640c9e}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!m\+\_\+\+F\+PS@{m\+\_\+\+F\+PS}}
+\index{m\+\_\+\+F\+PS@{m\+\_\+\+F\+PS}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{m\+\_\+\+F\+PS}{m\_FPS}}
+{\footnotesize\ttfamily float spork\+::graphics\+::\+Window\+::m\+\_\+\+F\+PS\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 29 of file window.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_aab31788244145ca5bf23791c167c22e0}\label{classspork_1_1graphics_1_1_window_aab31788244145ca5bf23791c167c22e0}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!m\+\_\+\+Height@{m\+\_\+\+Height}}
+\index{m\+\_\+\+Height@{m\+\_\+\+Height}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Height}{m\_Height}}
+{\footnotesize\ttfamily int spork\+::graphics\+::\+Window\+::m\+\_\+\+Height\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 20 of file window.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_a3f2781c21d888ebf81828e66464378cb}\label{classspork_1_1graphics_1_1_window_a3f2781c21d888ebf81828e66464378cb}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!m\+\_\+\+Input\+Manager@{m\+\_\+\+Input\+Manager}}
+\index{m\+\_\+\+Input\+Manager@{m\+\_\+\+Input\+Manager}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Input\+Manager}{m\_InputManager}}
+{\footnotesize\ttfamily \hyperlink{classspork_1_1app_1_1_input}{app\+::\+Input} spork\+::graphics\+::\+Window\+::m\+\_\+\+Input\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 30 of file window.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_af46d08eafc336b3db36e27a2700e0086}\label{classspork_1_1graphics_1_1_window_af46d08eafc336b3db36e27a2700e0086}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!m\+\_\+\+Keys@{m\+\_\+\+Keys}}
+\index{m\+\_\+\+Keys@{m\+\_\+\+Keys}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Keys}{m\_Keys}}
+{\footnotesize\ttfamily bool spork\+::graphics\+::\+Window\+::m\+\_\+\+Keys\mbox{[}\hyperlink{input_8h_a3077ecca3770bdee50e6a17dfb55d002}{M\+A\+X\+\_\+\+K\+E\+YS}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 24 of file window.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_a764dc38ed3635c4f52c9f84398f7a4c4}\label{classspork_1_1graphics_1_1_window_a764dc38ed3635c4f52c9f84398f7a4c4}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!m\+\_\+\+Mouse\+Buttons@{m\+\_\+\+Mouse\+Buttons}}
+\index{m\+\_\+\+Mouse\+Buttons@{m\+\_\+\+Mouse\+Buttons}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Mouse\+Buttons}{m\_MouseButtons}}
+{\footnotesize\ttfamily bool spork\+::graphics\+::\+Window\+::m\+\_\+\+Mouse\+Buttons\mbox{[}\hyperlink{input_8h_a8bb0c7f312bb8665c3377a061dae552c}{M\+A\+X\+\_\+\+B\+U\+T\+T\+O\+NS}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 25 of file window.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_a92e53320ace67c18ebeb2aeedaca642e}\label{classspork_1_1graphics_1_1_window_a92e53320ace67c18ebeb2aeedaca642e}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!m\+\_\+\+Title@{m\+\_\+\+Title}}
+\index{m\+\_\+\+Title@{m\+\_\+\+Title}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Title}{m\_Title}}
+{\footnotesize\ttfamily const char$\ast$ spork\+::graphics\+::\+Window\+::m\+\_\+\+Title\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 19 of file window.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_aa9f8adb1d8e8663f8325ee940235b98e}\label{classspork_1_1graphics_1_1_window_aa9f8adb1d8e8663f8325ee940235b98e}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!m\+\_\+\+Width@{m\+\_\+\+Width}}
+\index{m\+\_\+\+Width@{m\+\_\+\+Width}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Width}{m\_Width}}
+{\footnotesize\ttfamily int spork\+::graphics\+::\+Window\+::m\+\_\+\+Width\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 20 of file window.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_a63f713a27b94dfb0b2aec195de135917}\label{classspork_1_1graphics_1_1_window_a63f713a27b94dfb0b2aec195de135917}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!m\+\_\+\+Window@{m\+\_\+\+Window}}
+\index{m\+\_\+\+Window@{m\+\_\+\+Window}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Window}{m\_Window}}
+{\footnotesize\ttfamily G\+L\+F\+Wwindow$\ast$ spork\+::graphics\+::\+Window\+::m\+\_\+\+Window\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 21 of file window.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_abd1aee80a6fb58ccc507115dbdacbfd1}\label{classspork_1_1graphics_1_1_window_abd1aee80a6fb58ccc507115dbdacbfd1}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!mouse\+Visible@{mouse\+Visible}}
+\index{mouse\+Visible@{mouse\+Visible}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{mouse\+Visible}{mouseVisible}}
+{\footnotesize\ttfamily bool spork\+::graphics\+::\+Window\+::mouse\+Visible = true\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 28 of file window.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_aebba1c26ee5c686524a1a0697ade5038}\label{classspork_1_1graphics_1_1_window_aebba1c26ee5c686524a1a0697ade5038}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!mx@{mx}}
+\index{mx@{mx}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{mx}{mx}}
+{\footnotesize\ttfamily double spork\+::graphics\+::\+Window\+::mx\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 27 of file window.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_a5fea429ed7a514e1f1d7b51a5318e34d}\label{classspork_1_1graphics_1_1_window_a5fea429ed7a514e1f1d7b51a5318e34d}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!my@{my}}
+\index{my@{my}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{my}{my}}
+{\footnotesize\ttfamily double spork\+::graphics\+::\+Window\+::my\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 27 of file window.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_a9e178f6a4378404048d26e4f560b76c8}\label{classspork_1_1graphics_1_1_window_a9e178f6a4378404048d26e4f560b76c8}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!scrollX@{scrollX}}
+\index{scrollX@{scrollX}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{scrollX}{scrollX}}
+{\footnotesize\ttfamily double spork\+::graphics\+::\+Window\+::scrollX\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 26 of file window.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_window_a618aaab346cbb5e98f6a4b1f034ea56b}\label{classspork_1_1graphics_1_1_window_a618aaab346cbb5e98f6a4b1f034ea56b}} 
+\index{spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}!scrollY@{scrollY}}
+\index{scrollY@{scrollY}!spork\+::graphics\+::\+Window@{spork\+::graphics\+::\+Window}}
+\subsubsection{\texorpdfstring{scrollY}{scrollY}}
+{\footnotesize\ttfamily double spork\+::graphics\+::\+Window\+::scrollY\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 26 of file window.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+N\+G S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/graphics/\hyperlink{window_8h}{window.\+h}\item 
+W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+N\+G S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/graphics/\hyperlink{window_8cpp}{window.\+cpp}\end{DoxyCompactItemize}

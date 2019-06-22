@@ -6,5 +6,4 @@ namespace spork { namespace gameobject { namespace component {
 		: transform(transform)
 	{
 	}
-
 } } }

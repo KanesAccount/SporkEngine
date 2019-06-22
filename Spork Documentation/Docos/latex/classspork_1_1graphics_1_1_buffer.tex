@@ -1,0 +1,149 @@
+\hypertarget{classspork_1_1graphics_1_1_buffer}{}\section{spork\+:\+:graphics\+:\+:Buffer Class Reference}
+\label{classspork_1_1graphics_1_1_buffer}\index{spork\+::graphics\+::\+Buffer@{spork\+::graphics\+::\+Buffer}}
+
+
+\hyperlink{classspork_1_1graphics_1_1_buffer}{Buffer} Class.  
+
+
+
+
+{\ttfamily \#include $<$buffer.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classspork_1_1graphics_1_1_buffer_a6b445479994088e19ca363f366c95d25}{Buffer} ()
+\item 
+\hyperlink{classspork_1_1graphics_1_1_buffer_a743f6720ebcb279273203a29d8b7f0e9}{Buffer} (G\+Lfloat $\ast$data, G\+Lsizei count, G\+Luint component\+Count)
+\item 
+\hyperlink{classspork_1_1graphics_1_1_buffer_a5b19fccc64a6f5797d8946d826612ff8}{$\sim$\+Buffer} ()
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_buffer_ab591a4012f5395a001174e62769dba9f}{load} (G\+Lfloat $\ast$data, G\+Lsizei amount, G\+Luint component\+Count)
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_buffer_a93c4fb2f16f88a92e8561918a7d90cdd}{bind} () const
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_buffer_a3cb844f62146486ed17a4f840ccdd975}{unbind} () const
+\item 
+G\+Luint \hyperlink{classspork_1_1graphics_1_1_buffer_a75f304bac73678502c9095cf0a3d6751}{get\+Componenet\+Count} () const
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+Luint \hyperlink{classspork_1_1graphics_1_1_buffer_a30d6a65987404601f22d9160605ffc90}{m\+\_\+\+Buffer\+ID}
+\item 
+G\+Luint \hyperlink{classspork_1_1graphics_1_1_buffer_a8d6c9bc231ebb8eb39fe010761e4e631}{m\+\_\+\+Component\+Count}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classspork_1_1graphics_1_1_buffer}{Buffer} Class. 
+
+Handles buffer creation, deletion \& binding. 
+
+Definition at line 9 of file buffer.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_buffer_a6b445479994088e19ca363f366c95d25}\label{classspork_1_1graphics_1_1_buffer_a6b445479994088e19ca363f366c95d25}} 
+\index{spork\+::graphics\+::\+Buffer@{spork\+::graphics\+::\+Buffer}!Buffer@{Buffer}}
+\index{Buffer@{Buffer}!spork\+::graphics\+::\+Buffer@{spork\+::graphics\+::\+Buffer}}
+\subsubsection{\texorpdfstring{Buffer()}{Buffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily spork\+::graphics\+::\+Buffer\+::\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 5 of file buffer.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_buffer_a743f6720ebcb279273203a29d8b7f0e9}\label{classspork_1_1graphics_1_1_buffer_a743f6720ebcb279273203a29d8b7f0e9}} 
+\index{spork\+::graphics\+::\+Buffer@{spork\+::graphics\+::\+Buffer}!Buffer@{Buffer}}
+\index{Buffer@{Buffer}!spork\+::graphics\+::\+Buffer@{spork\+::graphics\+::\+Buffer}}
+\subsubsection{\texorpdfstring{Buffer()}{Buffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily spork\+::graphics\+::\+Buffer\+::\+Buffer (\begin{DoxyParamCaption}\item[{G\+Lfloat $\ast$}]{data,  }\item[{G\+Lsizei}]{count,  }\item[{G\+Luint}]{component\+Count }\end{DoxyParamCaption})}
+
+
+
+Definition at line 10 of file buffer.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_buffer_a5b19fccc64a6f5797d8946d826612ff8}\label{classspork_1_1graphics_1_1_buffer_a5b19fccc64a6f5797d8946d826612ff8}} 
+\index{spork\+::graphics\+::\+Buffer@{spork\+::graphics\+::\+Buffer}!````~Buffer@{$\sim$\+Buffer}}
+\index{````~Buffer@{$\sim$\+Buffer}!spork\+::graphics\+::\+Buffer@{spork\+::graphics\+::\+Buffer}}
+\subsubsection{\texorpdfstring{$\sim$\+Buffer()}{~Buffer()}}
+{\footnotesize\ttfamily spork\+::graphics\+::\+Buffer\+::$\sim$\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 16 of file buffer.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_buffer_a93c4fb2f16f88a92e8561918a7d90cdd}\label{classspork_1_1graphics_1_1_buffer_a93c4fb2f16f88a92e8561918a7d90cdd}} 
+\index{spork\+::graphics\+::\+Buffer@{spork\+::graphics\+::\+Buffer}!bind@{bind}}
+\index{bind@{bind}!spork\+::graphics\+::\+Buffer@{spork\+::graphics\+::\+Buffer}}
+\subsubsection{\texorpdfstring{bind()}{bind()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Buffer\+::bind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 29 of file buffer.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_buffer_a75f304bac73678502c9095cf0a3d6751}\label{classspork_1_1graphics_1_1_buffer_a75f304bac73678502c9095cf0a3d6751}} 
+\index{spork\+::graphics\+::\+Buffer@{spork\+::graphics\+::\+Buffer}!get\+Componenet\+Count@{get\+Componenet\+Count}}
+\index{get\+Componenet\+Count@{get\+Componenet\+Count}!spork\+::graphics\+::\+Buffer@{spork\+::graphics\+::\+Buffer}}
+\subsubsection{\texorpdfstring{get\+Componenet\+Count()}{getComponenetCount()}}
+{\footnotesize\ttfamily G\+Luint spork\+::graphics\+::\+Buffer\+::get\+Componenet\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 24 of file buffer.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_buffer_ab591a4012f5395a001174e62769dba9f}\label{classspork_1_1graphics_1_1_buffer_ab591a4012f5395a001174e62769dba9f}} 
+\index{spork\+::graphics\+::\+Buffer@{spork\+::graphics\+::\+Buffer}!load@{load}}
+\index{load@{load}!spork\+::graphics\+::\+Buffer@{spork\+::graphics\+::\+Buffer}}
+\subsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Buffer\+::load (\begin{DoxyParamCaption}\item[{G\+Lfloat $\ast$}]{data,  }\item[{G\+Lsizei}]{amount,  }\item[{G\+Luint}]{component\+Count }\end{DoxyParamCaption})}
+
+
+
+Definition at line 21 of file buffer.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_buffer_a3cb844f62146486ed17a4f840ccdd975}\label{classspork_1_1graphics_1_1_buffer_a3cb844f62146486ed17a4f840ccdd975}} 
+\index{spork\+::graphics\+::\+Buffer@{spork\+::graphics\+::\+Buffer}!unbind@{unbind}}
+\index{unbind@{unbind}!spork\+::graphics\+::\+Buffer@{spork\+::graphics\+::\+Buffer}}
+\subsubsection{\texorpdfstring{unbind()}{unbind()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Buffer\+::unbind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 34 of file buffer.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_buffer_a30d6a65987404601f22d9160605ffc90}\label{classspork_1_1graphics_1_1_buffer_a30d6a65987404601f22d9160605ffc90}} 
+\index{spork\+::graphics\+::\+Buffer@{spork\+::graphics\+::\+Buffer}!m\+\_\+\+Buffer\+ID@{m\+\_\+\+Buffer\+ID}}
+\index{m\+\_\+\+Buffer\+ID@{m\+\_\+\+Buffer\+ID}!spork\+::graphics\+::\+Buffer@{spork\+::graphics\+::\+Buffer}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Buffer\+ID}{m\_BufferID}}
+{\footnotesize\ttfamily G\+Luint spork\+::graphics\+::\+Buffer\+::m\+\_\+\+Buffer\+ID\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 12 of file buffer.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_buffer_a8d6c9bc231ebb8eb39fe010761e4e631}\label{classspork_1_1graphics_1_1_buffer_a8d6c9bc231ebb8eb39fe010761e4e631}} 
+\index{spork\+::graphics\+::\+Buffer@{spork\+::graphics\+::\+Buffer}!m\+\_\+\+Component\+Count@{m\+\_\+\+Component\+Count}}
+\index{m\+\_\+\+Component\+Count@{m\+\_\+\+Component\+Count}!spork\+::graphics\+::\+Buffer@{spork\+::graphics\+::\+Buffer}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Component\+Count}{m\_ComponentCount}}
+{\footnotesize\ttfamily G\+Luint spork\+::graphics\+::\+Buffer\+::m\+\_\+\+Component\+Count\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 13 of file buffer.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+N\+G S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/graphics/buffers/\hyperlink{buffer_8h}{buffer.\+h}\item 
+W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+N\+G S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/graphics/buffers/\hyperlink{buffer_8cpp}{buffer.\+cpp}\end{DoxyCompactItemize}

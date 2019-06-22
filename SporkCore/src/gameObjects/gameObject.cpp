@@ -2,14 +2,12 @@
 
 namespace spork { namespace gameobject {
 	
-	GameObject::GameObject(graphics::Sprite* sprite, const maths::mat4& transform)
+	GameObject::GameObject()
 	{
-		AddComponent(new component::SpriteComponent(sprite));
-//		AddComponent(new component::TransformComponent(transform));
 	}
 
-	void GameObject::AddComponent(component::Component* component)
+	void GameObject::addComponent(component::Component* component)
 	{
-		m_Compenents[component->GetName()] = component;
+		m_Components.push_back(component);
 	}
 } }

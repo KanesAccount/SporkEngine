@@ -1,5 +1,4 @@
 #pragma once
-
 #include <GL/glew.h>
 #include <vector>
 #include <iostream>
@@ -8,16 +7,20 @@
 #include "../maths/maths.h"		
 
 namespace spork { namespace graphics {
-
 	using namespace maths;
+	/**
+	*  Shader Class. Handles loading of vertex, fragment and geometry shaders & setting of uniform variables.
+	*/
 	class Shader
 	{
 	private:
 		const char* m_VertPath;
 		const char* m_FragPath;
+		const char* m_GeometryPath;
 	public:
 		GLuint m_ShaderID;
-		Shader(const char* vertPath, const char* fragPath);
+		Shader();
+		Shader(const char* vertPath, const char* fragPath, const char* geometryPath = nullptr);
 		~Shader();
 		void setUniform1f(const GLchar* name, float value);
 		void setUniform1i(const GLchar* name, int value);

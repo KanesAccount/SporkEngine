@@ -1,0 +1,13 @@
+digraph "W:/Uni/SPORK/WORKING SPORK/Assignment/Spork Engine Submission/SporkEngine/SporkCore" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_52cc2781a88813a131373793786956d2 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="SporkEngine" fontname="Helvetica", fontsize="10", URL="dir_52cc2781a88813a131373793786956d2.html"]
+  subgraph clusterdir_ca2214816ce647ff3bbf19d35c3bdee2 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_ca2214816ce647ff3bbf19d35c3bdee2.html"];
+    dir_ca2214816ce647ff3bbf19d35c3bdee2 [shape=plaintext label="SporkCore"];
+    dir_f24a18f2d481361064cf425afe0b6224 [shape=box label="src" color="red" fillcolor="white" style="filled" URL="dir_f24a18f2d481361064cf425afe0b6224.html"];
+  }
+  }
+}

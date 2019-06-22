@@ -1,0 +1,207 @@
+\hypertarget{classspork_1_1graphics_1_1_model}{}\section{spork\+:\+:graphics\+:\+:Model Class Reference}
+\label{classspork_1_1graphics_1_1_model}\index{spork\+::graphics\+::\+Model@{spork\+::graphics\+::\+Model}}
+
+
+\hyperlink{classspork_1_1graphics_1_1_model}{Model} Class.  
+
+
+
+
+{\ttfamily \#include $<$model.\+h$>$}
+
+
+
+Collaboration diagram for spork\+:\+:graphics\+:\+:Model\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classspork_1_1graphics_1_1_model_a774761cdfe1a21c1eb9223fc4adf7261}{Model} (const \hyperlink{my_string_8h_afbeda3fd1bdc8c37d01bdf9f5c8274ff}{String} \&path, bool gamma=false)
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_model_a35ded645db58e34f4404c7fa280767d0}{draw} (\hyperlink{classspork_1_1graphics_1_1_shader}{Shader} $\ast$shader)
+\item 
+std\+::vector$<$ \hyperlink{structspork_1_1graphics_1_1_tex}{Tex} $>$ \hyperlink{classspork_1_1graphics_1_1_model_a728a70e87b9a8cc83f746787219fb373}{load\+Material\+Textures} (ai\+Material $\ast$mat, ai\+Texture\+Type type, \hyperlink{my_string_8h_afbeda3fd1bdc8c37d01bdf9f5c8274ff}{String} type\+Name)
+\item 
+std\+::vector$<$ \hyperlink{classspork_1_1graphics_1_1_mesh}{Mesh} $\ast$ $>$ \hyperlink{classspork_1_1graphics_1_1_model_a8944e099bc13464e73e566d13b834216}{get\+Mesh} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classspork_1_1utils_1_1_load_utils}{utils\+::\+Load\+Utils} \hyperlink{classspork_1_1graphics_1_1_model_a5903a26db77455961781ab0da24c0638}{loader}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_model_a022a882076f86af30528a578058be5fa}{load\+Model} (const \hyperlink{my_string_8h_afbeda3fd1bdc8c37d01bdf9f5c8274ff}{String} \&path)
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_model_a3396b1f9e42c2c2adbe3265b489f7729}{process\+Node} (ai\+Node $\ast$node, const ai\+Scene $\ast$scene)
+\item 
+\hyperlink{classspork_1_1graphics_1_1_mesh}{Mesh} \hyperlink{classspork_1_1graphics_1_1_model_a6949747e22cc53f7e11a46d01a54c385}{process\+Mesh} (ai\+Mesh $\ast$mesh, const ai\+Scene $\ast$scene)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \hyperlink{classspork_1_1graphics_1_1_mesh}{Mesh} $>$ \hyperlink{classspork_1_1graphics_1_1_model_a2c88c2a99a6d609f1852bf103ec6e656}{m\+\_\+\+Meshes}
+\item 
+std\+::vector$<$ \hyperlink{classspork_1_1graphics_1_1_mesh}{Mesh} $\ast$ $>$ \hyperlink{classspork_1_1graphics_1_1_model_a3ffb7b06b220ae11c4d831795096f05b}{m\+\_\+\+Mesh}
+\item 
+std\+::vector$<$ \hyperlink{structspork_1_1graphics_1_1_tex}{Tex} $>$ \hyperlink{classspork_1_1graphics_1_1_model_a265f07af8885ad11afae2839dde5256d}{loaded\+Tex}
+\item 
+\hyperlink{my_string_8h_afbeda3fd1bdc8c37d01bdf9f5c8274ff}{String} \hyperlink{classspork_1_1graphics_1_1_model_ac566be33bfd7cfc1819c6de833f8cdc8}{dir}
+\item 
+bool \hyperlink{classspork_1_1graphics_1_1_model_a2c6c4c904b268e696f4998b47e883821}{gamma\+Correction}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classspork_1_1graphics_1_1_model}{Model} Class. 
+
+Handles loading of model its textures. 
+
+Definition at line 17 of file model.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_a774761cdfe1a21c1eb9223fc4adf7261}\label{classspork_1_1graphics_1_1_model_a774761cdfe1a21c1eb9223fc4adf7261}} 
+\index{spork\+::graphics\+::\+Model@{spork\+::graphics\+::\+Model}!Model@{Model}}
+\index{Model@{Model}!spork\+::graphics\+::\+Model@{spork\+::graphics\+::\+Model}}
+\subsubsection{\texorpdfstring{Model()}{Model()}}
+{\footnotesize\ttfamily spork\+::graphics\+::\+Model\+::\+Model (\begin{DoxyParamCaption}\item[{const \hyperlink{my_string_8h_afbeda3fd1bdc8c37d01bdf9f5c8274ff}{String} \&}]{path,  }\item[{bool}]{gamma = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 5 of file model.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_a35ded645db58e34f4404c7fa280767d0}\label{classspork_1_1graphics_1_1_model_a35ded645db58e34f4404c7fa280767d0}} 
+\index{spork\+::graphics\+::\+Model@{spork\+::graphics\+::\+Model}!draw@{draw}}
+\index{draw@{draw}!spork\+::graphics\+::\+Model@{spork\+::graphics\+::\+Model}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Model\+::draw (\begin{DoxyParamCaption}\item[{\hyperlink{classspork_1_1graphics_1_1_shader}{Shader} $\ast$}]{shader }\end{DoxyParamCaption})}
+
+
+
+Definition at line 170 of file model.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_a8944e099bc13464e73e566d13b834216}\label{classspork_1_1graphics_1_1_model_a8944e099bc13464e73e566d13b834216}} 
+\index{spork\+::graphics\+::\+Model@{spork\+::graphics\+::\+Model}!get\+Mesh@{get\+Mesh}}
+\index{get\+Mesh@{get\+Mesh}!spork\+::graphics\+::\+Model@{spork\+::graphics\+::\+Model}}
+\subsubsection{\texorpdfstring{get\+Mesh()}{getMesh()}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{classspork_1_1graphics_1_1_mesh}{Mesh}$\ast$$>$ spork\+::graphics\+::\+Model\+::get\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 35 of file model.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_a728a70e87b9a8cc83f746787219fb373}\label{classspork_1_1graphics_1_1_model_a728a70e87b9a8cc83f746787219fb373}} 
+\index{spork\+::graphics\+::\+Model@{spork\+::graphics\+::\+Model}!load\+Material\+Textures@{load\+Material\+Textures}}
+\index{load\+Material\+Textures@{load\+Material\+Textures}!spork\+::graphics\+::\+Model@{spork\+::graphics\+::\+Model}}
+\subsubsection{\texorpdfstring{load\+Material\+Textures()}{loadMaterialTextures()}}
+{\footnotesize\ttfamily std\+::vector$<$ \hyperlink{structspork_1_1graphics_1_1_tex}{Tex} $>$ spork\+::graphics\+::\+Model\+::load\+Material\+Textures (\begin{DoxyParamCaption}\item[{ai\+Material $\ast$}]{mat,  }\item[{ai\+Texture\+Type}]{type,  }\item[{\hyperlink{my_string_8h_afbeda3fd1bdc8c37d01bdf9f5c8274ff}{String}}]{type\+Name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 137 of file model.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_a022a882076f86af30528a578058be5fa}\label{classspork_1_1graphics_1_1_model_a022a882076f86af30528a578058be5fa}} 
+\index{spork\+::graphics\+::\+Model@{spork\+::graphics\+::\+Model}!load\+Model@{load\+Model}}
+\index{load\+Model@{load\+Model}!spork\+::graphics\+::\+Model@{spork\+::graphics\+::\+Model}}
+\subsubsection{\texorpdfstring{load\+Model()}{loadModel()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Model\+::load\+Model (\begin{DoxyParamCaption}\item[{const \hyperlink{my_string_8h_afbeda3fd1bdc8c37d01bdf9f5c8274ff}{String} \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 11 of file model.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_a6949747e22cc53f7e11a46d01a54c385}\label{classspork_1_1graphics_1_1_model_a6949747e22cc53f7e11a46d01a54c385}} 
+\index{spork\+::graphics\+::\+Model@{spork\+::graphics\+::\+Model}!process\+Mesh@{process\+Mesh}}
+\index{process\+Mesh@{process\+Mesh}!spork\+::graphics\+::\+Model@{spork\+::graphics\+::\+Model}}
+\subsubsection{\texorpdfstring{process\+Mesh()}{processMesh()}}
+{\footnotesize\ttfamily \hyperlink{classspork_1_1graphics_1_1_mesh}{Mesh} spork\+::graphics\+::\+Model\+::process\+Mesh (\begin{DoxyParamCaption}\item[{ai\+Mesh $\ast$}]{mesh,  }\item[{const ai\+Scene $\ast$}]{scene }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 43 of file model.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_a3396b1f9e42c2c2adbe3265b489f7729}\label{classspork_1_1graphics_1_1_model_a3396b1f9e42c2c2adbe3265b489f7729}} 
+\index{spork\+::graphics\+::\+Model@{spork\+::graphics\+::\+Model}!process\+Node@{process\+Node}}
+\index{process\+Node@{process\+Node}!spork\+::graphics\+::\+Model@{spork\+::graphics\+::\+Model}}
+\subsubsection{\texorpdfstring{process\+Node()}{processNode()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Model\+::process\+Node (\begin{DoxyParamCaption}\item[{ai\+Node $\ast$}]{node,  }\item[{const ai\+Scene $\ast$}]{scene }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 28 of file model.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_ac566be33bfd7cfc1819c6de833f8cdc8}\label{classspork_1_1graphics_1_1_model_ac566be33bfd7cfc1819c6de833f8cdc8}} 
+\index{spork\+::graphics\+::\+Model@{spork\+::graphics\+::\+Model}!dir@{dir}}
+\index{dir@{dir}!spork\+::graphics\+::\+Model@{spork\+::graphics\+::\+Model}}
+\subsubsection{\texorpdfstring{dir}{dir}}
+{\footnotesize\ttfamily \hyperlink{my_string_8h_afbeda3fd1bdc8c37d01bdf9f5c8274ff}{String} spork\+::graphics\+::\+Model\+::dir\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 23 of file model.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_a2c6c4c904b268e696f4998b47e883821}\label{classspork_1_1graphics_1_1_model_a2c6c4c904b268e696f4998b47e883821}} 
+\index{spork\+::graphics\+::\+Model@{spork\+::graphics\+::\+Model}!gamma\+Correction@{gamma\+Correction}}
+\index{gamma\+Correction@{gamma\+Correction}!spork\+::graphics\+::\+Model@{spork\+::graphics\+::\+Model}}
+\subsubsection{\texorpdfstring{gamma\+Correction}{gammaCorrection}}
+{\footnotesize\ttfamily bool spork\+::graphics\+::\+Model\+::gamma\+Correction\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 24 of file model.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_a265f07af8885ad11afae2839dde5256d}\label{classspork_1_1graphics_1_1_model_a265f07af8885ad11afae2839dde5256d}} 
+\index{spork\+::graphics\+::\+Model@{spork\+::graphics\+::\+Model}!loaded\+Tex@{loaded\+Tex}}
+\index{loaded\+Tex@{loaded\+Tex}!spork\+::graphics\+::\+Model@{spork\+::graphics\+::\+Model}}
+\subsubsection{\texorpdfstring{loaded\+Tex}{loadedTex}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{structspork_1_1graphics_1_1_tex}{Tex}$>$ spork\+::graphics\+::\+Model\+::loaded\+Tex\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 22 of file model.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_a5903a26db77455961781ab0da24c0638}\label{classspork_1_1graphics_1_1_model_a5903a26db77455961781ab0da24c0638}} 
+\index{spork\+::graphics\+::\+Model@{spork\+::graphics\+::\+Model}!loader@{loader}}
+\index{loader@{loader}!spork\+::graphics\+::\+Model@{spork\+::graphics\+::\+Model}}
+\subsubsection{\texorpdfstring{loader}{loader}}
+{\footnotesize\ttfamily \hyperlink{classspork_1_1utils_1_1_load_utils}{utils\+::\+Load\+Utils} spork\+::graphics\+::\+Model\+::loader}
+
+
+
+Definition at line 27 of file model.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_a3ffb7b06b220ae11c4d831795096f05b}\label{classspork_1_1graphics_1_1_model_a3ffb7b06b220ae11c4d831795096f05b}} 
+\index{spork\+::graphics\+::\+Model@{spork\+::graphics\+::\+Model}!m\+\_\+\+Mesh@{m\+\_\+\+Mesh}}
+\index{m\+\_\+\+Mesh@{m\+\_\+\+Mesh}!spork\+::graphics\+::\+Model@{spork\+::graphics\+::\+Model}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Mesh}{m\_Mesh}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{classspork_1_1graphics_1_1_mesh}{Mesh}$\ast$$>$ spork\+::graphics\+::\+Model\+::m\+\_\+\+Mesh\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 21 of file model.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_model_a2c88c2a99a6d609f1852bf103ec6e656}\label{classspork_1_1graphics_1_1_model_a2c88c2a99a6d609f1852bf103ec6e656}} 
+\index{spork\+::graphics\+::\+Model@{spork\+::graphics\+::\+Model}!m\+\_\+\+Meshes@{m\+\_\+\+Meshes}}
+\index{m\+\_\+\+Meshes@{m\+\_\+\+Meshes}!spork\+::graphics\+::\+Model@{spork\+::graphics\+::\+Model}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Meshes}{m\_Meshes}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{classspork_1_1graphics_1_1_mesh}{Mesh}$>$ spork\+::graphics\+::\+Model\+::m\+\_\+\+Meshes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 20 of file model.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+N\+G S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/graphics/models/\hyperlink{model_8h}{model.\+h}\item 
+W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+N\+G S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/graphics/models/\hyperlink{model_8cpp}{model.\+cpp}\end{DoxyCompactItemize}

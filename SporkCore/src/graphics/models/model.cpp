@@ -58,10 +58,12 @@ namespace spork { namespace graphics {
 			
 			vert.pos = tempVec;
 			//Normals
-			tempVec.x = mesh->mNormals[i].x;
-			tempVec.y = mesh->mNormals[i].y;
-			tempVec.z = mesh->mNormals[i].z;
-
+			if (mesh->mNormals)
+			{
+				tempVec.x = mesh->mNormals[i].x;
+				tempVec.y = mesh->mNormals[i].y;
+				tempVec.z = mesh->mNormals[i].z;
+			}
 			vert.normal = tempVec;
 			//Tex coords
 			if (mesh->mTextureCoords[0])
@@ -74,7 +76,7 @@ namespace spork { namespace graphics {
 			else
 				vert.uv = vec2(0.0f, 0.0f);
 
-			//Tangent
+			//Tangents
 			if (mesh->mTangents)
 			{
 				tempVec.x = mesh->mTangents[i].x;
@@ -83,7 +85,7 @@ namespace spork { namespace graphics {
 				vert.tangent = tempVec;
 			}
 
-			//Bitangent
+			//Bitangents
 			if (mesh->mBitangents)
 			{
 				tempVec.x = mesh->mBitangents[i].x;
@@ -126,6 +128,8 @@ namespace spork { namespace graphics {
 		textures.insert(textures.end(), heightMaps.begin(), heightMaps.end());
 		
 		//Return the mesh with the extracted mesh data
+		Mesh* res = new Mesh(vertices, indices, textures);
+		m_Mesh.push_back(res);
 		return Mesh(vertices, indices, textures);
 	}
 
@@ -163,7 +167,7 @@ namespace spork { namespace graphics {
 		return textures;
 	}
 
-	void Model::draw(Shader shader)
+	void Model::draw(Shader* shader)
 	{
 		for (uint i = 0; i < m_Meshes.size(); i++)
 		{

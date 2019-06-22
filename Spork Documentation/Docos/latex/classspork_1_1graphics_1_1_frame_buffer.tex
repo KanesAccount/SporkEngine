@@ -1,0 +1,204 @@
+\hypertarget{classspork_1_1graphics_1_1_frame_buffer}{}\section{spork\+:\+:graphics\+:\+:Frame\+Buffer Class Reference}
+\label{classspork_1_1graphics_1_1_frame_buffer}\index{spork\+::graphics\+::\+Frame\+Buffer@{spork\+::graphics\+::\+Frame\+Buffer}}
+
+
+Framebuffer Class.  
+
+
+
+
+{\ttfamily \#include $<$frame\+Buffer.\+h$>$}
+
+
+
+Collaboration diagram for spork\+:\+:graphics\+:\+:Frame\+Buffer\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classspork_1_1graphics_1_1_frame_buffer_abbfe4ea72dabd467d5166daa1ce02178}{Frame\+Buffer} ()
+\item 
+\hyperlink{classspork_1_1graphics_1_1_frame_buffer_a4c07c51b63295d3d47931e46eb6d3b31}{Frame\+Buffer} (\hyperlink{classspork_1_1graphics_1_1_window}{Window} $\ast$window)
+\item 
+\hyperlink{classspork_1_1graphics_1_1_frame_buffer_af0187f7d1b13fc0dd761f4207b9555c4}{$\sim$\+Frame\+Buffer} ()
+\item 
+G\+Luint \hyperlink{classspork_1_1graphics_1_1_frame_buffer_a4544b8c2ffe1ea1a248750c0b3c87f57}{get\+ID} ()
+\item 
+G\+Luint \hyperlink{classspork_1_1graphics_1_1_frame_buffer_a2c3884a0af7357158990dd6c2c2f9be0}{get\+Tex} ()
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_frame_buffer_a51a82de6f2015491e210b352360eb1b0}{init} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_frame_buffer_aff6d38e7e34bede17c72de375ca613cd}{bind} ()
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_frame_buffer_a844acfa32ed547f63e5e42d57218a633}{unbind} ()
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_frame_buffer_a98e8ac4671cc62e09bba3ceff5c36adc}{draw} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classspork_1_1graphics_1_1_window}{Window} $\ast$ \hyperlink{classspork_1_1graphics_1_1_frame_buffer_aeba86bc3c16a729e0ee0046c0d227dd4}{m\+\_\+\+Window}
+\item 
+G\+Luint \hyperlink{classspork_1_1graphics_1_1_frame_buffer_a4889c9e79c1feb6cfe7d83075af6fc84}{m\+\_\+\+Fbo}
+\item 
+G\+Luint \hyperlink{classspork_1_1graphics_1_1_frame_buffer_ae67a64c4136a360da28458b87e48082b}{m\+\_\+\+Dbo}
+\item 
+G\+Luint \hyperlink{classspork_1_1graphics_1_1_frame_buffer_a0d1b23266ca24b011fd8e1c9d7390f22}{m\+\_\+\+Rendered\+Texture}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Framebuffer Class. 
+
+Handles framebuffer creation, initialisation deletion \& binding. 
+
+Definition at line 11 of file frame\+Buffer.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_frame_buffer_abbfe4ea72dabd467d5166daa1ce02178}\label{classspork_1_1graphics_1_1_frame_buffer_abbfe4ea72dabd467d5166daa1ce02178}} 
+\index{spork\+::graphics\+::\+Frame\+Buffer@{spork\+::graphics\+::\+Frame\+Buffer}!Frame\+Buffer@{Frame\+Buffer}}
+\index{Frame\+Buffer@{Frame\+Buffer}!spork\+::graphics\+::\+Frame\+Buffer@{spork\+::graphics\+::\+Frame\+Buffer}}
+\subsubsection{\texorpdfstring{Frame\+Buffer()}{FrameBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily spork\+::graphics\+::\+Frame\+Buffer\+::\+Frame\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 5 of file frame\+Buffer.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_frame_buffer_a4c07c51b63295d3d47931e46eb6d3b31}\label{classspork_1_1graphics_1_1_frame_buffer_a4c07c51b63295d3d47931e46eb6d3b31}} 
+\index{spork\+::graphics\+::\+Frame\+Buffer@{spork\+::graphics\+::\+Frame\+Buffer}!Frame\+Buffer@{Frame\+Buffer}}
+\index{Frame\+Buffer@{Frame\+Buffer}!spork\+::graphics\+::\+Frame\+Buffer@{spork\+::graphics\+::\+Frame\+Buffer}}
+\subsubsection{\texorpdfstring{Frame\+Buffer()}{FrameBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily spork\+::graphics\+::\+Frame\+Buffer\+::\+Frame\+Buffer (\begin{DoxyParamCaption}\item[{\hyperlink{classspork_1_1graphics_1_1_window}{Window} $\ast$}]{window }\end{DoxyParamCaption})}
+
+
+
+Definition at line 9 of file frame\+Buffer.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_frame_buffer_af0187f7d1b13fc0dd761f4207b9555c4}\label{classspork_1_1graphics_1_1_frame_buffer_af0187f7d1b13fc0dd761f4207b9555c4}} 
+\index{spork\+::graphics\+::\+Frame\+Buffer@{spork\+::graphics\+::\+Frame\+Buffer}!````~Frame\+Buffer@{$\sim$\+Frame\+Buffer}}
+\index{````~Frame\+Buffer@{$\sim$\+Frame\+Buffer}!spork\+::graphics\+::\+Frame\+Buffer@{spork\+::graphics\+::\+Frame\+Buffer}}
+\subsubsection{\texorpdfstring{$\sim$\+Frame\+Buffer()}{~FrameBuffer()}}
+{\footnotesize\ttfamily spork\+::graphics\+::\+Frame\+Buffer\+::$\sim$\+Frame\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 14 of file frame\+Buffer.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_frame_buffer_aff6d38e7e34bede17c72de375ca613cd}\label{classspork_1_1graphics_1_1_frame_buffer_aff6d38e7e34bede17c72de375ca613cd}} 
+\index{spork\+::graphics\+::\+Frame\+Buffer@{spork\+::graphics\+::\+Frame\+Buffer}!bind@{bind}}
+\index{bind@{bind}!spork\+::graphics\+::\+Frame\+Buffer@{spork\+::graphics\+::\+Frame\+Buffer}}
+\subsubsection{\texorpdfstring{bind()}{bind()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Frame\+Buffer\+::bind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 48 of file frame\+Buffer.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_frame_buffer_a98e8ac4671cc62e09bba3ceff5c36adc}\label{classspork_1_1graphics_1_1_frame_buffer_a98e8ac4671cc62e09bba3ceff5c36adc}} 
+\index{spork\+::graphics\+::\+Frame\+Buffer@{spork\+::graphics\+::\+Frame\+Buffer}!draw@{draw}}
+\index{draw@{draw}!spork\+::graphics\+::\+Frame\+Buffer@{spork\+::graphics\+::\+Frame\+Buffer}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Frame\+Buffer\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 58 of file frame\+Buffer.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_frame_buffer_a4544b8c2ffe1ea1a248750c0b3c87f57}\label{classspork_1_1graphics_1_1_frame_buffer_a4544b8c2ffe1ea1a248750c0b3c87f57}} 
+\index{spork\+::graphics\+::\+Frame\+Buffer@{spork\+::graphics\+::\+Frame\+Buffer}!get\+ID@{get\+ID}}
+\index{get\+ID@{get\+ID}!spork\+::graphics\+::\+Frame\+Buffer@{spork\+::graphics\+::\+Frame\+Buffer}}
+\subsubsection{\texorpdfstring{get\+I\+D()}{getID()}}
+{\footnotesize\ttfamily G\+Luint spork\+::graphics\+::\+Frame\+Buffer\+::get\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 22 of file frame\+Buffer.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_frame_buffer_a2c3884a0af7357158990dd6c2c2f9be0}\label{classspork_1_1graphics_1_1_frame_buffer_a2c3884a0af7357158990dd6c2c2f9be0}} 
+\index{spork\+::graphics\+::\+Frame\+Buffer@{spork\+::graphics\+::\+Frame\+Buffer}!get\+Tex@{get\+Tex}}
+\index{get\+Tex@{get\+Tex}!spork\+::graphics\+::\+Frame\+Buffer@{spork\+::graphics\+::\+Frame\+Buffer}}
+\subsubsection{\texorpdfstring{get\+Tex()}{getTex()}}
+{\footnotesize\ttfamily G\+Luint spork\+::graphics\+::\+Frame\+Buffer\+::get\+Tex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 23 of file frame\+Buffer.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_frame_buffer_a51a82de6f2015491e210b352360eb1b0}\label{classspork_1_1graphics_1_1_frame_buffer_a51a82de6f2015491e210b352360eb1b0}} 
+\index{spork\+::graphics\+::\+Frame\+Buffer@{spork\+::graphics\+::\+Frame\+Buffer}!init@{init}}
+\index{init@{init}!spork\+::graphics\+::\+Frame\+Buffer@{spork\+::graphics\+::\+Frame\+Buffer}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Frame\+Buffer\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 20 of file frame\+Buffer.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_frame_buffer_a844acfa32ed547f63e5e42d57218a633}\label{classspork_1_1graphics_1_1_frame_buffer_a844acfa32ed547f63e5e42d57218a633}} 
+\index{spork\+::graphics\+::\+Frame\+Buffer@{spork\+::graphics\+::\+Frame\+Buffer}!unbind@{unbind}}
+\index{unbind@{unbind}!spork\+::graphics\+::\+Frame\+Buffer@{spork\+::graphics\+::\+Frame\+Buffer}}
+\subsubsection{\texorpdfstring{unbind()}{unbind()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Frame\+Buffer\+::unbind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 53 of file frame\+Buffer.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_frame_buffer_ae67a64c4136a360da28458b87e48082b}\label{classspork_1_1graphics_1_1_frame_buffer_ae67a64c4136a360da28458b87e48082b}} 
+\index{spork\+::graphics\+::\+Frame\+Buffer@{spork\+::graphics\+::\+Frame\+Buffer}!m\+\_\+\+Dbo@{m\+\_\+\+Dbo}}
+\index{m\+\_\+\+Dbo@{m\+\_\+\+Dbo}!spork\+::graphics\+::\+Frame\+Buffer@{spork\+::graphics\+::\+Frame\+Buffer}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Dbo}{m\_Dbo}}
+{\footnotesize\ttfamily G\+Luint spork\+::graphics\+::\+Frame\+Buffer\+::m\+\_\+\+Dbo\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 16 of file frame\+Buffer.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_frame_buffer_a4889c9e79c1feb6cfe7d83075af6fc84}\label{classspork_1_1graphics_1_1_frame_buffer_a4889c9e79c1feb6cfe7d83075af6fc84}} 
+\index{spork\+::graphics\+::\+Frame\+Buffer@{spork\+::graphics\+::\+Frame\+Buffer}!m\+\_\+\+Fbo@{m\+\_\+\+Fbo}}
+\index{m\+\_\+\+Fbo@{m\+\_\+\+Fbo}!spork\+::graphics\+::\+Frame\+Buffer@{spork\+::graphics\+::\+Frame\+Buffer}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Fbo}{m\_Fbo}}
+{\footnotesize\ttfamily G\+Luint spork\+::graphics\+::\+Frame\+Buffer\+::m\+\_\+\+Fbo\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 15 of file frame\+Buffer.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_frame_buffer_a0d1b23266ca24b011fd8e1c9d7390f22}\label{classspork_1_1graphics_1_1_frame_buffer_a0d1b23266ca24b011fd8e1c9d7390f22}} 
+\index{spork\+::graphics\+::\+Frame\+Buffer@{spork\+::graphics\+::\+Frame\+Buffer}!m\+\_\+\+Rendered\+Texture@{m\+\_\+\+Rendered\+Texture}}
+\index{m\+\_\+\+Rendered\+Texture@{m\+\_\+\+Rendered\+Texture}!spork\+::graphics\+::\+Frame\+Buffer@{spork\+::graphics\+::\+Frame\+Buffer}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Rendered\+Texture}{m\_RenderedTexture}}
+{\footnotesize\ttfamily G\+Luint spork\+::graphics\+::\+Frame\+Buffer\+::m\+\_\+\+Rendered\+Texture\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 17 of file frame\+Buffer.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_frame_buffer_aeba86bc3c16a729e0ee0046c0d227dd4}\label{classspork_1_1graphics_1_1_frame_buffer_aeba86bc3c16a729e0ee0046c0d227dd4}} 
+\index{spork\+::graphics\+::\+Frame\+Buffer@{spork\+::graphics\+::\+Frame\+Buffer}!m\+\_\+\+Window@{m\+\_\+\+Window}}
+\index{m\+\_\+\+Window@{m\+\_\+\+Window}!spork\+::graphics\+::\+Frame\+Buffer@{spork\+::graphics\+::\+Frame\+Buffer}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Window}{m\_Window}}
+{\footnotesize\ttfamily \hyperlink{classspork_1_1graphics_1_1_window}{Window}$\ast$ spork\+::graphics\+::\+Frame\+Buffer\+::m\+\_\+\+Window\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 14 of file frame\+Buffer.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+N\+G S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/graphics/buffers/\hyperlink{frame_buffer_8h}{frame\+Buffer.\+h}\item 
+W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+N\+G S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/graphics/buffers/\hyperlink{frame_buffer_8cpp}{frame\+Buffer.\+cpp}\end{DoxyCompactItemize}

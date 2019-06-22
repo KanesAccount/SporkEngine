@@ -2,6 +2,10 @@
 
 namespace spork { namespace graphics {
 
+	TextContainer::TextContainer()
+	{
+	}
+
 	TextContainer::TextContainer(const char* path)
 		: m_Path(path), m_TextShader("src/shaders/textShader.vert", "src/shaders/textShader.frag")
 	{
@@ -90,8 +94,21 @@ namespace spork { namespace graphics {
 		glCall(glDrawArrays(GL_TRIANGLES, 0, vertices.size()));
 		
 		//Cleanup
-		glDisable(GL_BLEND);
-		glDisableVertexAttribArray(0);
-		glDisableVertexAttribArray(1);
+		m_TextShader.disable();
+		glCall(glDisable(GL_BLEND));
+		glCall(glDisableVertexAttribArray(0));
+		glCall(glDisableVertexAttribArray(1));
+	}
+
+	void TextContainer::cleanupText()
+	{
+		// Delete buffers
+		glCall(glDeleteBuffers(1, &m_Text2DVertexBufferID));
+		glCall(glDeleteBuffers(1, &m_Text2DUVBufferID));
+
+		// Delete texture
+		glCall(glDeleteTextures(1, &m_Text2DTexID));
+		// Delete shader
+		glCall(glDeleteProgram(m_Text2DShaderID));
 	}
 } }

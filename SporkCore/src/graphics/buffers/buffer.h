@@ -3,7 +3,9 @@
 #include <GLFW/glfw3.h>
 
 namespace spork { namespace graphics {
-		
+	/**
+	*  Buffer Class. Handles buffer creation, deletion & binding.
+	*/
 	class Buffer
 	{
 	private:

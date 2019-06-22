@@ -1,0 +1,287 @@
+\hypertarget{log_8h}{}\section{W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+NG S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/utils/log.h File Reference}
+\label{log_8h}\index{W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+N\+G S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/utils/log.\+h@{W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+N\+G S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/utils/log.\+h}}
+{\ttfamily \#include \char`\"{}../spork/spork.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../maths/vec2.\+h\char`\"{}}\newline
+Include dependency graph for log.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structspork_1_1debug_1_1has__iter}{spork\+::debug\+::has\+\_\+iter$<$ T $>$}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacestd}{std}
+\item 
+ \hyperlink{namespacespork}{spork}
+\item 
+ \hyperlink{namespacespork_1_1debug}{spork\+::debug}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{log_8h_adf4476a6a4ea6c74231c826e899d7189}{L\+O\+G\+\_\+\+W\+A\+R\+N\+I\+NG}~0
+\item 
+\#define \hyperlink{log_8h_a96fad55b3f5adf08c39e4c877cf185e3}{L\+O\+G\+\_\+\+E\+RR}~1
+\item 
+\#define \hyperlink{log_8h_ac2164369b4d2bf72296f8ba6ea576ecf}{L\+O\+G\+\_\+\+F\+A\+T\+AL}~2
+\item 
+\#define \hyperlink{log_8h_aeb4f36db01bd128c7afeac5889dac311}{L\+O\+G\+\_\+\+I\+N\+FO}~3
+\item 
+\#define \hyperlink{log_8h_a0b87e0d3bf5853bcbb0b66a7c48fdc05}{L\+O\+G\+\_\+\+L\+E\+V\+EL}~\hyperlink{log_8h_aeb4f36db01bd128c7afeac5889dac311}{L\+O\+G\+\_\+\+I\+N\+FO}
+\item 
+\#define \hyperlink{log_8h_af48fc0751b9105a0a5acda7408483d84}{D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+F\+A\+T\+AL}(...)~\hyperlink{namespacespork_1_1debug_ae5b65f263f4686cf365b19f468fc1e53}{spork\+::debug\+::log\+Msg}(\hyperlink{log_8h_ac2164369b4d2bf72296f8ba6ea576ecf}{L\+O\+G\+\_\+\+F\+A\+T\+AL}, true, \char`\"{}spork\+:    \char`\"{}, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \hyperlink{log_8h_a7a0b8d44bcdac28f204fddd92e94c515}{\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+F\+A\+T\+AL}(...)~\hyperlink{namespacespork_1_1debug_ae5b65f263f4686cf365b19f468fc1e53}{spork\+::debug\+::log\+Msg}(\hyperlink{log_8h_ac2164369b4d2bf72296f8ba6ea576ecf}{L\+O\+G\+\_\+\+F\+A\+T\+AL}, false, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \hyperlink{log_8h_affecf0d55ffe00f921caddb1efd6bbbe}{D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+E\+R\+R\+OR}(...)~\hyperlink{namespacespork_1_1debug_ae5b65f263f4686cf365b19f468fc1e53}{spork\+::debug\+::log\+Msg}(\hyperlink{log_8h_a96fad55b3f5adf08c39e4c877cf185e3}{L\+O\+G\+\_\+\+E\+RR}, true, \char`\"{}spork\+:    \char`\"{}, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \hyperlink{log_8h_ab47037a8cfaedba73bd14442ae0a4a1f}{\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+E\+R\+R\+OR}(...)~\hyperlink{namespacespork_1_1debug_ae5b65f263f4686cf365b19f468fc1e53}{spork\+::debug\+::log\+Msg}(\hyperlink{log_8h_a96fad55b3f5adf08c39e4c877cf185e3}{L\+O\+G\+\_\+\+E\+RR}, false, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \hyperlink{log_8h_af31c95e1129b26a993b71dced6de68b0}{D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+W\+A\+R\+N\+I\+NG}(...)~\hyperlink{namespacespork_1_1debug_ae5b65f263f4686cf365b19f468fc1e53}{spork\+::debug\+::log\+Msg}(\hyperlink{log_8h_adf4476a6a4ea6c74231c826e899d7189}{L\+O\+G\+\_\+\+W\+A\+R\+N\+I\+NG}, true, \char`\"{}spork\+:    \char`\"{}, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \hyperlink{log_8h_aecbe306dbc86e4ddd490786b152de005}{\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+W\+A\+R\+N\+I\+NG}(...)~\hyperlink{namespacespork_1_1debug_ae5b65f263f4686cf365b19f468fc1e53}{spork\+::debug\+::log\+Msg}(\hyperlink{log_8h_adf4476a6a4ea6c74231c826e899d7189}{L\+O\+G\+\_\+\+W\+A\+R\+N\+I\+NG}, false, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \hyperlink{log_8h_a7383966ea4ead0b3c1735de74e426132}{D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+I\+N\+FO}(...)~\hyperlink{namespacespork_1_1debug_ae5b65f263f4686cf365b19f468fc1e53}{spork\+::debug\+::log\+Msg}(\hyperlink{log_8h_aeb4f36db01bd128c7afeac5889dac311}{L\+O\+G\+\_\+\+I\+N\+FO}, true, \char`\"{}spork\+:    \char`\"{}, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \hyperlink{log_8h_adf6fd987fbce4d1ccd91081bd2899c70}{\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+I\+N\+FO}(...)~\hyperlink{namespacespork_1_1debug_ae5b65f263f4686cf365b19f468fc1e53}{spork\+::debug\+::log\+Msg}(\hyperlink{log_8h_aeb4f36db01bd128c7afeac5889dac311}{L\+O\+G\+\_\+\+I\+N\+FO}, false, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \hyperlink{log_8h_a0c72f3abcae4a05c7847a3466bf67637}{D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+A\+S\+S\+E\+RT}(x, ...)
+\item 
+\#define \hyperlink{log_8h_afc69b9cf238520aef3e894ccc6e93f09}{gl\+Call}(x)~x
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\string \hyperlink{namespacestd_ad028a2646c9302d478995256bdbd9459}{std\+::to\+\_\+string} (const T \&t)
+\item 
+void \hyperlink{namespacespork_1_1debug_ad263309a1fad3a21dcf0c66d025a3d91}{spork\+::debug\+::plat\+Log\+Msg} (\hyperlink{defines_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} err\+Lvl, const char $\ast$msg)
+\item 
+{\footnotesize template$<$typename T $>$ }\\static const char $\ast$ \hyperlink{namespacespork_1_1debug_afc2bf363eb52ab11d27418006ad8e210}{spork\+::debug\+::to\+\_\+string} (const T \&t)
+\item 
+{\footnotesize template$<$$>$ }\\static const char $\ast$ \hyperlink{namespacespork_1_1debug_aa66a308ebd1125248b867ab43722de8f}{spork\+::debug\+::to\+\_\+string$<$ char $>$} (char const \&t)
+\item 
+{\footnotesize template$<$$>$ }\\static const char $\ast$ \hyperlink{namespacespork_1_1debug_aaa53753be4d2d27251764c381778aa38}{spork\+::debug\+::to\+\_\+string$<$ char $\ast$ $>$} (char $\ast$const \&t)
+\item 
+{\footnotesize template$<$$>$ }\\static const char $\ast$ \hyperlink{namespacespork_1_1debug_a2a5fd3461b42e65daf2b614c769bf849}{spork\+::debug\+::to\+\_\+string$<$ unsigned char const $\ast$ $>$} (unsigned char const $\ast$const \&t)
+\item 
+{\footnotesize template$<$$>$ }\\static const char $\ast$ \hyperlink{namespacespork_1_1debug_a4b09591a3c5a6760a63bd6cf39b48f99}{spork\+::debug\+::to\+\_\+string$<$ char const $\ast$ $>$} (char const $\ast$const \&t)
+\item 
+{\footnotesize template$<$$>$ }\\static const char $\ast$ \hyperlink{namespacespork_1_1debug_ae2c63495057b0491e5de0fc0f7f0922e}{spork\+::debug\+::to\+\_\+string$<$ String $>$} (const \hyperlink{my_string_8h_afbeda3fd1bdc8c37d01bdf9f5c8274ff}{String} \&t)
+\item 
+{\footnotesize template$<$$>$ }\\static const char $\ast$ \hyperlink{namespacespork_1_1debug_a34c91e829f04513719a850e5806a506e}{spork\+::debug\+::to\+\_\+string$<$ bool $>$} (const bool \&t)
+\item 
+{\footnotesize template$<$$>$ }\\static const char $\ast$ \hyperlink{namespacespork_1_1debug_a0080d57663b5fdb7cd10a606a2bf719b}{spork\+::debug\+::to\+\_\+string$<$ maths\+::vec2 $>$} (const maths\+::vec2 \&t)
+\item 
+{\footnotesize template$<$$>$ }\\static const char $\ast$ \hyperlink{namespacespork_1_1debug_ad9f34051f44d14eb4d3a792ed84c36c8}{spork\+::debug\+::to\+\_\+string$<$ maths\+::vec3 $>$} (const maths\+::vec3 \&t)
+\item 
+{\footnotesize template$<$typename T $>$ }\\static \hyperlink{my_string_8h_afbeda3fd1bdc8c37d01bdf9f5c8274ff}{String} \hyperlink{namespacespork_1_1debug_adb4d1a890888f2ed6eb0e85d4cea5c49}{spork\+::debug\+::format\+\_\+iterators} (T \&begin, T \&end)
+\item 
+{\footnotesize template$<$typename T $>$ }\\static const char $\ast$ \hyperlink{namespacespork_1_1debug_a8fd0aebbc584e9053a2e81ad7f207c14}{spork\+::debug\+::to\+\_\+string\+\_\+internal} (const T \&v, const std\+::true\+\_\+type \&ignored)
+\item 
+{\footnotesize template$<$typename T $>$ }\\static const char $\ast$ \hyperlink{namespacespork_1_1debug_a2d49d37a5a0aa7df3d3b18376406be42}{spork\+::debug\+::to\+\_\+string\+\_\+internal} (const T \&t, const std\+::false\+\_\+type \&ignored)
+\item 
+{\footnotesize template$<$typename X , typename Y $>$ }\\static const char $\ast$ \hyperlink{namespacespork_1_1debug_a1365e215370f4a9ace42b9421077caf0}{spork\+::debug\+::to\+\_\+string} (const std\+::pair$<$ typename X, typename Y $>$ \&v)
+\item 
+{\footnotesize template$<$$>$ }\\static const char $\ast$ \hyperlink{namespacespork_1_1debug_a32859632cb378334e7808f5daf380ed8}{spork\+::debug\+::to\+\_\+string\+\_\+internal$<$ const char $\ast$ $>$} (const char $\ast$const \&v, const std\+::false\+\_\+type \&ignored)
+\item 
+{\footnotesize template$<$typename First $>$ }\\static void \hyperlink{namespacespork_1_1debug_ac9c88ed5e936f4ebbe5c09cbdc3d3c9f}{spork\+::debug\+::print\+\_\+log\+\_\+internal} (char $\ast$buffer, int \&position, First \&\&first)
+\item 
+{\footnotesize template$<$typename First , typename... Args$>$ }\\static void \hyperlink{namespacespork_1_1debug_abed0fd88d4a8b8ee6c705d43908d5fb5}{spork\+::debug\+::print\+\_\+log\+\_\+internal} (char $\ast$buffer, int \&position, First \&\&first, Args \&\&... args)
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\static void \hyperlink{namespacespork_1_1debug_ae5b65f263f4686cf365b19f468fc1e53}{spork\+::debug\+::log\+Msg} (int level, bool newline, Args... args)
+\item 
+void \hyperlink{log_8h_ac6cac15917ad10c317135086ccc401cf}{check\+Error} ()
+\item 
+bool \hyperlink{log_8h_aaf07b51d2de377f67f7a9548d1e1a512}{log\+G\+Lcall} (const char $\ast$function, const char $\ast$file, int line)
+\begin{DoxyCompactList}\small\item\em Open\+GL Error Parsing Function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static char \hyperlink{namespacespork_1_1debug_aa1305eea424e282f851d800b690e1682}{spork\+::debug\+::to\+\_\+string\+\_\+buffer} \mbox{[}1024 $\ast$10\mbox{]}
+\item 
+static char \hyperlink{namespacespork_1_1debug_ad495c6327f1d571e7db4d5698410ca7d}{spork\+::debug\+::sprintf\+\_\+buffer} \mbox{[}1024 $\ast$10\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{log_8h_ab47037a8cfaedba73bd14442ae0a4a1f}\label{log_8h_ab47037a8cfaedba73bd14442ae0a4a1f}} 
+\index{log.\+h@{log.\+h}!\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+E\+R\+R\+OR@{\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+E\+R\+R\+OR}}
+\index{\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+E\+R\+R\+OR@{\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+E\+R\+R\+OR}!log.\+h@{log.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+E\+R\+R\+OR}{\_DEBUG\_LOG\_ERROR}}
+{\footnotesize\ttfamily \#define \+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+E\+R\+R\+OR(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~\hyperlink{namespacespork_1_1debug_ae5b65f263f4686cf365b19f468fc1e53}{spork\+::debug\+::log\+Msg}(\hyperlink{log_8h_a96fad55b3f5adf08c39e4c877cf185e3}{L\+O\+G\+\_\+\+E\+RR}, false, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Definition at line 199 of file log.\+h.
+
+\mbox{\Hypertarget{log_8h_a7a0b8d44bcdac28f204fddd92e94c515}\label{log_8h_a7a0b8d44bcdac28f204fddd92e94c515}} 
+\index{log.\+h@{log.\+h}!\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+F\+A\+T\+AL@{\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+F\+A\+T\+AL}}
+\index{\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+F\+A\+T\+AL@{\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+F\+A\+T\+AL}!log.\+h@{log.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+F\+A\+T\+AL}{\_DEBUG\_LOG\_FATAL}}
+{\footnotesize\ttfamily \#define \+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+F\+A\+T\+AL(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~\hyperlink{namespacespork_1_1debug_ae5b65f263f4686cf365b19f468fc1e53}{spork\+::debug\+::log\+Msg}(\hyperlink{log_8h_ac2164369b4d2bf72296f8ba6ea576ecf}{L\+O\+G\+\_\+\+F\+A\+T\+AL}, false, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Definition at line 191 of file log.\+h.
+
+\mbox{\Hypertarget{log_8h_adf6fd987fbce4d1ccd91081bd2899c70}\label{log_8h_adf6fd987fbce4d1ccd91081bd2899c70}} 
+\index{log.\+h@{log.\+h}!\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+I\+N\+FO@{\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+I\+N\+FO}}
+\index{\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+I\+N\+FO@{\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+I\+N\+FO}!log.\+h@{log.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+I\+N\+FO}{\_DEBUG\_LOG\_INFO}}
+{\footnotesize\ttfamily \#define \+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+I\+N\+FO(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~\hyperlink{namespacespork_1_1debug_ae5b65f263f4686cf365b19f468fc1e53}{spork\+::debug\+::log\+Msg}(\hyperlink{log_8h_aeb4f36db01bd128c7afeac5889dac311}{L\+O\+G\+\_\+\+I\+N\+FO}, false, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Definition at line 215 of file log.\+h.
+
+\mbox{\Hypertarget{log_8h_aecbe306dbc86e4ddd490786b152de005}\label{log_8h_aecbe306dbc86e4ddd490786b152de005}} 
+\index{log.\+h@{log.\+h}!\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+W\+A\+R\+N\+I\+NG@{\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+W\+A\+R\+N\+I\+NG}}
+\index{\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+W\+A\+R\+N\+I\+NG@{\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+W\+A\+R\+N\+I\+NG}!log.\+h@{log.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+W\+A\+R\+N\+I\+NG}{\_DEBUG\_LOG\_WARNING}}
+{\footnotesize\ttfamily \#define \+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+W\+A\+R\+N\+I\+NG(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~\hyperlink{namespacespork_1_1debug_ae5b65f263f4686cf365b19f468fc1e53}{spork\+::debug\+::log\+Msg}(\hyperlink{log_8h_adf4476a6a4ea6c74231c826e899d7189}{L\+O\+G\+\_\+\+W\+A\+R\+N\+I\+NG}, false, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Definition at line 207 of file log.\+h.
+
+\mbox{\Hypertarget{log_8h_a0c72f3abcae4a05c7847a3466bf67637}\label{log_8h_a0c72f3abcae4a05c7847a3466bf67637}} 
+\index{log.\+h@{log.\+h}!D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+A\+S\+S\+E\+RT@{D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+A\+S\+S\+E\+RT}}
+\index{D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+A\+S\+S\+E\+RT@{D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+A\+S\+S\+E\+RT}!log.\+h@{log.\+h}}
+\subsubsection{\texorpdfstring{D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+A\+S\+S\+E\+RT}{DEBUG\_LOG\_ASSERT}}
+{\footnotesize\ttfamily \#define D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+A\+S\+S\+E\+RT(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Definition at line 233 of file log.\+h.
+
+\mbox{\Hypertarget{log_8h_affecf0d55ffe00f921caddb1efd6bbbe}\label{log_8h_affecf0d55ffe00f921caddb1efd6bbbe}} 
+\index{log.\+h@{log.\+h}!D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+E\+R\+R\+OR@{D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+E\+R\+R\+OR}}
+\index{D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+E\+R\+R\+OR@{D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+E\+R\+R\+OR}!log.\+h@{log.\+h}}
+\subsubsection{\texorpdfstring{D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+E\+R\+R\+OR}{DEBUG\_LOG\_ERROR}}
+{\footnotesize\ttfamily \#define D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+E\+R\+R\+OR(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~\hyperlink{namespacespork_1_1debug_ae5b65f263f4686cf365b19f468fc1e53}{spork\+::debug\+::log\+Msg}(\hyperlink{log_8h_a96fad55b3f5adf08c39e4c877cf185e3}{L\+O\+G\+\_\+\+E\+RR}, true, \char`\"{}spork\+:    \char`\"{}, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Definition at line 198 of file log.\+h.
+
+\mbox{\Hypertarget{log_8h_af48fc0751b9105a0a5acda7408483d84}\label{log_8h_af48fc0751b9105a0a5acda7408483d84}} 
+\index{log.\+h@{log.\+h}!D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+F\+A\+T\+AL@{D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+F\+A\+T\+AL}}
+\index{D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+F\+A\+T\+AL@{D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+F\+A\+T\+AL}!log.\+h@{log.\+h}}
+\subsubsection{\texorpdfstring{D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+F\+A\+T\+AL}{DEBUG\_LOG\_FATAL}}
+{\footnotesize\ttfamily \#define D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+F\+A\+T\+AL(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~\hyperlink{namespacespork_1_1debug_ae5b65f263f4686cf365b19f468fc1e53}{spork\+::debug\+::log\+Msg}(\hyperlink{log_8h_ac2164369b4d2bf72296f8ba6ea576ecf}{L\+O\+G\+\_\+\+F\+A\+T\+AL}, true, \char`\"{}spork\+:    \char`\"{}, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Definition at line 190 of file log.\+h.
+
+\mbox{\Hypertarget{log_8h_a7383966ea4ead0b3c1735de74e426132}\label{log_8h_a7383966ea4ead0b3c1735de74e426132}} 
+\index{log.\+h@{log.\+h}!D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+I\+N\+FO@{D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+I\+N\+FO}}
+\index{D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+I\+N\+FO@{D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+I\+N\+FO}!log.\+h@{log.\+h}}
+\subsubsection{\texorpdfstring{D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+I\+N\+FO}{DEBUG\_LOG\_INFO}}
+{\footnotesize\ttfamily \#define D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+I\+N\+FO(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~\hyperlink{namespacespork_1_1debug_ae5b65f263f4686cf365b19f468fc1e53}{spork\+::debug\+::log\+Msg}(\hyperlink{log_8h_aeb4f36db01bd128c7afeac5889dac311}{L\+O\+G\+\_\+\+I\+N\+FO}, true, \char`\"{}spork\+:    \char`\"{}, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Definition at line 214 of file log.\+h.
+
+\mbox{\Hypertarget{log_8h_af31c95e1129b26a993b71dced6de68b0}\label{log_8h_af31c95e1129b26a993b71dced6de68b0}} 
+\index{log.\+h@{log.\+h}!D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+W\+A\+R\+N\+I\+NG@{D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+W\+A\+R\+N\+I\+NG}}
+\index{D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+W\+A\+R\+N\+I\+NG@{D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+W\+A\+R\+N\+I\+NG}!log.\+h@{log.\+h}}
+\subsubsection{\texorpdfstring{D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+W\+A\+R\+N\+I\+NG}{DEBUG\_LOG\_WARNING}}
+{\footnotesize\ttfamily \#define D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+W\+A\+R\+N\+I\+NG(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~\hyperlink{namespacespork_1_1debug_ae5b65f263f4686cf365b19f468fc1e53}{spork\+::debug\+::log\+Msg}(\hyperlink{log_8h_adf4476a6a4ea6c74231c826e899d7189}{L\+O\+G\+\_\+\+W\+A\+R\+N\+I\+NG}, true, \char`\"{}spork\+:    \char`\"{}, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Definition at line 206 of file log.\+h.
+
+\mbox{\Hypertarget{log_8h_afc69b9cf238520aef3e894ccc6e93f09}\label{log_8h_afc69b9cf238520aef3e894ccc6e93f09}} 
+\index{log.\+h@{log.\+h}!gl\+Call@{gl\+Call}}
+\index{gl\+Call@{gl\+Call}!log.\+h@{log.\+h}}
+\subsubsection{\texorpdfstring{gl\+Call}{glCall}}
+{\footnotesize\ttfamily \#define gl\+Call(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~x}
+
+
+
+Definition at line 245 of file log.\+h.
+
+\mbox{\Hypertarget{log_8h_a96fad55b3f5adf08c39e4c877cf185e3}\label{log_8h_a96fad55b3f5adf08c39e4c877cf185e3}} 
+\index{log.\+h@{log.\+h}!L\+O\+G\+\_\+\+E\+RR@{L\+O\+G\+\_\+\+E\+RR}}
+\index{L\+O\+G\+\_\+\+E\+RR@{L\+O\+G\+\_\+\+E\+RR}!log.\+h@{log.\+h}}
+\subsubsection{\texorpdfstring{L\+O\+G\+\_\+\+E\+RR}{LOG\_ERR}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+E\+RR~1}
+
+
+
+Definition at line 7 of file log.\+h.
+
+\mbox{\Hypertarget{log_8h_ac2164369b4d2bf72296f8ba6ea576ecf}\label{log_8h_ac2164369b4d2bf72296f8ba6ea576ecf}} 
+\index{log.\+h@{log.\+h}!L\+O\+G\+\_\+\+F\+A\+T\+AL@{L\+O\+G\+\_\+\+F\+A\+T\+AL}}
+\index{L\+O\+G\+\_\+\+F\+A\+T\+AL@{L\+O\+G\+\_\+\+F\+A\+T\+AL}!log.\+h@{log.\+h}}
+\subsubsection{\texorpdfstring{L\+O\+G\+\_\+\+F\+A\+T\+AL}{LOG\_FATAL}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+F\+A\+T\+AL~2}
+
+
+
+Definition at line 8 of file log.\+h.
+
+\mbox{\Hypertarget{log_8h_aeb4f36db01bd128c7afeac5889dac311}\label{log_8h_aeb4f36db01bd128c7afeac5889dac311}} 
+\index{log.\+h@{log.\+h}!L\+O\+G\+\_\+\+I\+N\+FO@{L\+O\+G\+\_\+\+I\+N\+FO}}
+\index{L\+O\+G\+\_\+\+I\+N\+FO@{L\+O\+G\+\_\+\+I\+N\+FO}!log.\+h@{log.\+h}}
+\subsubsection{\texorpdfstring{L\+O\+G\+\_\+\+I\+N\+FO}{LOG\_INFO}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+I\+N\+FO~3}
+
+
+
+Definition at line 9 of file log.\+h.
+
+\mbox{\Hypertarget{log_8h_a0b87e0d3bf5853bcbb0b66a7c48fdc05}\label{log_8h_a0b87e0d3bf5853bcbb0b66a7c48fdc05}} 
+\index{log.\+h@{log.\+h}!L\+O\+G\+\_\+\+L\+E\+V\+EL@{L\+O\+G\+\_\+\+L\+E\+V\+EL}}
+\index{L\+O\+G\+\_\+\+L\+E\+V\+EL@{L\+O\+G\+\_\+\+L\+E\+V\+EL}!log.\+h@{log.\+h}}
+\subsubsection{\texorpdfstring{L\+O\+G\+\_\+\+L\+E\+V\+EL}{LOG\_LEVEL}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+L\+E\+V\+EL~\hyperlink{log_8h_aeb4f36db01bd128c7afeac5889dac311}{L\+O\+G\+\_\+\+I\+N\+FO}}
+
+
+
+Definition at line 186 of file log.\+h.
+
+\mbox{\Hypertarget{log_8h_adf4476a6a4ea6c74231c826e899d7189}\label{log_8h_adf4476a6a4ea6c74231c826e899d7189}} 
+\index{log.\+h@{log.\+h}!L\+O\+G\+\_\+\+W\+A\+R\+N\+I\+NG@{L\+O\+G\+\_\+\+W\+A\+R\+N\+I\+NG}}
+\index{L\+O\+G\+\_\+\+W\+A\+R\+N\+I\+NG@{L\+O\+G\+\_\+\+W\+A\+R\+N\+I\+NG}!log.\+h@{log.\+h}}
+\subsubsection{\texorpdfstring{L\+O\+G\+\_\+\+W\+A\+R\+N\+I\+NG}{LOG\_WARNING}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+W\+A\+R\+N\+I\+NG~0}
+
+
+
+Definition at line 6 of file log.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{log_8h_ac6cac15917ad10c317135086ccc401cf}\label{log_8h_ac6cac15917ad10c317135086ccc401cf}} 
+\index{log.\+h@{log.\+h}!check\+Error@{check\+Error}}
+\index{check\+Error@{check\+Error}!log.\+h@{log.\+h}}
+\subsubsection{\texorpdfstring{check\+Error()}{checkError()}}
+{\footnotesize\ttfamily void check\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 4 of file gl\+Error.\+cpp.
+
+\mbox{\Hypertarget{log_8h_aaf07b51d2de377f67f7a9548d1e1a512}\label{log_8h_aaf07b51d2de377f67f7a9548d1e1a512}} 
+\index{log.\+h@{log.\+h}!log\+G\+Lcall@{log\+G\+Lcall}}
+\index{log\+G\+Lcall@{log\+G\+Lcall}!log.\+h@{log.\+h}}
+\subsubsection{\texorpdfstring{log\+G\+Lcall()}{logGLcall()}}
+{\footnotesize\ttfamily bool log\+G\+Lcall (\begin{DoxyParamCaption}\item[{const char $\ast$}]{function,  }\item[{const char $\ast$}]{file,  }\item[{int}]{line }\end{DoxyParamCaption})}
+
+
+
+Open\+GL Error Parsing Function. 
+
+Defines the error type based on GL Value given. 
+
+Definition at line 11 of file gl\+Error.\+cpp.
+

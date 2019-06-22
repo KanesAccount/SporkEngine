@@ -1,0 +1,119 @@
+\hypertarget{classspork_1_1gameobject_1_1_game_object}{}\section{spork\+:\+:gameobject\+:\+:Game\+Object Class Reference}
+\label{classspork_1_1gameobject_1_1_game_object}\index{spork\+::gameobject\+::\+Game\+Object@{spork\+::gameobject\+::\+Game\+Object}}
+
+
+Game Object Class.  
+
+
+
+
+{\ttfamily \#include $<$game\+Object.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classspork_1_1gameobject_1_1_game_object_a4bbe45cdb98e6052d8ba2a9b39abdef2}{Game\+Object} ()
+\item 
+void \hyperlink{classspork_1_1gameobject_1_1_game_object_a92c7417aee20ea020fd007f7c388afa7}{add\+Component} (\hyperlink{classspork_1_1gameobject_1_1component_1_1_component}{component\+::\+Component} $\ast$componenet)
+\item 
+{\footnotesize template$<$class T $>$ }\\const T $\ast$ \hyperlink{classspork_1_1gameobject_1_1_game_object_acc26b9f5ce77820af213aed7fce1aaf3}{get\+Component} () const
+\item 
+{\footnotesize template$<$class T $>$ }\\T $\ast$ \hyperlink{classspork_1_1gameobject_1_1_game_object_a0ed3f5aa3c450ff53acb3bd730b90b60}{get\+Component} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \hyperlink{classspork_1_1gameobject_1_1component_1_1_component}{component\+::\+Component} $\ast$ $>$ \hyperlink{classspork_1_1gameobject_1_1_game_object_a672b7675e3e9d5f0a1a35ad0c315020c}{m\+\_\+\+Components}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\const T $\ast$ \hyperlink{classspork_1_1gameobject_1_1_game_object_a39b2db30001339630f007b4975242f1c}{get\+Component\+Internal} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Game Object Class. 
+
+Handles adding of components using templates. 
+
+Definition at line 9 of file game\+Object.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classspork_1_1gameobject_1_1_game_object_a4bbe45cdb98e6052d8ba2a9b39abdef2}\label{classspork_1_1gameobject_1_1_game_object_a4bbe45cdb98e6052d8ba2a9b39abdef2}} 
+\index{spork\+::gameobject\+::\+Game\+Object@{spork\+::gameobject\+::\+Game\+Object}!Game\+Object@{Game\+Object}}
+\index{Game\+Object@{Game\+Object}!spork\+::gameobject\+::\+Game\+Object@{spork\+::gameobject\+::\+Game\+Object}}
+\subsubsection{\texorpdfstring{Game\+Object()}{GameObject()}}
+{\footnotesize\ttfamily spork\+::gameobject\+::\+Game\+Object\+::\+Game\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 5 of file game\+Object.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classspork_1_1gameobject_1_1_game_object_a92c7417aee20ea020fd007f7c388afa7}\label{classspork_1_1gameobject_1_1_game_object_a92c7417aee20ea020fd007f7c388afa7}} 
+\index{spork\+::gameobject\+::\+Game\+Object@{spork\+::gameobject\+::\+Game\+Object}!add\+Component@{add\+Component}}
+\index{add\+Component@{add\+Component}!spork\+::gameobject\+::\+Game\+Object@{spork\+::gameobject\+::\+Game\+Object}}
+\subsubsection{\texorpdfstring{add\+Component()}{addComponent()}}
+{\footnotesize\ttfamily void spork\+::gameobject\+::\+Game\+Object\+::add\+Component (\begin{DoxyParamCaption}\item[{\hyperlink{classspork_1_1gameobject_1_1component_1_1_component}{component\+::\+Component} $\ast$}]{componenet }\end{DoxyParamCaption})}
+
+
+
+Definition at line 9 of file game\+Object.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1gameobject_1_1_game_object_acc26b9f5ce77820af213aed7fce1aaf3}\label{classspork_1_1gameobject_1_1_game_object_acc26b9f5ce77820af213aed7fce1aaf3}} 
+\index{spork\+::gameobject\+::\+Game\+Object@{spork\+::gameobject\+::\+Game\+Object}!get\+Component@{get\+Component}}
+\index{get\+Component@{get\+Component}!spork\+::gameobject\+::\+Game\+Object@{spork\+::gameobject\+::\+Game\+Object}}
+\subsubsection{\texorpdfstring{get\+Component()}{getComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+const T$\ast$ spork\+::gameobject\+::\+Game\+Object\+::get\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 19 of file game\+Object.\+h.
+
+\mbox{\Hypertarget{classspork_1_1gameobject_1_1_game_object_a0ed3f5aa3c450ff53acb3bd730b90b60}\label{classspork_1_1gameobject_1_1_game_object_a0ed3f5aa3c450ff53acb3bd730b90b60}} 
+\index{spork\+::gameobject\+::\+Game\+Object@{spork\+::gameobject\+::\+Game\+Object}!get\+Component@{get\+Component}}
+\index{get\+Component@{get\+Component}!spork\+::gameobject\+::\+Game\+Object@{spork\+::gameobject\+::\+Game\+Object}}
+\subsubsection{\texorpdfstring{get\+Component()}{getComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T$\ast$ spork\+::gameobject\+::\+Game\+Object\+::get\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 25 of file game\+Object.\+h.
+
+\mbox{\Hypertarget{classspork_1_1gameobject_1_1_game_object_a39b2db30001339630f007b4975242f1c}\label{classspork_1_1gameobject_1_1_game_object_a39b2db30001339630f007b4975242f1c}} 
+\index{spork\+::gameobject\+::\+Game\+Object@{spork\+::gameobject\+::\+Game\+Object}!get\+Component\+Internal@{get\+Component\+Internal}}
+\index{get\+Component\+Internal@{get\+Component\+Internal}!spork\+::gameobject\+::\+Game\+Object@{spork\+::gameobject\+::\+Game\+Object}}
+\subsubsection{\texorpdfstring{get\+Component\+Internal()}{getComponentInternal()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+const T$\ast$ spork\+::gameobject\+::\+Game\+Object\+::get\+Component\+Internal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 32 of file game\+Object.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classspork_1_1gameobject_1_1_game_object_a672b7675e3e9d5f0a1a35ad0c315020c}\label{classspork_1_1gameobject_1_1_game_object_a672b7675e3e9d5f0a1a35ad0c315020c}} 
+\index{spork\+::gameobject\+::\+Game\+Object@{spork\+::gameobject\+::\+Game\+Object}!m\+\_\+\+Components@{m\+\_\+\+Components}}
+\index{m\+\_\+\+Components@{m\+\_\+\+Components}!spork\+::gameobject\+::\+Game\+Object@{spork\+::gameobject\+::\+Game\+Object}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Components}{m\_Components}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{classspork_1_1gameobject_1_1component_1_1_component}{component\+::\+Component}$\ast$$>$ spork\+::gameobject\+::\+Game\+Object\+::m\+\_\+\+Components\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 12 of file game\+Object.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+N\+G S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/game\+Objects/\hyperlink{game_object_8h}{game\+Object.\+h}\item 
+W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+N\+G S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/game\+Objects/\hyperlink{game_object_8cpp}{game\+Object.\+cpp}\end{DoxyCompactItemize}

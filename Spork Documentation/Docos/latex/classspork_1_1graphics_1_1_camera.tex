@@ -1,0 +1,381 @@
+\hypertarget{classspork_1_1graphics_1_1_camera}{}\section{spork\+:\+:graphics\+:\+:Camera Class Reference}
+\label{classspork_1_1graphics_1_1_camera}\index{spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}}
+
+
+Base \hyperlink{classspork_1_1graphics_1_1_camera}{Camera} Class.  
+
+
+
+
+{\ttfamily \#include $<$base\+Camera.\+h$>$}
+
+
+
+Inheritance diagram for spork\+:\+:graphics\+:\+:Camera\+:
+% FIG 0
+
+
+Collaboration diagram for spork\+:\+:graphics\+:\+:Camera\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classspork_1_1graphics_1_1_camera_a24c84a147cee9c82b55ef887bc514755}{Camera} ()
+\item 
+virtual void \hyperlink{classspork_1_1graphics_1_1_camera_aeecd63e4bf4617ef72b91d3b12037638}{update} (G\+Lfloat delta\+Time)
+\item 
+const \hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} \& \hyperlink{classspork_1_1graphics_1_1_camera_a9708c5d4e89467bcc677daa04052eb87}{get\+Pos} ()
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_camera_ab9b1a41bcb92ebdd6e7c01b5c0f7c1de}{set\+Pos} (const \hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} \&pos)
+\item 
+const \hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} \& \hyperlink{classspork_1_1graphics_1_1_camera_ae6a19862d6049eb50b742ddbb8365a57}{get\+Rot} ()
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_camera_aefaec9421f08eb10103b5feeb345b959}{set\+Rot} (const \hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} \&rot)
+\item 
+const \hyperlink{structspork_1_1maths_1_1mat4}{maths\+::mat4} \& \hyperlink{classspork_1_1graphics_1_1_camera_a7f02442363f407cbdb137fac4bf9ffcb}{get\+Proj\+Mat} () const
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_camera_a51edc9ff1d5e1dd15da08273e71fa00a}{set\+Proj\+Mat} (const \hyperlink{structspork_1_1maths_1_1mat4}{maths\+::mat4} \&proj\+Mat)
+\item 
+const \hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} \& \hyperlink{classspork_1_1graphics_1_1_camera_aceadde709af74b6ea6e68361bf407098}{get\+F\+OV} () const
+\item 
+const \hyperlink{structspork_1_1maths_1_1mat4}{maths\+::mat4} \& \hyperlink{classspork_1_1graphics_1_1_camera_a4f743bbc03938f78c227bcf06c4800e0}{get\+View\+Mat} () const
+\item 
+const \hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} \& \hyperlink{classspork_1_1graphics_1_1_camera_a6e74066de4f73bcf6e047eef177eb932}{get\+Up} () const
+\item 
+const \hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} \& \hyperlink{classspork_1_1graphics_1_1_camera_aeea19dc04c77632663a08da627b81f6a}{get\+Front} () const
+\item 
+const \hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} \& \hyperlink{classspork_1_1graphics_1_1_camera_a46f5ae89d30d350d782cdd694608a2a9}{get\+Right} () const
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_camera_a586d097dca122dd99832884c284aa3a5}{translate} (\hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} \&translation)
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_camera_ac7d6bdfc0d901c00f7f9be43efd248f5}{rotate} (\hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} \&rotate)
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_camera_af23c57eff5b25116067efa45cccbdd9e}{translate} (float x, float y, float z)
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_camera_a3af9d3dfc124d89dfbc85b1e1c06aafc}{rotate} (float x, float y, float z)
+\item 
+virtual void \hyperlink{classspork_1_1graphics_1_1_camera_a5ec54ffdedf82db7e3790566bd1e3522}{add\+To\+G\+UI} (Tw\+Bar $\ast$bar, const char $\ast$cam\+Name)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structspork_1_1maths_1_1mat4}{maths\+::mat4} \hyperlink{classspork_1_1graphics_1_1_camera_ae9845b2898904778df3a6c26e354ee9b}{m\+\_\+\+Proj\+Mat}
+\item 
+\hyperlink{structspork_1_1maths_1_1mat4}{maths\+::mat4} \hyperlink{classspork_1_1graphics_1_1_camera_a0a91145642b7dac5bafee0c983c6b4a9}{m\+\_\+\+View\+Mat}
+\item 
+\hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} \hyperlink{classspork_1_1graphics_1_1_camera_ad4247f2c72af3ccd85cb7c05b76d7237}{m\+\_\+\+Position}
+\item 
+\hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} \hyperlink{classspork_1_1graphics_1_1_camera_a488e7379d52ac5ad3732e7532c9e890c}{m\+\_\+\+Rot}
+\item 
+\hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} \hyperlink{classspork_1_1graphics_1_1_camera_a24198bdbc3219e9a0da4f718faf5c7bd}{m\+\_\+\+Focal}
+\item 
+\hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} \hyperlink{classspork_1_1graphics_1_1_camera_a727e302756442d2c1c47cca329279c00}{m\+\_\+\+Front}
+\item 
+\hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} \hyperlink{classspork_1_1graphics_1_1_camera_aef28f427afba06666beb38ab9c3485df}{m\+\_\+\+Right}
+\item 
+\hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} \hyperlink{classspork_1_1graphics_1_1_camera_abfffa649cf3def026da9643d2d1debe0}{m\+\_\+\+Up}
+\item 
+\hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} \hyperlink{classspork_1_1graphics_1_1_camera_a88aabacaa44ca722d257bd8b1b7e8411}{m\+\_\+\+Focal\+Point}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base \hyperlink{classspork_1_1graphics_1_1_camera}{Camera} Class. 
+
+Class that all camera classes are derived from. 
+
+Definition at line 10 of file base\+Camera.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_camera_a24c84a147cee9c82b55ef887bc514755}\label{classspork_1_1graphics_1_1_camera_a24c84a147cee9c82b55ef887bc514755}} 
+\index{spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}}
+\subsubsection{\texorpdfstring{Camera()}{Camera()}}
+{\footnotesize\ttfamily spork\+::graphics\+::\+Camera\+::\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 5 of file base\+Camera.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_camera_a5ec54ffdedf82db7e3790566bd1e3522}\label{classspork_1_1graphics_1_1_camera_a5ec54ffdedf82db7e3790566bd1e3522}} 
+\index{spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}!add\+To\+G\+UI@{add\+To\+G\+UI}}
+\index{add\+To\+G\+UI@{add\+To\+G\+UI}!spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}}
+\subsubsection{\texorpdfstring{add\+To\+G\+U\+I()}{addToGUI()}}
+{\footnotesize\ttfamily virtual void spork\+::graphics\+::\+Camera\+::add\+To\+G\+UI (\begin{DoxyParamCaption}\item[{Tw\+Bar $\ast$}]{bar,  }\item[{const char $\ast$}]{cam\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \hyperlink{classspork_1_1graphics_1_1_f_p_scamera_a8bf998a5b4adaab430a283ce6f6cd124}{spork\+::graphics\+::\+F\+P\+Scamera}, and \hyperlink{classspork_1_1graphics_1_1_model_cam_ade4df0e81cc325af221081634384783d}{spork\+::graphics\+::\+Model\+Cam}.
+
+
+
+Definition at line 43 of file base\+Camera.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_camera_aceadde709af74b6ea6e68361bf407098}\label{classspork_1_1graphics_1_1_camera_aceadde709af74b6ea6e68361bf407098}} 
+\index{spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}!get\+F\+OV@{get\+F\+OV}}
+\index{get\+F\+OV@{get\+F\+OV}!spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}}
+\subsubsection{\texorpdfstring{get\+F\+O\+V()}{getFOV()}}
+{\footnotesize\ttfamily const \hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3}\& spork\+::graphics\+::\+Camera\+::get\+F\+OV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 29 of file base\+Camera.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_camera_aeea19dc04c77632663a08da627b81f6a}\label{classspork_1_1graphics_1_1_camera_aeea19dc04c77632663a08da627b81f6a}} 
+\index{spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}!get\+Front@{get\+Front}}
+\index{get\+Front@{get\+Front}!spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}}
+\subsubsection{\texorpdfstring{get\+Front()}{getFront()}}
+{\footnotesize\ttfamily const \hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3}\& spork\+::graphics\+::\+Camera\+::get\+Front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 32 of file base\+Camera.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_camera_a9708c5d4e89467bcc677daa04052eb87}\label{classspork_1_1graphics_1_1_camera_a9708c5d4e89467bcc677daa04052eb87}} 
+\index{spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}!get\+Pos@{get\+Pos}}
+\index{get\+Pos@{get\+Pos}!spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}}
+\subsubsection{\texorpdfstring{get\+Pos()}{getPos()}}
+{\footnotesize\ttfamily const \hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3}\& spork\+::graphics\+::\+Camera\+::get\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 20 of file base\+Camera.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_camera_a7f02442363f407cbdb137fac4bf9ffcb}\label{classspork_1_1graphics_1_1_camera_a7f02442363f407cbdb137fac4bf9ffcb}} 
+\index{spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}!get\+Proj\+Mat@{get\+Proj\+Mat}}
+\index{get\+Proj\+Mat@{get\+Proj\+Mat}!spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}}
+\subsubsection{\texorpdfstring{get\+Proj\+Mat()}{getProjMat()}}
+{\footnotesize\ttfamily const \hyperlink{structspork_1_1maths_1_1mat4}{maths\+::mat4}\& spork\+::graphics\+::\+Camera\+::get\+Proj\+Mat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 26 of file base\+Camera.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_camera_a46f5ae89d30d350d782cdd694608a2a9}\label{classspork_1_1graphics_1_1_camera_a46f5ae89d30d350d782cdd694608a2a9}} 
+\index{spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}!get\+Right@{get\+Right}}
+\index{get\+Right@{get\+Right}!spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}}
+\subsubsection{\texorpdfstring{get\+Right()}{getRight()}}
+{\footnotesize\ttfamily const \hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3}\& spork\+::graphics\+::\+Camera\+::get\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 33 of file base\+Camera.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_camera_ae6a19862d6049eb50b742ddbb8365a57}\label{classspork_1_1graphics_1_1_camera_ae6a19862d6049eb50b742ddbb8365a57}} 
+\index{spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}!get\+Rot@{get\+Rot}}
+\index{get\+Rot@{get\+Rot}!spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}}
+\subsubsection{\texorpdfstring{get\+Rot()}{getRot()}}
+{\footnotesize\ttfamily const \hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3}\& spork\+::graphics\+::\+Camera\+::get\+Rot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 23 of file base\+Camera.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_camera_a6e74066de4f73bcf6e047eef177eb932}\label{classspork_1_1graphics_1_1_camera_a6e74066de4f73bcf6e047eef177eb932}} 
+\index{spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}!get\+Up@{get\+Up}}
+\index{get\+Up@{get\+Up}!spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}}
+\subsubsection{\texorpdfstring{get\+Up()}{getUp()}}
+{\footnotesize\ttfamily const \hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3}\& spork\+::graphics\+::\+Camera\+::get\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 31 of file base\+Camera.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_camera_a4f743bbc03938f78c227bcf06c4800e0}\label{classspork_1_1graphics_1_1_camera_a4f743bbc03938f78c227bcf06c4800e0}} 
+\index{spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}!get\+View\+Mat@{get\+View\+Mat}}
+\index{get\+View\+Mat@{get\+View\+Mat}!spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}}
+\subsubsection{\texorpdfstring{get\+View\+Mat()}{getViewMat()}}
+{\footnotesize\ttfamily const \hyperlink{structspork_1_1maths_1_1mat4}{maths\+::mat4}\& spork\+::graphics\+::\+Camera\+::get\+View\+Mat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 30 of file base\+Camera.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_camera_ac7d6bdfc0d901c00f7f9be43efd248f5}\label{classspork_1_1graphics_1_1_camera_ac7d6bdfc0d901c00f7f9be43efd248f5}} 
+\index{spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}!rotate@{rotate}}
+\index{rotate@{rotate}!spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Camera\+::rotate (\begin{DoxyParamCaption}\item[{\hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} \&}]{rotate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 37 of file base\+Camera.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_camera_a3af9d3dfc124d89dfbc85b1e1c06aafc}\label{classspork_1_1graphics_1_1_camera_a3af9d3dfc124d89dfbc85b1e1c06aafc}} 
+\index{spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}!rotate@{rotate}}
+\index{rotate@{rotate}!spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Camera\+::rotate (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 40 of file base\+Camera.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_camera_ab9b1a41bcb92ebdd6e7c01b5c0f7c1de}\label{classspork_1_1graphics_1_1_camera_ab9b1a41bcb92ebdd6e7c01b5c0f7c1de}} 
+\index{spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}!set\+Pos@{set\+Pos}}
+\index{set\+Pos@{set\+Pos}!spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}}
+\subsubsection{\texorpdfstring{set\+Pos()}{setPos()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Camera\+::set\+Pos (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} \&}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 21 of file base\+Camera.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_camera_a51edc9ff1d5e1dd15da08273e71fa00a}\label{classspork_1_1graphics_1_1_camera_a51edc9ff1d5e1dd15da08273e71fa00a}} 
+\index{spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}!set\+Proj\+Mat@{set\+Proj\+Mat}}
+\index{set\+Proj\+Mat@{set\+Proj\+Mat}!spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}}
+\subsubsection{\texorpdfstring{set\+Proj\+Mat()}{setProjMat()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Camera\+::set\+Proj\+Mat (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1mat4}{maths\+::mat4} \&}]{proj\+Mat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 27 of file base\+Camera.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_camera_aefaec9421f08eb10103b5feeb345b959}\label{classspork_1_1graphics_1_1_camera_aefaec9421f08eb10103b5feeb345b959}} 
+\index{spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}!set\+Rot@{set\+Rot}}
+\index{set\+Rot@{set\+Rot}!spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}}
+\subsubsection{\texorpdfstring{set\+Rot()}{setRot()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Camera\+::set\+Rot (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} \&}]{rot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 24 of file base\+Camera.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_camera_a586d097dca122dd99832884c284aa3a5}\label{classspork_1_1graphics_1_1_camera_a586d097dca122dd99832884c284aa3a5}} 
+\index{spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}!translate@{translate}}
+\index{translate@{translate}!spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}}
+\subsubsection{\texorpdfstring{translate()}{translate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Camera\+::translate (\begin{DoxyParamCaption}\item[{\hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} \&}]{translation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 36 of file base\+Camera.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_camera_af23c57eff5b25116067efa45cccbdd9e}\label{classspork_1_1graphics_1_1_camera_af23c57eff5b25116067efa45cccbdd9e}} 
+\index{spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}!translate@{translate}}
+\index{translate@{translate}!spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}}
+\subsubsection{\texorpdfstring{translate()}{translate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Camera\+::translate (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 39 of file base\+Camera.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_camera_aeecd63e4bf4617ef72b91d3b12037638}\label{classspork_1_1graphics_1_1_camera_aeecd63e4bf4617ef72b91d3b12037638}} 
+\index{spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}!update@{update}}
+\index{update@{update}!spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void spork\+::graphics\+::\+Camera\+::update (\begin{DoxyParamCaption}\item[{G\+Lfloat}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \hyperlink{classspork_1_1graphics_1_1_f_p_scamera_afbb0ac172ef7ab075cc5ff2131c203b3}{spork\+::graphics\+::\+F\+P\+Scamera}.
+
+
+
+Definition at line 18 of file base\+Camera.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_camera_a24198bdbc3219e9a0da4f718faf5c7bd}\label{classspork_1_1graphics_1_1_camera_a24198bdbc3219e9a0da4f718faf5c7bd}} 
+\index{spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}!m\+\_\+\+Focal@{m\+\_\+\+Focal}}
+\index{m\+\_\+\+Focal@{m\+\_\+\+Focal}!spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Focal}{m\_Focal}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} spork\+::graphics\+::\+Camera\+::m\+\_\+\+Focal\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 14 of file base\+Camera.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_camera_a88aabacaa44ca722d257bd8b1b7e8411}\label{classspork_1_1graphics_1_1_camera_a88aabacaa44ca722d257bd8b1b7e8411}} 
+\index{spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}!m\+\_\+\+Focal\+Point@{m\+\_\+\+Focal\+Point}}
+\index{m\+\_\+\+Focal\+Point@{m\+\_\+\+Focal\+Point}!spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Focal\+Point}{m\_FocalPoint}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} spork\+::graphics\+::\+Camera\+::m\+\_\+\+Focal\+Point\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 14 of file base\+Camera.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_camera_a727e302756442d2c1c47cca329279c00}\label{classspork_1_1graphics_1_1_camera_a727e302756442d2c1c47cca329279c00}} 
+\index{spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}!m\+\_\+\+Front@{m\+\_\+\+Front}}
+\index{m\+\_\+\+Front@{m\+\_\+\+Front}!spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Front}{m\_Front}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} spork\+::graphics\+::\+Camera\+::m\+\_\+\+Front\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 14 of file base\+Camera.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_camera_ad4247f2c72af3ccd85cb7c05b76d7237}\label{classspork_1_1graphics_1_1_camera_ad4247f2c72af3ccd85cb7c05b76d7237}} 
+\index{spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}!m\+\_\+\+Position@{m\+\_\+\+Position}}
+\index{m\+\_\+\+Position@{m\+\_\+\+Position}!spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Position}{m\_Position}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} spork\+::graphics\+::\+Camera\+::m\+\_\+\+Position\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 14 of file base\+Camera.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_camera_ae9845b2898904778df3a6c26e354ee9b}\label{classspork_1_1graphics_1_1_camera_ae9845b2898904778df3a6c26e354ee9b}} 
+\index{spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}!m\+\_\+\+Proj\+Mat@{m\+\_\+\+Proj\+Mat}}
+\index{m\+\_\+\+Proj\+Mat@{m\+\_\+\+Proj\+Mat}!spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Proj\+Mat}{m\_ProjMat}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1mat4}{maths\+::mat4} spork\+::graphics\+::\+Camera\+::m\+\_\+\+Proj\+Mat\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 13 of file base\+Camera.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_camera_aef28f427afba06666beb38ab9c3485df}\label{classspork_1_1graphics_1_1_camera_aef28f427afba06666beb38ab9c3485df}} 
+\index{spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}!m\+\_\+\+Right@{m\+\_\+\+Right}}
+\index{m\+\_\+\+Right@{m\+\_\+\+Right}!spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Right}{m\_Right}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} spork\+::graphics\+::\+Camera\+::m\+\_\+\+Right\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 14 of file base\+Camera.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_camera_a488e7379d52ac5ad3732e7532c9e890c}\label{classspork_1_1graphics_1_1_camera_a488e7379d52ac5ad3732e7532c9e890c}} 
+\index{spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}!m\+\_\+\+Rot@{m\+\_\+\+Rot}}
+\index{m\+\_\+\+Rot@{m\+\_\+\+Rot}!spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Rot}{m\_Rot}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} spork\+::graphics\+::\+Camera\+::m\+\_\+\+Rot\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 14 of file base\+Camera.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_camera_abfffa649cf3def026da9643d2d1debe0}\label{classspork_1_1graphics_1_1_camera_abfffa649cf3def026da9643d2d1debe0}} 
+\index{spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}!m\+\_\+\+Up@{m\+\_\+\+Up}}
+\index{m\+\_\+\+Up@{m\+\_\+\+Up}!spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Up}{m\_Up}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec3}{maths\+::vec3} spork\+::graphics\+::\+Camera\+::m\+\_\+\+Up\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 14 of file base\+Camera.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_camera_a0a91145642b7dac5bafee0c983c6b4a9}\label{classspork_1_1graphics_1_1_camera_a0a91145642b7dac5bafee0c983c6b4a9}} 
+\index{spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}!m\+\_\+\+View\+Mat@{m\+\_\+\+View\+Mat}}
+\index{m\+\_\+\+View\+Mat@{m\+\_\+\+View\+Mat}!spork\+::graphics\+::\+Camera@{spork\+::graphics\+::\+Camera}}
+\subsubsection{\texorpdfstring{m\+\_\+\+View\+Mat}{m\_ViewMat}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1mat4}{maths\+::mat4} spork\+::graphics\+::\+Camera\+::m\+\_\+\+View\+Mat\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 13 of file base\+Camera.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+N\+G S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/graphics/camera/\hyperlink{base_camera_8h}{base\+Camera.\+h}\item 
+W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+N\+G S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/graphics/camera/\hyperlink{base_camera_8cpp}{base\+Camera.\+cpp}\end{DoxyCompactItemize}

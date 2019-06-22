@@ -2,13 +2,17 @@
 #include <iostream>
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
+#include <AntTweakBar.h>
+#include "../input/input.h"
 #include "../utils/log.h"
 
 namespace spork { namespace graphics {
 
 #define MAX_KEYS	1024
 #define MAX_BUTTONS 32
-
+	/**
+	*  Window Class. Handles construction of the window & Mouse, Keyboard and Screen Resolution callbacks.
+	*/
  	class Window
 	{
 	private:
@@ -16,12 +20,14 @@ namespace spork { namespace graphics {
 		int m_Width, m_Height;
 		GLFWwindow *m_Window;
 		bool m_Closed;
-
 		//input:
 		bool m_Keys[MAX_KEYS];
 		bool m_MouseButtons[MAX_BUTTONS];
 		double scrollX, scrollY;
 		double mx, my;
+		bool mouseVisible = true;
+		float m_FPS;
+		app::Input m_InputManager;
 
 	public:
 		Window(const char *title, int width, int height);
@@ -36,14 +42,19 @@ namespace spork { namespace graphics {
 
 		inline double getMouseX() const { return mx; }
 		inline double getMouseY() const { return my; }
+		inline bool isVis() const { return mouseVisible; }
+		inline void setVis(bool visibility) { mouseVisible = visibility; }
 		inline double getScrollX() const { return scrollX; }
 		inline double getScrollY() const { return scrollY; }
 		inline void resetScroll() { scrollX = 0; scrollY = 0; }
-
+		inline void setFPS(float fps) { m_FPS = fps; }
+		inline float getFPS() { return m_FPS; }
 		inline GLFWwindow* getWindow() const { return m_Window; }
+		inline app::Input getInputManager() const { return m_InputManager; }
 
-		bool isKeyPressed(unsigned int keycode) const;
-		bool isMouseButtonPressed(unsigned int button) const;
+		bool isKeyPressed(uint keycode) const;
+		bool isKeyReleased(uint keycode) const;
+		bool isMouseButtonPressed(uint button) const;
 	private:
 		bool init();
 		void setFullscreenResolution();

@@ -1,0 +1,414 @@
+\hypertarget{structspork_1_1maths_1_1_quaternion}{}\section{spork\+:\+:maths\+:\+:Quaternion Struct Reference}
+\label{structspork_1_1maths_1_1_quaternion}\index{spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}}
+
+
+\hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} Class.  
+
+
+
+
+{\ttfamily \#include $<$quaternion.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structspork_1_1maths_1_1_quaternion_a4833d11706aa52389dd084604598ff57}{Quaternion} ()
+\item 
+\hyperlink{structspork_1_1maths_1_1_quaternion_a00c329e5b67a4a7bf2a9b5c0f5baf419}{Quaternion} (const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \&quat)
+\item 
+\hyperlink{structspork_1_1maths_1_1_quaternion_ac393846f6ea6eab59fcc87289e91622f}{Quaternion} (float \hyperlink{structspork_1_1maths_1_1_quaternion_ac9a551c42de0a7acd0c54bb18d1863e5}{x}, float \hyperlink{structspork_1_1maths_1_1_quaternion_ac6a591cc6515fd357cbc1a4ad49ea667}{y}, float \hyperlink{structspork_1_1maths_1_1_quaternion_a34c6708dbdf1e1e537d034fdab001584}{z}, float \hyperlink{structspork_1_1maths_1_1_quaternion_a5497dc08d45d86aa8faa956df16cb4b1}{w})
+\item 
+\hyperlink{structspork_1_1maths_1_1_quaternion_abf634fe2081177f26eec00e5aa1bf910}{Quaternion} (const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&xyz, float \hyperlink{structspork_1_1maths_1_1_quaternion_a5497dc08d45d86aa8faa956df16cb4b1}{w})
+\item 
+\hyperlink{structspork_1_1maths_1_1_quaternion_a5ada354b4b8a02ca544cd8860d32a451}{Quaternion} (\hyperlink{structspork_1_1maths_1_1vec4}{vec4} \&vec)
+\item 
+\hyperlink{structspork_1_1maths_1_1_quaternion_a5801369b22da4196a60178e2992c3563}{Quaternion} (float scalar)
+\item 
+\hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \hyperlink{structspork_1_1maths_1_1_quaternion_a99c40c3adaa208ca18844873caf57266}{set\+X\+YZ} (const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&vec)
+\item 
+const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \hyperlink{structspork_1_1maths_1_1_quaternion_a4eea744d712b05998e1be2db1fed60c4}{get\+X\+YZ} () const
+\item 
+\hyperlink{structspork_1_1maths_1_1vec3}{vec3} \hyperlink{structspork_1_1maths_1_1_quaternion_a67ced3bf831b837b22f927f86d0239fa}{get\+Axis} () const
+\item 
+\hyperlink{structspork_1_1maths_1_1vec3}{vec3} \hyperlink{structspork_1_1maths_1_1_quaternion_acc590420b3df4273167e59f5d380890f}{to\+Euler} () const
+\item 
+\hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \& \hyperlink{structspork_1_1maths_1_1_quaternion_af4ef2e359db6e90c8b59e1cdaf0ce02d}{operator=} (const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \&quat)
+\item 
+const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \hyperlink{structspork_1_1maths_1_1_quaternion_a037e6cfa22a82ecf57dc262088674f00}{operator+} (const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \&quaternion) const
+\item 
+const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \hyperlink{structspork_1_1maths_1_1_quaternion_af1c9b5ef7b54ca9de3f0b1e1b4b2894b}{operator-\/} (const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \&quaternion) const
+\item 
+const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \hyperlink{structspork_1_1maths_1_1_quaternion_ad818b807a969dbc6f97bdd43aba26fd5}{operator$\ast$} (const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \&quaternion) const
+\item 
+const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \hyperlink{structspork_1_1maths_1_1_quaternion_a44b376d43e6809b36c13c6700f4c3b7b}{operator$\ast$} (float scalar) const
+\item 
+const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \hyperlink{structspork_1_1maths_1_1_quaternion_ac2560ad77f0ca31d8f406933ee8d95b1}{operator/} (float scalar) const
+\item 
+const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \hyperlink{structspork_1_1maths_1_1_quaternion_abcba9ae87308fe8796c6d720a2f087d4}{operator-\/} () const
+\item 
+float \hyperlink{structspork_1_1maths_1_1_quaternion_a8ef8908ae0daefd7de38e6560c822b1f}{dot} (const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \&other) const
+\item 
+\hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \hyperlink{structspork_1_1maths_1_1_quaternion_acecfea67e6ddba5f238f1b23f5bf46a3}{conjugate} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \hyperlink{structspork_1_1maths_1_1_quaternion_a852176a071c37d949a20f60240f4f977}{identity} ()
+\item 
+static \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \hyperlink{structspork_1_1maths_1_1_quaternion_a45e3e18757f677e4c4b0207eafaa4751}{from\+Euler} (const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&right)
+\item 
+static \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \hyperlink{structspork_1_1maths_1_1_quaternion_a79245c7e245957602094ecf507e3cdc2}{rotate} (const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \&quat, const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&vec)
+\item 
+static const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \hyperlink{structspork_1_1maths_1_1_quaternion_a7746e864306c3844725c96575f7282cd}{rotate} (const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&unit\+Vec0, const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&unit\+Vec1)
+\item 
+static const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \hyperlink{structspork_1_1maths_1_1_quaternion_ae769335030acc9889db670ec3fcf9da2}{rotate} (float radians, const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&unit\+Vec)
+\item 
+static const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \hyperlink{structspork_1_1maths_1_1_quaternion_ab9d8fd8220c2f355b675a7ed2cdaee68}{rotationX} (float radians)
+\item 
+static const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \hyperlink{structspork_1_1maths_1_1_quaternion_a6e59b5c395cb7fdfaa902d4fb204d0c3}{rotationY} (float radians)
+\item 
+static const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \hyperlink{structspork_1_1maths_1_1_quaternion_a6d63a4fce870d6eebfe41bce244a6123}{rotationZ} (float radians)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{structspork_1_1maths_1_1_quaternion_ac9a551c42de0a7acd0c54bb18d1863e5}{x}
+\item 
+float \hyperlink{structspork_1_1maths_1_1_quaternion_ac6a591cc6515fd357cbc1a4ad49ea667}{y}
+\item 
+float \hyperlink{structspork_1_1maths_1_1_quaternion_a34c6708dbdf1e1e537d034fdab001584}{z}
+\item 
+float \hyperlink{structspork_1_1maths_1_1_quaternion_a5497dc08d45d86aa8faa956df16cb4b1}{w}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} Class. 
+
+Definition at line 9 of file quaternion.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structspork_1_1maths_1_1_quaternion_a4833d11706aa52389dd084604598ff57}\label{structspork_1_1maths_1_1_quaternion_a4833d11706aa52389dd084604598ff57}} 
+\index{spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}}
+\subsubsection{\texorpdfstring{Quaternion()}{Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily spork\+::maths\+::\+Quaternion\+::\+Quaternion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 5 of file quaternion.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1_quaternion_a00c329e5b67a4a7bf2a9b5c0f5baf419}\label{structspork_1_1maths_1_1_quaternion_a00c329e5b67a4a7bf2a9b5c0f5baf419}} 
+\index{spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}}
+\subsubsection{\texorpdfstring{Quaternion()}{Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily spork\+::maths\+::\+Quaternion\+::\+Quaternion (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \&}]{quat }\end{DoxyParamCaption})}
+
+
+
+Definition at line 11 of file quaternion.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1_quaternion_ac393846f6ea6eab59fcc87289e91622f}\label{structspork_1_1maths_1_1_quaternion_ac393846f6ea6eab59fcc87289e91622f}} 
+\index{spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}}
+\subsubsection{\texorpdfstring{Quaternion()}{Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily spork\+::maths\+::\+Quaternion\+::\+Quaternion (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z,  }\item[{float}]{w }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file quaternion.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1_quaternion_abf634fe2081177f26eec00e5aa1bf910}\label{structspork_1_1maths_1_1_quaternion_abf634fe2081177f26eec00e5aa1bf910}} 
+\index{spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}}
+\subsubsection{\texorpdfstring{Quaternion()}{Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily spork\+::maths\+::\+Quaternion\+::\+Quaternion (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&}]{xyz,  }\item[{float}]{w }\end{DoxyParamCaption})}
+
+
+
+Definition at line 25 of file quaternion.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1_quaternion_a5ada354b4b8a02ca544cd8860d32a451}\label{structspork_1_1maths_1_1_quaternion_a5ada354b4b8a02ca544cd8860d32a451}} 
+\index{spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}}
+\subsubsection{\texorpdfstring{Quaternion()}{Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily spork\+::maths\+::\+Quaternion\+::\+Quaternion (\begin{DoxyParamCaption}\item[{\hyperlink{structspork_1_1maths_1_1vec4}{vec4} \&}]{vec }\end{DoxyParamCaption})}
+
+
+
+Definition at line 31 of file quaternion.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1_quaternion_a5801369b22da4196a60178e2992c3563}\label{structspork_1_1maths_1_1_quaternion_a5801369b22da4196a60178e2992c3563}} 
+\index{spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}}
+\subsubsection{\texorpdfstring{Quaternion()}{Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily spork\+::maths\+::\+Quaternion\+::\+Quaternion (\begin{DoxyParamCaption}\item[{float}]{scalar }\end{DoxyParamCaption})}
+
+
+
+Definition at line 39 of file quaternion.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structspork_1_1maths_1_1_quaternion_acecfea67e6ddba5f238f1b23f5bf46a3}\label{structspork_1_1maths_1_1_quaternion_acecfea67e6ddba5f238f1b23f5bf46a3}} 
+\index{spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}!conjugate@{conjugate}}
+\index{conjugate@{conjugate}!spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}}
+\subsubsection{\texorpdfstring{conjugate()}{conjugate()}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} spork\+::maths\+::\+Quaternion\+::conjugate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 194 of file quaternion.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1_quaternion_a8ef8908ae0daefd7de38e6560c822b1f}\label{structspork_1_1maths_1_1_quaternion_a8ef8908ae0daefd7de38e6560c822b1f}} 
+\index{spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}!dot@{dot}}
+\index{dot@{dot}!spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}}
+\subsubsection{\texorpdfstring{dot()}{dot()}}
+{\footnotesize\ttfamily float spork\+::maths\+::\+Quaternion\+::dot (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 185 of file quaternion.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1_quaternion_a45e3e18757f677e4c4b0207eafaa4751}\label{structspork_1_1maths_1_1_quaternion_a45e3e18757f677e4c4b0207eafaa4751}} 
+\index{spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}!from\+Euler@{from\+Euler}}
+\index{from\+Euler@{from\+Euler}!spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}}
+\subsubsection{\texorpdfstring{from\+Euler()}{fromEuler()}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} spork\+::maths\+::\+Quaternion\+::from\+Euler (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 82 of file quaternion.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1_quaternion_a67ced3bf831b837b22f927f86d0239fa}\label{structspork_1_1maths_1_1_quaternion_a67ced3bf831b837b22f927f86d0239fa}} 
+\index{spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}!get\+Axis@{get\+Axis}}
+\index{get\+Axis@{get\+Axis}!spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}}
+\subsubsection{\texorpdfstring{get\+Axis()}{getAxis()}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec3}{vec3} spork\+::maths\+::\+Quaternion\+::get\+Axis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 60 of file quaternion.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1_quaternion_a4eea744d712b05998e1be2db1fed60c4}\label{structspork_1_1maths_1_1_quaternion_a4eea744d712b05998e1be2db1fed60c4}} 
+\index{spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}!get\+X\+YZ@{get\+X\+YZ}}
+\index{get\+X\+YZ@{get\+X\+YZ}!spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}}
+\subsubsection{\texorpdfstring{get\+X\+Y\+Z()}{getXYZ()}}
+{\footnotesize\ttfamily const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} spork\+::maths\+::\+Quaternion\+::get\+X\+YZ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 55 of file quaternion.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1_quaternion_a852176a071c37d949a20f60240f4f977}\label{structspork_1_1maths_1_1_quaternion_a852176a071c37d949a20f60240f4f977}} 
+\index{spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}!identity@{identity}}
+\index{identity@{identity}!spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}}
+\subsubsection{\texorpdfstring{identity()}{identity()}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} spork\+::maths\+::\+Quaternion\+::identity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 77 of file quaternion.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1_quaternion_ad818b807a969dbc6f97bdd43aba26fd5}\label{structspork_1_1maths_1_1_quaternion_ad818b807a969dbc6f97bdd43aba26fd5}} 
+\index{spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} spork\+::maths\+::\+Quaternion\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \&}]{quaternion }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 147 of file quaternion.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1_quaternion_a44b376d43e6809b36c13c6700f4c3b7b}\label{structspork_1_1maths_1_1_quaternion_a44b376d43e6809b36c13c6700f4c3b7b}} 
+\index{spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} spork\+::maths\+::\+Quaternion\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{float}]{scalar }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 109 of file quaternion.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1_quaternion_a037e6cfa22a82ecf57dc262088674f00}\label{structspork_1_1maths_1_1_quaternion_a037e6cfa22a82ecf57dc262088674f00}} 
+\index{spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}!operator+@{operator+}}
+\index{operator+@{operator+}!spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} spork\+::maths\+::\+Quaternion\+::operator+ (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \&}]{quaternion }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 99 of file quaternion.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1_quaternion_af1c9b5ef7b54ca9de3f0b1e1b4b2894b}\label{structspork_1_1maths_1_1_quaternion_af1c9b5ef7b54ca9de3f0b1e1b4b2894b}} 
+\index{spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} spork\+::maths\+::\+Quaternion\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \&}]{quaternion }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 104 of file quaternion.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1_quaternion_abcba9ae87308fe8796c6d720a2f087d4}\label{structspork_1_1maths_1_1_quaternion_abcba9ae87308fe8796c6d720a2f087d4}} 
+\index{spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} spork\+::maths\+::\+Quaternion\+::operator-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 119 of file quaternion.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1_quaternion_ac2560ad77f0ca31d8f406933ee8d95b1}\label{structspork_1_1maths_1_1_quaternion_ac2560ad77f0ca31d8f406933ee8d95b1}} 
+\index{spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}!operator/@{operator/}}
+\index{operator/@{operator/}!spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}}
+\subsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} spork\+::maths\+::\+Quaternion\+::operator/ (\begin{DoxyParamCaption}\item[{float}]{scalar }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 114 of file quaternion.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1_quaternion_af4ef2e359db6e90c8b59e1cdaf0ce02d}\label{structspork_1_1maths_1_1_quaternion_af4ef2e359db6e90c8b59e1cdaf0ce02d}} 
+\index{spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}!operator=@{operator=}}
+\index{operator=@{operator=}!spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \& spork\+::maths\+::\+Quaternion\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \&}]{quat }\end{DoxyParamCaption})}
+
+
+
+Definition at line 90 of file quaternion.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1_quaternion_a79245c7e245957602094ecf507e3cdc2}\label{structspork_1_1maths_1_1_quaternion_a79245c7e245957602094ecf507e3cdc2}} 
+\index{spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}!rotate@{rotate}}
+\index{rotate@{rotate}!spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec3}{vec3} spork\+::maths\+::\+Quaternion\+::rotate (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} \&}]{quat,  }\item[{const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 157 of file quaternion.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1_quaternion_a7746e864306c3844725c96575f7282cd}\label{structspork_1_1maths_1_1_quaternion_a7746e864306c3844725c96575f7282cd}} 
+\index{spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}!rotate@{rotate}}
+\index{rotate@{rotate}!spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} spork\+::maths\+::\+Quaternion\+::rotate (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&}]{unit\+Vec0,  }\item[{const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&}]{unit\+Vec1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 171 of file quaternion.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1_quaternion_ae769335030acc9889db670ec3fcf9da2}\label{structspork_1_1maths_1_1_quaternion_ae769335030acc9889db670ec3fcf9da2}} 
+\index{spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}!rotate@{rotate}}
+\index{rotate@{rotate}!spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} spork\+::maths\+::\+Quaternion\+::rotate (\begin{DoxyParamCaption}\item[{float}]{radians,  }\item[{const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&}]{unit\+Vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 179 of file quaternion.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1_quaternion_ab9d8fd8220c2f355b675a7ed2cdaee68}\label{structspork_1_1maths_1_1_quaternion_ab9d8fd8220c2f355b675a7ed2cdaee68}} 
+\index{spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}!rotationX@{rotationX}}
+\index{rotationX@{rotationX}!spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}}
+\subsubsection{\texorpdfstring{rotation\+X()}{rotationX()}}
+{\footnotesize\ttfamily static const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} spork\+::maths\+::\+Quaternion\+::rotationX (\begin{DoxyParamCaption}\item[{float}]{radians }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 40 of file quaternion.\+h.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1_quaternion_a6e59b5c395cb7fdfaa902d4fb204d0c3}\label{structspork_1_1maths_1_1_quaternion_a6e59b5c395cb7fdfaa902d4fb204d0c3}} 
+\index{spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}!rotationY@{rotationY}}
+\index{rotationY@{rotationY}!spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}}
+\subsubsection{\texorpdfstring{rotation\+Y()}{rotationY()}}
+{\footnotesize\ttfamily static const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} spork\+::maths\+::\+Quaternion\+::rotationY (\begin{DoxyParamCaption}\item[{float}]{radians }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 46 of file quaternion.\+h.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1_quaternion_a6d63a4fce870d6eebfe41bce244a6123}\label{structspork_1_1maths_1_1_quaternion_a6d63a4fce870d6eebfe41bce244a6123}} 
+\index{spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}!rotationZ@{rotationZ}}
+\index{rotationZ@{rotationZ}!spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}}
+\subsubsection{\texorpdfstring{rotation\+Z()}{rotationZ()}}
+{\footnotesize\ttfamily static const \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} spork\+::maths\+::\+Quaternion\+::rotationZ (\begin{DoxyParamCaption}\item[{float}]{radians }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 52 of file quaternion.\+h.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1_quaternion_a99c40c3adaa208ca18844873caf57266}\label{structspork_1_1maths_1_1_quaternion_a99c40c3adaa208ca18844873caf57266}} 
+\index{spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}!set\+X\+YZ@{set\+X\+YZ}}
+\index{set\+X\+YZ@{set\+X\+YZ}!spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}}
+\subsubsection{\texorpdfstring{set\+X\+Y\+Z()}{setXYZ()}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1_quaternion}{Quaternion} spork\+::maths\+::\+Quaternion\+::set\+X\+YZ (\begin{DoxyParamCaption}\item[{const \hyperlink{structspork_1_1maths_1_1vec3}{vec3} \&}]{vec }\end{DoxyParamCaption})}
+
+
+
+Definition at line 47 of file quaternion.\+cpp.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1_quaternion_acc590420b3df4273167e59f5d380890f}\label{structspork_1_1maths_1_1_quaternion_acc590420b3df4273167e59f5d380890f}} 
+\index{spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}!to\+Euler@{to\+Euler}}
+\index{to\+Euler@{to\+Euler}!spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}}
+\subsubsection{\texorpdfstring{to\+Euler()}{toEuler()}}
+{\footnotesize\ttfamily \hyperlink{structspork_1_1maths_1_1vec3}{vec3} spork\+::maths\+::\+Quaternion\+::to\+Euler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 70 of file quaternion.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structspork_1_1maths_1_1_quaternion_a5497dc08d45d86aa8faa956df16cb4b1}\label{structspork_1_1maths_1_1_quaternion_a5497dc08d45d86aa8faa956df16cb4b1}} 
+\index{spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}!w@{w}}
+\index{w@{w}!spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}}
+\subsubsection{\texorpdfstring{w}{w}}
+{\footnotesize\ttfamily float spork\+::maths\+::\+Quaternion\+::w}
+
+
+
+Definition at line 11 of file quaternion.\+h.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1_quaternion_ac9a551c42de0a7acd0c54bb18d1863e5}\label{structspork_1_1maths_1_1_quaternion_ac9a551c42de0a7acd0c54bb18d1863e5}} 
+\index{spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}!x@{x}}
+\index{x@{x}!spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}}
+\subsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily float spork\+::maths\+::\+Quaternion\+::x}
+
+
+
+Definition at line 11 of file quaternion.\+h.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1_quaternion_ac6a591cc6515fd357cbc1a4ad49ea667}\label{structspork_1_1maths_1_1_quaternion_ac6a591cc6515fd357cbc1a4ad49ea667}} 
+\index{spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}!y@{y}}
+\index{y@{y}!spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}}
+\subsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily float spork\+::maths\+::\+Quaternion\+::y}
+
+
+
+Definition at line 11 of file quaternion.\+h.
+
+\mbox{\Hypertarget{structspork_1_1maths_1_1_quaternion_a34c6708dbdf1e1e537d034fdab001584}\label{structspork_1_1maths_1_1_quaternion_a34c6708dbdf1e1e537d034fdab001584}} 
+\index{spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}!z@{z}}
+\index{z@{z}!spork\+::maths\+::\+Quaternion@{spork\+::maths\+::\+Quaternion}}
+\subsubsection{\texorpdfstring{z}{z}}
+{\footnotesize\ttfamily float spork\+::maths\+::\+Quaternion\+::z}
+
+
+
+Definition at line 11 of file quaternion.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+N\+G S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/maths/\hyperlink{quaternion_8h}{quaternion.\+h}\item 
+W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+N\+G S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/maths/\hyperlink{quaternion_8cpp}{quaternion.\+cpp}\end{DoxyCompactItemize}

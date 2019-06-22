@@ -2,10 +2,11 @@
 #include "../utils/loadUtils.h"
 #include "../utils/log.h"
 #include "../graphics/shader.h"
-#include "../graphics/texture.h"
 
 namespace spork { namespace graphics {
-	
+	/**
+	*  Text Container Class. Handles Printing of 2D Text to the screen.
+	*/
 	class TextContainer 
 	{
 		const char* m_Path;
@@ -18,8 +19,10 @@ namespace spork { namespace graphics {
 		uint m_Text2DShaderID;
 		uint m_Text2DUniformID;
 	public:
+		TextContainer();
 		TextContainer(const char* path);
 		~TextContainer();
 		void printText(const char* text, int x, int y, int size);
+		void cleanupText();
 	};
 } }

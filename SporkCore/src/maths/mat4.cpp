@@ -1,4 +1,5 @@
 #include "mat4.h"
+#include "quaternion.h"
 
 namespace spork { namespace maths {
 	//Matrix constructor
@@ -264,8 +265,8 @@ namespace spork { namespace maths {
 
 		return result;
 	}
-	//Rotation matrix
-	mat4 mat4::rotation(float angle, const vec3& axis)
+	//Rotation matrix for float input
+	mat4 mat4::rotate(float angle, const vec3& axis)
 	{
 		mat4 result(1.0f);
 
@@ -273,23 +274,55 @@ namespace spork { namespace maths {
 		float c = cos(r);
 		float s = sin(r);
 		float omc = 1.0f - c;
-		
+
 		float x = axis.x;
 		float y = axis.y;
 		float z = axis.z;
 
-		result.elements[0 + 0 * 4] = x * omc + c;
+		result.elements[0 + 0 * 4] = x * x * omc + c;
 		result.elements[1 + 0 * 4] = y * x * omc + z * s;
 		result.elements[2 + 0 * 4] = x * z * omc - y * s;
 
 		result.elements[0 + 1 * 4] = x * y * omc - z * s;
-		result.elements[1 + 1 * 4] = y * omc + c;
+		result.elements[1 + 1 * 4] = y * y * omc + c;
 		result.elements[2 + 1 * 4] = y * z * omc + x * s;
 
 		result.elements[0 + 2 * 4] = x * z * omc + y * s;
 		result.elements[1 + 2 * 4] = y * z * omc - x * s;
 		result.elements[2 + 2 * 4] = z * omc + c;
+
+		return result;
+	}
+	//Rotation matrix for quaternion input
+	mat4 mat4::rotate(const Quaternion& quat)
+	{
+		mat4 result = identity();
+
+		float qx, qy, qz, qw, qx2, qy2, qz2, qxqx2, qyqy2, qzqz2, qxqy2, qyqz2, qzqw2, qxqz2, qyqw2, qxqw2;
 		
+		qx = quat.x;
+		qy = quat.y;
+		qz = quat.z;
+		qw = quat.w;
+		
+		qx2 = (qx + qx);
+		qy2 = (qy + qy);
+		qz2 = (qz + qz);
+		
+		qxqx2 = (qx * qx2);
+		qxqy2 = (qx * qy2);
+		qxqz2 = (qx * qz2);
+		qxqw2 = (qw * qx2);
+		qyqy2 = (qy * qy2);
+		qyqz2 = (qy * qz2);
+		qyqw2 = (qw * qy2);
+		qzqz2 = (qz * qz2);
+		qzqw2 = (qw * qz2);
+		
+		result.columns[0] = vec4(((1.0f - qyqy2) - qzqz2), (qxqy2 + qzqw2), (qxqz2 - qyqw2), 0.0f);
+		result.columns[1] = vec4((qxqy2 - qzqw2), ((1.0f - qxqx2) - qzqz2), (qyqz2 + qxqw2), 0.0f);
+		result.columns[2] = vec4((qxqz2 + qyqw2), (qyqz2 - qxqw2), ((1.0f - qxqx2) - qyqy2), 0.0f);
+
 		return result;
 	}
 	//Scale matrix
@@ -325,5 +358,17 @@ namespace spork { namespace maths {
 
 		return result * translate(vec3(-cam.x, -cam.y, -cam.z));
 
+	}
+
+	//Convert mat4 to string 
+	String mat4::toString() const
+	{
+		std::stringstream mat4;
+		mat4 << "Mat4: (" << columns[0].x << ", " << columns[1].x << ", " << columns[2].x << ", " << columns[3].x << "), ";
+		mat4 << "Mat4: (" << columns[0].y << ", " << columns[1].y << ", " << columns[2].y << ", " << columns[3].y << "), ";
+		mat4 << "Mat4: (" << columns[0].z << ", " << columns[1].z << ", " << columns[2].z << ", " << columns[3].z << "), ";
+		mat4 << "Mat4: (" << columns[0].w << ", " << columns[1].w << ", " << columns[2].w << ", " << columns[3].w << "), ";
+
+		return mat4.str();
 	}
 } }

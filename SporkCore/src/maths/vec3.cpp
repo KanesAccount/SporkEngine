@@ -1,4 +1,5 @@
 #include "vec3.h"
+#include "vec2.h"
 
 namespace spork { namespace maths {
 
@@ -15,6 +16,13 @@ namespace spork { namespace maths {
 		this->x = x;
 		this->y = y;
 		this->z = z;
+	}
+	//Convert vec2 to vec3 w/ z = 0
+	vec3::vec3(const vec2& other)
+	{
+		this->x = other.x;
+		this->y = other.y;
+		this->z = 0.0f;
 	}
 	//Directional vectors
 	vec3 vec3::up()
@@ -219,11 +227,24 @@ namespace spork { namespace maths {
 	{
 		return vec3(y * other.z - z * other.y, z * other.x - x * other.z, x * other.y - y * other.x);
 	}
+	//Vector distance
+	float vec3::distance(const vec3& other) const
+	{
+		float a = x - other.x;
+		float b = y - other.y;
+		float c = z - other.z;
 
+		return sqrt(a * a + b * b + c * c);
+	}
+	//Vec3 -self operator
+	vec3 operator-(const vec3& vector)
+	{
+		return vec3(-vector.x, -vector.y, -vector.z);
+	}
+	//Print helper func
 	std::ostream& operator<<(std::ostream& stream, const vec3& vec)
 	{
 		stream << "vec3: (" << vec.x << "," << vec.y << "," << vec.z << ")";
 		return stream;
 	}
-	
-}	}
+} }

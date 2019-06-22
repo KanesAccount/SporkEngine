@@ -1,0 +1,125 @@
+\hypertarget{classspork_1_1graphics_1_1_vertex_array}{}\section{spork\+:\+:graphics\+:\+:Vertex\+Array Class Reference}
+\label{classspork_1_1graphics_1_1_vertex_array}\index{spork\+::graphics\+::\+Vertex\+Array@{spork\+::graphics\+::\+Vertex\+Array}}
+
+
+\hyperlink{structspork_1_1graphics_1_1_vertex}{Vertex} Array Class.  
+
+
+
+
+{\ttfamily \#include $<$vertex\+Array.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classspork_1_1graphics_1_1_vertex_array_a13e593f72368d3de20f1204cf6e756dd}{Vertex\+Array} ()
+\item 
+\hyperlink{classspork_1_1graphics_1_1_vertex_array_a6e501bb3893c396e1ccf66720e5222ab}{$\sim$\+Vertex\+Array} ()
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_vertex_array_a27b13c452475f5b7a2eb8a3b2f86bc3d}{add\+Buffer} (\hyperlink{classspork_1_1graphics_1_1_buffer}{Buffer} $\ast$buffer, G\+Luint index)
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_vertex_array_ad70dc1434cfd15b821d5f24ffdf82cb4}{bind} () const
+\item 
+void \hyperlink{classspork_1_1graphics_1_1_vertex_array_a6bc4197579700d9801bbc731aaa28351}{unbind} () const
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+Luint \hyperlink{classspork_1_1graphics_1_1_vertex_array_a52da6aa84afc82535e4c84c19ff438ad}{m\+\_\+\+Array\+ID}
+\item 
+std\+::vector$<$ \hyperlink{classspork_1_1graphics_1_1_buffer}{Buffer} $\ast$ $>$ \hyperlink{classspork_1_1graphics_1_1_vertex_array_ac73ece6d36263668e29d31a43e2886ea}{m\+\_\+\+Buffers}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{structspork_1_1graphics_1_1_vertex}{Vertex} Array Class. 
+
+Handles vertex array creation, deletion \& binding. 
+
+Definition at line 10 of file vertex\+Array.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_vertex_array_a13e593f72368d3de20f1204cf6e756dd}\label{classspork_1_1graphics_1_1_vertex_array_a13e593f72368d3de20f1204cf6e756dd}} 
+\index{spork\+::graphics\+::\+Vertex\+Array@{spork\+::graphics\+::\+Vertex\+Array}!Vertex\+Array@{Vertex\+Array}}
+\index{Vertex\+Array@{Vertex\+Array}!spork\+::graphics\+::\+Vertex\+Array@{spork\+::graphics\+::\+Vertex\+Array}}
+\subsubsection{\texorpdfstring{Vertex\+Array()}{VertexArray()}}
+{\footnotesize\ttfamily spork\+::graphics\+::\+Vertex\+Array\+::\+Vertex\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 5 of file vertex\+Array.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_vertex_array_a6e501bb3893c396e1ccf66720e5222ab}\label{classspork_1_1graphics_1_1_vertex_array_a6e501bb3893c396e1ccf66720e5222ab}} 
+\index{spork\+::graphics\+::\+Vertex\+Array@{spork\+::graphics\+::\+Vertex\+Array}!````~Vertex\+Array@{$\sim$\+Vertex\+Array}}
+\index{````~Vertex\+Array@{$\sim$\+Vertex\+Array}!spork\+::graphics\+::\+Vertex\+Array@{spork\+::graphics\+::\+Vertex\+Array}}
+\subsubsection{\texorpdfstring{$\sim$\+Vertex\+Array()}{~VertexArray()}}
+{\footnotesize\ttfamily spork\+::graphics\+::\+Vertex\+Array\+::$\sim$\+Vertex\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 10 of file vertex\+Array.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_vertex_array_a27b13c452475f5b7a2eb8a3b2f86bc3d}\label{classspork_1_1graphics_1_1_vertex_array_a27b13c452475f5b7a2eb8a3b2f86bc3d}} 
+\index{spork\+::graphics\+::\+Vertex\+Array@{spork\+::graphics\+::\+Vertex\+Array}!add\+Buffer@{add\+Buffer}}
+\index{add\+Buffer@{add\+Buffer}!spork\+::graphics\+::\+Vertex\+Array@{spork\+::graphics\+::\+Vertex\+Array}}
+\subsubsection{\texorpdfstring{add\+Buffer()}{addBuffer()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Vertex\+Array\+::add\+Buffer (\begin{DoxyParamCaption}\item[{\hyperlink{classspork_1_1graphics_1_1_buffer}{Buffer} $\ast$}]{buffer,  }\item[{G\+Luint}]{index }\end{DoxyParamCaption})}
+
+
+
+Definition at line 20 of file vertex\+Array.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_vertex_array_ad70dc1434cfd15b821d5f24ffdf82cb4}\label{classspork_1_1graphics_1_1_vertex_array_ad70dc1434cfd15b821d5f24ffdf82cb4}} 
+\index{spork\+::graphics\+::\+Vertex\+Array@{spork\+::graphics\+::\+Vertex\+Array}!bind@{bind}}
+\index{bind@{bind}!spork\+::graphics\+::\+Vertex\+Array@{spork\+::graphics\+::\+Vertex\+Array}}
+\subsubsection{\texorpdfstring{bind()}{bind()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Vertex\+Array\+::bind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 32 of file vertex\+Array.\+cpp.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_vertex_array_a6bc4197579700d9801bbc731aaa28351}\label{classspork_1_1graphics_1_1_vertex_array_a6bc4197579700d9801bbc731aaa28351}} 
+\index{spork\+::graphics\+::\+Vertex\+Array@{spork\+::graphics\+::\+Vertex\+Array}!unbind@{unbind}}
+\index{unbind@{unbind}!spork\+::graphics\+::\+Vertex\+Array@{spork\+::graphics\+::\+Vertex\+Array}}
+\subsubsection{\texorpdfstring{unbind()}{unbind()}}
+{\footnotesize\ttfamily void spork\+::graphics\+::\+Vertex\+Array\+::unbind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 37 of file vertex\+Array.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_vertex_array_a52da6aa84afc82535e4c84c19ff438ad}\label{classspork_1_1graphics_1_1_vertex_array_a52da6aa84afc82535e4c84c19ff438ad}} 
+\index{spork\+::graphics\+::\+Vertex\+Array@{spork\+::graphics\+::\+Vertex\+Array}!m\+\_\+\+Array\+ID@{m\+\_\+\+Array\+ID}}
+\index{m\+\_\+\+Array\+ID@{m\+\_\+\+Array\+ID}!spork\+::graphics\+::\+Vertex\+Array@{spork\+::graphics\+::\+Vertex\+Array}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Array\+ID}{m\_ArrayID}}
+{\footnotesize\ttfamily G\+Luint spork\+::graphics\+::\+Vertex\+Array\+::m\+\_\+\+Array\+ID\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 13 of file vertex\+Array.\+h.
+
+\mbox{\Hypertarget{classspork_1_1graphics_1_1_vertex_array_ac73ece6d36263668e29d31a43e2886ea}\label{classspork_1_1graphics_1_1_vertex_array_ac73ece6d36263668e29d31a43e2886ea}} 
+\index{spork\+::graphics\+::\+Vertex\+Array@{spork\+::graphics\+::\+Vertex\+Array}!m\+\_\+\+Buffers@{m\+\_\+\+Buffers}}
+\index{m\+\_\+\+Buffers@{m\+\_\+\+Buffers}!spork\+::graphics\+::\+Vertex\+Array@{spork\+::graphics\+::\+Vertex\+Array}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Buffers}{m\_Buffers}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{classspork_1_1graphics_1_1_buffer}{Buffer}$\ast$$>$ spork\+::graphics\+::\+Vertex\+Array\+::m\+\_\+\+Buffers\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 14 of file vertex\+Array.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+N\+G S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/graphics/buffers/\hyperlink{vertex_array_8h}{vertex\+Array.\+h}\item 
+W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+N\+G S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/graphics/buffers/\hyperlink{vertex_array_8cpp}{vertex\+Array.\+cpp}\end{DoxyCompactItemize}

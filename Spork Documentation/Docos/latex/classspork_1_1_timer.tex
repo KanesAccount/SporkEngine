@@ -1,0 +1,123 @@
+\hypertarget{classspork_1_1_timer}{}\section{spork\+:\+:Timer Class Reference}
+\label{classspork_1_1_timer}\index{spork\+::\+Timer@{spork\+::\+Timer}}
+
+
+{\ttfamily \#include $<$timer.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classspork_1_1_timer_a0c5bc9a1d6bbf58b3f5268f699cdcb90}{Timer} ()
+\item 
+void \hyperlink{classspork_1_1_timer_a2edd31761d6ffbee37fbcb19abae7397}{reset} ()
+\item 
+float \hyperlink{classspork_1_1_timer_aa640a87d429bc4c37df2791fd3769f38}{elapsed} ()
+\item 
+float \hyperlink{classspork_1_1_timer_ac2aa43e7102d1836b13a8d659f79e21a}{elapsed\+Milli} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::chrono\+::high\+\_\+resolution\+\_\+clock \hyperlink{classspork_1_1_timer_aa9dbba26ef2e26de57cfcd4294630387}{High\+Resolution\+Clock}
+\item 
+typedef std\+::chrono\+::duration$<$ float, std\+::milli $>$ \hyperlink{classspork_1_1_timer_a2d684c0b32609e7ee0864f1ce5cc7396}{milliseconds\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::chrono\+::time\+\_\+point$<$ \hyperlink{classspork_1_1_timer_aa9dbba26ef2e26de57cfcd4294630387}{High\+Resolution\+Clock} $>$ \hyperlink{classspork_1_1_timer_af76f0cbd99ac86c2d792f0d48b7013a7}{m\+\_\+\+Start}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 9 of file timer.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classspork_1_1_timer_aa9dbba26ef2e26de57cfcd4294630387}\label{classspork_1_1_timer_aa9dbba26ef2e26de57cfcd4294630387}} 
+\index{spork\+::\+Timer@{spork\+::\+Timer}!High\+Resolution\+Clock@{High\+Resolution\+Clock}}
+\index{High\+Resolution\+Clock@{High\+Resolution\+Clock}!spork\+::\+Timer@{spork\+::\+Timer}}
+\subsubsection{\texorpdfstring{High\+Resolution\+Clock}{HighResolutionClock}}
+{\footnotesize\ttfamily typedef std\+::chrono\+::high\+\_\+resolution\+\_\+clock \hyperlink{classspork_1_1_timer_aa9dbba26ef2e26de57cfcd4294630387}{spork\+::\+Timer\+::\+High\+Resolution\+Clock}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 12 of file timer.\+h.
+
+\mbox{\Hypertarget{classspork_1_1_timer_a2d684c0b32609e7ee0864f1ce5cc7396}\label{classspork_1_1_timer_a2d684c0b32609e7ee0864f1ce5cc7396}} 
+\index{spork\+::\+Timer@{spork\+::\+Timer}!milliseconds\+\_\+type@{milliseconds\+\_\+type}}
+\index{milliseconds\+\_\+type@{milliseconds\+\_\+type}!spork\+::\+Timer@{spork\+::\+Timer}}
+\subsubsection{\texorpdfstring{milliseconds\+\_\+type}{milliseconds\_type}}
+{\footnotesize\ttfamily typedef std\+::chrono\+::duration$<$float, std\+::milli$>$ \hyperlink{classspork_1_1_timer_a2d684c0b32609e7ee0864f1ce5cc7396}{spork\+::\+Timer\+::milliseconds\+\_\+type}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 13 of file timer.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classspork_1_1_timer_a0c5bc9a1d6bbf58b3f5268f699cdcb90}\label{classspork_1_1_timer_a0c5bc9a1d6bbf58b3f5268f699cdcb90}} 
+\index{spork\+::\+Timer@{spork\+::\+Timer}!Timer@{Timer}}
+\index{Timer@{Timer}!spork\+::\+Timer@{spork\+::\+Timer}}
+\subsubsection{\texorpdfstring{Timer()}{Timer()}}
+{\footnotesize\ttfamily spork\+::\+Timer\+::\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 16 of file timer.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classspork_1_1_timer_aa640a87d429bc4c37df2791fd3769f38}\label{classspork_1_1_timer_aa640a87d429bc4c37df2791fd3769f38}} 
+\index{spork\+::\+Timer@{spork\+::\+Timer}!elapsed@{elapsed}}
+\index{elapsed@{elapsed}!spork\+::\+Timer@{spork\+::\+Timer}}
+\subsubsection{\texorpdfstring{elapsed()}{elapsed()}}
+{\footnotesize\ttfamily float spork\+::\+Timer\+::elapsed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 26 of file timer.\+h.
+
+\mbox{\Hypertarget{classspork_1_1_timer_ac2aa43e7102d1836b13a8d659f79e21a}\label{classspork_1_1_timer_ac2aa43e7102d1836b13a8d659f79e21a}} 
+\index{spork\+::\+Timer@{spork\+::\+Timer}!elapsed\+Milli@{elapsed\+Milli}}
+\index{elapsed\+Milli@{elapsed\+Milli}!spork\+::\+Timer@{spork\+::\+Timer}}
+\subsubsection{\texorpdfstring{elapsed\+Milli()}{elapsedMilli()}}
+{\footnotesize\ttfamily float spork\+::\+Timer\+::elapsed\+Milli (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 30 of file timer.\+h.
+
+\mbox{\Hypertarget{classspork_1_1_timer_a2edd31761d6ffbee37fbcb19abae7397}\label{classspork_1_1_timer_a2edd31761d6ffbee37fbcb19abae7397}} 
+\index{spork\+::\+Timer@{spork\+::\+Timer}!reset@{reset}}
+\index{reset@{reset}!spork\+::\+Timer@{spork\+::\+Timer}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void spork\+::\+Timer\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 21 of file timer.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classspork_1_1_timer_af76f0cbd99ac86c2d792f0d48b7013a7}\label{classspork_1_1_timer_af76f0cbd99ac86c2d792f0d48b7013a7}} 
+\index{spork\+::\+Timer@{spork\+::\+Timer}!m\+\_\+\+Start@{m\+\_\+\+Start}}
+\index{m\+\_\+\+Start@{m\+\_\+\+Start}!spork\+::\+Timer@{spork\+::\+Timer}}
+\subsubsection{\texorpdfstring{m\+\_\+\+Start}{m\_Start}}
+{\footnotesize\ttfamily std\+::chrono\+::time\+\_\+point$<$\hyperlink{classspork_1_1_timer_aa9dbba26ef2e26de57cfcd4294630387}{High\+Resolution\+Clock}$>$ spork\+::\+Timer\+::m\+\_\+\+Start\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 14 of file timer.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+W\+:/\+Uni/\+S\+P\+O\+R\+K/\+W\+O\+R\+K\+I\+N\+G S\+P\+O\+R\+K/\+Assignment/\+Spork Engine Submission/\+Spork\+Engine/\+Spork\+Core/src/utils/\hyperlink{timer_8h}{timer.\+h}\end{DoxyCompactItemize}

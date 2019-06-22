@@ -12,7 +12,9 @@
 #define FOURCC_DXT5 0x35545844 // Equivalent to "DXT5" in ASCII
 
 namespace spork { namespace utils {
-	
+	/**
+	*  Loading utility class. Loads different texture formats.
+	*/
 	class LoadUtils
 	{
 	public:

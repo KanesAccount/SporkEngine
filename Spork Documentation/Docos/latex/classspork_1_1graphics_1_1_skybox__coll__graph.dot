@@ -1,0 +1,27 @@
+digraph "spork::graphics::Skybox"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="spork::graphics::Skybox",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_Window" ];
+  Node2 [label="spork::graphics::Window",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classspork_1_1graphics_1_1_window.html",tooltip="Window Class. "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_InputManager" ];
+  Node3 [label="spork::app::Input",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classspork_1_1app_1_1_input.html",tooltip="Input Manager Class. "];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_SkyboxShader" ];
+  Node4 [label="spork::graphics::Shader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classspork_1_1graphics_1_1_shader.html",tooltip="Shader Class. "];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_SkyboxIBO" ];
+  Node5 [label="spork::graphics::IndexBuffer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classspork_1_1graphics_1_1_index_buffer.html",tooltip="Index Buffer Class. "];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_SkyboxVAO" ];
+  Node6 [label="spork::graphics::VertexArray",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classspork_1_1graphics_1_1_vertex_array.html",tooltip="Vertex Array Class. "];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_Camera" ];
+  Node7 [label="spork::graphics::Camera",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classspork_1_1graphics_1_1_camera.html",tooltip="Base Camera Class. "];
+  Node8 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_ProjMat\nm_ViewMat" ];
+  Node8 [label="spork::maths::mat4",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structspork_1_1maths_1_1mat4.html",tooltip="4x4 Matrix Class. "];
+  Node9 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" columns" ];
+  Node9 [label="spork::maths::vec4",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structspork_1_1maths_1_1vec4.html",tooltip="4 Component Vector Class. "];
+  Node10 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_FocalPoint\nm_Right\nm_Position\nm_Front\nm_Focal\nm_Up\nm_Rot" ];
+  Node10 [label="spork::maths::vec3",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structspork_1_1maths_1_1vec3.html",tooltip="3 Component Vector Class. "];
+  Node11 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_SkyboxVBO" ];
+  Node11 [label="spork::graphics::Buffer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classspork_1_1graphics_1_1_buffer.html",tooltip="Buffer Class. "];
+}

@@ -1,48 +1,34 @@
-#ifndef FPSCAMERA_H
-#define FPSCAMERA_H
-//#pragma once
+#pragma once
 #include <GL/glew.h>
 #include "../../maths/maths.h"
-#include "../../maths/maths_func.h"
-#include "../../utils/time.h"
+#include "../../input/input.h"
+#include "baseCamera.h"
 
 namespace spork { namespace graphics {
-
-	enum camMovement 
-	{
-		FORWARDS,
-		BACKWARDS,
-		LEFT,
-		RIGHT,
-		UP,
-		DOWN
-	};
-
 	//Default camera values
-	const float YAW = -90.0f;
+	const float YAW = 3.14f;
 	const float PITCH = 0.0f;
-	const float SPEED = 40.0f;
-	const float SENSITIVITY = 0.1f;
-	const float ZOOM = 45.0f;
-
-	class FPScamera
+	const float SPEED = 0.01f;
+	const float SENSITIVITY = 0.005f;
+	const float ZOOM = 95.0f;
+	/**
+	*  FPS Camera Class.  Handles camera creation, movement & orientation in a first person fashion.
+	*/
+	class FPScamera : public Camera
 	{
 	public:
+		Window* m_Window;
 		float m_MouseSensitivity;
 		float m_CamSpeed;
+		float m_SprintSpeed;
 		float m_Pitch, m_Yaw;
 		float m_Zoom;
-		//bool m_MouseClicked;
-	
-		maths::vec3 m_Pos, m_Front, m_Right, m_Up, m_WorldUp;
+		app::Input m_InputManager;
+		FPScamera(Window* window);
 
-		FPScamera(maths::vec3 pos, maths::vec3 up, float yaw, float pitch);
-
-		// Focus() override;
-		//void Update() override;
-		void processKeyboard(camMovement direction, GLfloat deltaTime);
-		void processMouseMove(float xOffset, float yOffset, bool holdPitch = true);
-		void processMouseScroll(float yOffset);
+		void update(GLfloat deltaTime) override;
+		void processKeyboard(GLfloat deltaTime);
+		void processMouseMove(double halfWidth, double halfHeight, bool holdPitch = true);
 		
 		//Getters
 		inline float getYaw() const { return m_Yaw; }
@@ -50,17 +36,12 @@ namespace spork { namespace graphics {
 		inline float getMovementSpeed() const { return m_CamSpeed; }
 		inline float getMouseSensitivity() const { return m_MouseSensitivity; }
 		inline float getFOV() const { return m_Zoom; }
-		inline const maths::vec3& getFront() const { return m_Front; }
-		inline const maths::vec3& getPosition() const { return m_Pos; }
-
-		maths::mat4 getViewMat();
-
+		//Setters
+		inline void setPos(maths::vec3 pos) { m_Position = pos; }
+		inline void setFront(maths::vec3 front) { m_Front = front; }
+		//GUI bar creation
+		void addToGUI(TwBar* bar, const char* camName) override;
+	private:
 		void updateVecs();
-		//priv:
-		//maths::Quaternion getOrientation() const;
-		//maths::vec3 getForwardDir(const maths::Quaternion& orientation) const;
-		//maths::vec3 FPScamera::GetUpDir(const maths::Quaternion& orientation) const;
-		//maths::vec3 FPScamera::GetRightDir(const maths::Quaternion& orientation) const;	
 	};
 } }
-#endif
