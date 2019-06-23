@@ -1,3 +1,9 @@
+Class Design Details -
+
+The component system was designed to be as abstract as possible, the components all inherit from a base component class and each individual component simply handles the setting of its variables, the game object class was designed to then add any type of component through the use of templates.
+
+The camera system was designed in a conceptually similar fashion, the base camera class handles the setting and control of common variables along with providing methods to translate and rotate the cameras. The individual camera types then handle the input in their own fashion according to the movement type of their design.
+
 Implementation Details -
 
 The initial engine design was based around the concept of having a minimal amount of external dependencies by incorporating all necessary functionality as a part of the core engine. This led to the creation of my own maths library which was developed as the functionality was required. This includes simple vector functions, matrix functions and quaternion functions for rotation.
